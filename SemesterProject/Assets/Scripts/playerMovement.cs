@@ -27,7 +27,7 @@ public class playerMovement : MonoBehaviour
     public void FixedUpdate()
     {
         ApplyEngineForce();
-        killOrthogonalVeelocity();
+        killOrthogonalVelocity();
         ApplySteeringForce();
     }
     void ApplyEngineForce()
@@ -58,7 +58,7 @@ public class playerMovement : MonoBehaviour
         rb.MoveRotation(rotationAngle);
     }
 
-    public void killOrthogonalVeelocity()
+    public void killOrthogonalVelocity()
     {
         Vector2 forwardVelocity = transform.up * Vector2.Dot(rb.velocity, transform.up);
         Vector2 rightVelocity = transform.right * Vector2.Dot(rb.velocity, transform.right);
