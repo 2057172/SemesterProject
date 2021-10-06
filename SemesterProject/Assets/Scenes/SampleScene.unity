@@ -1194,9 +1194,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b42f6cc2b99c547a660a676cbde7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiCamera: {fileID: 0}
-  arrowSprite: {fileID: 0}
-  crossSprite: {fileID: 0}
+  uiCamera: {fileID: 519420031}
+  arrowSprite: {fileID: 21300000, guid: 3b93c484fb632fe47ab43fc727a004e5, type: 3}
+  crossSprite: {fileID: 21300000, guid: 20ca2de90b45e6540b365259244299d2, type: 3}
 --- !u!1 &995782990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,12 +1646,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a0ddc8abf17a234a9e3bcda43ec3807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiCamera: {fileID: 519420031}
-  arrowSprite: {fileID: 21300000, guid: c12195fb8e04312488e98b5a20a76f47, type: 3}
-  crossSprite: {fileID: 21300000, guid: 3b93c484fb632fe47ab43fc727a004e5, type: 3}
-  targetPosition: {x: 0, y: 0, z: 0}
-  pointerRectTransform: {fileID: 0}
-  pointerImage: {fileID: 0}
 --- !u!1 &1393115469
 GameObject:
   m_ObjectHideFlags: 0
