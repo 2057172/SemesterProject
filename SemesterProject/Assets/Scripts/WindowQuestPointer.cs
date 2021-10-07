@@ -10,33 +10,22 @@ public class WindowQuestPointer : MonoBehaviour
     [SerializeField] private Sprite arrowSprite;
     [SerializeField] private Sprite crossSprite;
 
-    public Vector3 targetPosition;
+    private Vector3 targetPosition;
     private Transform pointerRectTransform;
     private Image pointerImage;
-
-    public GameObject playerGO;
-
-    public Text DistanceTXT;
-
-    public Transform pickUpZone;
 
     private void Awake()
     {
         pointerRectTransform = transform.Find("Pointer").GetComponent<RectTransform>();
         pointerImage = transform.Find("Pointer").GetComponent<Image>();
-        
-    }
 
-    private void Start()
-    {
-        targetPosition = pickUpZone.position;
+        Hide();
     }
 
     private void Update()
     {
-        DistanceTXT.text = Mathf.RoundToInt(Vector3.Distance(targetPosition, playerGO.GetComponent<Transform>().position)).ToString() + " m";
+        
 
-        //targetPosition = new Vector3(-3.73f, 0.85f, 0f);
         float borderSize = 100f; 
         Vector3 targetPositionScreenPoint = Camera.main.WorldToScreenPoint(targetPosition);
         bool isOffScreen = targetPositionScreenPoint.x <= borderSize || targetPositionScreenPoint.x >= Screen.width - borderSize || 
@@ -74,5 +63,14 @@ public class WindowQuestPointer : MonoBehaviour
         float angle = UtilsClass.GetAngleFromVector(dir);
         pointerRectTransform.localEulerAngles = new Vector3(0, 0, angle);
     }
-   
+    public void Hide()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public void Show(Vector3 targetPosition)
+    {
+        gameObject.SetActive(true);
+        this.targetPosition = targetPosition;
+    }
 }
