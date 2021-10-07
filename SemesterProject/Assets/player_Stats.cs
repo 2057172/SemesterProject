@@ -27,11 +27,14 @@ public class player_Stats : MonoBehaviour
     void Update()
     {
         fuelDecrease();
+        StartCoroutine(fuelstuff());
+
     }
 
 
     void fuelDecrease()
     {
+        //TEST CODE
         if (Input.GetKeyDown(KeyCode.Space))
         {
             currentFuel -= fuel;
@@ -42,25 +45,25 @@ public class player_Stats : MonoBehaviour
                 currentFuel = 0;
             }
         }
-        StartCoroutine(fuelstuff(30));
+       
     }
 
     bool running;
-    public IEnumerator fuelstuff(int time)
+    public IEnumerator fuelstuff()
     {
-        // Set the function as running
+       
         running = true;
 
-        // Do the job until running is set to false
+       
         while (running)
         {
             // wait for seconds
-            yield return new WaitForSeconds(time);
-            // Do your code
+            yield return new WaitForSeconds(5);
             currentFuel -= fuel;
             Health_And_Fuel.setCurrentFuel(currentFuel);
+            yield break;
+           
 
-            
         }
     }
 
