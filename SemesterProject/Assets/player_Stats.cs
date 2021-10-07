@@ -42,7 +42,26 @@ public class player_Stats : MonoBehaviour
                 currentFuel = 0;
             }
         }
-        
+        StartCoroutine(fuelstuff(30));
+    }
+
+    bool running;
+    public IEnumerator fuelstuff(int time)
+    {
+        // Set the function as running
+        running = true;
+
+        // Do the job until running is set to false
+        while (running)
+        {
+            // wait for seconds
+            yield return new WaitForSeconds(time);
+            // Do your code
+            currentFuel -= fuel;
+            Health_And_Fuel.setCurrentFuel(currentFuel);
+
+            
+        }
     }
 
     void ShipCollision()
