@@ -12,7 +12,7 @@ public class player_Stats : MonoBehaviour
 
     public int maxFuel =100;
     public int currentFuel;
-    public int fuel = 10;
+    public int fuel = 2;
 
     void Start()
     {
@@ -26,8 +26,16 @@ public class player_Stats : MonoBehaviour
     
     void Update()
     {
-        fuelDecrease();
-        StartCoroutine(fuelstuff());
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            currentFuel -= fuel;
+            Health_And_Fuel.setCurrentFuel(currentFuel);
+
+            if (currentFuel < 0)
+            {
+                currentFuel = 0;
+            }
+        }
 
     }
 
@@ -48,25 +56,7 @@ public class player_Stats : MonoBehaviour
        
     }
 
-    bool running;
-    public IEnumerator fuelstuff()
-    {
-       
-        running = true;
-
-       
-        while (running)
-        {
-            // wait for seconds
-            yield return new WaitForSeconds(5);
-            currentFuel -= fuel;
-            Health_And_Fuel.setCurrentFuel(currentFuel);
-            yield break;
-           
-
-        }
-    }
-
+   
     void ShipCollision()
     {
         currentHealth -= shipDamage;
