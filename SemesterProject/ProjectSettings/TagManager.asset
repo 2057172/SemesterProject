@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< Updated upstream
   - Collision
+=======
+  - PickupZone
+  - DropOffZone
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
