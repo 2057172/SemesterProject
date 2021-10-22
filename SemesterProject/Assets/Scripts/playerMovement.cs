@@ -20,6 +20,61 @@ public class playerMovement : MonoBehaviour
 
     Rigidbody2D rb;
 
+
+    //FUEL AND HEALTH STATS
+    public health_and_fuel Health_And_Fuel;
+
+    public int maxHealth = 100;
+    public int currentHealth;
+    public int shipDamage = 10;
+
+    public int maxFuel = 100;
+    public int currentFuel;
+    public int fuel = 2;
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+        Health_And_Fuel.setMaxHealth(maxHealth);
+
+        currentFuel = maxFuel;
+        Health_And_Fuel.setMaxFuel(maxFuel);
+    }
+
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            currentFuel -= fuel;
+            Health_And_Fuel.setCurrentFuel(currentFuel);
+
+            if (currentFuel < 0)
+            {
+                currentFuel = 0;
+            }
+        }
+
+    }
+
+    void ShipCollision()
+    {
+        currentHealth -= shipDamage;
+        Health_And_Fuel.setCurrentHealth(currentHealth);
+        if (currentHealth < 0)
+        {
+            currentHealth = 0;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Collision")
+        {
+            ShipCollision();
+        }
+    }
+    /////
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -34,7 +89,7 @@ public class playerMovement : MonoBehaviour
     {
         velocityVsUp = Vector2.Dot(transform.up, rb.velocity);
 
-        if(velocityVsUp > maxSpeed && accelerationInput > 0)
+        if (velocityVsUp > maxSpeed && accelerationInput > 0)
         {
             return;
         }
@@ -47,12 +102,13 @@ public class playerMovement : MonoBehaviour
         {
             rb.drag = Mathf.Lerp(rb.drag, 3.0f, Time.fixedDeltaTime * 3);
         }
-        else rb.drag = 0; 
+        else rb.drag = 0;
 
         Vector2 engineForceVector = transform.up * accelerationInput * accelerationFactor;
 
-        rb.AddForce(engineForceVector, ForceMode2D.Force); 
-    } void ApplySteeringForce()
+        rb.AddForce(engineForceVector, ForceMode2D.Force);
+    }
+    void ApplySteeringForce()
     {
         rotationAngle -= steeringInput * turnFactor;
         rb.MoveRotation(rotationAngle);
