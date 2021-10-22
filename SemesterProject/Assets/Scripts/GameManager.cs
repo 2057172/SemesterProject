@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         pointer.gameObject.SetActive(false);
-        money = 20;
+        //money = 20;
         phoneUp = false;
         
     }
