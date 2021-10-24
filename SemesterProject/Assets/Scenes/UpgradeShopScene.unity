@@ -2430,9 +2430,9 @@ MonoBehaviour:
   shopOP: 0
   instruction: {fileID: 1974965828}
   gameMan: {fileID: 1393748014}
-  firePro: 98
-  icePro: 72
-  radPro: 23
+  firePro: 5
+  icePro: 7
+  radPro: 10
   firePurchased: 0
   icePurchased: 0
   radPurchased: 0

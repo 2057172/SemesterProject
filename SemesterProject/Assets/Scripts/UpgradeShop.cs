@@ -122,34 +122,25 @@ public class UpgradeShop : MonoBehaviour
 
         /// Fuel Upgrade Things
 
-        if (gameMan.money >= FuelUp1)
-        {
-            fuelUp1Button.interactable = true;
-            fuelUp2Button.interactable = false;
-            fuelUp3Button.interactable = false;
-        }
-        if (gameMan.money < FuelUp1)
+        if (gameMan.money < FuelUp1)        // If you don't have enough money for to buy of the other fuel upgrades
         {
             fuelUp1Button.interactable = false;
             fuelUp2Button.interactable = false;
             fuelUp3Button.interactable = false;
         }
-
-        if (fuelUP1purchased)
+        if (fuelUP1purchased)              // If the player has already bought upgrade 1 
         {
             fuelUp1Button.interactable = false;
             fuelUp2Button.interactable = true;
             fuelUp3Button.interactable = false;
         }
-
-        if (fuelUP2purchased)
+        if (fuelUP2purchased)               // If the player has already bought upgrade 2
         {
             fuelUp1Button.interactable = false;
             fuelUp2Button.interactable = false;
             fuelUp3Button.interactable = true;
         }
-
-        if (fuelUP3purchased)
+        if (fuelUP3purchased)               // If the player has already bought upgrade 3
         {
             fuelUp1Button.interactable = false;
             fuelUp2Button.interactable = false;
@@ -178,41 +169,83 @@ public class UpgradeShop : MonoBehaviour
 
     public void Upgrade1()
     {
-        gameMan.money -= firePro;
-        firePurchased = true;
-
+        if (gameMan.money >= firePro)
+        {
+            gameMan.money -= firePro;
+            firePurchased = true;
+        }
+        else
+        {
+            firePurchased = false;
+        }
     }
 
     public void Upgrade2()
     {
-        gameMan.money -= icePro;
-        icePurchased = true;
+        if (gameMan.money >= icePro)
+        {
+            gameMan.money -= icePro;
+            icePurchased = true;
+        }
+        else
+        {
+            icePurchased = false;
+        } 
     }
 
     public void Upgrade3()
     {
-        gameMan.money -= radPro;
-        radPurchased = true;
+        if (gameMan.money >= radPro)
+        {
+            gameMan.money -= radPro;
+            radPurchased = true;
+        }
+        else
+        {
+            radPurchased = false;
+        }
     }
 
     public void FuelUpgrade1()
     {
-        gameMan.money -= FuelUp1;
-        playerMov.maxHealth = 150;
-        fuelUP1purchased = true;
+        if (gameMan.money >= FuelUp1)
+        {
+            gameMan.money -= FuelUp1;
+            playerMov.maxHealth = 150;
+            fuelUP1purchased = true;
+        }
+        else
+        {
+            fuelUP1purchased = false;
+        }
+       
     }
 
     public void FuelUpgrade2()
     {
-        gameMan.money -= FuelUp2;
-        playerMov.maxHealth = 200;
-        fuelUP1purchased = true;
+        if (gameMan.money >= FuelUp2)
+        {
+            gameMan.money -= FuelUp2;
+            playerMov.maxHealth = 200;
+            fuelUP2purchased = true;
+        }
+        else
+        {
+            fuelUP2purchased = false;
+        }
     }
 
     public void FuelUpgrade3()
     {
-        gameMan.money -= FuelUp3;
-        playerMov.maxHealth = 250;
-        fuelUP3purchased = true;
+        if (gameMan.money >= FuelUp3)
+        {
+            gameMan.money -= FuelUp3;
+            playerMov.maxHealth = 250;
+            fuelUP3purchased = true;
+        }
+        else
+        {
+            fuelUP3purchased = false;
+        }
     }
 }
