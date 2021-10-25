@@ -45,6 +45,22 @@ public class UpgradeShop : MonoBehaviour
     public Button fuelUp2Button;
     public Button fuelUp3Button;
 
+    /// <summary>
+    /// All of the variables for the health upgrades
+    /// </summary>
+
+    public int HealthUp1;
+    public int HealthUp2;
+    public int HealthUp3;
+
+    [SerializeField] private bool healthUP1purchased;
+    [SerializeField] private bool healthUP2purchased;
+    [SerializeField] private bool healthUP3purchased;
+
+    public Button healthUp1Button;
+    public Button healthUp2Button;
+    public Button healthUp3Button;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,7 +93,7 @@ public class UpgradeShop : MonoBehaviour
         
         // if the money is equal or less than 0, then it stays at 0
 
-        if (gameMan.money <= 0)
+        if (gameMan.money < 0)
         {
             gameMan.money = 0;
             heatButton.interactable = false;
@@ -86,6 +102,9 @@ public class UpgradeShop : MonoBehaviour
             fuelUp1Button.interactable = false;
             fuelUp2Button.interactable = false;
             fuelUp3Button.interactable = false;
+            healthUp1Button.interactable = false;
+            healthUp2Button.interactable = false;
+            healthUp3Button.interactable = false;
         }
 
         // if you don't have enough money for a upgrade, you cannot purchase it
@@ -122,7 +141,7 @@ public class UpgradeShop : MonoBehaviour
 
         /// Fuel Upgrade Things
 
-        if (gameMan.money < FuelUp1)        // If you don't have enough money for Fuel UPgrade 1
+        if (gameMan.money < FuelUp1 || fuelUP1purchased)     // If you don't have enough money for Fuel Upgrade 1 or have purchased it
         {
             fuelUp1Button.interactable = false;
         }
@@ -130,7 +149,7 @@ public class UpgradeShop : MonoBehaviour
         {
             fuelUp1Button.interactable = true;
         }
-        if (gameMan.money < FuelUp2)        // If you don't have enough money for Fuel Upgrade 2
+        if (gameMan.money < FuelUp2 || fuelUP2purchased)     // If you don't have enough money for Fuel Upgrade 2 or have purchased it
         {
             fuelUp2Button.interactable = false;
         }
@@ -138,7 +157,7 @@ public class UpgradeShop : MonoBehaviour
         {
             fuelUp2Button.interactable = true;
         }
-        if (gameMan.money < FuelUp3)        // If you don't have enough money for Fuel Upgrade 3
+        if (gameMan.money < FuelUp3 || fuelUP3purchased)     // If you don't have enough money for Fuel Upgrade 3 or have purchased it
         {
             fuelUp3Button.interactable = false;
         }
@@ -146,23 +165,31 @@ public class UpgradeShop : MonoBehaviour
         {
             fuelUp3Button.interactable = true;
         }
+        // Health Upgrade Things
 
-
-        if (fuelUP1purchased)              // If the player has already bought upgrade 1 
+        if (gameMan.money < HealthUp1 || healthUP1purchased)     // If you don't have enough money for Health Upgrade 1 or have purchased it
         {
-            Debug.Log("FuelUp1 Purchased");
-            fuelUp1Button.interactable = false;
-
+            healthUp1Button.interactable = false;
         }
-        if (fuelUP2purchased)               // If the player has already bought upgrade 2
+        else
         {
-            Debug.Log("FuelUp2 Purchased");
-            fuelUp2Button.interactable = false;
+            healthUp1Button.interactable = true;
         }
-        if (fuelUP3purchased)               // If the player has already bought upgrade 3
+        if (gameMan.money < HealthUp2 || healthUP2purchased)     // If you don't have enough money for Health Upgrade 2 or have purchased it
         {
-            Debug.Log("FuelUp3 Purchased");
-            fuelUp3Button.interactable = false;
+            healthUp2Button.interactable = false;
+        }
+        else
+        {
+            healthUp2Button.interactable = true;
+        }
+        if (gameMan.money < HealthUp3 || healthUP3purchased)     // If you don't have enough money for Health Upgrade 3 or have purchased it
+        {
+            healthUp3Button.interactable = false;
+        }
+        else
+        {
+            healthUp3Button.interactable = true;
         }
     }
 
@@ -264,6 +291,48 @@ public class UpgradeShop : MonoBehaviour
         else
         {
             fuelUP3purchased = false;
+        }
+    }
+
+    public void HealthUpgrade1()
+    {
+        if (gameMan.money >= HealthUp1)
+        {
+            gameMan.money -= HealthUp1;
+            playerMov.maxHealth = 150;
+            healthUP1purchased = true;
+        }
+        else
+        {
+            healthUP1purchased = false;
+        }
+    }
+
+    public void HealthUpgrade2()
+    {
+        if (gameMan.money >= HealthUp2 && healthUP1purchased)
+        {
+            gameMan.money -= HealthUp2;
+            playerMov.maxHealth = 200;
+            healthUP2purchased = true;
+        }
+        else
+        {
+            healthUP2purchased = false;
+        }
+    }
+
+    public void HealthUpgrade3()
+    {
+        if (gameMan.money >= HealthUp3 && healthUP2purchased)
+        {
+            gameMan.money -= HealthUp3;
+            playerMov.maxHealth = 250;
+            healthUP3purchased = true;
+        }
+        else
+        {
+            healthUP3purchased = false;
         }
     }
 }
