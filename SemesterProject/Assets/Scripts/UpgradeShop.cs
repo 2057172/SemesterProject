@@ -122,28 +122,46 @@ public class UpgradeShop : MonoBehaviour
 
         /// Fuel Upgrade Things
 
-        if (gameMan.money < FuelUp1)        // If you don't have enough money for to buy of the other fuel upgrades
+        if (gameMan.money < FuelUp1)        // If you don't have enough money for Fuel UPgrade 1
         {
             fuelUp1Button.interactable = false;
+        }
+        else
+        {
+            fuelUp1Button.interactable = true;
+        }
+        if (gameMan.money < FuelUp2)        // If you don't have enough money for Fuel Upgrade 2
+        {
             fuelUp2Button.interactable = false;
+        }
+        else
+        {
+            fuelUp2Button.interactable = true;
+        }
+        if (gameMan.money < FuelUp3)        // If you don't have enough money for Fuel Upgrade 3
+        {
             fuelUp3Button.interactable = false;
         }
+        else
+        {
+            fuelUp3Button.interactable = true;
+        }
+
+
         if (fuelUP1purchased)              // If the player has already bought upgrade 1 
         {
+            Debug.Log("FuelUp1 Purchased");
             fuelUp1Button.interactable = false;
-            fuelUp2Button.interactable = true;
-            fuelUp3Button.interactable = false;
+
         }
         if (fuelUP2purchased)               // If the player has already bought upgrade 2
         {
-            fuelUp1Button.interactable = false;
+            Debug.Log("FuelUp2 Purchased");
             fuelUp2Button.interactable = false;
-            fuelUp3Button.interactable = true;
         }
         if (fuelUP3purchased)               // If the player has already bought upgrade 3
         {
-            fuelUp1Button.interactable = false;
-            fuelUp2Button.interactable = false;
+            Debug.Log("FuelUp3 Purchased");
             fuelUp3Button.interactable = false;
         }
     }
@@ -211,7 +229,7 @@ public class UpgradeShop : MonoBehaviour
         if (gameMan.money >= FuelUp1)
         {
             gameMan.money -= FuelUp1;
-            playerMov.maxHealth = 150;
+            playerMov.maxFuel = 150;
             fuelUP1purchased = true;
         }
         else
@@ -223,10 +241,10 @@ public class UpgradeShop : MonoBehaviour
 
     public void FuelUpgrade2()
     {
-        if (gameMan.money >= FuelUp2)
+        if (gameMan.money >= FuelUp2 && fuelUP1purchased)
         {
             gameMan.money -= FuelUp2;
-            playerMov.maxHealth = 200;
+            playerMov.maxFuel = 200;
             fuelUP2purchased = true;
         }
         else
@@ -237,10 +255,10 @@ public class UpgradeShop : MonoBehaviour
 
     public void FuelUpgrade3()
     {
-        if (gameMan.money >= FuelUp3)
+        if (gameMan.money >= FuelUp3 && fuelUP2purchased)
         {
             gameMan.money -= FuelUp3;
-            playerMov.maxHealth = 250;
+            playerMov.maxFuel = 250;
             fuelUP3purchased = true;
         }
         else

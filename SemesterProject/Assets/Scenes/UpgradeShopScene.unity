@@ -2440,9 +2440,9 @@ MonoBehaviour:
   iceButton: {fileID: 1843862865}
   radButton: {fileID: 1509688674}
   playerMov: {fileID: 1189374812}
-  FuelUp1: 8
+  FuelUp1: 12
   FuelUp2: 16
-  FuelUp3: 32
+  FuelUp3: 20
   fuelUP1purchased: 0
   fuelUP2purchased: 0
   fuelUP3purchased: 0
