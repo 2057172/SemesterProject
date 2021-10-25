@@ -30,7 +30,18 @@ public class playerMovement : MonoBehaviour
 
     public int maxFuel = 100;
     public int currentFuel;
-    public int fuel = 2;
+    public int fuel = 5;
+
+    // Timer controls
+    private float startTime = 0f;
+    private float timer = 0f;
+    public float holdTime = 2.0f; // how long you need to hold to trigger the effect
+
+    // Use if you only want to call the method once after holding for the required time
+    private bool held = false;
+
+    public string key = "w"; // Whichever key you're using to control the effects. Just hardcode it in if you want
+
 
     void Start()
     {
@@ -44,18 +55,55 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            currentFuel -= fuel;
-            Health_And_Fuel.setCurrentFuel(currentFuel);
+        //   if (Input.GetKeyDown(KeyCode.W))
+        // {
+        //   currentFuel -= fuel;
+        // Health_And_Fuel.setCurrentFuel(currentFuel);
 
-            if (currentFuel < 0)
+        //if (currentFuel < 0)
+        //{
+        //  currentFuel = 0;
+        //}
+        //}
+
+        // Starts the timer from when the key is pressed
+        if (Input.GetKeyDown(key))
+        {
+            startTime = Time.time;
+            timer = startTime;
+        }
+
+        // Adds time onto the timer so long as the key is pressed
+        if (Input.GetKey(key) && held == false)
+        {
+            timer += Time.deltaTime;
+
+            // Once the timer float has added on the required holdTime, changes the bool (for a single trigger), and calls the function
+            if (timer > (startTime + holdTime))
             {
-                currentFuel = 0;
+                held = true;
+                ButtonHeld();
             }
         }
 
+        // For single effects. Remove if not needed
+        if (Input.GetKeyUp(key))
+        {
+            held = false;
+            currentFuel -= fuel;
+            Health_And_Fuel.setCurrentFuel(currentFuel);
+        }
+
     }
+
+    // Method called after held for required time
+    void ButtonHeld()
+    {
+        Debug.Log("held for " + holdTime + " seconds");
+        currentFuel -= fuel;
+        Health_And_Fuel.setCurrentFuel(currentFuel);
+    }
+
 
     void ShipCollision()
     {
