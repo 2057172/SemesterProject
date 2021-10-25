@@ -9,6 +9,7 @@ TagManager:
   - DropOffZone
   - FuelStation
   - MechanicStation
+  - MenuStation
   layers:
   - Default
   - TransparentFX

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class menu_Items : MonoBehaviour
 {
+    public GameObject menuStation_UI;
+
     //BEEF
     public string[] beefFood = new string[]
     {  
@@ -79,7 +81,7 @@ public class menu_Items : MonoBehaviour
 
     void Start()
     {
-        
+        menuStation_UI.SetActive(false);
     }
 
 
@@ -87,4 +89,35 @@ public class menu_Items : MonoBehaviour
     {
         
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (this.gameObject.tag == "MenuStation")
+        {
+            if (collision.gameObject.name == "Player")
+            {
+
+                menuStation_UI.SetActive(true);
+            }
+        }
+
+
+       
+
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (this.gameObject.tag == "MenuStation")
+        {
+            if (collision.gameObject.name == "Player")
+            {
+
+                menuStation_UI.SetActive(false);
+            }
+        }
+
+       
+    }
+
 }
