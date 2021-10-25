@@ -34,7 +34,7 @@ public class playerMovement : MonoBehaviour
     {
         velocityVsUp = Vector2.Dot(transform.up, rb.velocity);
 
-        if (velocityVsUp > maxSpeed && accelerationInput > 0)
+        if(velocityVsUp > maxSpeed && accelerationInput > 0)
         {
             return;
         }
@@ -47,13 +47,12 @@ public class playerMovement : MonoBehaviour
         {
             rb.drag = Mathf.Lerp(rb.drag, 3.0f, Time.fixedDeltaTime * 3);
         }
-        else rb.drag = 0;
+        else rb.drag = 0; 
 
         Vector2 engineForceVector = transform.up * accelerationInput * accelerationFactor;
 
-        rb.AddForce(engineForceVector, ForceMode2D.Force);
-    }
-    void ApplySteeringForce()
+        rb.AddForce(engineForceVector, ForceMode2D.Force); 
+    } void ApplySteeringForce()
     {
         rotationAngle -= steeringInput * turnFactor;
         rb.MoveRotation(rotationAngle);
