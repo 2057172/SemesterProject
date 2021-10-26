@@ -30,8 +30,7 @@ public class playerMovement : MonoBehaviour
 
     public int maxFuel = 100;
     public int currentFuel;
-    public int fuel = 2;
-    public float totalVelocity;
+
 
     void Start()
     {
@@ -45,19 +44,47 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            currentFuel -= fuel;
-            Health_And_Fuel.setCurrentFuel(currentFuel);
+        //   if (Input.GetKeyDown(KeyCode.W))
+        // {
+        //   currentFuel -= fuel;
+        // Health_And_Fuel.setCurrentFuel(currentFuel);
 
-            if (currentFuel < 0)
+        //if (currentFuel < 0)
+        //{
+        //  currentFuel = 0;
+        //}
+        //}
+
+        // Starts the timer from when the key is pressed
+        if (Input.GetKeyDown(key))
+        {
+            startTime = Time.time;
+            timer = startTime;
+        }
+
+        // Adds time onto the timer so long as the key is pressed
+        if (Input.GetKey(key) && held == false)
+        {
+            timer += Time.deltaTime;
+
+            // Once the timer float has added on the required holdTime, changes the bool (for a single trigger), and calls the function
+            if (timer > (startTime + holdTime))
             {
-                currentFuel = 0;
+                held = true;
+                ButtonHeld();
             }
         }
-        totalVelocity = rb.velocity.x + rb.velocity.y;
-       
+
     }
+
+    // Method called after held for required time
+    void ButtonHeld()
+    {
+        Debug.Log("held for " + holdTime + " seconds");
+        currentFuel -= fuel;
+        Health_And_Fuel.setCurrentFuel(currentFuel);
+    }
+
 
     void ShipCollision()
     {

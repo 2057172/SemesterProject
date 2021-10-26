@@ -7,6 +7,9 @@ TagManager:
   - Collision
   - PickUpZone
   - DropOffZone
+  - FuelStation
+  - MechanicStation
+  - MenuStation
   layers:
   - Default
   - TransparentFX
