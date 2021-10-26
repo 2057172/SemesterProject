@@ -34,7 +34,8 @@ public class playerMovement : MonoBehaviour
     //public int fuel = 2;
     public float totalVelocity;
 
-    public int fuel = 5;
+    public float fuel = 1;
+    public float consumption = 0.01f;
 
     // Timer controls
     private float startTime = 0f;
@@ -56,6 +57,7 @@ public class playerMovement : MonoBehaviour
         Health_And_Fuel.setMaxFuel(maxFuel);
     }
 
+    
 
     void Update()
     {
@@ -70,7 +72,7 @@ public class playerMovement : MonoBehaviour
         //}
         //}
 
-        // Starts the timer from when the key is pressed
+             // Starts the timer from when the key is pressed
         if (Input.GetKeyDown(key))
         {
             startTime = Time.time;
@@ -96,7 +98,7 @@ public class playerMovement : MonoBehaviour
         if (Input.GetKeyUp(key))
         {
             held = false;
-            currentFuel -= fuel;
+            //currentFuel -= fuel;
             Health_And_Fuel.setCurrentFuel(currentFuel);
         }
 
@@ -106,7 +108,7 @@ public class playerMovement : MonoBehaviour
     void ButtonHeld()
     {
         Debug.Log("held for " + holdTime + " seconds");
-        currentFuel -= fuel;
+        //currentFuel -= fuel;
         Health_And_Fuel.setCurrentFuel(currentFuel);
     }
 
@@ -138,6 +140,8 @@ public class playerMovement : MonoBehaviour
         ApplyEngineForce();
         killOrthogonalVelocity();
         ApplySteeringForce();
+
+        fuel -= consumption * Mathf.Abs(rb.velocity.x + rb.velocity.y) * Time.fixedDeltaTime;
     }
     void ApplyEngineForce()
     {
@@ -181,6 +185,7 @@ public class playerMovement : MonoBehaviour
         steeringInput = inputVector.x;
         accelerationInput = inputVector.y;
     }
+    
 
 
 }

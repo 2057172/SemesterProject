@@ -40,7 +40,7 @@ public class OrderManager : MonoBehaviour
     {
         if(currentlyOnOrder == true)
         {
-            countDown =  ETA -= 1 * Time.deltaTime;
+            countDown =  ETA += 1 * Time.deltaTime;
             Debug.Log(Mathf.Round(countDown));
         } 
     }

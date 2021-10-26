@@ -31,6 +31,10 @@ public class PlayerOrderInfo : MonoBehaviour
             orderManager.totalCommision = 0;
             pointer.gameObject.SetActive(false);
             orderMoneyInfo.gameObject.SetActive(false);
+            if(orderManager.countDown < orderManager.ETA)
+            {
+                gm.money = gm.money + 15f;
+            }
         }
     }
     public void OnTriggerExit2D(Collider2D collision)
