@@ -4121,7 +4121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa7d29a4fec07e4489f58bde53c8cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 0
+  money: 500
   moneyTXT: {fileID: 1916168726}
   phone: {fileID: 29537123}
   phoneUp: 0
@@ -7643,6 +7643,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4757995201937311027, guid: 10abe5e28c6497f41ba8c0a97aca4424, type: 3}
+      propertyPath: fuelStation_UI
+      value: 
+      objectReference: {fileID: 314241112}
+    - target: {fileID: 4757995201937311027, guid: 10abe5e28c6497f41ba8c0a97aca4424, type: 3}
+      propertyPath: mechanicStation_UI
+      value: 
+      objectReference: {fileID: 314241111}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10abe5e28c6497f41ba8c0a97aca4424, type: 3}
 --- !u!1001 &2117130957
