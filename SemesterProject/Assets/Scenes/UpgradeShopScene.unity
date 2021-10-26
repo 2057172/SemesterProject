@@ -729,10 +729,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 11
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 5
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -740,7 +740,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fuel Upgrade 2
+  m_Text: 'Fuel Upgrade 2
+
+
+    $15'
 --- !u!222 &319643595
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1414,10 +1417,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 11
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 5
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1427,7 +1430,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Upgrade 2
 
-    Ice Protection'
+    Ice Protection
+
+
+    $7'
 --- !u!222 &593193639
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1564,10 +1570,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 11
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 5
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1575,7 +1581,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fuel Upgrade 1
+  m_Text: 'Fuel Upgrade 1
+
+
+    $12'
 --- !u!222 &621609906
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1643,10 +1652,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 11
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 5
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1654,7 +1663,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Health Upgrade 2
+  m_Text: 'Health Upgrade 2
+
+
+    $25'
 --- !u!222 &621890394
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2210,10 +2222,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 11
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 5
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2223,7 +2235,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Upgrade 1
 
-    Heat Protection'
+    Heat Protection
+
+
+    $5'
 --- !u!222 &770963600
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2388,10 +2403,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 11
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 5
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2399,7 +2414,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fuel Upgrade 3
+  m_Text: 'Fuel Upgrade 3
+
+
+    $20'
 --- !u!222 &807350173
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2467,10 +2485,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 11
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 5
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2478,7 +2496,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Health Upgrade 1
+  m_Text: 'Health Upgrade 1
+
+
+    $21'
 --- !u!222 &835411984
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4590,10 +4611,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 11
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 5
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -4603,7 +4624,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Upgrade 3
 
-    Radiation Protection'
+    Radiation Protection
+
+
+    $10'
 --- !u!222 &1480276071
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6307,10 +6331,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 11
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 5
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -6318,7 +6342,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Health Upgrade 3
+  m_Text: 'Health Upgrade 3
+
+
+    $29'
 --- !u!222 &2000540404
 CanvasRenderer:
   m_ObjectHideFlags: 0
