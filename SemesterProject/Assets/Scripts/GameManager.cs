@@ -13,12 +13,12 @@ public class GameManager : MonoBehaviour
 
     public WindowQuestPointer pointer;
 
-    public Button takeBurgerAndFriedOrder;
+    public Button takeBurgerAndFriedOrder, takePizzaOrder, takeIceCreamOrder;
     public OrderManager om;
     public Transform pickUp;
     public GameObject Player;
 
-    public Transform burgerAndFriesDropOff;
+    public Transform burgerAndFriesDropOff, Earth, ForestPlanet;
 
     public Vector3 deliveryDestination;
 
@@ -59,13 +59,20 @@ public class GameManager : MonoBehaviour
             {
                 phone.GetComponent<RectTransform>().anchoredPosition = new Vector2(763f, -186f);
                 takeBurgerAndFriedOrder.gameObject.SetActive(true);
+                takePizzaOrder.gameObject.SetActive(true);
+                takeIceCreamOrder.gameObject.SetActive(true);
+
                 takeBurgerAndFriedOrder.GetComponentInChildren<Text>().text = "Burger and Fries: $" + Mathf.RoundToInt(20 + (Vector3.Distance(pickUp.position, om.BAndFriesDestination.position) * 0.8f));
+                takePizzaOrder.GetComponentInChildren<Text>().text = "Pizza: $" + Mathf.RoundToInt(20 + (Vector3.Distance(pickUp.position, om.PizzaDestination.position) * 0.8f));
+                takeIceCreamOrder.GetComponentInChildren<Text>().text = "IceCream: $" + Mathf.RoundToInt(20 + (Vector3.Distance(pickUp.position, om.IceCreamDestination.position) * 0.8f));
                 phoneUp = true;
             }
             else if (phoneUp == true)
             {
                 phone.GetComponent<RectTransform>().anchoredPosition = new Vector2(763f, -653f);
                 takeBurgerAndFriedOrder.gameObject.SetActive(false);
+                takePizzaOrder.gameObject.SetActive(false);
+                takeIceCreamOrder.gameObject.SetActive(false);
                 phoneUp = false;
             }
         } 
@@ -75,15 +82,37 @@ public class GameManager : MonoBehaviour
 
     public void BurgerAndFriesOrderSelected()
     {
-        pointer.gameObject.SetActive(true);
-        pointer.targetPosition = pickUp.position;
+        //pointer.gameObject.SetActive(true);
+        //pointer.targetPosition = pickUp.position;
         deliveryDestination = burgerAndFriesDropOff.position;
-        pointer.targetPosition = pickUp.position;
+        //pointer.targetPosition = pickUp.position;
 
         om.ETA = Mathf.Round(Vector3.Distance(om.pickUpZone.position, om.BAndFriesDestination.position)) + 
             Mathf.Round(Vector3.Distance(Player.gameObject.GetComponent<Transform>().position, om.pickUpZone.position));
         om.currentlyOnOrder = true;
     }
+    public void PizzaOrderSelected()
+    {
+        //pointer.gameObject.SetActive(true);
+        //pointer.targetPosition = pickUp.position;
+        deliveryDestination = Earth.position;
+        //pointer.targetPosition = pickUp.position;
 
-    
+        om.ETA = Mathf.Round(Vector3.Distance(om.pickUpZone.position, om.PizzaDestination.position)) +
+            Mathf.Round(Vector3.Distance(Player.gameObject.GetComponent<Transform>().position, om.pickUpZone.position));
+        om.currentlyOnOrder = true;
+    }
+    public void IceCreamOrderSelected()
+    {
+        //pointer.gameObject.SetActive(true);
+       //pointer.targetPosition = pickUp.position;
+        deliveryDestination = ForestPlanet.position;
+        //pointer.targetPosition = pickUp.position;
+
+        om.ETA = Mathf.Round(Vector3.Distance(om.pickUpZone.position, om.IceCreamDestination.position)) +
+            Mathf.Round(Vector3.Distance(Player.gameObject.GetComponent<Transform>().position, om.pickUpZone.position));
+        om.currentlyOnOrder = true;
+    }
+
+
 }
