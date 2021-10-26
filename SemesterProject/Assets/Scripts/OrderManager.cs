@@ -8,6 +8,7 @@ public class OrderManager : MonoBehaviour
     public WindowQuestPointer pointer;
 
     public bool currentlyHasOrder;
+    public bool currentlyOnOrder;
     public bool BurgerAndFriesB, IceCreamB, SandwichB;
 
     public Transform pickUpZone;
@@ -21,13 +22,27 @@ public class OrderManager : MonoBehaviour
     public GameManager gm;
     public Text OrderMoneyTXT;
 
+    public float countDown;
+    public float ETA;
+
+
     void Start()
     {
         currentlyHasOrder = false;
         OrderMoneyTXT.gameObject.SetActive(false);
         BurgerAndFriesB = false;
         IceCreamB = false;
-        SandwichB = false;       
+        SandwichB = false;
+        currentlyOnOrder = false;
+    }
+
+    public void Update()
+    {
+        if(currentlyOnOrder == true)
+        {
+            countDown =  ETA -= 1 * Time.deltaTime;
+            Debug.Log(Mathf.Round(countDown));
+        } 
     }
 
 
@@ -42,7 +57,7 @@ public class OrderManager : MonoBehaviour
             Menu.gameObject.SetActive(false);
             totalCommision = 20 + (Vector3.Distance(pickUpZone.position, BAndFriesDestination.position) * 0.8f);
             OrderMoneyTXT.text = "Total: $" + Mathf.Round(totalCommision);
-            OrderMoneyTXT.gameObject.SetActive(true);
+            OrderMoneyTXT.gameObject.SetActive(true);           
         }
         else { Debug.Log("Can't Afford"); }
     }

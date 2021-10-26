@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class inputHandler : MonoBehaviour
 {
-    playerMovement pm;
+    public playerMovement pm;
 
     private void Awake()
     {

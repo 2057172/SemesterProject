@@ -31,6 +31,7 @@ public class playerMovement : MonoBehaviour
     public int maxFuel = 100;
     public int currentFuel;
     public int fuel = 2;
+    public float totalVelocity;
 
     void Start()
     {
@@ -54,7 +55,8 @@ public class playerMovement : MonoBehaviour
                 currentFuel = 0;
             }
         }
-
+        totalVelocity = rb.velocity.x + rb.velocity.y;
+       
     }
 
     void ShipCollision()
@@ -127,5 +129,6 @@ public class playerMovement : MonoBehaviour
         steeringInput = inputVector.x;
         accelerationInput = inputVector.y;
     }
+
 
 }
