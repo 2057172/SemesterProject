@@ -75,6 +75,10 @@ public class playerMovement : MonoBehaviour
         {
             startTime = Time.time;
             timer = startTime;
+           
+            currentFuel -= 5;
+            Health_And_Fuel.setCurrentFuel(currentFuel);
+
         }
 
         // Adds time onto the timer so long as the key is pressed
