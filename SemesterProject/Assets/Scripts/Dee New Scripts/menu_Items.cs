@@ -1,10 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class menu_Items : MonoBehaviour
 {
     public GameObject menuStation_UI;
+    public GameObject background_UI;
+    public GameObject beefFood_UI;
+    public GameObject chickenFood_UI;
+    public GameObject fishFood_UI;
+    public GameObject vegFood_UI;
+    public GameObject sideFood_UI;
+    public GameObject dessertFood_UI;
+    public GameObject drinksFoodUI;
+    public GameObject planetFood_UI;
+
+
+    public Button singleCheeseburger;
+    public Button doubleCheeseburger;
+    public Button tripleCheeseburger;
+    public Button steak;
+    public Button ribs;
+    public Button shank;
+    public Button beefTaco;
+    public Button beefNoodles;
+    public Button beefPizza;
+
+
 
     //BEEF
     public string[] beefFood = new string[]
@@ -82,7 +104,18 @@ public class menu_Items : MonoBehaviour
     void Start()
     {
         menuStation_UI.SetActive(false);
-    }
+        background_UI.SetActive(false);
+        beefFood_UI.SetActive(false);
+        chickenFood_UI.SetActive(false);
+        fishFood_UI.SetActive(false);
+        vegFood_UI.SetActive(false);
+        sideFood_UI.SetActive(false);
+        dessertFood_UI.SetActive(false);
+        drinksFoodUI.SetActive(false);
+        planetFood_UI.SetActive(false);
+
+        
+}
 
 
     void Update()
@@ -98,6 +131,9 @@ public class menu_Items : MonoBehaviour
             {
 
                 menuStation_UI.SetActive(true);
+                background_UI.SetActive(true);
+                beefFood_UI.SetActive(true);
+
             }
         }
 
@@ -120,4 +156,51 @@ public class menu_Items : MonoBehaviour
        
     }
 
+
+
+    public void singleCheeseBurgerBtn()
+    {
+        singleCheeseburger.interactable = false; 
+    }
+
+    public void doubleCheeseburgerBtn()
+    {
+        doubleCheeseburger.interactable = false;
+    }
+
+    public void tripleCheeseburgerBtn()
+    {
+        tripleCheeseburger.interactable = false;
+    }
+
+
+    public void steakBtn()
+    {
+        steak.interactable = false;
+    }
+
+    public void ribsBtn()
+    {
+        ribs.interactable = false;
+    }
+
+    public void shankBtn()
+    {
+        shank.interactable = false; 
+    }
+
+    public void beefTacoBtn()
+    {
+        beefTaco.interactable = false;
+    }
+
+    public void beefNoodlesBtn()
+    {
+        beefNoodles.interactable = false;
+    }
+
+    public void beefPizzaBtn()
+    {
+        beefPizza.interactable = false;
+    }
 }
