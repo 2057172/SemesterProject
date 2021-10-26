@@ -16,17 +16,21 @@ public class GameManager : MonoBehaviour
     public Button takeBurgerAndFriedOrder;
     public OrderManager om;
     public Transform pickUp;
+    public GameObject Player;
 
     public Transform burgerAndFriesDropOff;
 
     public Vector3 deliveryDestination;
+
+    public GameObject Map;
+    public bool mapOpen;
 
     void Start()
     {
         pointer.gameObject.SetActive(false);
         //money = 20;
         phoneUp = false;
-        
+        mapOpen = false;
     }
 
     void Update()
@@ -36,7 +40,18 @@ public class GameManager : MonoBehaviour
         {
             Application.Quit();
         }
-
+        if(Input.GetKeyDown(KeyCode.M))
+        {
+            if(mapOpen == false)
+            {
+                Map.gameObject.SetActive(true);
+                mapOpen = true;
+            } else if(mapOpen == true)
+            {
+                Map.gameObject.SetActive(false);
+                mapOpen = false;
+            }
+        }
 
         if(Input.GetKeyDown(KeyCode.H))
         {
@@ -64,6 +79,10 @@ public class GameManager : MonoBehaviour
         pointer.targetPosition = pickUp.position;
         deliveryDestination = burgerAndFriesDropOff.position;
         pointer.targetPosition = pickUp.position;
+
+        om.ETA = Mathf.Round(Vector3.Distance(om.pickUpZone.position, om.BAndFriesDestination.position)) + 
+            Mathf.Round(Vector3.Distance(Player.gameObject.GetComponent<Transform>().position, om.pickUpZone.position));
+        om.currentlyOnOrder = true;
     }
 
     

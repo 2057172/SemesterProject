@@ -30,17 +30,6 @@ public class playerMovement : MonoBehaviour
 
     public int maxFuel = 100;
     public int currentFuel;
-    public int fuel = 5;
-
-    // Timer controls
-    private float startTime = 0f;
-    private float timer = 0f;
-    public float holdTime = 2.0f; // how long you need to hold to trigger the effect
-
-    // Use if you only want to call the method once after holding for the required time
-    private bool held = false;
-
-    public string key = "w"; // Whichever key you're using to control the effects. Just hardcode it in if you want
 
 
     void Start()
@@ -84,14 +73,6 @@ public class playerMovement : MonoBehaviour
                 held = true;
                 ButtonHeld();
             }
-        }
-
-        // For single effects. Remove if not needed
-        if (Input.GetKeyUp(key))
-        {
-            held = false;
-            currentFuel -= fuel;
-            Health_And_Fuel.setCurrentFuel(currentFuel);
         }
 
     }
@@ -175,5 +156,6 @@ public class playerMovement : MonoBehaviour
         steeringInput = inputVector.x;
         accelerationInput = inputVector.y;
     }
+
 
 }
