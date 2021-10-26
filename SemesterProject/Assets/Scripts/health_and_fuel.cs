@@ -31,6 +31,7 @@ public class health_and_fuel : MonoBehaviour
     public void setCurrentFuel(int fuel)
     {
         fuel_Bar.value =fuel;
+
     }
 
 }
