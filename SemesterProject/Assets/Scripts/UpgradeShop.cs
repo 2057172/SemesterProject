@@ -19,9 +19,9 @@ public class UpgradeShop : MonoBehaviour
     public int icePro;
     public int radPro;
 
-    [SerializeField] private bool firePurchased;
-    [SerializeField] private bool icePurchased;
-    [SerializeField] private bool radPurchased;
+    [SerializeField] public bool firePurchased;
+    [SerializeField] public bool icePurchased;
+    [SerializeField] public bool radPurchased;
 
     public Button heatButton;
     public Button iceButton;
@@ -37,9 +37,9 @@ public class UpgradeShop : MonoBehaviour
     public int FuelUp2;
     public int FuelUp3;
 
-    [SerializeField] private bool fuelUP1purchased;
-    [SerializeField] private bool fuelUP2purchased;
-    [SerializeField] private bool fuelUP3purchased;
+    [SerializeField] public bool fuelUP1purchased;
+    [SerializeField] public bool fuelUP2purchased;
+    [SerializeField] public bool fuelUP3purchased;
 
     public Button fuelUp1Button;
     public Button fuelUp2Button;
@@ -53,9 +53,9 @@ public class UpgradeShop : MonoBehaviour
     public int HealthUp2;
     public int HealthUp3;
 
-    [SerializeField] private bool healthUP1purchased;
-    [SerializeField] private bool healthUP2purchased;
-    [SerializeField] private bool healthUP3purchased;
+    [SerializeField] public bool healthUP1purchased;
+    [SerializeField] public bool healthUP2purchased;
+    [SerializeField] public bool healthUP3purchased;
 
     public Button healthUp1Button;
     public Button healthUp2Button;
