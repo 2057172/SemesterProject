@@ -1227,6 +1227,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173248587}
   m_CullTransparentMesh: 1
+--- !u!114 &180773397 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8955749805258013962, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
+  m_PrefabInstance: {fileID: 314241108}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &187162876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,6 +1843,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 639516958}
     m_Modifications:
+    - target: {fileID: 8955749805258013960, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
+      propertyPath: m_Name
+      value: Repair Amount Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955749805471552653, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955749806167075408, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
+      propertyPath: m_Name
+      value: 'Refuel Amount Text '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955749806418660230, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2089348124}
+    - target: {fileID: 8955749806418660230, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: payForFuel
+      objectReference: {fileID: 0}
     - target: {fileID: 8955749806552002629, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
       propertyPath: m_Name
       value: Fuel Station +Mechanic Station_UI
@@ -1927,6 +1958,14 @@ PrefabInstance:
     - target: {fileID: 8955749806552002633, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955749807098489580, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2089348124}
+    - target: {fileID: 8955749807098489580, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: payforMechanic
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
@@ -9744,6 +9783,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663359738}
   m_CullTransparentMesh: 1
+--- !u!114 &1667042621 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7428859736349503698, guid: 444d6e87d9a60694283548253d13aa5c, type: 3}
+  m_PrefabInstance: {fileID: 284965378}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919335b4430d61442b8e2d70a5979e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1691707973
 GameObject:
   m_ObjectHideFlags: 0
@@ -10930,6 +10980,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1858952536 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8955749806167075410, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
+  m_PrefabInstance: {fileID: 314241108}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1882655961
 GameObject:
   m_ObjectHideFlags: 0
@@ -11508,13 +11569,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 314241109}
     - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1191842861}
+    - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
+      propertyPath: upgradeShop
+      value: 
+      objectReference: {fileID: 1667042621}
+    - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
       propertyPath: PlayerMovement
       value: 
       objectReference: {fileID: 1334553574}
     - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
+      propertyPath: fuelAmountText
+      value: 
+      objectReference: {fileID: 1858952536}
+    - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
       propertyPath: Health_And_Fuel
       value: 
       objectReference: {fileID: 769091601}
+    - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
+      propertyPath: repairAmountText
+      value: 
+      objectReference: {fileID: 180773397}
     - target: {fileID: 1721997026624316031, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
       propertyPath: m_Name
       value: FuelandMechanicManager
@@ -12131,6 +12208,17 @@ Transform:
   m_Father: {fileID: 87481703}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2089348124 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
+  m_PrefabInstance: {fileID: 1955480913}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b8682083a403d43a0362ae0be891a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2093856110
 PrefabInstance:
   m_ObjectHideFlags: 0
