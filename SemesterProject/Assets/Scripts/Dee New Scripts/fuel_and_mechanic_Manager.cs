@@ -8,7 +8,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
     public GameManager gameManager;
     public health_and_fuel Health_And_Fuel;
     public playerMovement  PlayerMovement;
-   // public fuel_and_Mechanic Fuel_And_Mechanic;
+    public UpgradeShop upgradeShop;
 
     public int fuelCost;
     public TMP_Text fuelText;
@@ -21,6 +21,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
     {
         fuelCost = 10;
         repairCost = 20;
+        
     }
 
     void Update()
@@ -44,7 +45,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
         //NOT ENOUGH MONEY
         if(gameManager.money < 10)
         {
-            gameManager.money = gameManager.money;
+            
             gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
             fuelText.text = "You don't have enough money!";
         }
