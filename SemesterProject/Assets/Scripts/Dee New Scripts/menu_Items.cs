@@ -36,11 +36,7 @@ public class menu_Items : MonoBehaviour
         "Juice",
         "Alchol",
         "Cold Drink",
-    };
 
-    public string[] SpecialFood = new string[]
-    {
-      
         //EARTH PLANET
         "Human Food",
 
@@ -87,11 +83,9 @@ public class menu_Items : MonoBehaviour
 
         //LOVECRAFT PLANET
         "THE VOID",
-
-
-
     };
-       
+
+
 
 
     public string[] Planets = new string[]
@@ -127,6 +121,11 @@ public class menu_Items : MonoBehaviour
         choosingRandomFoods();
     }
 
+    public void Update()
+    {
+        
+    }
+
     //DECIDES WHERE THE ORDER WILL BE PLACED 
     public void choosingRandomPlanet()
     {
@@ -135,6 +134,7 @@ public class menu_Items : MonoBehaviour
         int usePlanets = random.Next(Planets.Length);
         string pickPlanet = Planets[usePlanets];
         print(pickPlanet);
+
 
 
     }
@@ -150,11 +150,11 @@ public class menu_Items : MonoBehaviour
         int useFoods2 = random.Next(Foods.Length);
         string pickfood2 = Foods[useFoods2];
 
+        
         int useFoods3 = random.Next(Foods.Length);
         string pickfood3 = Foods[useFoods3];
 
-        int useFoodsAll = random.Next(Foods.Length);
-      
+     
 
         print(pickfood1);
         print(pickfood2);
