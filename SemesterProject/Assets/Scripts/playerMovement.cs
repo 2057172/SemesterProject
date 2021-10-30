@@ -107,7 +107,7 @@ public class playerMovement : MonoBehaviour
     // Method called after held for required time
     void ButtonHeld()
     {
-        Debug.Log("held for " + holdTime + " seconds");
+
         //currentFuel -= fuel;
         Health_And_Fuel.setCurrentFuel(currentFuel);
     }
