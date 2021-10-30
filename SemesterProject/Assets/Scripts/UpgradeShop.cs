@@ -65,6 +65,8 @@ public class UpgradeShop : MonoBehaviour
     void Start()
     {
         repairPanel.SetActive(false);
+        
+
     }
 
     // Update is called once per frame
