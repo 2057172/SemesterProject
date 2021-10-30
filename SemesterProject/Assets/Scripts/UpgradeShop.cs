@@ -61,6 +61,16 @@ public class UpgradeShop : MonoBehaviour
     public Button healthUp2Button;
     public Button healthUp3Button;
 
+    /// <summary>
+    /// All the variables to repair ship
+    /// </summary>
+
+    public fuel_and_mechanic_Manager repairScript;
+
+    public Button repairButton;
+
+    public Text priceTXT;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -107,6 +117,7 @@ public class UpgradeShop : MonoBehaviour
             healthUp1Button.interactable = false;
             healthUp2Button.interactable = false;
             healthUp3Button.interactable = false;
+            repairButton.interactable = false;
         }
 
         // if you don't have enough money for a upgrade, you cannot purchase it
@@ -172,6 +183,7 @@ public class UpgradeShop : MonoBehaviour
         if (gameMan.money < HealthUp1 || healthUP1purchased)     // If you don't have enough money for Health Upgrade 1 or have purchased it
         {
             healthUp1Button.interactable = false;
+           
         }
         else
         {
@@ -193,6 +205,24 @@ public class UpgradeShop : MonoBehaviour
         {
             healthUp3Button.interactable = true;
         }
+
+        // Repair Things
+        if (healthUP1purchased)
+        {
+            repairScript.repairCost = repairScript.mechanicUpgradeCost1;
+            priceTXT.text = "$100";
+        }
+        if (healthUP2purchased)
+        {
+            repairScript.repairCost = repairScript.mechanicUpgradeCost2;
+            priceTXT.text = "$200";
+        }
+        if (healthUP3purchased)
+        {
+            repairScript.repairCost = repairScript.mechanicUpgradeCost3;
+            priceTXT.text = "$300";
+        }
+        
     }
 
 
@@ -335,6 +365,55 @@ public class UpgradeShop : MonoBehaviour
         else
         {
             healthUP3purchased = false;
+        }
+    }
+
+    public void RepairShip()
+    {
+        if (gameMan.money >= repairScript.baseMechanicCost)
+        {
+            gameMan.money -= repairScript.repairCost;
+            playerMov.currentHealth = playerMov.maxHealth;
+        }
+        else
+        {
+            repairButton.interactable = false;
+        }
+        if (healthUP1purchased)
+        {
+            if (gameMan.money >= repairScript.mechanicUpgradeCost1)
+            {
+                gameMan.money -= repairScript.repairCost;
+                playerMov.currentHealth = playerMov.maxHealth;
+            }
+            else
+            {
+                repairButton.interactable = false;
+            }
+        }
+        if (healthUP2purchased)
+        {
+            if (gameMan.money >= repairScript.mechanicUpgradeCost2)
+            {
+                gameMan.money -= repairScript.repairCost;
+                playerMov.currentHealth = playerMov.maxHealth;
+            }
+            else
+            {
+                repairButton.interactable = false;
+            }
+        }
+        if (healthUP3purchased)
+        {
+            if (gameMan.money >= repairScript.mechanicUpgradeCost3)
+            {
+                gameMan.money -= repairScript.repairCost;
+                playerMov.currentHealth = playerMov.maxHealth;
+            }
+            else
+            {
+                repairButton.interactable = false;
+            }
         }
     }
 }
