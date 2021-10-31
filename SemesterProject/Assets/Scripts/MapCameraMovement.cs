@@ -7,6 +7,9 @@ public class MapCameraMovement : MonoBehaviour
     [SerializeField]
     public Camera cam;
 
+    [SerializeField]
+    private float zoomStep, minCamSize, maxCamSize; 
+
     private Vector3 dragOrigin;
 
     void Update()
@@ -26,5 +29,16 @@ public class MapCameraMovement : MonoBehaviour
 
             cam.transform.position += difference / 2;
         }
+    }
+
+    public void ZoomIn()
+    {
+        float newSize = cam.orthographicSize - zoomStep;
+        cam.orthographicSize = Mathf.Clamp(newSize, minCamSize, maxCamSize);
+
+    } public void ZoomOut()
+    {
+        float newSize = cam.orthographicSize + zoomStep;
+        cam.orthographicSize = Mathf.Clamp(newSize, minCamSize, maxCamSize);
     }
 }
