@@ -207,21 +207,6 @@ public class UpgradeShop : MonoBehaviour
         }
 
         // Repair Things
-        if (healthUP1purchased)
-        {
-            repairScript.repairCost = repairScript.mechanicUpgradeCost1;
-            priceTXT.text = "$100";
-        }
-        if (healthUP2purchased)
-        {
-            repairScript.repairCost = repairScript.mechanicUpgradeCost2;
-            priceTXT.text = "$200";
-        }
-        if (healthUP3purchased)
-        {
-            repairScript.repairCost = repairScript.mechanicUpgradeCost3;
-            priceTXT.text = "$300";
-        }
         
     }
 
@@ -372,8 +357,9 @@ public class UpgradeShop : MonoBehaviour
     {
         if (gameMan.money >= repairScript.baseMechanicCost)
         {
-            gameMan.money -= repairScript.repairCost;
+            gameMan.money = gameMan.money - repairScript.repairCost;
             playerMov.currentHealth = playerMov.maxHealth;
+            Debug.Log("Repaired!");
         }
         else
         {
@@ -381,10 +367,14 @@ public class UpgradeShop : MonoBehaviour
         }
         if (healthUP1purchased)
         {
+            repairScript.repairCost = repairScript.mechanicUpgradeCost1;
+            priceTXT.text = "$100";
+
             if (gameMan.money >= repairScript.mechanicUpgradeCost1)
             {
-                gameMan.money -= repairScript.repairCost;
+                gameMan.money = gameMan.money - repairScript.repairCost;
                 playerMov.currentHealth = playerMov.maxHealth;
+                Debug.Log("NEW REPAIR!");
             }
             else
             {
@@ -393,10 +383,14 @@ public class UpgradeShop : MonoBehaviour
         }
         if (healthUP2purchased)
         {
+            repairScript.repairCost = repairScript.mechanicUpgradeCost2;
+            priceTXT.text = "$200";
+
             if (gameMan.money >= repairScript.mechanicUpgradeCost2)
             {
-                gameMan.money -= repairScript.repairCost;
+                gameMan.money = gameMan.money - repairScript.repairCost;
                 playerMov.currentHealth = playerMov.maxHealth;
+                Debug.Log("NEW NEW REPAIR!");
             }
             else
             {
@@ -405,10 +399,14 @@ public class UpgradeShop : MonoBehaviour
         }
         if (healthUP3purchased)
         {
+            repairScript.repairCost = repairScript.mechanicUpgradeCost3;
+            priceTXT.text = "$300";
+
             if (gameMan.money >= repairScript.mechanicUpgradeCost3)
             {
-                gameMan.money -= repairScript.repairCost;
+                gameMan.money = gameMan.money - repairScript.repairCost;
                 playerMov.currentHealth = playerMov.maxHealth;
+                Debug.Log("NEW NEW NEW REPAIR!");
             }
             else
             {
