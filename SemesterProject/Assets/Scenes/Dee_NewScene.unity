@@ -3459,6 +3459,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &891350273 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7428859736349503698, guid: 444d6e87d9a60694283548253d13aa5c, type: 3}
+  m_PrefabInstance: {fileID: 1352666062}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919335b4430d61442b8e2d70a5979e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &894549309
 GameObject:
   m_ObjectHideFlags: 0
@@ -3603,6 +3614,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57cf29d1ae000c74592014a39cbe3f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovement: {fileID: 897349200}
+  Health_And_Fuel: {fileID: 298885603}
+  upgradeShop: {fileID: 891350273}
   spaceship_distance: 0
   spaceship: {fileID: 897349207}
   normalZoneEdge: {fileID: 1696905726}
