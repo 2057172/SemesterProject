@@ -38,7 +38,13 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
 
     void Update()
     {
-        
+
+        if (upgradeShop.fuelUP1purchased == true)
+        {
+            fuelCost = fuelUpgradeCost1;
+        }
+
+        Debug.Log(fuelCost);
     }
 
     public void payForFuel()
