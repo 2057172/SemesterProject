@@ -60,7 +60,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
             fuelAmountText.text = "$150";
         }
         
-        Debug.Log(fuelCost);
+        //Debug.Log(fuelCost);
     }
 
     public void payForFuel()
