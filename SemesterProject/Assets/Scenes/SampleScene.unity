@@ -938,11 +938,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7428859736349503699, guid: 444d6e87d9a60694283548253d13aa5c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.3
+      value: 56.5
       objectReference: {fileID: 0}
     - target: {fileID: 7428859736349503699, guid: 444d6e87d9a60694283548253d13aa5c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1
+      value: -44.5
       objectReference: {fileID: 0}
     - target: {fileID: 7428859736349503699, guid: 444d6e87d9a60694283548253d13aa5c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1016,7 +1016,7 @@ PrefabInstance:
       objectReference: {fileID: 2089348124}
     - target: {fileID: 8955749806418660230, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: payforMechanic
+      value: payForFuel
       objectReference: {fileID: 0}
     - target: {fileID: 8955749806552002629, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
       propertyPath: m_Name
@@ -3127,11 +3127,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3175237311639296129, guid: 44776f2380fe7c64d94aa3e3f11cc663, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.6
+      value: -37
       objectReference: {fileID: 0}
     - target: {fileID: 3175237311639296129, guid: 44776f2380fe7c64d94aa3e3f11cc663, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.4
+      value: 11.1
       objectReference: {fileID: 0}
     - target: {fileID: 3175237311639296129, guid: 44776f2380fe7c64d94aa3e3f11cc663, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3884,6 +3884,7 @@ RectTransform:
   - {fileID: 1895556445}
   - {fileID: 1585314530}
   - {fileID: 1049009330}
+  - {fileID: 1395265561}
   m_Father: {fileID: 639516958}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5083,7 +5084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 1334553574}
   Health_And_Fuel: {fileID: 769091601}
-  upgradeShop: {fileID: 0}
+  upgradeShop: {fileID: 715012193}
   spaceship_distance: 0
   spaceship: {fileID: 1334553578}
   normalZoneEdge: {fileID: 421952929}
@@ -5352,6 +5353,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1395265558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1395265561}
+  - component: {fileID: 1395265560}
+  - component: {fileID: 1395265559}
+  m_Layer: 5
+  m_Name: 'CountdownTXT '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1395265559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395265558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 33
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 800m
+--- !u!222 &1395265560
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395265558}
+  m_CullTransparentMesh: 1
+--- !u!224 &1395265561
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395265558}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5907, y: 1.5907, z: 1.5907}
+  m_Children: []
+  m_Father: {fileID: 995782994}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 798, y: 492}
+  m_SizeDelta: {x: 194.72, y: 38.42}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1397342140
 GameObject:
   m_ObjectHideFlags: 0
@@ -6077,6 +6157,7 @@ MonoBehaviour:
   gm: {fileID: 1191842861}
   OrderMoneyTXT: {fileID: 241386104}
   orderStatus: {fileID: 1585314531}
+  countdownTimerText: {fileID: 1395265559}
   countDown: 0
   ETA: 0
 --- !u!4 &1636116109

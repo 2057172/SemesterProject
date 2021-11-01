@@ -61,7 +61,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
             fuelAmountText.text = "$150";
         }
         
-        Debug.Log(repairCost);
+      
 
 
         if (upgradeShop.healthUP1purchased == true)
