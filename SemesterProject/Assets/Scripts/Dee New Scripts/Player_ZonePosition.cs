@@ -5,9 +5,9 @@ using UnityEngine;
 public class Player_ZonePosition : MonoBehaviour
 {
 
-    //public playerMovement playerMovement;
-    //public health_and_fuel Health_And_Fuel;
-    //public UpgradeShop upgradeShop;
+    public playerMovement playerMovement;
+    public health_and_fuel Health_And_Fuel;
+    public UpgradeShop upgradeShop;
 
     public float spaceship_distance;
     public Transform spaceship;
@@ -27,7 +27,7 @@ public class Player_ZonePosition : MonoBehaviour
 
     void Start()
     {
-
+       
 
     }
 
@@ -40,6 +40,8 @@ public class Player_ZonePosition : MonoBehaviour
         if (spaceship_distance <= normalZoneEdge.transform.position.y)
         {
             isInNormalZone = true;
+
+            
         }
         else
         {
@@ -52,6 +54,11 @@ public class Player_ZonePosition : MonoBehaviour
         if (spaceship_distance > normalZoneEdge.transform.position.y && spaceship_distance < heatZoneEdge.transform.position.y)
         {
             isInHeatZone = true;
+
+            if (isInHeatZone == true && upgradeShop.firePurchased == false)
+            {
+                InvokeRepeating("TakeHeatDamage", 5.0f, 5f);
+            }
         }
         else
         {
@@ -90,6 +97,17 @@ public class Player_ZonePosition : MonoBehaviour
     }
 
 
+
+
+
+
+
+
+    public void TakeHeatDamage()
+    {
+        playerMovement.currentHealth -= 2;
+        Health_And_Fuel.setCurrentHealth(playerMovement.currentHealth);
+    }
 
 
 
