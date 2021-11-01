@@ -27,20 +27,7 @@ public class Player_ZonePosition : MonoBehaviour
 
     void Start()
     {
-        //INSIDE HEAT ZONE
-        if (spaceship_distance > normalZoneEdge.transform.position.y && spaceship_distance < heatZoneEdge.transform.position.y)
-        {
-            isInHeatZone = true;
-
-            if (isInHeatZone == true && upgradeShop.firePurchased == false)
-            {
-                InvokeRepeating("TakeHeatDamage", 5.0f, 5f);
-            }
-        }
-        else
-        {
-            isInHeatZone = false;
-        }
+       
 
     }
 
@@ -63,7 +50,20 @@ public class Player_ZonePosition : MonoBehaviour
         }
 
 
-       
+        //INSIDE HEAT ZONE
+        if (spaceship_distance > normalZoneEdge.transform.position.y && spaceship_distance < heatZoneEdge.transform.position.y)
+        {
+            isInHeatZone = true;
+
+            if (isInHeatZone == true && upgradeShop.firePurchased == false)
+            {
+                InvokeRepeating("TakeHeatDamage", 5.0f, 5f);
+            }
+        }
+        else
+        {
+            isInHeatZone = false;
+        }
 
         //INSIDE ICE ZONE
         if (spaceship_distance > heatZoneEdge.transform.position.y && spaceship_distance < iceZoneEdge.transform.position.y)
