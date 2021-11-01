@@ -160,7 +160,8 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
     {
         //BASE UPGRADE
         //ENOUGH MONEY
-        if (gameManager.money >= baseMechanicCost)     {
+        if (gameManager.money >= baseMechanicCost)     
+        {
             gameManager.money = gameManager.money - repairCost;
             gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
             repairAmountText.text = "$20";
