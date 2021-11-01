@@ -62,9 +62,9 @@ public class GameManager : MonoBehaviour
                 takePizzaOrder.gameObject.SetActive(true);
                 takeIceCreamOrder.gameObject.SetActive(true);
 
-                takeBurgerAndFriedOrder.GetComponentInChildren<Text>().text = "Burger and Fries: $" + Mathf.RoundToInt(20 + (Vector3.Distance(pickUp.position, om.BAndFriesDestination.position) * 0.8f));
-                takePizzaOrder.GetComponentInChildren<Text>().text = "Pizza: $" + Mathf.RoundToInt(20 + (Vector3.Distance(pickUp.position, om.PizzaDestination.position) * 0.8f));
-                takeIceCreamOrder.GetComponentInChildren<Text>().text = "IceCream: $" + Mathf.RoundToInt(20 + (Vector3.Distance(pickUp.position, om.IceCreamDestination.position) * 0.8f));
+                //takeBurgerAndFriedOrder.GetComponentInChildren<Text>().text = "Burger and Fries: $" + Mathf.RoundToInt(20 + (Vector3.Distance(pickUp.position, om.BAndFriesDestination.position) * 0.8f));
+                //takePizzaOrder.GetComponentInChildren<Text>().text = "Pizza: $" + Mathf.RoundToInt(20 + (Vector3.Distance(pickUp.position, om.PizzaDestination.position) * 0.8f));
+                //takeIceCreamOrder.GetComponentInChildren<Text>().text = "IceCream: $" + Mathf.RoundToInt(20 + (Vector3.Distance(pickUp.position, om.IceCreamDestination.position) * 0.8f));
                 phoneUp = true;
             }
             else if (phoneUp == true)

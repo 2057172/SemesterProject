@@ -6,6 +6,8 @@ public class menu_Items : MonoBehaviour
 
 {
 
+    public GameManager gm;
+
     public string[] Foods = new string[]
     {
         "Single Cheeseburger",
@@ -115,10 +117,38 @@ public class menu_Items : MonoBehaviour
         "Weed Planet",
     };
 
+    public string pickfood1, pickfood2, pickfood3;
+
+    public void choosingRandomFoods()
+    {
+        System.Random random = new System.Random();
+
+        int useFoods1 = random.Next(Foods.Length);
+        pickfood1 = Foods[useFoods1];
+
+
+        int useFoods2 = random.Next(Foods.Length);
+        pickfood2 = Foods[useFoods2];
+
+
+        int useFoods3 = random.Next(Foods.Length);
+        pickfood3 = Foods[useFoods3];
+
+
+
+        print(pickfood1);
+        print(pickfood2);
+        print(pickfood3);
+
+        Debug.Log(useFoods1.ToString() + useFoods2.ToString() + useFoods3.ToString());
+
+    }
     public void Start()
     {
         choosingRandomPlanet();
         choosingRandomFoods();
+
+        gm.takeBurgerAndFriedOrder.GetComponentInChildren<Text>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
     }
 
     public void Update()
@@ -139,30 +169,7 @@ public class menu_Items : MonoBehaviour
 
     }
 
-    public void choosingRandomFoods()
-    {
-        System.Random random = new System.Random();
-        
-        int useFoods1 = random.Next(Foods.Length);
-        string pickfood1 = Foods[useFoods1];
-
-        
-        int useFoods2 = random.Next(Foods.Length);
-        string pickfood2 = Foods[useFoods2];
-
-        
-        int useFoods3 = random.Next(Foods.Length);
-        string pickfood3 = Foods[useFoods3];
-
-     
-
-        print(pickfood1);
-        print(pickfood2);
-        print(pickfood3);
-
-        Debug.Log(useFoods1.ToString() + useFoods2.ToString() + useFoods3.ToString());
-             
-    }
+   
 
 
 }

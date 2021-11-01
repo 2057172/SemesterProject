@@ -4412,6 +4412,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3942846579350475892, guid: c5145489d6755d04e839bb7ba6df11bc, type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2014712557}
+    - target: {fileID: 3942846579350475892, guid: c5145489d6755d04e839bb7ba6df11bc, type: 3}
       propertyPath: ribs
       value: 
       objectReference: {fileID: 848189300}
