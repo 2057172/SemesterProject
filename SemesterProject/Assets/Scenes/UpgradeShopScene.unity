@@ -1135,7 +1135,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.1500244, y: 0}
+  m_AnchoredPosition: {x: 1.1503906, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &624073366
@@ -1936,6 +1936,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &965975748 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4908325741787254227, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+  m_PrefabInstance: {fileID: 7160320243413395060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1011495973
 GameObject:
   m_ObjectHideFlags: 0
@@ -2442,6 +2453,7 @@ MonoBehaviour:
   currentFuel: 0
   totalVelocity: 0
   fuel: 2
+  consumption: 0.01
   holdTime: 2
   key: w
 --- !u!61 &1189374813
@@ -2637,6 +2649,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210924126}
   m_CullTransparentMesh: 1
+--- !u!1 &1212629690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1212629692}
+  - component: {fileID: 1212629691}
+  m_Layer: 0
+  m_Name: RepairManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1212629691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212629690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b8682083a403d43a0362ae0be891a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 1393748014}
+  Health_And_Fuel: {fileID: 687837185}
+  PlayerMovement: {fileID: 1189374812}
+  upgradeShop: {fileID: 835881709}
+  fuelCost: 0
+  fuelText: {fileID: 0}
+  fuelAmountText: {fileID: 0}
+  repairCost: 0
+  repairText: {fileID: 0}
+  repairAmountText: {fileID: 0}
+  baseFuelCost: 10
+  fuelUpgradeCost1: 50
+  fuelUpgradeCost2: 100
+  fuelUpgradeCost3: 150
+  baseMechanicCost: 50
+  mechanicUpgradeCost1: 100
+  mechanicUpgradeCost2: 200
+  mechanicUpgradeCost3: 300
+--- !u!4 &1212629692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212629690}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1229477258
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,16 +3053,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa7d29a4fec07e4489f58bde53c8cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 50
+  money: 1000
   moneyTXT: {fileID: 317480490}
   phone: {fileID: 930405340}
   phoneUp: 0
   pointer: {fileID: 624073366}
   takeBurgerAndFriedOrder: {fileID: 514228251}
+  takePizzaOrder: {fileID: 0}
+  takeIceCreamOrder: {fileID: 0}
   om: {fileID: 2028981444}
   pickUp: {fileID: 1733380506}
   Player: {fileID: 0}
   burgerAndFriesDropOff: {fileID: 1695941296}
+  Earth: {fileID: 0}
+  ForestPlanet: {fileID: 0}
   deliveryDestination: {x: 0, y: 0, z: 0}
   Map: {fileID: 0}
   mapOpen: 0
@@ -3497,6 +3574,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2330509510079814169, guid: 8a2694243b614a140bd079ce91168173, type: 3}
   m_PrefabInstance: {fileID: 1164124461}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1676846333 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5812910424852709094, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+  m_PrefabInstance: {fileID: 7160320243413395060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1695941295
 GameObject:
   m_ObjectHideFlags: 0
@@ -4156,13 +4244,17 @@ MonoBehaviour:
   BurgerAndFriesB: 0
   IceCreamB: 0
   SandwichB: 0
+  pizzaB: 0
   pickUpZone: {fileID: 1733380506}
   BAndFriesDestination: {fileID: 1695941296}
+  PizzaDestination: {fileID: 0}
+  IceCreamDestination: {fileID: 0}
   BurgerAndFriedDropoff: {fileID: 1695941296}
   Menu: {fileID: 161281766}
   totalCommision: 0
   gm: {fileID: 1393748014}
   OrderMoneyTXT: {fileID: 1229477259}
+  orderStatus: {fileID: 0}
   countDown: 0
   ETA: 0
 --- !u!4 &2028981445
@@ -4287,6 +4379,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1714572248}
     m_Modifications:
+    - target: {fileID: 5812910424852709094, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 835881709}
+    - target: {fileID: 5812910424852709094, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RepairShip
+      objectReference: {fileID: 0}
     - target: {fileID: 7160320243302757724, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -4522,6 +4622,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1393748014}
     - target: {fileID: 7428859736349503698, guid: 444d6e87d9a60694283548253d13aa5c, type: 3}
+      propertyPath: priceTXT
+      value: 
+      objectReference: {fileID: 965975748}
+    - target: {fileID: 7428859736349503698, guid: 444d6e87d9a60694283548253d13aa5c, type: 3}
       propertyPath: iceButton
       value: 
       objectReference: {fileID: 1843862865}
@@ -4545,6 +4649,14 @@ PrefabInstance:
       propertyPath: repairPanel
       value: 
       objectReference: {fileID: 2137608848}
+    - target: {fileID: 7428859736349503698, guid: 444d6e87d9a60694283548253d13aa5c, type: 3}
+      propertyPath: repairButton
+      value: 
+      objectReference: {fileID: 1676846333}
+    - target: {fileID: 7428859736349503698, guid: 444d6e87d9a60694283548253d13aa5c, type: 3}
+      propertyPath: repairScript
+      value: 
+      objectReference: {fileID: 1212629691}
     - target: {fileID: 7428859736349503698, guid: 444d6e87d9a60694283548253d13aa5c, type: 3}
       propertyPath: fuelUp1Button
       value: 

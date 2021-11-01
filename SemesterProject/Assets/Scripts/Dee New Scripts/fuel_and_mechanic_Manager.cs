@@ -33,32 +33,55 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
     {
         fuelCost = 10;
         repairCost = 20;
-        
+
+        fuelAmountText.text = "$10";
+        fuelCost = baseFuelCost;
+
     }
 
     void Update()
     {
+
+        if (upgradeShop.fuelUP1purchased == true)
+        {
+            fuelCost = fuelUpgradeCost1;
+            fuelAmountText.text = "$50";
+        }
+
+        if (upgradeShop.fuelUP2purchased == true)
+        {
+            fuelCost = fuelUpgradeCost2;
+            fuelAmountText.text = "$100";
+        }
+
+        if (upgradeShop.fuelUP3purchased == true)
+        {
+            fuelCost = fuelUpgradeCost3;
+            fuelAmountText.text = "$150";
+        }
         
+        Debug.Log(fuelCost);
     }
 
     public void payForFuel()
     {
         //BASE FUEL STATS
         //ENOUGH MONEY
-        if (gameManager.money >= baseFuelCost)
+        if (fuelCost == baseFuelCost)
         {
-            gameManager.money = gameManager.money - fuelCost;
-            gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
+            if (gameManager.money >= fuelCost)
+            {
+                gameManager.money = gameManager.money - fuelCost;
+                gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
 
-            //AMOUNT FILLED UP 
-            PlayerMovement.currentFuel = 100;
-            Health_And_Fuel.setCurrentFuel(PlayerMovement.currentFuel);
-
-            fuelAmountText.text = "$10";
+                //AMOUNT FILLED UP 
+                PlayerMovement.currentFuel = 100;
+                Health_And_Fuel.setCurrentFuel(PlayerMovement.currentFuel);
+            }
         }
 
         //NOT ENOUGH MONEY
-        if(gameManager.money < baseFuelCost)
+        if(gameManager.money < fuelCost)
         {
             
             gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
@@ -68,14 +91,9 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
 
         //UPGRADE 1 FUEL STATS 
         //ENOUGH MONEY
-        if (upgradeShop.fuelUP1purchased == true)
+        if (fuelCost == fuelUpgradeCost1)
         {
-            Debug.Log("Yee1");
-            fuelCost = fuelUpgradeCost1;
-            fuelAmountText.text = "$50";
-
-            //ENOUGH MONEY
-            if (gameManager.money >= fuelUpgradeCost1)
+            if (gameManager.money >= fuelCost)
             {
                 gameManager.money = gameManager.money - fuelCost;
                 gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
@@ -84,28 +102,23 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
                 PlayerMovement.currentFuel = 150;
                 Health_And_Fuel.setCurrentFuel(PlayerMovement.currentFuel);
             }
-
-            //NOT ENOUGH MONEY
-            if (gameManager.money < fuelUpgradeCost1)
-            {
-
-                gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
-                fuelText.text = "You don't have enough money!";
-            }
-
         }
+
+        //NOT ENOUGH MONEY
+        if (gameManager.money < fuelCost)
+        {
+
+            gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
+            fuelText.text = "You don't have enough money!";
+        }
+
 
 
         //UPGRADE 2 FUEL STATS 
         //ENOUGH MONEY
-        if (upgradeShop.fuelUP2purchased == true)
+        if (fuelCost == fuelUpgradeCost2)
         {
-            Debug.Log("Yee2");
-            fuelCost = fuelUpgradeCost2;
-            fuelAmountText.text = "$100";
-
-            //ENOUGH MONEY
-            if (gameManager.money >= fuelUpgradeCost2)
+            if (gameManager.money >= fuelCost)
             {
                 gameManager.money = gameManager.money - fuelCost;
                 gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
@@ -114,28 +127,22 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
                 PlayerMovement.currentFuel = 200;
                 Health_And_Fuel.setCurrentFuel(PlayerMovement.currentFuel);
             }
+        }
 
-            //NOT ENOUGH MONEY
-            if (gameManager.money < fuelUpgradeCost2)
-            {
+        //NOT ENOUGH MONEY
+        if (gameManager.money < fuelCost)
+        {
 
-                gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
-                fuelText.text = "You don't have enough money!";
-            }
-
+            gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
+            fuelText.text = "You don't have enough money!";
         }
 
 
         //UPGRADE 3 FUEL STATS 
         //ENOUGH MONEY
-        if (upgradeShop.fuelUP3purchased == true)
+        if (fuelCost == fuelUpgradeCost3)
         {
-            Debug.Log("Yee3");
-            fuelCost = fuelUpgradeCost3;
-            fuelAmountText.text = "$150";
-
-            //ENOUGH MONEY
-            if (gameManager.money >= fuelUpgradeCost3)
+            if (gameManager.money >= fuelCost)
             {
                 gameManager.money = gameManager.money - fuelCost;
                 gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
@@ -144,23 +151,34 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
                 PlayerMovement.currentFuel = 250;
                 Health_And_Fuel.setCurrentFuel(PlayerMovement.currentFuel);
             }
-
-            //NOT ENOUGH MONEY
-            if (gameManager.money < fuelUpgradeCost3)
-            {
-
-                gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
-                fuelText.text = "You don't have enough money!";
-            }
-
         }
+
+        //NOT ENOUGH MONEY
+        if (gameManager.money < fuelCost)
+        {
+
+            gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
+            fuelText.text = "You don't have enough money!";
+        }
+
+
+
+
+
+
+
+
+
+
+
     }
 
     public void payforMechanic()
     {
         //BASE UPGRADE
         //ENOUGH MONEY
-        if (gameManager.money >= baseMechanicCost)     {
+        if (gameManager.money >= baseMechanicCost)     
+        {
             gameManager.money = gameManager.money - repairCost;
             gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
             repairAmountText.text = "$20";
