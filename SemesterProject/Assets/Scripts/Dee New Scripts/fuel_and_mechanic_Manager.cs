@@ -36,6 +36,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
 
         fuelAmountText.text = "$10";
         fuelCost = baseFuelCost;
+        repairCost = baseMechanicCost;
 
     }
 
@@ -60,7 +61,26 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
             fuelAmountText.text = "$150";
         }
         
-        Debug.Log(fuelCost);
+      
+
+
+        if (upgradeShop.healthUP1purchased == true)
+        {
+            repairCost = mechanicUpgradeCost1;
+            repairAmountText.text = "$100";
+        }
+
+        if (upgradeShop.healthUP2purchased == true)
+        {
+            repairCost = mechanicUpgradeCost2;
+            repairAmountText.text = "$200";
+        }
+
+        if (upgradeShop.healthUP3purchased == true)
+        {
+            repairCost = mechanicUpgradeCost3;
+            repairAmountText.text = "$300";
+        }
     }
 
     public void payForFuel()
@@ -75,7 +95,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
                 gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
 
                 //AMOUNT FILLED UP 
-                PlayerMovement.currentFuel = 100;
+                PlayerMovement.currentFuel = upgradeShop.baseFuel;
                 Health_And_Fuel.setCurrentFuel(PlayerMovement.currentFuel);
             }
         }
@@ -99,7 +119,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
                 gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
 
                 //AMOUNT FILLED UP 
-                PlayerMovement.currentFuel = 150;
+                PlayerMovement.currentFuel = upgradeShop.maxFuelUpgrade1;
                 Health_And_Fuel.setCurrentFuel(PlayerMovement.currentFuel);
             }
         }
@@ -124,7 +144,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
                 gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
 
                 //AMOUNT FILLED UP 
-                PlayerMovement.currentFuel = 200;
+                PlayerMovement.currentFuel = upgradeShop.maxFuelUpgrade2;
                 Health_And_Fuel.setCurrentFuel(PlayerMovement.currentFuel);
             }
         }
@@ -148,7 +168,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
                 gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
 
                 //AMOUNT FILLED UP 
-                PlayerMovement.currentFuel = 250;
+                PlayerMovement.currentFuel = upgradeShop.maxFuelUpgrade1;
                 Health_And_Fuel.setCurrentFuel(PlayerMovement.currentFuel);
             }
         }
@@ -173,24 +193,32 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
 
     }
 
+    public void oof()
+    {
+        Debug.Log("DHDH");
+    }
+
     public void payforMechanic()
     {
         //BASE UPGRADE
         //ENOUGH MONEY
-        if (gameManager.money >= baseMechanicCost)     
+        if (repairCost == baseMechanicCost)
         {
-            gameManager.money = gameManager.money - repairCost;
-            gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
-            repairAmountText.text = "$20";
+            if (gameManager.money >= repairCost)
+            {
+                gameManager.money = gameManager.money - repairCost;
+                gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
 
-            //AMOUNT FILLED UP 
-            PlayerMovement.currentHealth = 100;
-            Health_And_Fuel.setCurrentHealth(PlayerMovement.currentHealth);
+                //AMOUNT FILLED UP 
+                PlayerMovement.currentHealth = upgradeShop.baseHealth;
+                Health_And_Fuel.setCurrentHealth(PlayerMovement.currentHealth);
+            }
         }
 
         //NOT ENOUGH MONEY
-        if (gameManager.money < baseMechanicCost)
+        if (gameManager.money < repairCost)
         {
+
             gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
             repairText.text = "You don't have enough money!";
         }
@@ -198,98 +226,78 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
 
 
 
-        //UPGRADE 1 REPAIR STATS 
+        //UPGRADE 1
         //ENOUGH MONEY
-        if (upgradeShop.healthUP1purchased == true)
+        if (repairCost == mechanicUpgradeCost1)
         {
-            Debug.Log("Nee1");
-            repairCost = mechanicUpgradeCost1;
-            repairAmountText.text = "$100";
-
-            //ENOUGH MONEY
-            if (gameManager.money >= mechanicUpgradeCost1)
+            if (gameManager.money >= repairCost)
             {
-                gameManager.money = gameManager.money - fuelCost;
+                gameManager.money = gameManager.money - repairCost;
                 gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
 
                 //AMOUNT FILLED UP 
-                PlayerMovement.currentHealth = 150;
+                PlayerMovement.currentHealth = upgradeShop.maxHealthUpgrade1;
                 Health_And_Fuel.setCurrentHealth(PlayerMovement.currentHealth);
             }
-
-            //NOT ENOUGH MONEY
-            if (gameManager.money < mechanicUpgradeCost1)
-            {
-
-                gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
-                repairText.text = "You don't have enough money!";
-            }
-
-
-
-            //UPGRADE 2 REPAIR STATS 
-            //ENOUGH MONEY
-            if (upgradeShop.healthUP2purchased == true)
-            {
-                Debug.Log("Nee2");
-                repairCost = 200;
-                repairAmountText.text = "$200";
-
-                //ENOUGH MONEY
-                if (gameManager.money >= mechanicUpgradeCost2)
-                {
-                    gameManager.money = gameManager.money - fuelCost;
-                    gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
-
-                    //AMOUNT FILLED UP 
-                    PlayerMovement.currentHealth = 200;
-                    Health_And_Fuel.setCurrentHealth(PlayerMovement.currentHealth);
-                }
-
-                //NOT ENOUGH MONEY
-                if (gameManager.money < mechanicUpgradeCost2)
-                {
-
-                    gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
-                    repairText.text = "You don't have enough money!";
-                }
-
-            }
-
-
-
-
-
-            //UPGRADE 3 REPAIR STATS 
-            //ENOUGH MONEY
-            if (upgradeShop.healthUP3purchased == true)
-            {
-                Debug.Log("Nee3");
-                repairCost = mechanicUpgradeCost3;
-                repairAmountText.text = "$300";
-
-                //ENOUGH MONEY
-                if (gameManager.money >= mechanicUpgradeCost3)
-                {
-                    gameManager.money = gameManager.money - fuelCost;
-                    gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
-
-                    //AMOUNT FILLED UP 
-                    PlayerMovement.currentHealth = 250;
-                    Health_And_Fuel.setCurrentHealth(PlayerMovement.currentHealth);
-                }
-
-                //NOT ENOUGH MONEY
-                if (gameManager.money < mechanicUpgradeCost3)
-                {
-
-                    gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
-                    repairText.text = "You don't have enough money!";
-                }
-
-            }
-
         }
+
+        //NOT ENOUGH MONEY
+        if (gameManager.money < repairCost)
+        {
+
+            gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
+            repairText.text = "You don't have enough money!";
+        }
+
+
+        //UPGRADE 2
+        //ENOUGH MONEY
+        if (repairCost == mechanicUpgradeCost2)
+        {
+            if (gameManager.money >= repairCost)
+            {
+                gameManager.money = gameManager.money - repairCost;
+                gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
+
+                //AMOUNT FILLED UP 
+                PlayerMovement.currentHealth = upgradeShop.maxHealthUpgrade2;
+                Health_And_Fuel.setCurrentHealth(PlayerMovement.currentHealth);
+            }
+        }
+
+        //NOT ENOUGH MONEY
+        if (gameManager.money < repairCost)
+        {
+
+            gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
+            repairText.text = "You don't have enough money!";
+        }
+
+
+        //UPGRADE 3
+        //ENOUGH MONEY
+        if (repairCost == mechanicUpgradeCost3)
+        {
+            if (gameManager.money >= repairCost)
+            {
+                gameManager.money = gameManager.money - repairCost;
+                gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
+
+                //AMOUNT FILLED UP 
+                PlayerMovement.currentHealth = upgradeShop.maxHealthUpgrade3;
+                Health_And_Fuel.setCurrentHealth(PlayerMovement.currentHealth);
+            }
+        }
+
+        //NOT ENOUGH MONEY
+        if (gameManager.money < repairCost)
+        {
+
+            gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
+            repairText.text = "You don't have enough money!";
+        }
+
+
 
     }
 }

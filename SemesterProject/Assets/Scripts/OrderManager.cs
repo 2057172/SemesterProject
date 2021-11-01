@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class OrderManager : MonoBehaviour
 {
     public WindowQuestPointer pointer;
@@ -20,7 +21,7 @@ public class OrderManager : MonoBehaviour
     public float totalCommision;
 
     public GameManager gm;
-    public Text OrderMoneyTXT, orderStatus;
+    public Text OrderMoneyTXT, orderStatus, countdownTimerText;
 
     public float countDown;
     public float ETA;
@@ -42,8 +43,9 @@ public class OrderManager : MonoBehaviour
     {
         if(currentlyOnOrder == true)
         {
-            countDown =  ETA += 1 * Time.deltaTime;
-            Debug.Log(Mathf.Round(countDown));
+            countDown =  ETA -= 1 * Time.deltaTime;
+            Debug.Log(Mathf.RoundToInt(countDown));
+            countdownTimerText.text = countDown.ToString();
         } 
     }
 
