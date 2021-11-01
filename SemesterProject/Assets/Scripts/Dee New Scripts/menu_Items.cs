@@ -308,6 +308,8 @@ public class menu_Items : MonoBehaviour
         RefreshOrders();
 
         gm.takeBurgerAndFriedOrder.GetComponentInChildren<Text>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
+        gm.takeIceCreamOrder.GetComponentInChildren<Text>().text = pickfood4 + "," + pickfood5 + "," + pickfood6;
+
     }
 
     public void Update()
@@ -334,7 +336,7 @@ public class menu_Items : MonoBehaviour
         {
             Debug.Log(count);
 
-                if (count == 0)
+            if (count == 0)
             {
                 System.Random random = new System.Random();
                 int usePlanets = random.Next(Planets.Length);
@@ -347,19 +349,21 @@ public class menu_Items : MonoBehaviour
 
                 int useFoods1 = random1.Next(Foods.Length);
                 pickfood1 = Foods[useFoods1];
+                Debug.Log("This is" + useFoods1);
 
 
                 int useFoods2 = random1.Next(Foods.Length);
                 pickfood2 = Foods[useFoods2];
-
+                Debug.Log("This is" + useFoods2);
 
                 int useFoods3 = random1.Next(Foods.Length);
                 pickfood3 = Foods[useFoods3];
+                Debug.Log("This is" + useFoods3);
 
                 OrderButtonOne.gameObject.GetComponentInChildren<Text>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3 + ". To " + pickplanet;
 
             } 
-             if(count == 1)
+            if(count == 1)
             {
                 System.Random random3 = new System.Random();
                 int usePlanets = random3.Next(Planets.Length);
@@ -369,21 +373,28 @@ public class menu_Items : MonoBehaviour
                 pickplanet = pickPlanet;
 
                 System.Random random4 = new System.Random();
+                int random4New = Random.Range(0, Foods.Length); 
 
-                int useFoods4 = random4.Next(Foods2.Length);
-                pickfood4 = Foods2[useFoods4];
+                int useFoods4 = random4.Next(Foods.Length);
+                pickfood4 = Foods[useFoods4];
+                Debug.Log("This is" + random4New);
+                Debug.Log("Order 2.1 is: " + Foods[useFoods4]);
 
 
-                int useFoods5 = random4.Next(Foods2.Length);
-                pickfood5 = Foods2[useFoods5];
+                int useFoods5 = random4.Next(Foods.Length);
+                pickfood5 = Foods[useFoods5];
+                Debug.Log("This is" + useFoods5);
+                Debug.Log("Order 2.2 is: " + Foods[useFoods5]);
 
 
-                int useFoods6 = random4.Next(Foods2.Length);
-                pickfood6 = Foods2[useFoods6];
+                int useFoods6 = random4.Next(Foods.Length);
+                pickfood6 = Foods[useFoods6];
+                Debug.Log("This is" + useFoods6);
+                Debug.Log("Order 2.3 is: " + Foods[useFoods6]);
 
                 OrderButtonTwo.gameObject.GetComponentInChildren<Text>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6 + ". To " + pickplanet;
             }
-             if (count == 2)
+            if (count == 2)
             {
                 System.Random random5 = new System.Random();
                 int usePlanets = random5.Next(Planets.Length);
