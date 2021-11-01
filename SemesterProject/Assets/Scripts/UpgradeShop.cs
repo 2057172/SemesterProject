@@ -45,9 +45,15 @@ public class UpgradeShop : MonoBehaviour
     public Button fuelUp2Button;
     public Button fuelUp3Button;
 
+    public int baseFuel = 100;
+    public int maxFuelUpgrade1 =150;
+    public int maxFuelUpgrade2 =200;
+    public int maxFuelUpgrade3 =250;
+
     /// <summary>
     /// All of the variables for the health upgrades
     /// </summary>
+
 
     public int HealthUp1;
     public int HealthUp2;
@@ -60,6 +66,11 @@ public class UpgradeShop : MonoBehaviour
     public Button healthUp1Button;
     public Button healthUp2Button;
     public Button healthUp3Button;
+
+    public int baseHealth = 100;
+    public int maxHealthUpgrade1 = 150;
+    public int maxHealthUpgrade2 = 200;
+    public int maxHealthUpgrade3 = 250;
 
     /// <summary>
     /// All the variables to repair ship
@@ -273,7 +284,7 @@ public class UpgradeShop : MonoBehaviour
         if (gameMan.money >= FuelUp1)
         {
             gameMan.money -= FuelUp1;
-            playerMov.maxFuel = 150;
+            playerMov.maxFuel = maxFuelUpgrade1;
             fuelUP1purchased = true;
         }
         else
@@ -288,7 +299,7 @@ public class UpgradeShop : MonoBehaviour
         if (gameMan.money >= FuelUp2 && fuelUP1purchased)
         {
             gameMan.money -= FuelUp2;
-            playerMov.maxFuel = 200;
+            playerMov.maxFuel = maxFuelUpgrade2;
             fuelUP2purchased = true;
         }
         else
@@ -302,7 +313,7 @@ public class UpgradeShop : MonoBehaviour
         if (gameMan.money >= FuelUp3 && fuelUP2purchased)
         {
             gameMan.money -= FuelUp3;
-            playerMov.maxFuel = 250;
+            playerMov.maxFuel = maxFuelUpgrade3;
             fuelUP3purchased = true;
         }
         else
@@ -316,7 +327,7 @@ public class UpgradeShop : MonoBehaviour
         if (gameMan.money >= HealthUp1)
         {
             gameMan.money -= HealthUp1;
-            playerMov.maxHealth = 150;
+            playerMov.maxHealth = maxHealthUpgrade1;
             healthUP1purchased = true;
         }
         else
@@ -330,7 +341,7 @@ public class UpgradeShop : MonoBehaviour
         if (gameMan.money >= HealthUp2 && healthUP1purchased)
         {
             gameMan.money -= HealthUp2;
-            playerMov.maxHealth = 200;
+            playerMov.maxHealth = maxHealthUpgrade2;
             healthUP2purchased = true;
         }
         else
@@ -344,7 +355,7 @@ public class UpgradeShop : MonoBehaviour
         if (gameMan.money >= HealthUp3 && healthUP2purchased)
         {
             gameMan.money -= HealthUp3;
-            playerMov.maxHealth = 250;
+            playerMov.maxHealth = maxHealthUpgrade3;
             healthUP3purchased = true;
         }
         else
