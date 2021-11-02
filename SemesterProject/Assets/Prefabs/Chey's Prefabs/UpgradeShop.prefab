@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7428859736349503700}
   - component: {fileID: 7428859736349503701}
   - component: {fileID: 7428859736349503702}
-  - component: {fileID: 7428859736349503698}
+  - component: {fileID: 4161762685516645045}
   m_Layer: 0
   m_Name: UpgradeShop
   m_TagString: Untagged
@@ -138,7 +138,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.43, y: 1.58}
   m_EdgeRadius: 0
---- !u!114 &7428859736349503698
+--- !u!114 &4161762685516645045
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,42 +147,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7428859736349503703}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 919335b4430d61442b8e2d70a5979e21, type: 3}
+  m_Script: {fileID: 11500000, guid: 460faf472460f6c469be6333df9987f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  repairPanel: {fileID: 0}
+  repairPanel: {fileID: 7160320245211133156, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
   isAtShop: 0
   shopOP: 0
   instruction: {fileID: 0}
-  gameMan: {fileID: 0}
-  firePro: 5
-  icePro: 7
-  radPro: 10
-  firePurchased: 0
-  icePurchased: 0
-  radPurchased: 0
-  heatButton: {fileID: 0}
-  iceButton: {fileID: 0}
-  radButton: {fileID: 0}
-  playerMov: {fileID: 0}
-  FuelUp1: 12
-  FuelUp2: 16
-  FuelUp3: 20
-  fuelUP1purchased: 0
-  fuelUP2purchased: 0
-  fuelUP3purchased: 0
-  fuelUp1Button: {fileID: 0}
-  fuelUp2Button: {fileID: 0}
-  fuelUp3Button: {fileID: 0}
-  HealthUp1: 21
-  HealthUp2: 25
-  HealthUp3: 29
-  healthUP1purchased: 0
-  healthUP2purchased: 0
-  healthUP3purchased: 0
-  healthUp1Button: {fileID: 0}
-  healthUp2Button: {fileID: 0}
-  healthUp3Button: {fileID: 0}
 --- !u!1 &7428859736735586055
 GameObject:
   m_ObjectHideFlags: 0
