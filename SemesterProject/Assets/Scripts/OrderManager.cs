@@ -43,9 +43,14 @@ public class OrderManager : MonoBehaviour
     {
         if(currentlyOnOrder == true)
         {
+
+            countDown =  ETA += 1 * Time.deltaTime;
+           // Debug.Log(Mathf.Round(countDown));
+
             countDown =  ETA -= 1 * Time.deltaTime;
             Debug.Log(Mathf.RoundToInt(countDown));
             countdownTimerText.text = countDown.ToString();
+ 
         } 
     }
 

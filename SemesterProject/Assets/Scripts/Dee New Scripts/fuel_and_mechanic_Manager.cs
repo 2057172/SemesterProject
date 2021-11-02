@@ -61,6 +61,9 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
             fuelAmountText.text = "$150";
         }
         
+
+        //Debug.Log(fuelCost);
+
       
 
 
@@ -81,6 +84,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
             repairCost = mechanicUpgradeCost3;
             repairAmountText.text = "$300";
         }
+ 
     }
 
     public void payForFuel()
