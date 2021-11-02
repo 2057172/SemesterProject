@@ -26619,7 +26619,7 @@ PrefabInstance:
     - target: {fileID: 4757995201937311027, guid: 10abe5e28c6497f41ba8c0a97aca4424, type: 3}
       propertyPath: mechanicStation_UI
       value: 
-      objectReference: {fileID: 1644347454}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10abe5e28c6497f41ba8c0a97aca4424, type: 3}
 --- !u!1001 &721768224
@@ -36996,7 +36996,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1033887800}
   m_Layer: 0
-  m_Name: UpgradeShops
+  m_Name: UpgradeShops(POSITION)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44675,7 +44675,7 @@ PrefabInstance:
     - target: {fileID: 3175237311639296134, guid: 44776f2380fe7c64d94aa3e3f11cc663, type: 3}
       propertyPath: mechanicStation_UI
       value: 
-      objectReference: {fileID: 1644347454}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44776f2380fe7c64d94aa3e3f11cc663, type: 3}
 --- !u!4 &1246138328 stripped
@@ -51241,6 +51241,7 @@ MonoBehaviour:
   gm: {fileID: 404758208}
   OrderMoneyTXT: {fileID: 1809117492}
   orderStatus: {fileID: 270495328}
+  countdownTimerText: {fileID: 0}
   countDown: 0
   ETA: 0
 --- !u!4 &1439183880
@@ -51837,7 +51838,7 @@ PrefabInstance:
     - target: {fileID: 3175237311639296134, guid: 44776f2380fe7c64d94aa3e3f11cc663, type: 3}
       propertyPath: mechanicStation_UI
       value: 
-      objectReference: {fileID: 1644347454}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44776f2380fe7c64d94aa3e3f11cc663, type: 3}
 --- !u!4 &1451997865 stripped
@@ -54524,7 +54525,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1510367801}
   m_Layer: 0
-  m_Name: FuelStations
+  m_Name: FuelStations(POS)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60781,28 +60782,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8955749806552002633, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
   m_PrefabInstance: {fileID: 1644347448}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1644347450 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8955749805258013962, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
-  m_PrefabInstance: {fileID: 1644347448}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1644347451 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8955749805598687615, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
-  m_PrefabInstance: {fileID: 1644347448}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1644347452 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8955749806167075410, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
@@ -60825,11 +60804,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1644347454 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8955749805175628162, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
-  m_PrefabInstance: {fileID: 1644347448}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1644347455 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8955749805471552653, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
@@ -63256,7 +63230,7 @@ PrefabInstance:
     - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
       propertyPath: repairText
       value: 
-      objectReference: {fileID: 1644347451}
+      objectReference: {fileID: 0}
     - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
       propertyPath: gameManager
       value: 
@@ -63264,7 +63238,7 @@ PrefabInstance:
     - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
       propertyPath: upgradeShop
       value: 
-      objectReference: {fileID: 1891172252}
+      objectReference: {fileID: 0}
     - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
       propertyPath: PlayerMovement
       value: 
@@ -63280,7 +63254,7 @@ PrefabInstance:
     - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
       propertyPath: repairAmountText
       value: 
-      objectReference: {fileID: 1644347450}
+      objectReference: {fileID: 0}
     - target: {fileID: 1721997026624316031, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
       propertyPath: m_Name
       value: FuelandMechanicManager
@@ -67798,7 +67772,7 @@ PrefabInstance:
     - target: {fileID: 3175237311639296134, guid: 44776f2380fe7c64d94aa3e3f11cc663, type: 3}
       propertyPath: mechanicStation_UI
       value: 
-      objectReference: {fileID: 1644347454}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44776f2380fe7c64d94aa3e3f11cc663, type: 3}
 --- !u!4 &1823374018 stripped
@@ -70302,17 +70276,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 444d6e87d9a60694283548253d13aa5c, type: 3}
---- !u!114 &1891172252 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7428859736349503698, guid: 444d6e87d9a60694283548253d13aa5c, type: 3}
-  m_PrefabInstance: {fileID: 1891172251}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 919335b4430d61442b8e2d70a5979e21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1891172253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7428859736349503699, guid: 444d6e87d9a60694283548253d13aa5c, type: 3}
