@@ -307,8 +307,9 @@ public class menu_Items : MonoBehaviour
         //choosingRandomFoods();
         RefreshOrders();
 
-        gm.takeBurgerAndFriedOrder.GetComponentInChildren<Text>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
-        gm.takeIceCreamOrder.GetComponentInChildren<Text>().text = pickfood4 + "," + pickfood5 + "," + pickfood6;
+        gm.OrderButton1.GetComponentInChildren<Text>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
+        gm.OrderButton2.GetComponentInChildren<Text>().text = pickfood4 + "," + pickfood5 + "," + pickfood6;
+        
 
     }
 

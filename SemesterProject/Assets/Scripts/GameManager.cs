@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     public WindowQuestPointer pointer;
 
-    public Button takeBurgerAndFriedOrder, takePizzaOrder, takeIceCreamOrder;
+    public Button OrderButton1, OrderButton2, OrderButton3, refreshButton;
     public OrderManager om;
     public Transform pickUp;
     public GameObject Player;
@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        pointer.gameObject.SetActive(false);
+        //pointer.gameObject.SetActive(false);
         //money = 20;
         phoneUp = false;
         mapOpen = false;
@@ -58,21 +58,23 @@ public class GameManager : MonoBehaviour
             if (phoneUp == false)
             {
                 phone.GetComponent<RectTransform>().anchoredPosition = new Vector2(763f, -186f);
-                takeBurgerAndFriedOrder.gameObject.SetActive(true);
-                takePizzaOrder.gameObject.SetActive(true);
-                takeIceCreamOrder.gameObject.SetActive(true);
+                OrderButton1.gameObject.SetActive(true);
+                OrderButton2.gameObject.SetActive(true);
+                OrderButton3.gameObject.SetActive(true);
+                refreshButton.gameObject.SetActive(true);
 
-                takeBurgerAndFriedOrder.GetComponentInChildren<Text>().text = "Burger and Fries: $" + Mathf.RoundToInt(20 + (Vector3.Distance(pickUp.position, om.BAndFriesDestination.position) * 0.8f));
-                takePizzaOrder.GetComponentInChildren<Text>().text = "Pizza: $" + Mathf.RoundToInt(20 + (Vector3.Distance(pickUp.position, om.PizzaDestination.position) * 0.8f));
-                takeIceCreamOrder.GetComponentInChildren<Text>().text = "IceCream: $" + Mathf.RoundToInt(20 + (Vector3.Distance(pickUp.position, om.IceCreamDestination.position) * 0.8f));
+               // takeBurgerAndFriedOrder.GetComponentInChildren<Text>().text = "Burger and Fries: $" + Mathf.RoundToInt(20 + (Vector3.Distance(pickUp.position, om.BAndFriesDestination.position) * 0.8f));
+                //takePizzaOrder.GetComponentInChildren<Text>().text = "Pizza: $" + Mathf.RoundToInt(20 + (Vector3.Distance(pickUp.position, om.PizzaDestination.position) * 0.8f));
+                //takeIceCreamOrder.GetComponentInChildren<Text>().text = "IceCream: $" + Mathf.RoundToInt(20 + (Vector3.Distance(pickUp.position, om.IceCreamDestination.position) * 0.8f));
                 phoneUp = true;
             }
             else if (phoneUp == true)
             {
                 phone.GetComponent<RectTransform>().anchoredPosition = new Vector2(763f, -653f);
-                takeBurgerAndFriedOrder.gameObject.SetActive(false);
-                takePizzaOrder.gameObject.SetActive(false);
-                takeIceCreamOrder.gameObject.SetActive(false);
+                OrderButton1.gameObject.SetActive(false);
+                OrderButton2.gameObject.SetActive(false);
+                OrderButton3.gameObject.SetActive(false);
+                refreshButton.gameObject.SetActive(false);
                 phoneUp = false;
             }
         } 
