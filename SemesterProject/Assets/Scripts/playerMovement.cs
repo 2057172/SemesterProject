@@ -79,7 +79,7 @@ public class playerMovement : MonoBehaviour
             timer = startTime;
            
             currentFuel -= 5;
-            Health_And_Fuel.setCurrentFuel(currentFuel);
+                Health_And_Fuel.setCurrentFuel(currentFuel);
 
         }
 
