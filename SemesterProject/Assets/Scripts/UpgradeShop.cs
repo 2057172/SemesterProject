@@ -30,9 +30,9 @@ public class UpgradeShop : MonoBehaviour
 
     public playerMovement playerMov;
 
-    public int FuelUp1;
-    public int FuelUp2;
-    public int FuelUp3;
+    public int FuelUp1Cost;
+    public int FuelUp2Cost;
+    public int FuelUp3Cost;
 
     [SerializeField] public bool fuelUP1purchased;
     [SerializeField] public bool fuelUP2purchased;
@@ -52,9 +52,9 @@ public class UpgradeShop : MonoBehaviour
     /// </summary>
 
 
-    public int HealthUp1;
-    public int HealthUp2;
-    public int HealthUp3;
+    public int HealthUp1Cost;
+    public int HealthUp2Cost;
+    public int HealthUp3Cost;
 
     [SerializeField] public bool healthUP1purchased;
     [SerializeField] public bool healthUP2purchased;
@@ -79,21 +79,49 @@ public class UpgradeShop : MonoBehaviour
 
     public Text priceTXT;
 
+
+  
+
     // Start is called before the first frame update
     void Start()
     {
-       
-        
 
+        heatButton.GetComponentInChildren<Text>().text = "Heat Protection: " + "$" + firePro;
+        iceButton.GetComponentInChildren<Text>().text = "Ice Protection: " + "$" + icePro;
+        radButton.GetComponentInChildren<Text>().text = "Radiation Protection: " + "$" + radPro;
+
+        healthUp1Button.GetComponentInChildren<Text>().text = "Health Upgrade 1: " + "$" + HealthUp1Cost;
+        healthUp2Button.GetComponentInChildren<Text>().text = "Health Upgrade 2: " + "$" + HealthUp2Cost;
+        healthUp3Button.GetComponentInChildren<Text>().text = "Health Upgrade 3: " + "$" + HealthUp3Cost;
+
+        fuelUp1Button.GetComponentInChildren<Text>().text = "Fuel Upgrade 1: " + "$" + FuelUp1Cost;
+        fuelUp2Button.GetComponentInChildren<Text>().text = "Fuel Upgrade 2: " + "$" + FuelUp2Cost;
+        fuelUp3Button.GetComponentInChildren<Text>().text = "Fuel Upgrade 3: " + "$" + FuelUp3Cost;
+
+
+        repairButton.GetComponentInChildren<Text>().text = "Repair Ship: " + "$" + repairScript.repairCost;
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        heatButton.GetComponentInChildren<Text>().text = "Heat Protection: " + "$" + firePro;
+        iceButton.GetComponentInChildren<Text>().text = "Ice Protection: " + "$" + icePro;
+        radButton.GetComponentInChildren<Text>().text = "Radiation Protection: " + "$" + radPro;
+
+        healthUp1Button.GetComponentInChildren<Text>().text = "Health Upgrade 1: " + "$" + HealthUp1Cost;
+        healthUp2Button.GetComponentInChildren<Text>().text = "Health Upgrade 2: " + "$" + HealthUp2Cost;
+        healthUp3Button.GetComponentInChildren<Text>().text = "Health Upgrade 3: " + "$" + HealthUp3Cost;
+
+        fuelUp1Button.GetComponentInChildren<Text>().text = "Fuel Upgrade 1: " + "$" + FuelUp1Cost;
+        fuelUp2Button.GetComponentInChildren<Text>().text = "Fuel Upgrade 2: " + "$" + FuelUp2Cost;
+        fuelUp3Button.GetComponentInChildren<Text>().text = "Fuel Upgrade 3: " + "$" + FuelUp3Cost;
+
+
+        repairButton.GetComponentInChildren<Text>().text = "Repair Ship: " + "$" + repairScript.repairCost;
 
         ///Once Off Upgrades things
-        
+
         // if the money is equal or less than 0, then it stays at 0
 
         if (gameMan.money < 0)
@@ -145,7 +173,7 @@ public class UpgradeShop : MonoBehaviour
 
         /// Fuel Upgrade Things
 
-        if (gameMan.money < FuelUp1 || fuelUP1purchased)     // If you don't have enough money for Fuel Upgrade 1 or have purchased it
+        if (gameMan.money < FuelUp1Cost || fuelUP1purchased)     // If you don't have enough money for Fuel Upgrade 1 or have purchased it
         {
             fuelUp1Button.interactable = false;
         }
@@ -153,7 +181,7 @@ public class UpgradeShop : MonoBehaviour
         {
             fuelUp1Button.interactable = true;
         }
-        if (gameMan.money < FuelUp2 || fuelUP2purchased)     // If you don't have enough money for Fuel Upgrade 2 or have purchased it
+        if (gameMan.money < FuelUp2Cost || fuelUP2purchased)     // If you don't have enough money for Fuel Upgrade 2 or have purchased it
         {
             fuelUp2Button.interactable = false;
         }
@@ -161,7 +189,7 @@ public class UpgradeShop : MonoBehaviour
         {
             fuelUp2Button.interactable = true;
         }
-        if (gameMan.money < FuelUp3 || fuelUP3purchased)     // If you don't have enough money for Fuel Upgrade 3 or have purchased it
+        if (gameMan.money < FuelUp3Cost || fuelUP3purchased)     // If you don't have enough money for Fuel Upgrade 3 or have purchased it
         {
             fuelUp3Button.interactable = false;
         }
@@ -171,7 +199,7 @@ public class UpgradeShop : MonoBehaviour
         }
         // Health Upgrade Things
 
-        if (gameMan.money < HealthUp1 || healthUP1purchased)     // If you don't have enough money for Health Upgrade 1 or have purchased it
+        if (gameMan.money < HealthUp1Cost || healthUP1purchased)     // If you don't have enough money for Health Upgrade 1 or have purchased it
         {
             healthUp1Button.interactable = false;
            
@@ -180,7 +208,7 @@ public class UpgradeShop : MonoBehaviour
         {
             healthUp1Button.interactable = true;
         }
-        if (gameMan.money < HealthUp2 || healthUP2purchased)     // If you don't have enough money for Health Upgrade 2 or have purchased it
+        if (gameMan.money < HealthUp2Cost || healthUP2purchased)     // If you don't have enough money for Health Upgrade 2 or have purchased it
         {
             healthUp2Button.interactable = false;
         }
@@ -188,7 +216,7 @@ public class UpgradeShop : MonoBehaviour
         {
             healthUp2Button.interactable = true;
         }
-        if (gameMan.money < HealthUp3 || healthUP3purchased)     // If you don't have enough money for Health Upgrade 3 or have purchased it
+        if (gameMan.money < HealthUp3Cost || healthUP3purchased)     // If you don't have enough money for Health Upgrade 3 or have purchased it
         {
             healthUp3Button.interactable = false;
         }
@@ -204,8 +232,12 @@ public class UpgradeShop : MonoBehaviour
 
    
 
-    public void Upgrade1()
+    public void UpgradeHeat()
     {
+
+       
+
+
         if (gameMan.money >= firePro)
         {
             gameMan.money -= firePro;
@@ -217,7 +249,7 @@ public class UpgradeShop : MonoBehaviour
         }
     }
 
-    public void Upgrade2()
+    public void UpgradeIce()
     {
         if (gameMan.money >= icePro)
         {
@@ -230,8 +262,9 @@ public class UpgradeShop : MonoBehaviour
         } 
     }
 
-    public void Upgrade3()
+    public void UpgradeRadiation()
     {
+      
         if (gameMan.money >= radPro)
         {
             gameMan.money -= radPro;
@@ -245,9 +278,9 @@ public class UpgradeShop : MonoBehaviour
 
     public void FuelUpgrade1()
     {
-        if (gameMan.money >= FuelUp1)
+        if (gameMan.money >= FuelUp1Cost)
         {
-            gameMan.money -= FuelUp1;
+            gameMan.money -= FuelUp1Cost;
             playerMov.maxFuel = maxFuelUpgrade1;
             fuelUP1purchased = true;
         }
@@ -260,9 +293,9 @@ public class UpgradeShop : MonoBehaviour
 
     public void FuelUpgrade2()
     {
-        if (gameMan.money >= FuelUp2 && fuelUP1purchased)
+        if (gameMan.money >= FuelUp2Cost && fuelUP1purchased)
         {
-            gameMan.money -= FuelUp2;
+            gameMan.money -= FuelUp2Cost;
             playerMov.maxFuel = maxFuelUpgrade2;
             fuelUP2purchased = true;
         }
@@ -274,9 +307,9 @@ public class UpgradeShop : MonoBehaviour
 
     public void FuelUpgrade3()
     {
-        if (gameMan.money >= FuelUp3 && fuelUP2purchased)
+        if (gameMan.money >= FuelUp3Cost && fuelUP2purchased)
         {
-            gameMan.money -= FuelUp3;
+            gameMan.money -= FuelUp3Cost;
             playerMov.maxFuel = maxFuelUpgrade3;
             fuelUP3purchased = true;
         }
@@ -288,9 +321,9 @@ public class UpgradeShop : MonoBehaviour
 
     public void HealthUpgrade1()
     {
-        if (gameMan.money >= HealthUp1)
+        if (gameMan.money >= HealthUp1Cost)
         {
-            gameMan.money -= HealthUp1;
+            gameMan.money -= HealthUp1Cost;
             playerMov.maxHealth = maxHealthUpgrade1;
             healthUP1purchased = true;
         }
@@ -302,9 +335,9 @@ public class UpgradeShop : MonoBehaviour
 
     public void HealthUpgrade2()
     {
-        if (gameMan.money >= HealthUp2 && healthUP1purchased)
+        if (gameMan.money >= HealthUp2Cost && healthUP1purchased)
         {
-            gameMan.money -= HealthUp2;
+            gameMan.money -= HealthUp2Cost;
             playerMov.maxHealth = maxHealthUpgrade2;
             healthUP2purchased = true;
         }
@@ -316,9 +349,9 @@ public class UpgradeShop : MonoBehaviour
 
     public void HealthUpgrade3()
     {
-        if (gameMan.money >= HealthUp3 && healthUP2purchased)
+        if (gameMan.money >= HealthUp3Cost && healthUP2purchased)
         {
-            gameMan.money -= HealthUp3;
+            gameMan.money -= HealthUp3Cost;
             playerMov.maxHealth = maxHealthUpgrade3;
             healthUP3purchased = true;
         }
@@ -328,65 +361,5 @@ public class UpgradeShop : MonoBehaviour
         }
     }
 
-    public void RepairShip()
-    {
-        if (gameMan.money >= repairScript.baseMechanicCost)
-        {
-            gameMan.money = gameMan.money - repairScript.repairCost;
-            playerMov.currentHealth = playerMov.maxHealth;
-            Debug.Log("Repaired!");
-        }
-        else
-        {
-            repairButton.interactable = false;
-        }
-        if (healthUP1purchased)
-        {
-            repairScript.repairCost = repairScript.mechanicUpgradeCost1;
-            priceTXT.text = "$100";
 
-            if (gameMan.money >= repairScript.mechanicUpgradeCost1)
-            {
-                gameMan.money = gameMan.money - repairScript.repairCost;
-                playerMov.currentHealth = playerMov.maxHealth;
-                Debug.Log("NEW REPAIR!");
-            }
-            else
-            {
-                repairButton.interactable = false;
-            }
-        }
-        if (healthUP2purchased)
-        {
-            repairScript.repairCost = repairScript.mechanicUpgradeCost2;
-            priceTXT.text = "$200";
-
-            if (gameMan.money >= repairScript.mechanicUpgradeCost2)
-            {
-                gameMan.money = gameMan.money - repairScript.repairCost;
-                playerMov.currentHealth = playerMov.maxHealth;
-                Debug.Log("NEW NEW REPAIR!");
-            }
-            else
-            {
-                repairButton.interactable = false;
-            }
-        }
-        if (healthUP3purchased)
-        {
-            repairScript.repairCost = repairScript.mechanicUpgradeCost3;
-            priceTXT.text = "$300";
-
-            if (gameMan.money >= repairScript.mechanicUpgradeCost3)
-            {
-                gameMan.money = gameMan.money - repairScript.repairCost;
-                playerMov.currentHealth = playerMov.maxHealth;
-                Debug.Log("NEW NEW NEW REPAIR!");
-            }
-            else
-            {
-                repairButton.interactable = false;
-            }
-        }
-    }
 }
