@@ -13,7 +13,7 @@ public class PlayerOrderInfo : MonoBehaviour
 
     void Start()
     {
-        Menu.gameObject.SetActive(false);
+       Menu.gameObject.SetActive(false);
     }
 
 
