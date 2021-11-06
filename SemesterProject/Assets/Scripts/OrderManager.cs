@@ -26,6 +26,8 @@ public class OrderManager : MonoBehaviour
     public float countDown;
     public float ETA;
 
+    public menu_Items MI;
+
 
     void Start()
     {

@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class buttonLogic : MonoBehaviour
 {
-    
-    void Start()
+
+    public menu_Items MI;
+    public string Planet1, Planet2, Planet3;
+
+    public void ButtonOne()
     {
-        
+        Debug.Log(Planet1);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
