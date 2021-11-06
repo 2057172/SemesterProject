@@ -380,7 +380,7 @@ public class menu_Items : MonoBehaviour
                 Debug.Log("Order 2.3 is: " + Foods[useFoods6]);
 
                 OrderButtonTwo.gameObject.GetComponentInChildren<Text>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6;
-                menuButton2.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6;
+                //menuButton2.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6;
 
                 orderStatus.text = "Order Picked Up.";
             }
@@ -402,7 +402,7 @@ public class menu_Items : MonoBehaviour
                 pickfood9 = Foods3[useFoods9];
 
                 OrderButtonThree.gameObject.GetComponentInChildren<Text>().text = pickfood7 + ", " + pickfood8 + ", " + pickfood9;
-                menuButton3.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood7 + ", " + pickfood8 + ", " + pickfood9;
+                //menuButton3.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood7 + ", " + pickfood8 + ", " + pickfood9;
 
                 orderStatus.text = "Order Picked Up.";
             } 
