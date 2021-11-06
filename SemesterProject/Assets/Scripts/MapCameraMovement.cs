@@ -25,7 +25,7 @@ public class MapCameraMovement : MonoBehaviour
         {
             Vector3 difference = dragOrigin - cam.ScreenToWorldPoint(Input.mousePosition);
 
-            print("origin " + dragOrigin + " new position " + cam.ScreenToWorldPoint(Input.mousePosition) + " =difference" + difference);
+           // print("origin " + dragOrigin + " new position " + cam.ScreenToWorldPoint(Input.mousePosition) + " =difference" + difference);
 
             cam.transform.position += difference / 2;
         }
