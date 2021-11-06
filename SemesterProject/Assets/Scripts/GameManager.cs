@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     public GameObject Map;
     public bool mapOpen;
 
+    public menu_Items MI;
+
     void Start()
     {
         //pointer.gameObject.SetActive(false);
@@ -58,14 +60,30 @@ public class GameManager : MonoBehaviour
             if (phoneUp == false)
             {
                 phone.GetComponent<RectTransform>().anchoredPosition = new Vector2(763f, -186f);
-                OrderButton1.gameObject.SetActive(true);
-                OrderButton2.gameObject.SetActive(true);
-                OrderButton3.gameObject.SetActive(true);
-                refreshButton.gameObject.SetActive(true);
+                if(MI.OnOrder1 == false)
+                {
+                    OrderButton1.gameObject.SetActive(true);
+                }
+                if (MI.onOrder2 == false)
+                {
+                    OrderButton2.gameObject.SetActive(true);
+                }
+                if (MI.onOrder2 == false)
+                {
+                    OrderButton2.gameObject.SetActive(true);
+                } else if (MI.OnOrder1 == true)
+                {
+                    OrderButton1.gameObject.SetActive(false);
+                }
+                else if (MI.onOrder2 == true)
+                {
+                    OrderButton2.gameObject.SetActive(false);
+                }
+                else if (MI.onOrder3 == true)
+                {
+                    OrderButton3.gameObject.SetActive(false);
+                }
 
-               // takeBurgerAndFriedOrder.GetComponentInChildren<Text>().text = "Burger and Fries: $" + Mathf.RoundToInt(20 + (Vector3.Distance(pickUp.position, om.BAndFriesDestination.position) * 0.8f));
-                //takePizzaOrder.GetComponentInChildren<Text>().text = "Pizza: $" + Mathf.RoundToInt(20 + (Vector3.Distance(pickUp.position, om.PizzaDestination.position) * 0.8f));
-                //takeIceCreamOrder.GetComponentInChildren<Text>().text = "IceCream: $" + Mathf.RoundToInt(20 + (Vector3.Distance(pickUp.position, om.IceCreamDestination.position) * 0.8f));
                 phoneUp = true;
             }
             else if (phoneUp == true)

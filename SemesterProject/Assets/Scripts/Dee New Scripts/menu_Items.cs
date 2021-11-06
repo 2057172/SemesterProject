@@ -9,10 +9,14 @@ public class menu_Items : MonoBehaviour
 {
 
     public GameManager gm;
+    public buttonLogic BL;
 
     public Button OrderButtonOne, OrderButtonTwo, OrderButtonThree, menuButton1, menuButton2, menuButton3;
 
     public Transform Earth, Forest, Ice, Metal, Cat, Sun, Sleep, Fire, Dance, Lovecraft, LSD, Weed, Bougie, Gas;
+
+    public Text orderStatus;
+    public bool OnOrder1, onOrder2, onOrder3;
 
     public string[] Foods = new string[]
     {
@@ -277,62 +281,50 @@ public class menu_Items : MonoBehaviour
         "Weed Planet",
     };
 
-    public string pickfood1, pickfood2, pickfood3, pickfood4, pickfood5, pickfood6, pickplanet;
+    public string pickfood1, pickfood2, pickfood3, pickfood4, pickfood5, pickfood6, pickfood7, pickfood8, pickfood9, pickplanet;
 
-   /* public void choosingRandomFoods()
-    {
-        System.Random random = new System.Random();
-
-        int useFoods1 = random.Next(Foods.Length);
-        pickfood1 = Foods[useFoods1];
-
-
-        int useFoods2 = random.Next(Foods.Length);
-        pickfood2 = Foods[useFoods2];
-
-
-        int useFoods3 = random.Next(Foods.Length);
-        pickfood3 = Foods[useFoods3];
-
-
-
-        print(pickfood1);
-        print(pickfood2);
-        print(pickfood3);
-
-        Debug.Log(useFoods1.ToString() + useFoods2.ToString() + useFoods3.ToString());
-
-    } */
+ 
     public void Start()
     {
-        //choosingRandomPlanet();
-        //choosingRandomFoods();
         RefreshOrders();
         RefreshOrders();
 
+        OnOrder1 = false;
+        onOrder2 = false;
+        onOrder3 = false;
+      
         gm.OrderButton1.GetComponentInChildren<Text>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
         gm.OrderButton2.GetComponentInChildren<Text>().text = pickfood4 + "," + pickfood5 + "," + pickfood6;
-        
 
+        orderStatus.text = "";
     }
 
-    public void Update()
+    
+
+    public void Order1()
     {
-        
+        if (OnOrder1 == false)
+        {
+            OrderButtonOne.gameObject.SetActive(false);
+            OnOrder1 = true;
+        }
     }
-
-    //DECIDES WHERE THE ORDER WILL BE PLACED 
-   /* public void choosingRandomPlanet()
+    public void Order2()
     {
-
-        System.Random random = new System.Random();
-        int usePlanets = random.Next(Planets.Length);
-        string pickPlanet = Planets[usePlanets];
-        print(pickPlanet);
-
-        pickplanet = pickPlanet;
-
-    } */
+        if (onOrder2 == false)
+        {
+            OrderButtonTwo.gameObject.SetActive(false);
+            onOrder2 = true;
+        }
+    }
+    public void Order3()
+    {
+        if (onOrder3 == false)
+        {
+            OrderButtonThree.gameObject.SetActive(false);
+            onOrder3 = true;
+        }
+    }
 
     public void RefreshOrders()
     {
@@ -342,13 +334,7 @@ public class menu_Items : MonoBehaviour
 
             if (count == 0)
             {
-                System.Random random = new System.Random();
-                int usePlanets = Random.Range(0, Planets.Length);
-                string pickPlanet = Planets[usePlanets];
-                print(pickPlanet);
-
-                pickplanet = pickPlanet;
-
+               
                 System.Random random1 = new System.Random();
 
                 int useFoods1 = Random.Range(0, Foods.Length);
@@ -364,17 +350,14 @@ public class menu_Items : MonoBehaviour
                 pickfood3 = Foods[useFoods3];
                 Debug.Log("This is" + useFoods3);
 
-                OrderButtonOne.gameObject.GetComponentInChildren<Text>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3 + ". To " + pickplanet;
-                menuButton1.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
+                OrderButtonOne.gameObject.GetComponentInChildren<Text>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
+                //menuButton1.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
+
+                orderStatus.text = "Order Picked Up.";
             } 
             if(count == 1)
             {
-                System.Random random3 = new System.Random();
-                int usePlanets = Random.Range(0, Planets.Length);
-                string pickPlanet = Planets[usePlanets];
-                print(pickPlanet);
-
-                pickplanet = pickPlanet;
+               
 
                 System.Random random4 = new System.Random();
                 int random4New = Random.Range(0, Foods.Length); 
@@ -396,115 +379,36 @@ public class menu_Items : MonoBehaviour
                 Debug.Log("This is" + useFoods6);
                 Debug.Log("Order 2.3 is: " + Foods[useFoods6]);
 
-                OrderButtonTwo.gameObject.GetComponentInChildren<Text>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6 + ". To " + pickplanet;
-                menuButton2.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
+                OrderButtonTwo.gameObject.GetComponentInChildren<Text>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6;
+                menuButton2.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6;
+
+                orderStatus.text = "Order Picked Up.";
             }
             if (count == 2)
             {
-                System.Random random5 = new System.Random();
-                int usePlanets = Random.Range(0, Planets.Length);
-                string pickPlanet = Planets[usePlanets];
-                print(pickPlanet);
-
-                pickplanet = pickPlanet;
+           
 
                 System.Random random6 = new System.Random();
 
-                int useFoods1 = Random.Range(0, Foods.Length);
-                pickfood1 = Foods3[useFoods1];
+                int useFoods7 = Random.Range(0, Foods.Length);
+                pickfood7 = Foods3[useFoods7];
 
 
-                int useFoods2 = Random.Range(0, Foods.Length);
-                pickfood2 = Foods3[useFoods2];
+                int useFoods8 = Random.Range(0, Foods.Length);
+                pickfood8 = Foods3[useFoods8];
 
 
-                int useFoods3 = Random.Range(0, Foods.Length);
-                pickfood3 = Foods3[useFoods3];
+                int useFoods9 = Random.Range(0, Foods.Length);
+                pickfood9 = Foods3[useFoods9];
 
-                OrderButtonThree.gameObject.GetComponentInChildren<Text>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3 + ". To " + pickplanet;
-                menuButton3.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
+                OrderButtonThree.gameObject.GetComponentInChildren<Text>().text = pickfood7 + ", " + pickfood8 + ", " + pickfood9;
+                menuButton3.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood7 + ", " + pickfood8 + ", " + pickfood9;
+
+                orderStatus.text = "Order Picked Up.";
             } 
         }
 
-
-
-
-    }
-    public void OrderOneSelected()
-    {
-       if(pickplanet == "Earth Planet")
-        {
-            gm.deliveryDestination = Earth.position;
-            Debug.Log("Earth");
-        } else if(pickplanet == "Forest Planet")
-        {
-            gm.deliveryDestination = Forest.position;
-            Debug.Log("Earth");
-        }
-        else if (pickplanet == "Ice Planet")
-        {
-            gm.deliveryDestination = Ice.position;
-            Debug.Log("Earth");
-        }
-        else if (pickplanet == "Metal Planet")
-        {
-            gm.deliveryDestination = Metal.position;
-            Debug.Log("Earth");
-        }
-        else if (pickplanet == "Cat Planet")
-        {
-            gm.deliveryDestination = Cat.position;
-            Debug.Log("Earth");
-        }
-        else if (pickplanet == "Sun Planet")
-        {
-            gm.deliveryDestination = Sun.position;
-            Debug.Log("Earth");
-        }
-        else if (pickplanet == "Sleep Planet")
-        {
-            gm.deliveryDestination = Sleep.position;
-            Debug.Log("Earth");
-        }        
-        else if (pickplanet == "Fire Planet")
-        {
-            gm.deliveryDestination = Fire.position;
-            Debug.Log("Earth");
-        }
-        else if (pickplanet == "Dance Planet")
-        {
-            gm.deliveryDestination = Dance.position;
-            Debug.Log("Earth");
-        }
-        else if (pickplanet == "Lovecraft Planet")
-        {
-            gm.deliveryDestination = Lovecraft.position;
-            Debug.Log("Earth");
-        }
-        else if (pickplanet == "LSD Planet")
-        {
-            gm.deliveryDestination = LSD.position;
-            Debug.Log("Earth");
-        }
-        else if (pickplanet == "Weed Planet")
-        {
-            gm.deliveryDestination = Weed.position;
-            Debug.Log("Earth");
-        }
-        else if (pickplanet == "Bougie Planet")
-        {
-            gm.deliveryDestination = Bougie.position;
-            Debug.Log("Earth");
-        }
-        else if (pickplanet == "Gas Planet")
-        {
-            gm.deliveryDestination = Gas.position;
-            Debug.Log("Earth");
-        }
-    }
-
-   
-
+    }     
 
 }
 

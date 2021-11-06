@@ -10,6 +10,8 @@ public class PlayerOrderInfo : MonoBehaviour
     public OrderManager orderManager;
     public GameManager gm;
     public Text orderMoneyInfo;
+    public NewRandomPlanets np;
+    public menu_Items MI;
 
     void Start()
     {
@@ -23,6 +25,34 @@ public class PlayerOrderInfo : MonoBehaviour
         {
             Menu.gameObject.SetActive(true);
         }
+
+        if(collision.gameObject.name == np.PlanetOutcome1.name)
+        {
+            Debug.Log("Its lit");
+            np.PlanetOutcome1 = null;
+            gm.money += np.totalCommision1;
+            MI.OnOrder1 = false;
+        }
+
+        if (collision.gameObject.name == np.PlanetOutcome2.name)
+        {
+            Debug.Log("Its lit 2");
+            np.PlanetOutcome2 = null;
+            gm.money += np.totalCommision2;
+            MI.onOrder2 = false;
+        }
+
+        if (collision.gameObject.name == np.PlanetOutcome3.name)
+        {
+            Debug.Log("Its lit 3");
+            np.PlanetOutcome3 = null;
+            gm.money += np.totalCommision3;
+            MI.onOrder3 = false;
+        }
+
+
+
+
 
         if (collision.gameObject.tag == "DropOffZone" && orderManager.currentlyHasOrder == true )
         {
