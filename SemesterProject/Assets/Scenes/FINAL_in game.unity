@@ -8051,7 +8051,7 @@ PrefabInstance:
     - target: {fileID: 8955749806418660230, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1116147596}
     - target: {fileID: 8955749806418660230, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: payForFuel
@@ -8062,7 +8062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8955749806552002629, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8955749806552002630, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
       propertyPath: m_Camera
@@ -29974,7 +29974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &803520853
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38932,18 +38932,162 @@ PrefabInstance:
       propertyPath: m_Name
       value: RepairShip_Text
       objectReference: {fileID: 0}
+    - target: {fileID: 3208983098627911661, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4178064195975937178, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
       propertyPath: m_Name
       value: Repairs_Heading_Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: icePro
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: radPro
+      value: 750
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: firePro
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
       propertyPath: gameMan
       value: 
       objectReference: {fileID: 1806517241}
     - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: HealthUp1
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: HealthUp2
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: HealthUp3
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: playerMov
+      value: 
+      objectReference: {fileID: 2052233155}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: FuelUp1Cost
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: FuelUp2Cost
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: FuelUp3Cost
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
       propertyPath: repairScript
       value: 
       objectReference: {fileID: 1116147596}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: HealthUp1Cost
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: HealthUp2Cost
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: HealthUp3Cost
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: maxFuelUpgrade1
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: maxFuelUpgrade2
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: maxFuelUpgrade3
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812910424852709094, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1116147596}
+    - target: {fileID: 5812910424852709094, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: payforMechanic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812910424852709094, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: fuel_and_mechanic_Manager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160320243302757724, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1041465758}
+    - target: {fileID: 7160320243302757724, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FuelUpgrade1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160320243938606757, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1041465758}
+    - target: {fileID: 7160320243938606757, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HealthUpgrade1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160320244074121865, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1041465758}
+    - target: {fileID: 7160320244074121865, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FuelUpgrade2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160320244084925301, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1041465758}
+    - target: {fileID: 7160320244084925301, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FuelUpgrade3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160320244631577366, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1041465758}
+    - target: {fileID: 7160320244631577366, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpgradeRadiation
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160320244721466301, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1041465758}
+    - target: {fileID: 7160320244721466301, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HealthUpgrade3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160320244967717669, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1041465758}
+    - target: {fileID: 7160320244967717669, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpgradeIce
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160320245071331434, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1041465758}
+    - target: {fileID: 7160320245071331434, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpgradeHeat
+      objectReference: {fileID: 0}
     - target: {fileID: 7160320245211133156, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
       propertyPath: m_Name
       value: Upgrade&Repairs
@@ -39051,6 +39195,14 @@ PrefabInstance:
     - target: {fileID: 7160320245305195206, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
       propertyPath: m_Name
       value: Upgrades_Heading_Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160320245317561801, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1041465758}
+    - target: {fileID: 7160320245317561801, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HealthUpgrade2
       objectReference: {fileID: 0}
     - target: {fileID: 7486404775105772111, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -41233,6 +41385,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1041465758}
     - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
+      propertyPath: baseFuelCost
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
+      propertyPath: refuelButton
+      value: 
+      objectReference: {fileID: 2022893299}
+    - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
       propertyPath: PlayerMovement
       value: 
       objectReference: {fileID: 2052233155}
@@ -41245,12 +41405,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 364557116}
     - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
+      propertyPath: fuelUpgradeCost1
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
+      propertyPath: fuelUpgradeCost2
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
+      propertyPath: fuelUpgradeCost3
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
       propertyPath: repairAmountText
       value: 
       objectReference: {fileID: 1041465757}
+    - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
+      propertyPath: fuelAfterUpgradeCost1
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
+      propertyPath: fuelAfterUpgradeCost2
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721997026624316030, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
+      propertyPath: fuelAfterUpgradeCost3
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1721997026624316031, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
       propertyPath: m_Name
-      value: FuelandMechanicManager_Shop Manager
+      value: Fuel_Shop Manager
       objectReference: {fileID: 0}
     - target: {fileID: 1721997026624316031, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
       propertyPath: m_IsActive
@@ -46949,7 +47133,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 0.990566, g: 0.60275006, b: 0.7421336, a: 1}
   m_FlipX: 0
@@ -68369,7 +68553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa7d29a4fec07e4489f58bde53c8cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 500
+  money: 50000
   moneyTXT: {fileID: 1275563286}
   phone: {fileID: 453510873}
   phoneUp: 0
@@ -76307,6 +76491,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2330509510079814169, guid: 8a2694243b614a140bd079ce91168173, type: 3}
   m_PrefabInstance: {fileID: 2022393693}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2022893299 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8955749806418660230, guid: 9b049297f4047f840ad9bfa4cc286432, type: 3}
+  m_PrefabInstance: {fileID: 209527046}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2023311083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77567,7 +77762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 2052233155}
-  Health_And_Fuel: {fileID: 0}
+  Health_And_Fuel: {fileID: 364557116}
   upgradeShop: {fileID: 1041465758}
   spaceship_distance: 0
   spaceship: {fileID: 2052233159}
@@ -77632,7 +77827,7 @@ MonoBehaviour:
   accelerationFactor: 3
   turnFactor: 2
   maxSpeed: 6
-  Health_And_Fuel: {fileID: 0}
+  Health_And_Fuel: {fileID: 364557116}
   maxHealth: 100
   currentHealth: 0
   shipDamage: 10
@@ -79002,7 +79197,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 0.99559647, g: 1, b: 0.28773582, a: 1}
   m_FlipX: 0

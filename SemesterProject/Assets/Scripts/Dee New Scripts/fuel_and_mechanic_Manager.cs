@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro; 
+using TMPro;
+using UnityEngine.UI;
 
 public class fuel_and_mechanic_Manager : MonoBehaviour
 {
@@ -19,22 +20,23 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
     public TMP_Text repairAmountText;
 
     public int baseFuelCost = 10;
-    public int fuelUpgradeCost1 = 50;
-    public int fuelUpgradeCost2= 100;
-    public int fuelUpgradeCost3 = 150;
+    public int fuelAfterUpgradeCost1 = 50;
+    public int fuelAfterUpgradeCost2 = 100;
+    public int fuelAfterUpgradeCost3 = 150;
 
     public int baseMechanicCost = 50;
     public int mechanicUpgradeCost1 = 100;
     public int mechanicUpgradeCost2 = 200;
     public int mechanicUpgradeCost3 = 300;
 
+    public Button refuelButton;
 
     void Start()
     {
         fuelCost = 10;
         repairCost = 20;
 
-        fuelAmountText.text = "$10";
+        refuelButton.GetComponentInChildren<TextMeshProUGUI>().text = "Refuel: " + "$" + fuelCost;
         fuelCost = baseFuelCost;
         repairCost = baseMechanicCost;
 
@@ -42,23 +44,25 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
 
     void Update()
     {
-
+        refuelButton.GetComponentInChildren<TextMeshProUGUI>().text = "Refuel: " + "$" + fuelCost;
+        
         if (upgradeShop.fuelUP1purchased == true)
         {
-            fuelCost = fuelUpgradeCost1;
-            fuelAmountText.text = "$50";
+            fuelCost = fuelAfterUpgradeCost1;
+            refuelButton.GetComponentInChildren<TextMeshProUGUI>().text = "Refuel: " + "$" + fuelCost;
+
         }
 
         if (upgradeShop.fuelUP2purchased == true)
         {
-            fuelCost = fuelUpgradeCost2;
-            fuelAmountText.text = "$100";
+            fuelCost = fuelAfterUpgradeCost2;
+            refuelButton.GetComponentInChildren<TextMeshProUGUI>().text = "Refuel: " + "$" + fuelCost;
         }
 
         if (upgradeShop.fuelUP3purchased == true)
         {
-            fuelCost = fuelUpgradeCost3;
-            fuelAmountText.text = "$150";
+            fuelCost = fuelAfterUpgradeCost3;
+            refuelButton.GetComponentInChildren<TextMeshProUGUI>().text = "Refuel: " + "$" + fuelCost;
         }
         
 
@@ -115,7 +119,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
 
         //UPGRADE 1 FUEL STATS 
         //ENOUGH MONEY
-        if (fuelCost == fuelUpgradeCost1)
+        if (fuelCost == fuelAfterUpgradeCost1)
         {
             if (gameManager.money >= fuelCost)
             {
@@ -140,7 +144,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
 
         //UPGRADE 2 FUEL STATS 
         //ENOUGH MONEY
-        if (fuelCost == fuelUpgradeCost2)
+        if (fuelCost == fuelAfterUpgradeCost2)
         {
             if (gameManager.money >= fuelCost)
             {
@@ -164,7 +168,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
 
         //UPGRADE 3 FUEL STATS 
         //ENOUGH MONEY
-        if (fuelCost == fuelUpgradeCost3)
+        if (fuelCost == fuelAfterUpgradeCost3)
         {
             if (gameManager.money >= fuelCost)
             {
@@ -195,11 +199,6 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
 
 
 
-    }
-
-    public void oof()
-    {
-        Debug.Log("DHDH");
     }
 
     public void payforMechanic()
