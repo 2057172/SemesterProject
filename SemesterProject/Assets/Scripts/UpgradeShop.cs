@@ -15,14 +15,17 @@ public class UpgradeShop : MonoBehaviour
     public int firePro;
     public int icePro;
     public int radPro;
+    public int hardcorePro;
 
     [SerializeField] public bool firePurchased;
     [SerializeField] public bool icePurchased;
     [SerializeField] public bool radPurchased;
+    [SerializeField] public bool hardcorePurchased;
 
     public Button heatButton;
     public Button iceButton;
     public Button radButton;
+    public Button hardcoreButton;
 
     /// <summary>
     /// All of the varuables for the fuel upgrades
@@ -89,6 +92,7 @@ public class UpgradeShop : MonoBehaviour
         heatButton.GetComponentInChildren<Text>().text = "Heat Protection: " + "$" + firePro;
         iceButton.GetComponentInChildren<Text>().text = "Ice Protection: " + "$" + icePro;
         radButton.GetComponentInChildren<Text>().text = "Radiation Protection: " + "$" + radPro;
+        hardcoreButton.GetComponentInChildren<Text>().text = "Hardcore Proection: " + "$" + hardcorePro;
 
         healthUp1Button.GetComponentInChildren<Text>().text = "Health Upgrade 1: " + "$" + HealthUp1Cost;
         healthUp2Button.GetComponentInChildren<Text>().text = "Health Upgrade 2: " + "$" + HealthUp2Cost;
@@ -108,6 +112,7 @@ public class UpgradeShop : MonoBehaviour
         heatButton.GetComponentInChildren<Text>().text = "Heat Protection: " + "$" + firePro;
         iceButton.GetComponentInChildren<Text>().text = "Ice Protection: " + "$" + icePro;
         radButton.GetComponentInChildren<Text>().text = "Radiation Protection: " + "$" + radPro;
+        hardcoreButton.GetComponentInChildren<Text>().text = "Hardcore Proection: " + "$" + hardcorePro;
 
         healthUp1Button.GetComponentInChildren<Text>().text = "Health Upgrade 1: " + "$" + HealthUp1Cost;
         healthUp2Button.GetComponentInChildren<Text>().text = "Health Upgrade 2: " + "$" + HealthUp2Cost;
@@ -130,6 +135,7 @@ public class UpgradeShop : MonoBehaviour
             heatButton.interactable = false;
             iceButton.interactable = false;
             radButton.interactable = false;
+            hardcoreButton.interactable = false;
             fuelUp1Button.interactable = false;
             fuelUp2Button.interactable = false;
             fuelUp3Button.interactable = false;
@@ -170,6 +176,18 @@ public class UpgradeShop : MonoBehaviour
         {
             radButton.interactable = true;
         }
+
+
+        if (gameMan.money < hardcorePro || hardcorePurchased)
+        {
+            //can't purchase radiation protection
+            hardcoreButton.interactable = false;
+        }
+        else
+        {
+            hardcoreButton.interactable = true;
+        }
+
 
         /// Fuel Upgrade Things
 
@@ -273,6 +291,21 @@ public class UpgradeShop : MonoBehaviour
         else
         {
             radPurchased = false;
+        }
+    }
+
+
+    public void UpgradeHardcore()
+    {
+
+        if (gameMan.money >= hardcorePro)
+        {
+            gameMan.money -= hardcorePro;
+            hardcorePurchased = true;
+        }
+        else
+        {
+            hardcorePurchased = false;
         }
     }
 

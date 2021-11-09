@@ -26,9 +26,15 @@ public class Player_ZonePosition : MonoBehaviour
     public bool isInRadiationZone;
     public bool isInHardcoreZone;
 
+    //HEAT ZONE HEALTH DAMAGE DAMAGE
     public bool canTakeHeatDamage=true;
     public int heatSeconds = 5;
     public int heatDamage = 2;
+
+    //HARDCORE ZONE DAMAGE
+    public bool canTakeHardcoreHeatDamage = true;
+    public int hardcoreHeatSeconds = 5;
+    public int hardcoreHeatDamage = 15;
 
     public TextMeshProUGUI dangerAlert;
 
@@ -38,8 +44,8 @@ public class Player_ZonePosition : MonoBehaviour
 
     void Start()
     {
-       
 
+        dangerAlert.text = "";
     }
 
     private void Awake()
@@ -85,10 +91,10 @@ public class Player_ZonePosition : MonoBehaviour
             {
              
                 dangerAlert.text = "";
-
+                //CODE TO MAKE SHIP GO FAST AGAIN
             }
 
-            
+
         }
 
      
@@ -109,13 +115,14 @@ public class Player_ZonePosition : MonoBehaviour
                 dangerAlert.text = "HEAT DAMAGE!";
                 checkHeatDamage();
 
+                StopCoroutine(TakeHeatDamage());
             }
             //IF PLAYER DOES HAVE HEAT PROTECTION
             if (upgradeShop.firePurchased == true)
             {
                 canTakeHeatDamage = false;
                 dangerAlert.text = "";
-
+                StopCoroutine(TakeHeatDamage());
             }
         }
         else
@@ -139,6 +146,9 @@ public class Player_ZonePosition : MonoBehaviour
             if (upgradeShop.radPurchased == true)
             {
                 dangerAlert.text = "";
+                miniMap.SetActive(true);
+
+                //CODE TO MAKE SHIP GO FAST AGAIN
             }
         }
         else
@@ -151,6 +161,27 @@ public class Player_ZonePosition : MonoBehaviour
         if (spaceship_distance > radiationZoneEdge.transform.position.y && spaceship_distance < hardcoreZoneEdge.transform.position.y)
         {
             isInHardcoreZone = true;
+            //IF PLAYER DOES NOT HAVE HARDCORE PROTECTION 
+            if (isInHardcoreZone == true && upgradeShop.hardcorePurchased == false && canTakeHardcoreHeatDamage==true)
+            {
+
+                dangerAlert.text = "HARDCORE DAMAGE!";
+
+                //MORE DAMAGE TAKEN
+                checkHardcoreHeatDamage();
+                //SHIP SLOWED DOWN EVEN MORE
+                //CAM PLS PUT CODE TO SLOW DOWN SHIP EVEN MORE HERE 
+
+                //MINI MAP DISABLED 
+                miniMap.SetActive(false);
+
+            }
+            //IF PLAYER DOES HAVE RADIATION PROTECTION
+            if (upgradeShop.hardcorePurchased == true)
+            {
+                dangerAlert.text = "";
+            }
+
         }
         else
         {
@@ -168,6 +199,15 @@ public class Player_ZonePosition : MonoBehaviour
         
     }
 
+    public void checkHardcoreHeatDamage()
+    {
+
+        StartCoroutine(TakeHardcoreHeatDamage());
+        //StartCoroutine(TakeHeatDamage());
+
+
+    }
+
     public IEnumerator TakeHeatDamage()
     {
         canTakeHeatDamage = false;
@@ -175,6 +215,16 @@ public class Player_ZonePosition : MonoBehaviour
         playerMovement.currentHealth -= heatDamage;
         Health_And_Fuel.setCurrentHealth(playerMovement.currentHealth);
         canTakeHeatDamage = true;
+    }
+
+
+    public IEnumerator TakeHardcoreHeatDamage()
+    {
+        canTakeHardcoreHeatDamage = false;
+        yield return new WaitForSeconds(hardcoreHeatSeconds);
+        playerMovement.currentHealth -= hardcoreHeatDamage;
+        Health_And_Fuel.setCurrentHealth(playerMovement.currentHealth);
+        canTakeHardcoreHeatDamage = true;
     }
 
 
