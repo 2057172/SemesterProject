@@ -14,18 +14,20 @@ public class UpgradeShop : MonoBehaviour
         
     public GameManager gameMan;
 
-    public int firePro;
     public int icePro;
+    public int firePro;
     public int radPro;
     public int hardcorePro;
 
-    [SerializeField] public bool firePurchased;
+    
     [SerializeField] public bool icePurchased;
+    [SerializeField] public bool firePurchased;
     [SerializeField] public bool radPurchased;
     [SerializeField] public bool hardcorePurchased;
 
-    public Button heatButton;
+    
     public Button iceButton;
+    public Button heatButton;
     public Button radButton;
     public Button hardcoreButton;
 

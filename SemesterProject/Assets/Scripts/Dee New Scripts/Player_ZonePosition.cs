@@ -42,6 +42,8 @@ public class Player_ZonePosition : MonoBehaviour
     //MAP STUFF FOR RADIATION ZONE
     public GameObject miniMap;
 
+    
+
     void Start()
     {
 
@@ -71,7 +73,7 @@ public class Player_ZonePosition : MonoBehaviour
         }
 
 
-       
+
 
         //INSIDE ICE ZONE
         if (spaceship_distance > normalZoneEdge.transform.position.y && spaceship_distance < iceZoneEdge.transform.position.y)
@@ -80,16 +82,17 @@ public class Player_ZonePosition : MonoBehaviour
 
 
             //IF PLAYER DOES NOT HAVE ICE PROTECTION 
-            if (isInIceZone == true && upgradeShop.icePurchased == false )
+            if (isInIceZone == true && upgradeShop.icePurchased == false)
             {
                 dangerAlert.text = "ICE DAMAGE DAMAGE!";
 
                 //CAM PLS PUT CODE TO SLOW DOWN SHIP WHEN IN THIS ZONE HERE
+                playerMovement.maxSpeed = 3;
             }
             //IF PLAYER DOES HAVE ICE PROTECTION
             if (upgradeShop.icePurchased == true)
             {
-             
+                playerMovement.maxSpeed = 6;
                 dangerAlert.text = "";
                 //CODE TO MAKE SHIP GO FAST AGAIN
             }
@@ -97,10 +100,17 @@ public class Player_ZonePosition : MonoBehaviour
 
         }
 
-     
+
         else
         {
             isInIceZone = false;
+
+            if (isInIceZone == false && isInNormalZone==true ||isInHeatZone==true || isInRadiationZone==true)
+            {
+                playerMovement.maxSpeed = 6;
+            }
+
+           
         }
 
 
@@ -162,7 +172,7 @@ public class Player_ZonePosition : MonoBehaviour
         {
             isInHardcoreZone = true;
             //IF PLAYER DOES NOT HAVE HARDCORE PROTECTION 
-            if (isInHardcoreZone == true && upgradeShop.hardcorePurchased == false && canTakeHardcoreHeatDamage==true)
+            if (isInHardcoreZone == true && upgradeShop.hardcorePurchased == false && canTakeHardcoreHeatDamage==true && isInIceZone==false)
             {
 
                 dangerAlert.text = "HARDCORE DAMAGE!";
@@ -171,6 +181,7 @@ public class Player_ZonePosition : MonoBehaviour
                 checkHardcoreHeatDamage();
                 //SHIP SLOWED DOWN EVEN MORE
                 //CAM PLS PUT CODE TO SLOW DOWN SHIP EVEN MORE HERE 
+                playerMovement.maxSpeed = 1.5f;
 
                 //MINI MAP DISABLED 
                 miniMap.SetActive(false);
@@ -180,12 +191,14 @@ public class Player_ZonePosition : MonoBehaviour
             if (upgradeShop.hardcorePurchased == true)
             {
                 dangerAlert.text = "";
+                playerMovement.maxSpeed = 6;
             }
 
         }
         else
         {
             isInHardcoreZone = false;
+            
         }
     }
 
