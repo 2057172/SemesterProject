@@ -50,11 +50,11 @@ public class playerMovement : MonoBehaviour
 
     void Start()
     {
-        //currentHealth = maxHealth;
-        //Health_And_Fuel.setMaxHealth(maxHealth);
+        currentHealth = maxHealth;
+        Health_And_Fuel.setMaxHealth(maxHealth);
 
-       // currentFuel = maxFuel;
-        //Health_And_Fuel.setMaxFuel(maxFuel);
+       currentFuel = maxFuel;
+       Health_And_Fuel.setMaxFuel(maxFuel);
     }
 
     
@@ -75,7 +75,7 @@ public class playerMovement : MonoBehaviour
              // Starts the timer from when the key is pressed
         if (Input.GetKeyDown(key))
         {
-            startTime = Time.time;
+            startTime = Time.deltaTime;
             timer = startTime;
            
             currentFuel -= 5;
