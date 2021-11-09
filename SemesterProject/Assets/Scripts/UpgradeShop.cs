@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 public class UpgradeShop : MonoBehaviour
 {
    
@@ -73,8 +75,24 @@ public class UpgradeShop : MonoBehaviour
     public int maxHealthUpgrade3 = 250;
 
     /// <summary>
-    /// All the variables to repair ship
+    /// All the variables to upgrade order capacity
     /// </summary>
+    /// 
+
+
+    public int carryCapUp1Cost;
+    public int carryCapUp2Cost;
+    public int carryCapUp3Cost;
+
+    [SerializeField] public bool carryCapUP1purchased;
+    [SerializeField] public bool carryCapUP2purchased;
+    [SerializeField] public bool carryCapUP3purchased;
+
+    public Button carryCapUp1Button;
+    public Button carryCapUp2Button;
+    public Button carryCapUp3Button;
+
+    
 
     public fuel_and_mechanic_Manager repairScript;
 
@@ -102,6 +120,10 @@ public class UpgradeShop : MonoBehaviour
         fuelUp2Button.GetComponentInChildren<Text>().text = "Fuel Upgrade 2: " + "$" + FuelUp2Cost;
         fuelUp3Button.GetComponentInChildren<Text>().text = "Fuel Upgrade 3: " + "$" + FuelUp3Cost;
 
+        carryCapUp1Button.GetComponentInChildren<Text>().text = "Order Capacity Upgrade 1: " + "$" + carryCapUp1Cost;
+        carryCapUp2Button.GetComponentInChildren<Text>().text = "Order Capacity Upgrade 2: " + "$" + carryCapUp2Cost;
+        carryCapUp3Button.GetComponentInChildren<Text>().text = "Order Capacity Upgrade 3: " + "$" + carryCapUp3Cost;
+
 
         repairButton.GetComponentInChildren<Text>().text = "Repair Ship: " + "$" + repairScript.repairCost;
     }
@@ -121,6 +143,10 @@ public class UpgradeShop : MonoBehaviour
         fuelUp1Button.GetComponentInChildren<Text>().text = "Fuel Upgrade 1: " + "$" + FuelUp1Cost;
         fuelUp2Button.GetComponentInChildren<Text>().text = "Fuel Upgrade 2: " + "$" + FuelUp2Cost;
         fuelUp3Button.GetComponentInChildren<Text>().text = "Fuel Upgrade 3: " + "$" + FuelUp3Cost;
+
+        carryCapUp1Button.GetComponentInChildren<Text>().text = "Order Capacity Upgrade 1: " + "$" + carryCapUp1Cost;
+        carryCapUp2Button.GetComponentInChildren<Text>().text = "Order Capacity Upgrade 2: " + "$" + carryCapUp2Cost;
+        carryCapUp3Button.GetComponentInChildren<Text>().text = "Order Capacity Upgrade 3: " + "$" + carryCapUp3Cost;
 
 
         repairButton.GetComponentInChildren<Text>().text = "Repair Ship: " + "$" + repairScript.repairCost;
@@ -143,6 +169,9 @@ public class UpgradeShop : MonoBehaviour
             healthUp2Button.interactable = false;
             healthUp3Button.interactable = false;
             repairButton.interactable = false;
+            carryCapUp1Button.interactable = false;
+            carryCapUp2Button.interactable = false;
+            carryCapUp3Button.interactable = false;
         }
 
         // if you don't have enough money for a upgrade, you cannot purchase it
@@ -243,8 +272,33 @@ public class UpgradeShop : MonoBehaviour
             healthUp3Button.interactable = true;
         }
 
-        // Repair Things
-        
+        // Order Carry Capacity Things
+        if (gameMan.money < carryCapUp1Cost|| carryCapUP1purchased)    
+        {
+            carryCapUp1Button.interactable = false;
+        }
+        else
+        {
+            carryCapUp1Button.interactable = true;
+        }
+
+        if (gameMan.money < carryCapUp2Cost || carryCapUP2purchased)
+        {
+            carryCapUp2Button.interactable = false;
+        }
+        else
+        {
+            carryCapUp2Button.interactable = true;
+        }
+
+        if (gameMan.money < carryCapUp3Cost || carryCapUP3purchased)
+        {
+            carryCapUp3Button.interactable = false;
+        }
+        else
+        {
+            carryCapUp3Button.interactable = true;
+        }
     }
 
 
@@ -394,5 +448,50 @@ public class UpgradeShop : MonoBehaviour
         }
     }
 
+    public void CarryCapUpgrade1()
+    {
+        if (gameMan.money >= carryCapUp1Cost)
+        {
+            gameMan.money -= carryCapUp1Cost;
+            carryCapUP1purchased = true;
 
+            //DO SOMETHING
+        }
+        else
+        {
+            carryCapUP1purchased = false;
+        }
+    }
+
+
+    public void CarryCapUpgrade2()
+    {
+        if (gameMan.money >= carryCapUp2Cost && carryCapUP1purchased)
+        {
+            gameMan.money -= carryCapUp2Cost;
+            carryCapUP2purchased = true;
+
+            //DO SOMETHING
+        }
+        else
+        {
+            carryCapUP2purchased = false;
+        }
+    }
+
+
+    public void CarryCapUpgrade3()
+    {
+        if (gameMan.money >= carryCapUp3Cost && carryCapUP2purchased)
+        {
+            gameMan.money -= carryCapUp3Cost;
+            carryCapUP3purchased = true;
+
+            //DO SOMETHING
+        }
+        else
+        {
+            carryCapUP3purchased = false;
+        }
+    }
 }
