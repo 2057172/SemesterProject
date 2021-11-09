@@ -26470,7 +26470,7 @@ RectTransform:
   m_Children:
   - {fileID: 1113071214}
   m_Father: {fileID: 1041465756}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -26523,7 +26523,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1041465758}
         m_TargetAssemblyTypeName: UpgradeShop, Assembly-CSharp
-        m_MethodName: HealthUpgrade3
+        m_MethodName: CarryCapUpgrade3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -39515,7 +39515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2581946070897470412, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 2581946070897470412, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -39614,6 +39614,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 806154814}
     - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: carryCapUp1Cost
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: carryCapUp2Cost
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: carryCapUp3Cost
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
       propertyPath: maxFuelUpgrade1
       value: 150
       objectReference: {fileID: 0}
@@ -39625,6 +39637,18 @@ PrefabInstance:
       propertyPath: maxFuelUpgrade3
       value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: carryCapUp1Button
+      value: 
+      objectReference: {fileID: 1796423658}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: carryCapUp2Button
+      value: 
+      objectReference: {fileID: 1905780261}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: carryCapUp3Button
+      value: 
+      objectReference: {fileID: 697708799}
     - target: {fileID: 5497030636324159014, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
       propertyPath: m_Text
       value: '
@@ -68769,7 +68793,7 @@ RectTransform:
   m_Children:
   - {fileID: 1038938393}
   m_Father: {fileID: 1041465756}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -68822,7 +68846,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1041465758}
         m_TargetAssemblyTypeName: UpgradeShop, Assembly-CSharp
-        m_MethodName: HealthUpgrade1
+        m_MethodName: CarryCapUpgrade1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -73140,7 +73164,7 @@ RectTransform:
   m_Children:
   - {fileID: 1956402054}
   m_Father: {fileID: 1041465756}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -73193,7 +73217,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1041465758}
         m_TargetAssemblyTypeName: UpgradeShop, Assembly-CSharp
-        m_MethodName: HealthUpgrade2
+        m_MethodName: CarryCapUpgrade2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

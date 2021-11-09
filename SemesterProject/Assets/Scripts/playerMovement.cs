@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerMovement : MonoBehaviour
 {
@@ -61,18 +62,11 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
-        //   if (Input.GetKeyDown(KeyCode.W))
-        // {
-        //   currentFuel -= fuel;
-        // Health_And_Fuel.setCurrentFuel(currentFuel);
+        //LOSE CONDITION VOIDS
+        zeroFuel();
+        zeroHealth();
 
-        //if (currentFuel < 0)
-        //{
-        //  currentFuel = 0;
-        //}
-        //}
-
-             // Starts the timer from when the key is pressed
+        // Starts the timer from when the key is pressed
         if (Input.GetKeyDown(key))
         {
             startTime = Time.deltaTime;
@@ -113,6 +107,7 @@ public class playerMovement : MonoBehaviour
     }
 
 
+    //WHEN HITTING AN OBSTACLE THE SHIP TAKES DAMAGE
     void ShipCollision()
     {
         currentHealth -= shipDamage;
@@ -123,6 +118,8 @@ public class playerMovement : MonoBehaviour
         }
     }
 
+
+    //WHEN HITTING AN OBSTACLE THE SHIP TAKES DAMAGE
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Collision")
@@ -188,5 +185,27 @@ public class playerMovement : MonoBehaviour
     }
     
 
+
+
+    //LOSE CONDITION CODE
+    //IF PLAYER HEALTH OR FUEL REACHES ZERO GO TO LOSE SCREEN
+    public void zeroFuel()
+    {
+        if(currentFuel <= 0)
+        {
+            currentFuel = 0;
+            SceneManager.LoadScene("gameOver_scene");
+
+        }
+    }
+
+    public void zeroHealth()
+    {
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            SceneManager.LoadScene("gameOver_scene");
+        }
+    }
 
 }
