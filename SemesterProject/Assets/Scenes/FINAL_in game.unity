@@ -78921,6 +78921,9 @@ MonoBehaviour:
   consumption: 0.01
   holdTime: 2
   key: w
+  canDecreaseFuel: 1
+  fuelSeconds: 5
+  fuelDecrease: 2
 --- !u!61 &2052233156
 BoxCollider2D:
   m_ObjectHideFlags: 0
