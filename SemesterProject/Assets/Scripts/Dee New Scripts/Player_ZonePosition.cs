@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player_ZonePosition : MonoBehaviour
 {
@@ -13,8 +14,8 @@ public class Player_ZonePosition : MonoBehaviour
     public Transform spaceship;
 
     public Transform normalZoneEdge;
-    public Transform heatZoneEdge;
     public Transform iceZoneEdge;
+    public Transform heatZoneEdge;
     public Transform radiationZoneEdge;
     public Transform hardcoreZoneEdge;
 
@@ -29,6 +30,11 @@ public class Player_ZonePosition : MonoBehaviour
     public int heatSeconds = 5;
     public int heatDamage = 2;
 
+    public TextMeshProUGUI dangerAlert;
+
+
+    //MAP STUFF FOR RADIATION ZONE
+    public GameObject miniMap;
 
     void Start()
     {
@@ -59,21 +65,56 @@ public class Player_ZonePosition : MonoBehaviour
         }
 
 
+       
+
+        //INSIDE ICE ZONE
+        if (spaceship_distance > normalZoneEdge.transform.position.y && spaceship_distance < iceZoneEdge.transform.position.y)
+        {
+            isInIceZone = true;
+
+
+            //IF PLAYER DOES NOT HAVE ICE PROTECTION 
+            if (isInIceZone == true && upgradeShop.icePurchased == false )
+            {
+                dangerAlert.text = "ICE DAMAGE DAMAGE!";
+
+                //CAM PLS PUT CODE TO SLOW DOWN SHIP WHEN IN THIS ZONE HERE
+            }
+            //IF PLAYER DOES HAVE ICE PROTECTION
+            if (upgradeShop.icePurchased == true)
+            {
+             
+                dangerAlert.text = "";
+
+            }
+
+            
+        }
+
+     
+        else
+        {
+            isInIceZone = false;
+        }
+
+
         //INSIDE HEAT ZONE
-        if (spaceship_distance > normalZoneEdge.transform.position.y && spaceship_distance < heatZoneEdge.transform.position.y)
+        if (spaceship_distance > iceZoneEdge.transform.position.y && spaceship_distance < heatZoneEdge.transform.position.y)
         {
             isInHeatZone = true;
 
             //IF PLAYER DOES NOT HAVE HEAT PROTECTION 
-            if (isInHeatZone == true && upgradeShop.firePurchased == false && canTakeHeatDamage ==true )
+            if (isInHeatZone == true && upgradeShop.firePurchased == false && canTakeHeatDamage == true)
             {
+                dangerAlert.text = "HEAT DAMAGE!";
                 checkHeatDamage();
 
             }
             //IF PLAYER DOES HAVE HEAT PROTECTION
-            if ( upgradeShop.firePurchased == true )
+            if (upgradeShop.firePurchased == true)
             {
                 canTakeHeatDamage = false;
+                dangerAlert.text = "";
 
             }
         }
@@ -82,24 +123,28 @@ public class Player_ZonePosition : MonoBehaviour
             isInHeatZone = false;
         }
 
-        //INSIDE ICE ZONE
-        if (spaceship_distance > heatZoneEdge.transform.position.y && spaceship_distance < iceZoneEdge.transform.position.y)
-        {
-            isInIceZone = true;
-        }
-        else
-        {
-            isInIceZone = false;
-        }
-
         //INSIDE RADIATION ZONE
-        if (spaceship_distance > iceZoneEdge.transform.position.y && spaceship_distance < radiationZoneEdge.transform.position.y)
+        if (spaceship_distance > heatZoneEdge.transform.position.y && spaceship_distance < radiationZoneEdge.transform.position.y)
         {
             isInRadiationZone = true;
+            //IF PLAYER DOES NOT HAVE RADIATION PROTECTION 
+            if (isInRadiationZone == true && upgradeShop.radPurchased == false)
+            {
+                
+                dangerAlert.text = "RADIATION DAMAGE!";
+                miniMap.SetActive(false);
+                
+            }
+            //IF PLAYER DOES HAVE RADIATION PROTECTION
+            if (upgradeShop.radPurchased == true)
+            {
+                dangerAlert.text = "";
+            }
         }
         else
         {
             isInRadiationZone = false;
+            
         }
 
         //INSIDE HARDCORE ZONE
