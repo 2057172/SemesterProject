@@ -100,7 +100,7 @@ public class UpgradeShop : MonoBehaviour
 
     public Button repairButton;
 
-    public Text priceTXT;
+    public TextMeshProUGUI priceTXT;
 
 
   
@@ -109,49 +109,49 @@ public class UpgradeShop : MonoBehaviour
     void Start()
     {
 
-        heatButton.GetComponentInChildren<Text>().text = "Heat Protection: " + "$" + firePro;
-        iceButton.GetComponentInChildren<Text>().text = "Ice Protection: " + "$" + icePro;
-        radButton.GetComponentInChildren<Text>().text = "Radiation Protection: " + "$" + radPro;
-        hardcoreButton.GetComponentInChildren<Text>().text = "Hardcore Proection: " + "$" + hardcorePro;
+        heatButton.GetComponentInChildren<TextMeshProUGUI>().text = "Heat Protection: " + "$" + firePro;
+        iceButton.GetComponentInChildren<TextMeshProUGUI>().text = "Ice Protection: " + "$" + icePro;
+        radButton.GetComponentInChildren<TextMeshProUGUI>().text = "Radiation Protection: " + "$" + radPro;
+        hardcoreButton.GetComponentInChildren<TextMeshProUGUI>().text = "Hardcore Proection: " + "$" + hardcorePro;
 
-        healthUp1Button.GetComponentInChildren<Text>().text = "Health Upgrade 1: " + "$" + HealthUp1Cost;
-        healthUp2Button.GetComponentInChildren<Text>().text = "Health Upgrade 2: " + "$" + HealthUp2Cost;
-        healthUp3Button.GetComponentInChildren<Text>().text = "Health Upgrade 3: " + "$" + HealthUp3Cost;
+        healthUp1Button.GetComponentInChildren<TextMeshProUGUI>().text = "Health Upgrade 1: " + "$" + HealthUp1Cost;
+        healthUp2Button.GetComponentInChildren<TextMeshProUGUI>().text = "Health Upgrade 2: " + "$" + HealthUp2Cost;
+        healthUp3Button.GetComponentInChildren<TextMeshProUGUI>().text = "Health Upgrade 3: " + "$" + HealthUp3Cost;
 
-        fuelUp1Button.GetComponentInChildren<Text>().text = "Fuel Upgrade 1: " + "$" + FuelUp1Cost;
-        fuelUp2Button.GetComponentInChildren<Text>().text = "Fuel Upgrade 2: " + "$" + FuelUp2Cost;
-        fuelUp3Button.GetComponentInChildren<Text>().text = "Fuel Upgrade 3: " + "$" + FuelUp3Cost;
+        fuelUp1Button.GetComponentInChildren<TextMeshProUGUI>().text = "Fuel Upgrade 1: " + "$" + FuelUp1Cost;
+        fuelUp2Button.GetComponentInChildren<TextMeshProUGUI>().text = "Fuel Upgrade 2: " + "$" + FuelUp2Cost;
+        fuelUp3Button.GetComponentInChildren<TextMeshProUGUI>().text = "Fuel Upgrade 3: " + "$" + FuelUp3Cost;
 
-        carryCapUp1Button.GetComponentInChildren<Text>().text = "Order Capacity Upgrade 1: " + "$" + carryCapUp1Cost;
-        carryCapUp2Button.GetComponentInChildren<Text>().text = "Order Capacity Upgrade 2: " + "$" + carryCapUp2Cost;
-        carryCapUp3Button.GetComponentInChildren<Text>().text = "Order Capacity Upgrade 3: " + "$" + carryCapUp3Cost;
+        carryCapUp1Button.GetComponentInChildren<TextMeshProUGUI>().text = "Order Capacity Upgrade 1: " + "$" + carryCapUp1Cost;
+        carryCapUp2Button.GetComponentInChildren<TextMeshProUGUI>().text = "Order Capacity Upgrade 2: " + "$" + carryCapUp2Cost;
+        carryCapUp3Button.GetComponentInChildren<TextMeshProUGUI>().text = "Order Capacity Upgrade 3: " + "$" + carryCapUp3Cost;
 
 
-        repairButton.GetComponentInChildren<Text>().text = "Repair Ship: " + "$" + repairScript.repairCost;
+        repairButton.GetComponentInChildren<TextMeshProUGUI>().text = "Repair Ship: " + "$" + repairScript.repairCost;
     }
 
     // Update is called once per frame
     void Update()
     {
-        heatButton.GetComponentInChildren<Text>().text = "Heat Protection: " + "$" + firePro;
-        iceButton.GetComponentInChildren<Text>().text = "Ice Protection: " + "$" + icePro;
-        radButton.GetComponentInChildren<Text>().text = "Radiation Protection: " + "$" + radPro;
-        hardcoreButton.GetComponentInChildren<Text>().text = "Hardcore Proection: " + "$" + hardcorePro;
+        heatButton.GetComponentInChildren<TextMeshProUGUI>().text = "Heat Protection: " + "$" + firePro;
+        iceButton.GetComponentInChildren<TextMeshProUGUI>().text = "Ice Protection: " + "$" + icePro;
+        radButton.GetComponentInChildren<TextMeshProUGUI>().text = "Radiation Protection: " + "$" + radPro;
+        hardcoreButton.GetComponentInChildren<TextMeshProUGUI>().text = "Hardcore Proection: " + "$" + hardcorePro;
 
-        healthUp1Button.GetComponentInChildren<Text>().text = "Health Upgrade 1: " + "$" + HealthUp1Cost;
-        healthUp2Button.GetComponentInChildren<Text>().text = "Health Upgrade 2: " + "$" + HealthUp2Cost;
-        healthUp3Button.GetComponentInChildren<Text>().text = "Health Upgrade 3: " + "$" + HealthUp3Cost;
+        healthUp1Button.GetComponentInChildren<TextMeshProUGUI>().text = "Health Upgrade 1: " + "$" + HealthUp1Cost;
+        healthUp2Button.GetComponentInChildren<TextMeshProUGUI>().text = "Health Upgrade 2: " + "$" + HealthUp2Cost;
+        healthUp3Button.GetComponentInChildren<TextMeshProUGUI>().text = "Health Upgrade 3: " + "$" + HealthUp3Cost;
 
-        fuelUp1Button.GetComponentInChildren<Text>().text = "Fuel Upgrade 1: " + "$" + FuelUp1Cost;
-        fuelUp2Button.GetComponentInChildren<Text>().text = "Fuel Upgrade 2: " + "$" + FuelUp2Cost;
-        fuelUp3Button.GetComponentInChildren<Text>().text = "Fuel Upgrade 3: " + "$" + FuelUp3Cost;
+        fuelUp1Button.GetComponentInChildren<TextMeshProUGUI>().text = "Fuel Upgrade 1: " + "$" + FuelUp1Cost;
+        fuelUp2Button.GetComponentInChildren<TextMeshProUGUI>().text = "Fuel Upgrade 2: " + "$" + FuelUp2Cost;
+        fuelUp3Button.GetComponentInChildren<TextMeshProUGUI>().text = "Fuel Upgrade 3: " + "$" + FuelUp3Cost;
 
-        carryCapUp1Button.GetComponentInChildren<Text>().text = "Order Capacity Upgrade 1: " + "$" + carryCapUp1Cost;
-        carryCapUp2Button.GetComponentInChildren<Text>().text = "Order Capacity Upgrade 2: " + "$" + carryCapUp2Cost;
-        carryCapUp3Button.GetComponentInChildren<Text>().text = "Order Capacity Upgrade 3: " + "$" + carryCapUp3Cost;
+        carryCapUp1Button.GetComponentInChildren<TextMeshProUGUI>().text = "Order Capacity Upgrade 1: " + "$" + carryCapUp1Cost;
+        carryCapUp2Button.GetComponentInChildren<TextMeshProUGUI>().text = "Order Capacity Upgrade 2: " + "$" + carryCapUp2Cost;
+        carryCapUp3Button.GetComponentInChildren<TextMeshProUGUI>().text = "Order Capacity Upgrade 3: " + "$" + carryCapUp3Cost;
 
 
-        repairButton.GetComponentInChildren<Text>().text = "Repair Ship: " + "$" + repairScript.repairCost;
+        repairButton.GetComponentInChildren<TextMeshProUGUI>().text = "Repair Ship: " + "$" + repairScript.repairCost;
 
         ///Once Off Upgrades things
 

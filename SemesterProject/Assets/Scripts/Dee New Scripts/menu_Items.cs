@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class menu_Items : MonoBehaviour
@@ -15,7 +16,7 @@ public class menu_Items : MonoBehaviour
 
     public Transform Earth, Forest, Ice, Metal, Cat, Sun, Sleep, Fire, Dance, Lovecraft, LSD, Weed, Bougie, Gas;
 
-    public Text orderStatus;
+    public TextMeshProUGUI orderStatus;
     public bool OnOrder1, onOrder2, onOrder3;
 
     public string[] Foods = new string[]
