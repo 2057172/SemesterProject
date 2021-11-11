@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class OrderManager : MonoBehaviour
@@ -21,7 +22,7 @@ public class OrderManager : MonoBehaviour
     public float totalCommision;
 
     public GameManager gm;
-    public Text OrderMoneyTXT, orderStatus, countdownTimerText;
+    public TextMeshProUGUI OrderMoneyTXT, orderStatus, countdownTimerText;
 
     public float countDown;
     public float ETA;

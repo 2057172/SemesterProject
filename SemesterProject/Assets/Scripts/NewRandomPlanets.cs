@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class NewRandomPlanets : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class NewRandomPlanets : MonoBehaviour
     public float Distance1, Distance2, Distance3;
     public Vector3 Destination1, Destination2, Destination3;
 
-    public Text Distance1TXT, Distance2TXT, Distance3TXT, Planet1, Planet2, Planet3;
+    public TextMeshProUGUI Distance1TXT, Distance2TXT, Distance3TXT, Planet1, Planet2, Planet3;
 
     public Transform Player, pickUpZone;
 

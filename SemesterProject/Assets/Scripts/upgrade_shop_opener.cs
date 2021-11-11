@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class upgrade_shop_opener : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class upgrade_shop_opener : MonoBehaviour
     public GameObject repairPanel;
     public bool isAtShop;
     public bool shopOP;
-    public Text instruction;
+    public TextMeshProUGUI instruction;
 
     void Start()
     {
