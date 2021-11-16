@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Player_ZonePosition : MonoBehaviour
 {
@@ -42,12 +43,66 @@ public class Player_ZonePosition : MonoBehaviour
     //MAP STUFF FOR RADIATION ZONE
     public GameObject miniMap;
 
-    
 
+
+
+    //STUFF FOR BUTTONS
+    //UPGRADE BUTTONS
+    public Button healthUpgrade1;
+    public Button healthUpgrade2;
+    public Button healthUpgrade3;
+
+    public Button fuelUpgrade1;
+    public Button fuelUpgrade2;
+    public Button fuelUpgrade3;
+
+    public Button carryCapacity1;
+    public Button carryCapacity2;
+    public Button carryCapacity3;
+    public Button carryCapacity4;
+
+    public Button iceUpgrade;
+    public Button heatUpgrade;
+    public Button radiationUpgrade;
+    public Button hardcoreUpgrade;
+
+    public Button repairButton;
+
+    //COLOURS 
+    public Color green1;
+    public Color green2;
+    public Color green3;
+    public Color green4;
+
+
+    public Color blue1;
+    public Color blue2;
+    public Color blue3;
+    public Color blue4;
+
+    public Color red1;
+    public Color red2;
+    public Color red3;
+    public Color red4;
+
+    public Color purple1;
+    public Color purple2;
+    public Color purple3;
+    public Color purple4;
+
+
+    public Color black1;
+    public Color black2;
+    public Color black3;
+    public Color black4;
+    
+    
     void Start()
     {
 
-        dangerAlert.text = "";
+
+        //Changes the button's Normal color to the new color.
+     
     }
 
     private void Awake()
@@ -64,7 +119,8 @@ public class Player_ZonePosition : MonoBehaviour
         {
             isInNormalZone = true;
 
-            
+           
+
         }
         else
         {
@@ -80,14 +136,76 @@ public class Player_ZonePosition : MonoBehaviour
         {
             isInIceZone = true;
 
+            //UPGRADE UI COLOUR IN ICE ZONE
+            ColorBlock hu1 = healthUpgrade1.colors;
+            hu1.normalColor = blue1;
+            healthUpgrade1.colors = hu1;
+
+            ColorBlock fu1 = fuelUpgrade1.colors;
+            fu1.normalColor = blue1;
+            fuelUpgrade1.colors = fu1;
+
+            ColorBlock cu1 = carryCapacity1.colors;
+            cu1.normalColor = blue1;
+            carryCapacity1.colors =cu1;
+
+            ColorBlock ice = iceUpgrade.colors;
+            ice.normalColor = blue1;
+            iceUpgrade.colors = ice;
+
+
+            ColorBlock hu2 = healthUpgrade2.colors;
+            hu2.normalColor = blue2;
+            healthUpgrade2.colors = hu2;
+
+            ColorBlock fu2 = fuelUpgrade2.colors;
+            fu2.normalColor = blue2;
+            fuelUpgrade2.colors = fu2;
+
+            ColorBlock cu2 = carryCapacity2.colors;
+            cu2.normalColor = blue2;
+            carryCapacity2.colors = cu2;
+
+            ColorBlock heat = heatUpgrade.colors;
+            heat.normalColor = blue2;
+            heatUpgrade.colors = heat;
+
+
+            ColorBlock hu3 = healthUpgrade3.colors;
+            hu3.normalColor = blue3;
+            healthUpgrade3.colors = hu3;
+
+            ColorBlock fu3 = fuelUpgrade3.colors;
+            fu3.normalColor = blue3;
+            fuelUpgrade3.colors = fu3;
+
+            ColorBlock cu3 = carryCapacity3.colors;
+            cu3.normalColor = blue3;
+            carryCapacity3.colors = cu3;
+
+            ColorBlock rad = radiationUpgrade.colors;
+            rad.normalColor = blue3;
+            radiationUpgrade.colors = rad;
+
+
+            ColorBlock hard = hardcoreUpgrade.colors;
+            hard.normalColor = blue4;
+            hardcoreUpgrade.colors = hard;
+
+            ColorBlock repair = repairButton.colors;
+            repair.normalColor = blue4;
+            repairButton.colors = repair;
 
             //IF PLAYER DOES NOT HAVE ICE PROTECTION 
             if (isInIceZone == true && upgradeShop.icePurchased == false)
             {
                 dangerAlert.text = "ICE DAMAGE DAMAGE!";
 
-                //CAM PLS PUT CODE TO SLOW DOWN SHIP WHEN IN THIS ZONE HERE
+                //PUT CODE TO SLOW DOWN SHIP WHEN IN THIS ZONE HERE
                 playerMovement.maxSpeed = 3;
+
+
+
             }
             //IF PLAYER DOES HAVE ICE PROTECTION
             if (upgradeShop.icePurchased == true)
@@ -144,6 +262,67 @@ public class Player_ZonePosition : MonoBehaviour
         if (spaceship_distance > heatZoneEdge.transform.position.y && spaceship_distance < radiationZoneEdge.transform.position.y)
         {
             isInRadiationZone = true;
+
+            //UPGRADE UI COLOUR IN RADIATION ZONE
+            ColorBlock hu1 = healthUpgrade1.colors;
+            hu1.normalColor = purple1;
+            healthUpgrade1.colors = hu1;
+
+            ColorBlock fu1 = fuelUpgrade1.colors;
+            fu1.normalColor = purple1;
+            fuelUpgrade1.colors = fu1;
+
+            ColorBlock cu1 = carryCapacity1.colors;
+            cu1.normalColor = purple1;
+            carryCapacity1.colors = cu1;
+
+            ColorBlock ice = iceUpgrade.colors;
+            ice.normalColor = purple1;
+            iceUpgrade.colors = ice;
+
+
+            ColorBlock hu2 = healthUpgrade2.colors;
+            hu2.normalColor = purple1;
+            healthUpgrade2.colors = hu2;
+
+            ColorBlock fu2 = fuelUpgrade2.colors;
+            fu2.normalColor = purple2;
+            fuelUpgrade2.colors = fu2;
+
+            ColorBlock cu2 = carryCapacity2.colors;
+            cu2.normalColor = purple2;
+            carryCapacity2.colors = cu2;
+
+            ColorBlock heat = heatUpgrade.colors;
+            heat.normalColor = purple2;
+            heatUpgrade.colors = heat;
+
+
+            ColorBlock hu3 = healthUpgrade3.colors;
+            hu3.normalColor = purple3;
+            healthUpgrade3.colors = hu3;
+
+            ColorBlock fu3 = fuelUpgrade3.colors;
+            fu3.normalColor = purple3;
+            fuelUpgrade3.colors = fu3;
+
+            ColorBlock cu3 = carryCapacity3.colors;
+            cu3.normalColor = purple3;
+            carryCapacity3.colors = cu3;
+
+            ColorBlock rad = radiationUpgrade.colors;
+            rad.normalColor = purple3;
+            radiationUpgrade.colors = rad;
+
+
+            ColorBlock hard = hardcoreUpgrade.colors;
+            hard.normalColor = purple4;
+            hardcoreUpgrade.colors = hard;
+
+            ColorBlock repair = repairButton.colors;
+            repair.normalColor = purple4;
+            repairButton.colors = repair;
+
             //IF PLAYER DOES NOT HAVE RADIATION PROTECTION 
             if (isInRadiationZone == true && upgradeShop.radPurchased == false)
             {
@@ -160,6 +339,10 @@ public class Player_ZonePosition : MonoBehaviour
 
                 //CODE TO MAKE SHIP GO FAST AGAIN
             }
+
+
+
+          
         }
         else
         {
@@ -193,6 +376,27 @@ public class Player_ZonePosition : MonoBehaviour
                 dangerAlert.text = "";
                 playerMovement.maxSpeed = 6;
             }
+
+
+
+            //UPGRADE UI COLOUR IN HARDCORE ZONE
+            healthUpgrade1.GetComponent<Image>().color = black1;
+            fuelUpgrade1.GetComponent<Image>().color = black1;
+            carryCapacity1.GetComponent<Image>().color = black1;
+            iceUpgrade.GetComponent<Image>().color = black1;
+
+            healthUpgrade2.GetComponent<Image>().color = black2;
+            fuelUpgrade2.GetComponent<Image>().color = black2;
+            carryCapacity2.GetComponent<Image>().color = black2;
+            heatUpgrade.GetComponent<Image>().color = black2;
+
+            healthUpgrade3.GetComponent<Image>().color = black3;
+            fuelUpgrade3.GetComponent<Image>().color = black3;
+            carryCapacity3.GetComponent<Image>().color = black3;
+            radiationUpgrade.GetComponent<Image>().color = black3;
+
+            repairButton.GetComponent<Image>().color = black4;
+            hardcoreUpgrade.GetComponent<Image>().color = black4;
 
         }
         else
