@@ -20,8 +20,15 @@ public class NewRandomPlanets : MonoBehaviour
 
     public float totalCommision1, totalCommision2, totalCommision3;
 
+    public float destinationTime1, destinationTime2, destinationTime3, totalDestinationTime;
+    public bool onOrder;
+    public float timeOfDelivery;
+    public float eta;
+
     public void Start()
     {
+
+        onOrder = false;
         Distance1TXT.gameObject.SetActive(false);
         Distance2TXT.gameObject.SetActive(false);
         Distance3TXT.gameObject.SetActive(false);
@@ -33,6 +40,16 @@ public class NewRandomPlanets : MonoBehaviour
 
     public void Update()
     {
+        if(PlanetOutcome1 == null && PlanetOutcome2 == null)
+        {
+            onOrder = false;
+            timeOfDelivery = totalDestinationTime - timeOfDelivery;
+            Debug.Log(timeOfDelivery);           
+        } else {
+            onOrder = true;
+            totalDestinationTime -= 1 * Time.deltaTime;
+        }
+
         if(MI.OnOrder1 == true)
         {
             Distance1 = Vector3.Distance(Player.position, Destination1);
@@ -86,7 +103,7 @@ public class NewRandomPlanets : MonoBehaviour
 
     public void fillOrders()
     {
-
+        onOrder = true;
         PI.Menu.gameObject.SetActive(false);
 
         for (int count = 0; count < 3; count++)
@@ -109,6 +126,11 @@ public class NewRandomPlanets : MonoBehaviour
                     totalCommision1 = 20 + (Vector3.Distance(pickUpZone.position, PlanetOutcome1.gameObject.GetComponent<Transform>().position) * 0.8f);
                 }
 
+                destinationTime1 = Vector3.Distance(pickUpZone.position, PlanetOutcome1.gameObject.GetComponent<Transform>().position) * 1.2f;
+                //+
+                // Vector3.Distance(pickUpZone.position, PlanetOutcome3.gameObject.GetComponent<Transform>().position); */
+
+                Debug.Log("Destination 1: " + destinationTime1);
             }
             else if (count == 1)
             {
@@ -126,6 +148,11 @@ public class NewRandomPlanets : MonoBehaviour
 
                     totalCommision2 = 20 + (Vector3.Distance(pickUpZone.position, PlanetOutcome2.gameObject.GetComponent<Transform>().position) * 0.8f);
 
+                    destinationTime2 = Vector3.Distance(pickUpZone.position, PlanetOutcome2.gameObject.GetComponent<Transform>().position) * 1.2f;
+                    totalDestinationTime = destinationTime1 + destinationTime2 + destinationTime3;
+
+                    Debug.Log("Destination 2: " + destinationTime2);
+                    Debug.Log("Total: " + totalDestinationTime);
                 }               
 
             }
@@ -144,8 +171,14 @@ public class NewRandomPlanets : MonoBehaviour
                     Planet3.text = PlanetOutcome3.name;
 
                     totalCommision3 = 20 + (Vector3.Distance(pickUpZone.position, PlanetOutcome3.gameObject.GetComponent<Transform>().position) * 0.8f);
+
+                    destinationTime3 = Vector3.Distance(pickUpZone.position, PlanetOutcome3.gameObject.GetComponent<Transform>().position) * 1.2f;
+                    totalDestinationTime = destinationTime1 + destinationTime2 + destinationTime3;
+
+                    Debug.Log("Destination 3: " + destinationTime3);
+                    Debug.Log("Total: " + totalDestinationTime);
                 }
-            }
+            } eta = totalDestinationTime;
         }
 
     }
