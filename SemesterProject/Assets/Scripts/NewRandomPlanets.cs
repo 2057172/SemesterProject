@@ -28,7 +28,7 @@ public class NewRandomPlanets : MonoBehaviour
 
     public void Start()
     {
-
+        fillOrders();
         onOrder = false;
         Distance1TXT.gameObject.SetActive(false);
         Distance2TXT.gameObject.SetActive(false);

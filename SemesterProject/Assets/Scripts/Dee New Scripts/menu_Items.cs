@@ -11,6 +11,7 @@ public class menu_Items : MonoBehaviour
 
     public GameManager gm;
     public Button OrderButtonOne, OrderButtonTwo, OrderButtonThree;
+    public NewRandomPlanets newRandomPlanets;
 
     public UpgradeShop upgradeShop;
 
@@ -287,15 +288,17 @@ public class menu_Items : MonoBehaviour
     public int orderCounter;
  
     public void Start()
-    {
+    {     
         RefreshOrders();
         RefreshOrders();
+        newRandomPlanets.fillOrders();
+
 
         OnOrder1 = false;
         onOrder2 = false;
         onOrder3 = false;
       
-        gm.OrderButton1.GetComponentInChildren<TextMeshProUGUI>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
+        gm.OrderButton1.GetComponentInChildren<TextMeshProUGUI>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3 + ", " + newRandomPlanets.PlanetOutcome1;
         gm.OrderButton2.GetComponentInChildren<TextMeshProUGUI>().text = pickfood4 + "," + pickfood5 + "," + pickfood6;
 
         orderStatus.text = "";
@@ -365,7 +368,7 @@ public class menu_Items : MonoBehaviour
                 pickfood3 = Foods[useFoods3];
                 Debug.Log("This is" + useFoods3);
 
-                OrderButtonOne.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
+                OrderButtonOne.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3 + ", " + newRandomPlanets.PlanetOutcome1;
                 //menuButton1.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
 
                 orderStatus.text = "Order Picked Up.";

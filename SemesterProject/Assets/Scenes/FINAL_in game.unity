@@ -68708,7 +68708,8 @@ MonoBehaviour:
   OrderButtonOne: {fileID: 787388983}
   OrderButtonTwo: {fileID: 1238322632}
   OrderButtonThree: {fileID: 748635336}
-  upgradeShop: {fileID: 0}
+  newRandomPlanets: {fileID: 1796300870}
+  upgradeShop: {fileID: 1041465758}
   Earth: {fileID: 919480718}
   Forest: {fileID: 1547510393}
   Ice: {fileID: 909872697}
