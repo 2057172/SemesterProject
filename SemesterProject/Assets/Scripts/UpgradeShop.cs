@@ -18,7 +18,6 @@ public class UpgradeShop : MonoBehaviour
     public int firePro;
     public int radPro;
     public int hardcorePro;
-
     
     [SerializeField] public bool icePurchased;
     [SerializeField] public bool firePurchased;
@@ -81,7 +80,7 @@ public class UpgradeShop : MonoBehaviour
     /// </summary>
     /// 
 
-
+    public int maxOrderCapacity;
     public int carryCapUp1Cost;
     public int carryCapUp2Cost;
     public int carryCapUp3Cost;
@@ -128,7 +127,9 @@ public class UpgradeShop : MonoBehaviour
 
 
         repairButton.GetComponentInChildren<TextMeshProUGUI>().text = "Repair Ship: " + "$" + repairScript.repairCost;
-    }
+
+        maxOrderCapacity = 2;
+}
 
     // Update is called once per frame
     void Update()
@@ -457,7 +458,7 @@ public class UpgradeShop : MonoBehaviour
             gameMan.money -= carryCapUp1Cost;
             carryCapUP1purchased = true;
 
-            //DO SOMETHING
+            maxOrderCapacity = 3;
         }
         else
         {
@@ -473,7 +474,7 @@ public class UpgradeShop : MonoBehaviour
             gameMan.money -= carryCapUp2Cost;
             carryCapUP2purchased = true;
 
-            //DO SOMETHING
+            maxOrderCapacity = 4;
         }
         else
         {
@@ -489,7 +490,7 @@ public class UpgradeShop : MonoBehaviour
             gameMan.money -= carryCapUp3Cost;
             carryCapUP3purchased = true;
 
-            //DO SOMETHING
+            maxOrderCapacity = 5;
         }
         else
         {

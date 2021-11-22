@@ -32,6 +32,7 @@ public class PlayerOrderInfo : MonoBehaviour
             np.PlanetOutcome1 = null;
             gm.money += np.totalCommision1;
             MI.OnOrder1 = false;
+            MI.orderCounter--;
             if (np.PlanetOutcome2 == null)
             {
                 np.totalDestinationTime = np.eta - np.totalDestinationTime;
@@ -44,8 +45,9 @@ public class PlayerOrderInfo : MonoBehaviour
             Debug.Log("Its lit 2");
             np.PlanetOutcome2 = null;
             gm.money += np.totalCommision2;
-            MI.onOrder2 = false;          
-            if(np.PlanetOutcome1 == null)
+            MI.onOrder2 = false;
+            MI.orderCounter--;
+            if (np.PlanetOutcome1 == null)
             {
                 np.totalDestinationTime = np.eta - np.totalDestinationTime;
                 gm.money += np.totalDestinationTime;
@@ -56,6 +58,7 @@ public class PlayerOrderInfo : MonoBehaviour
         {
             Debug.Log("Its lit 3");
             np.PlanetOutcome3 = null;
+            MI.orderCounter--;
             gm.money += np.totalCommision3;
             MI.onOrder3 = false;
         }

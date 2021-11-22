@@ -10,7 +10,11 @@ public class RandomIncorrectOrder : MonoBehaviour
     public Button Order2;
     public Button Order3;
     public Button Order4;
+    public Button Order5;
+    public Button Order6;
 
+    public menu_Items menuItems;
+    public UpgradeShop upgradeShop;
 
     public string[] RandomFoods = new string[]
    {
@@ -92,7 +96,8 @@ public class RandomIncorrectOrder : MonoBehaviour
    };
 
 
-    public string PickRandomFood1, PickRandomFood2, PickRandomFood3, PickRandomFood4, PickRandomFood5, PickRandomFood6, PickRandomFood7, PickRandomFood8, PickRandomFood9, PickRandomFood10, PickRandomFood11, PickRandomFood12;
+    public string PickRandomFood1, PickRandomFood2, PickRandomFood3, PickRandomFood4, PickRandomFood5, PickRandomFood6, PickRandomFood7, PickRandomFood8, PickRandomFood9, PickRandomFood10, PickRandomFood11, PickRandomFood12, PickRandomFood13, PickRandomFood14,
+                  PickRandomFood15, PickRandomFood16, PickRandomFood17, PickRandomFood18;
 
     public GameObject OrderPanel;
     // Start is called before the first frame update
@@ -127,7 +132,7 @@ public class RandomIncorrectOrder : MonoBehaviour
 
     public void PickRandomFoodOrder()
     {
-        for (int counrt = 0; counrt < 4; counrt++)
+        for (int counrt = 0; counrt < 6; counrt++)
         {
             if (counrt == 0)
             {
@@ -141,6 +146,7 @@ public class RandomIncorrectOrder : MonoBehaviour
 ;
                 FourRandomFoods();
                 Order2.gameObject.GetComponentInChildren<Text>().text = PickRandomFood4 + "," + PickRandomFood5 + "," + PickRandomFood6;
+
             }
             if (counrt == 2)
             {
@@ -152,6 +158,25 @@ public class RandomIncorrectOrder : MonoBehaviour
             {
                 FourRandomFoods();
                 Order4.gameObject.GetComponentInChildren<Text>().text = PickRandomFood10 + "," + PickRandomFood11 + "," + PickRandomFood12;
+            }
+            if (counrt == 4)
+            {
+                FourRandomFoods();
+                Order5.gameObject.GetComponentInChildren<Text>().text = PickRandomFood13 + "," + PickRandomFood14 + "," + PickRandomFood15;
+            }
+            if (counrt == 5)
+            {
+                if(menuItems.OnOrder1 == true)
+                {
+                    Order6.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood1 + ", " + 
+                        menuItems.pickfood2 + ", " + menuItems.pickfood3;
+                }
+                else
+                {
+                    FourRandomFoods();
+                    Order6.gameObject.GetComponentInChildren<Text>().text = PickRandomFood16 + "," + PickRandomFood17 + "," + PickRandomFood18;
+                }
+
             }
         }
        
@@ -245,6 +270,42 @@ public class RandomIncorrectOrder : MonoBehaviour
 
         PickRandomFood12 = RandomFoods[useFoods12];
         Debug.Log("This is" + useFoods12);
+
+        System.Random random13 = new System.Random();
+        int useFoods13 = Random.Range(0, RandomFoods.Length);
+
+        PickRandomFood13 = RandomFoods[useFoods13];
+        Debug.Log("This is" + useFoods13);
+
+        System.Random random14 = new System.Random();
+        int useFoods14 = Random.Range(0, RandomFoods.Length);
+
+        PickRandomFood14 = RandomFoods[useFoods14];
+        Debug.Log("This is" + useFoods14);
+
+        System.Random random15 = new System.Random();
+        int useFoods15 = Random.Range(0, RandomFoods.Length);
+
+        PickRandomFood15 = RandomFoods[useFoods15];
+        Debug.Log("This is" + useFoods15);
+
+        System.Random random16 = new System.Random();
+        int useFoods16 = Random.Range(0, RandomFoods.Length);
+
+        PickRandomFood16 = RandomFoods[useFoods16];
+        Debug.Log("This is" + useFoods16);
+
+        System.Random random17 = new System.Random();
+        int useFoods17 = Random.Range(0, RandomFoods.Length);
+
+        PickRandomFood17 = RandomFoods[useFoods17];
+        Debug.Log("This is" + useFoods17);
+
+        System.Random random18 = new System.Random();
+        int useFoods18 = Random.Range(0, RandomFoods.Length);
+
+        PickRandomFood18 = RandomFoods[useFoods18];
+        Debug.Log("This is" + useFoods18);
     }
 
 }
