@@ -39588,6 +39588,10 @@ PrefabInstance:
       propertyPath: maxFuelUpgrade3
       value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 5022386924910296816, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
+      propertyPath: maxOrderCapacity
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5812910424852709094, guid: ac51c4774c0cd4f49a6ead698c9ee7bc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

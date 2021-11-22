@@ -13,6 +13,9 @@ public class RandomIncorrectOrder : MonoBehaviour
     public Button Order5;
     public Button Order6;
 
+    public bool CorrectButton1, CorrectButton2, CorrectButton3, CorrectButton4, CorrectButton5, CorrectButton6;
+    public bool order1Assigned, order2Assigned, order3Assigned, order4Assigned, order5Assigned;
+
     public menu_Items menuItems;
     public UpgradeShop upgradeShop;
 
@@ -118,7 +121,9 @@ public class RandomIncorrectOrder : MonoBehaviour
         {
             Debug.Log("COLLITION!!!");
             OrderPanel.SetActive(true);
+            AssignAllButtons();
             PickRandomFoodOrder();
+            
         }
     }
 
@@ -127,49 +132,157 @@ public class RandomIncorrectOrder : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             OrderPanel.SetActive(false);
+            CorrectButton1 = false;
+            CorrectButton2 = false;
+            CorrectButton3 = false;
+            CorrectButton4 = false; 
+            CorrectButton5 = false;
+            CorrectButton6 = false;
+
+            order1Assigned = false;
+            order2Assigned = false;
+            order3Assigned = false;
+            order4Assigned = false;
+            order5Assigned = false;
         }
     }
 
     public void PickRandomFoodOrder()
     {
+            
+
         for (int counrt = 0; counrt < 6; counrt++)
         {
-            if (counrt == 0)
-            {
-                FourRandomFoods();
+            if (counrt == 0) {
+                if (CorrectButton1 == true)
+                {
+                    if (order1Assigned == false)
+                    {
+                        Order1.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood1 + ", " +
+                        menuItems.pickfood2 + ", " + menuItems.pickfood3;
+                        order1Assigned = true;
+                    }
+                    else if (order2Assigned == false)
+                    {
+                        Order1.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood4 + ", " +
+                        menuItems.pickfood5 + ", " + menuItems.pickfood6;
+                        order2Assigned = true;
+                    }
 
-                Order1.gameObject.GetComponentInChildren<Text>().text = PickRandomFood1 + "," + PickRandomFood2 + "," + PickRandomFood3;
-
+                } else 
+                {
+                    FourRandomFoods();
+                    Order1.gameObject.GetComponentInChildren<Text>().text = PickRandomFood1 + "," + PickRandomFood2 + "," + PickRandomFood3;
+                }               
             }
+           
             if (counrt == 1)
             {
-;
-                FourRandomFoods();
-                Order2.gameObject.GetComponentInChildren<Text>().text = PickRandomFood4 + "," + PickRandomFood5 + "," + PickRandomFood6;
-
+                if (CorrectButton2 == true)
+                {
+                    if (order1Assigned == false)
+                    {
+                        Order2.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood1 + ", " +
+                        menuItems.pickfood2 + ", " + menuItems.pickfood3;
+                        order1Assigned = true;
+                    }
+                    else if (order2Assigned == false)
+                    {
+                        Order2.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood4 + ", " +
+                        menuItems.pickfood5 + ", " + menuItems.pickfood6;
+                        order2Assigned = true;
+                    }
+                }
+                else
+                {
+                    FourRandomFoods();
+                    Order2.gameObject.GetComponentInChildren<Text>().text = PickRandomFood4 + "," + PickRandomFood5 + "," + PickRandomFood6;
+                }
             }
             if (counrt == 2)
             {
-
-                FourRandomFoods();
-                Order3.gameObject.GetComponentInChildren<Text>().text = PickRandomFood7 + "," + PickRandomFood8 + "," + PickRandomFood9;
+                if (CorrectButton3 == true)
+                {
+                    if(order1Assigned == false) {
+                        Order3.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood1 + ", " +
+                        menuItems.pickfood2 + ", " + menuItems.pickfood3;
+                        order1Assigned = true;
+                    } else if (order2Assigned == false)
+                    {
+                        Order3.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood4 + ", " +
+                        menuItems.pickfood5 + ", " + menuItems.pickfood6;
+                        order2Assigned = true;
+                    }
+                 
+                }
+                else
+                {
+                    FourRandomFoods();
+                    Order3.gameObject.GetComponentInChildren<Text>().text = PickRandomFood7 + "," + PickRandomFood8 + "," + PickRandomFood9;
+                }
             }
             if (counrt == 3)
             {
-                FourRandomFoods();
-                Order4.gameObject.GetComponentInChildren<Text>().text = PickRandomFood10 + "," + PickRandomFood11 + "," + PickRandomFood12;
+                if (CorrectButton4 == true)
+                {
+                    if (order1Assigned == false)
+                    {
+                        Order4.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood1 + ", " +
+                        menuItems.pickfood2 + ", " + menuItems.pickfood3;
+                        order1Assigned = true;
+                    }
+                    else if (order2Assigned == false)
+                    {
+                        Order4.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood4 + ", " +
+                        menuItems.pickfood5 + ", " + menuItems.pickfood6;
+                        order2Assigned = true;
+                    }
+                }
+                else
+                {
+                    FourRandomFoods();
+                    Order4.gameObject.GetComponentInChildren<Text>().text = PickRandomFood10 + "," + PickRandomFood11 + "," + PickRandomFood12;
+                }
             }
             if (counrt == 4)
             {
-                FourRandomFoods();
-                Order5.gameObject.GetComponentInChildren<Text>().text = PickRandomFood13 + "," + PickRandomFood14 + "," + PickRandomFood15;
+                if (CorrectButton5 == true)
+                {
+                    if (order1Assigned == false)
+                    {
+                        Order5.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood1 + ", " +
+                        menuItems.pickfood2 + ", " + menuItems.pickfood3;
+                        order1Assigned = true;
+                    }
+                    else if (order2Assigned == false)
+                    {
+                        Order5.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood4 + ", " +
+                        menuItems.pickfood5 + ", " + menuItems.pickfood6;
+                        order2Assigned = true;
+                    }
+                }
+                else
+                {
+                    FourRandomFoods();
+                    Order5.gameObject.GetComponentInChildren<Text>().text = PickRandomFood13 + "," + PickRandomFood14 + "," + PickRandomFood15;
+                }
             }
             if (counrt == 5)
             {
-                if(menuItems.OnOrder1 == true)
+                if (CorrectButton6 == true)
                 {
-                    Order6.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood1 + ", " + 
+                    if (order1Assigned == false)
+                    {
+                        Order6.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood1 + ", " +
                         menuItems.pickfood2 + ", " + menuItems.pickfood3;
+                        order1Assigned = true;
+                    }
+                    else if (order2Assigned == false)
+                    {
+                        Order6.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood4 + ", " +
+                        menuItems.pickfood5 + ", " + menuItems.pickfood6;
+                        order2Assigned = true;
+                    }
                 }
                 else
                 {
@@ -182,6 +295,93 @@ public class RandomIncorrectOrder : MonoBehaviour
        
     }
 
+    public void AssignAllButtons()
+    {
+        Debug.Log("Test");
+        int range = upgradeShop.maxOrderCapacity;
+
+        int chosen1 = Random.Range(0, 6);
+
+        if (upgradeShop.maxOrderCapacity == 2)
+        {
+            Debug.Log("Test");
+            int chosen2 = Random.Range(0, 6);
+
+            if (chosen1 == 0)
+            {
+                CorrectButton1 = true;
+            }
+            else if (chosen1 == 1)
+            {
+                CorrectButton2 = true;
+            }
+            else if (chosen1 == 2)
+            {
+                CorrectButton3 = true;
+            }
+            else if (chosen1 == 3)
+            {
+                CorrectButton4 = true;
+            }
+            else if (chosen1 == 4)
+            {
+                CorrectButton5 = true;
+            }
+            else if (chosen1 == 5)
+            {
+                CorrectButton6 = true;
+            }
+            if (chosen2 == 0)
+            {
+                if(CorrectButton1 == true)
+                {
+                    AssignAllButtons();
+                } else { CorrectButton1 = true; }
+            }
+            else if (chosen2 == 1)
+            {
+                if (CorrectButton2 == true)
+                {
+                    AssignAllButtons();
+                }
+                else { CorrectButton2 = true; }
+            }
+            else if (chosen2 == 2)
+            {
+                if (CorrectButton3 == true)
+                {
+                    AssignAllButtons();
+                }
+                else { CorrectButton3 = true; }
+            }
+            else if (chosen2 == 3)
+            {
+                if (CorrectButton4 == true)
+                {
+                    AssignAllButtons();
+                }
+                else { CorrectButton4 = true; }
+            }
+            else if (chosen2 == 4)
+            {
+                if (CorrectButton5 == true)
+                {
+                    AssignAllButtons();
+                }
+                else { CorrectButton5 = true; }
+            }
+            else if (chosen2 == 5)
+            {
+                if (CorrectButton6 == true)
+                {
+                    AssignAllButtons();
+                }
+                else { CorrectButton6 = true; }
+            }
+
+        }
+
+    }
     public void FourRandomFoods()
     {
         System.Random random1 = new System.Random();

@@ -80,7 +80,8 @@ public class UpgradeShop : MonoBehaviour
     /// </summary>
     /// 
 
-    public int maxOrderCapacity;
+    public int maxOrderCapacity = 2; 
+
     public int carryCapUp1Cost;
     public int carryCapUp2Cost;
     public int carryCapUp3Cost;
@@ -128,7 +129,6 @@ public class UpgradeShop : MonoBehaviour
 
         repairButton.GetComponentInChildren<TextMeshProUGUI>().text = "Repair Ship: " + "$" + repairScript.repairCost;
 
-        maxOrderCapacity = 2;
 }
 
     // Update is called once per frame
