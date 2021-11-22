@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class PlayerOrderInfo : MonoBehaviour
 {
     public Image Menu;
     public WindowQuestPointer pointer;
     public OrderManager orderManager;
     public GameManager gm;
-    public Text orderMoneyInfo;
+    public TextMeshProUGUI orderMoneyInfo;
     public NewRandomPlanets np;
     public menu_Items MI;
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerMovement : MonoBehaviour
 {
@@ -47,62 +48,89 @@ public class playerMovement : MonoBehaviour
 
     public string key = "w"; // Whichever key you're using to control the effects. Just hardcode it in if you want
 
+    //ALT FUEL DECREASE SYSTEM
+    public bool canDecreaseFuel = true;
+    public int fuelSeconds = 10;
+    public int fuelDecrease = 2;
+
 
     void Start()
     {
-        //currentHealth = maxHealth;
-        //Health_And_Fuel.setMaxHealth(maxHealth);
+        currentHealth = maxHealth;
+        Health_And_Fuel.setMaxHealth(maxHealth);
 
-       // currentFuel = maxFuel;
-        //Health_And_Fuel.setMaxFuel(maxFuel);
+       currentFuel = maxFuel;
+       Health_And_Fuel.setMaxFuel(maxFuel);
     }
 
     
 
     void Update()
     {
-        //   if (Input.GetKeyDown(KeyCode.W))
-        // {
-        //   currentFuel -= fuel;
-        // Health_And_Fuel.setCurrentFuel(currentFuel);
+        //LOSE CONDITION VOIDS
+        zeroFuel();
+        zeroHealth();
 
-        //if (currentFuel < 0)
-        //{
-        //  currentFuel = 0;
-        //}
-        //}
-
-             // Starts the timer from when the key is pressed
-        if (Input.GetKeyDown(key))
+        //ALT FUEL DECREASE SYSTEM
+    
+        if (Input.GetKey(key) && canDecreaseFuel)
         {
-            startTime = Time.time;
-            timer = startTime;
-           
-            currentFuel -= 5;
-                Health_And_Fuel.setCurrentFuel(currentFuel);
-
-        }
-
-        // Adds time onto the timer so long as the key is pressed
-        if (Input.GetKey(key) && held == false)
-        {
-            timer += Time.deltaTime;
-
-            // Once the timer float has added on the required holdTime, changes the bool (for a single trigger), and calls the function
-            if (timer > (startTime + holdTime))
+            
             {
-                held = true;
-                ButtonHeld();
+                checkfuel();
             }
         }
-        if (Input.GetKeyUp(key))
-        {
-            held = false;
-            //currentFuel -= fuel;
-            Health_And_Fuel.setCurrentFuel(currentFuel);
-        }
+
+
+
+
+        // Starts the timer from when the key is pressed
+        //if (Input.GetKeyDown(key))
+        //{
+        //  startTime = Time.deltaTime;
+        // timer = startTime;
+
+        //currentFuel -= 5;
+        //  Health_And_Fuel.setCurrentFuel(currentFuel);
+
+        //}
+
+        // Adds time onto the timer so long as the key is pressed
+        // if (Input.GetKey(key) && held == false)
+        //{
+        //   timer += Time.deltaTime;
+
+        // Once the timer float has added on the required holdTime, changes the bool (for a single trigger), and calls the function
+        // if (timer > (startTime + holdTime))
+        // {
+        //   held = true;
+        //     ButtonHeld();
+        //}
+        // }
+        // if (Input.GetKeyUp(key))
+        // {
+        //   held = false;
+        //currentFuel -= fuel;
+        //   Health_And_Fuel.setCurrentFuel(currentFuel);
+        // }
 
     }
+
+    //ALT FUEL DECREASE SYSTEM
+    public void checkfuel()
+    {
+        StartCoroutine(fuelDecreaseCoroutine());
+    }
+
+    public IEnumerator fuelDecreaseCoroutine()
+    {
+        canDecreaseFuel = false;
+        yield return new WaitForSeconds(fuelSeconds);
+        currentFuel -= fuelDecrease;
+        Health_And_Fuel.setCurrentFuel(currentFuel);
+        canDecreaseFuel = true;
+    }
+
 
     // Method called after held for required time
     void ButtonHeld()
@@ -113,6 +141,7 @@ public class playerMovement : MonoBehaviour
     }
 
 
+    //WHEN HITTING AN OBSTACLE THE SHIP TAKES DAMAGE
     void ShipCollision()
     {
         currentHealth -= shipDamage;
@@ -123,6 +152,8 @@ public class playerMovement : MonoBehaviour
         }
     }
 
+
+    //WHEN HITTING AN OBSTACLE THE SHIP TAKES DAMAGE
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Collision")
@@ -188,5 +219,27 @@ public class playerMovement : MonoBehaviour
     }
     
 
+
+
+    //LOSE CONDITION CODE
+    //IF PLAYER HEALTH OR FUEL REACHES ZERO GO TO LOSE SCREEN
+    public void zeroFuel()
+    {
+        if(currentFuel <= 0)
+        {
+            currentFuel = 0;
+            SceneManager.LoadScene("gameOver_scene");
+
+        }
+    }
+
+    public void zeroHealth()
+    {
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            SceneManager.LoadScene("gameOver_scene");
+        }
+    }
 
 }

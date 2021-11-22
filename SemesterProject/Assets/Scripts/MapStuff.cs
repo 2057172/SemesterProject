@@ -17,5 +17,6 @@ public class MapStuff : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, offScreenPos.position, speed * Time.deltaTime);
         }
+       
     }
 }

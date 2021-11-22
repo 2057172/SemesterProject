@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class menu_Items : MonoBehaviour
@@ -15,7 +16,7 @@ public class menu_Items : MonoBehaviour
 
     public Transform Earth, Forest, Ice, Metal, Cat, Sun, Sleep, Fire, Dance, Lovecraft, LSD, Weed, Bougie, Gas;
 
-    public Text orderStatus;
+    public TextMeshProUGUI orderStatus;
     public bool OnOrder1, onOrder2, onOrder3;
 
     public string[] Foods = new string[]
@@ -380,7 +381,7 @@ public class menu_Items : MonoBehaviour
                 Debug.Log("Order 2.3 is: " + Foods[useFoods6]);
 
                 OrderButtonTwo.gameObject.GetComponentInChildren<Text>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6;
-                menuButton2.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6;
+                //menuButton2.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6;
 
                 orderStatus.text = "Order Picked Up.";
             }
@@ -402,7 +403,7 @@ public class menu_Items : MonoBehaviour
                 pickfood9 = Foods3[useFoods9];
 
                 OrderButtonThree.gameObject.GetComponentInChildren<Text>().text = pickfood7 + ", " + pickfood8 + ", " + pickfood9;
-                menuButton3.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood7 + ", " + pickfood8 + ", " + pickfood9;
+                //menuButton3.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood7 + ", " + pickfood8 + ", " + pickfood9;
 
                 orderStatus.text = "Order Picked Up.";
             } 
