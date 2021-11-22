@@ -294,8 +294,8 @@ public class menu_Items : MonoBehaviour
         onOrder2 = false;
         onOrder3 = false;
       
-        gm.OrderButton1.GetComponentInChildren<TextMeshProUGUI>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
-        gm.OrderButton2.GetComponentInChildren<TextMeshProUGUI>().text = pickfood4 + "," + pickfood5 + "," + pickfood6;
+        gm.OrderButton1.GetComponentInChildren<Text>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
+        gm.OrderButton2.GetComponentInChildren<Text>().text = pickfood4 + "," + pickfood5 + "," + pickfood6;
 
         orderStatus.text = "";
     }
@@ -351,7 +351,7 @@ public class menu_Items : MonoBehaviour
                 pickfood3 = Foods[useFoods3];
                 Debug.Log("This is" + useFoods3);
 
-                OrderButtonOne.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
+                OrderButtonOne.gameObject.GetComponentInChildren<Text>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
                 //menuButton1.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
 
                 orderStatus.text = "Order Picked Up.";
@@ -380,7 +380,7 @@ public class menu_Items : MonoBehaviour
                 Debug.Log("This is" + useFoods6);
                 Debug.Log("Order 2.3 is: " + Foods[useFoods6]);
 
-                OrderButtonTwo.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6;
+                OrderButtonTwo.gameObject.GetComponentInChildren<Text>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6;
                 //menuButton2.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6;
 
                 orderStatus.text = "Order Picked Up.";
@@ -402,7 +402,7 @@ public class menu_Items : MonoBehaviour
                 int useFoods9 = Random.Range(0, Foods.Length);
                 pickfood9 = Foods3[useFoods9];
 
-                OrderButtonThree.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = pickfood7 + ", " + pickfood8 + ", " + pickfood9;
+                OrderButtonThree.gameObject.GetComponentInChildren<Text>().text = pickfood7 + ", " + pickfood8 + ", " + pickfood9;
                 //menuButton3.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood7 + ", " + pickfood8 + ", " + pickfood9;
 
                 orderStatus.text = "Order Picked Up.";
