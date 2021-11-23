@@ -30,7 +30,6 @@ public class menu_Items : MonoBehaviour
 
 
     //IMAGE STUFF
-<<<<<<< HEAD
     public Sprite burgerImg;
     public Sprite steakImg;
     public Sprite ribsImg;
@@ -73,25 +72,31 @@ public class menu_Items : MonoBehaviour
   
 
     //PHONE ORDER BUTTON STUFF
-=======
-    public Sprite burger;
->>>>>>> parent of 18ac172 (Images Added to Phone)
     public Image phoneOrderbutton1_food1;
+    public Image phoneOrderbutton1_food2;
+    public Image phoneOrderbutton1_food3;
+
+
+    public Image phoneOrderbutton2_food1;
+    public Image phoneOrderbutton2_food2;
+    public Image phoneOrderbutton2_food3;
+
+    public Image phoneOrderbutton3_food1;
+    public Image phoneOrderbutton3_food2;
+    public Image phoneOrderbutton3_food3;
+
+
 
     public string[] Foods = new string[]
     {
-        "Single Cheeseburger",
-        "Double Cheeseburger",
+        "Cheeseburger",
         "Steak",
         "Ribs",
         "Taco",
         "Noodles",
         "Pizza",
-        "Hot Wings",
         "Chicken Piece",
-        "Sushi 1",
-        "Sushi 2",
-        "Sushi 3",
+        "Sushi",
         "Fried Fish",
         "Fried Calamari",
         "Fried Prawns",
@@ -159,18 +164,14 @@ public class menu_Items : MonoBehaviour
 
     public string[] Foods2 = new string[]
     {
-        "Single Cheeseburger",
-        "Double Cheeseburger",
+        "Cheeseburger",
         "Steak",
         "Ribs",
         "Taco",
         "Noodles",
         "Pizza",
-        "Hot Wings",
         "Chicken Piece",
-        "Sushi 1",
-        "Sushi 2",
-        "Sushi 3",
+        "Sushi",
         "Fried Fish",
         "Fried Calamari",
         "Fried Prawns",
@@ -238,18 +239,14 @@ public class menu_Items : MonoBehaviour
 
     public string[] Foods3 = new string[]
     {
-        "Single Cheeseburger",
-        "Double Cheeseburger",
+        "Cheeseburger",
         "Steak",
         "Ribs",
         "Taco",
         "Noodles",
         "Pizza",
-        "Hot Wings",
         "Chicken Piece",
-        "Sushi 1",
-        "Sushi 2",
-        "Sushi 3",
+        "Sushi",
         "Fried Fish",
         "Fried Calamari",
         "Fried Prawns",
@@ -338,14 +335,24 @@ public class menu_Items : MonoBehaviour
         Planet1.gameObject.SetActive(false);
         Planet2.gameObject.SetActive(false);
         Planet3.gameObject.SetActive(false);
-      
+
+
+        //PHONE BUTTON  1 ORDER
         gm.OrderButton1.GetComponentInChildren<TextMeshProUGUI>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3 + ", " + PlanetOutcome1.name;
+        //PHONE BUTTON  2 ORDER
         gm.OrderButton2.GetComponentInChildren<TextMeshProUGUI>().text = pickfood4 + "," + pickfood5 + "," + pickfood6 + ", " + PlanetOutcome2.name;
 
         orderStatus.text = "";
 
-        //IMAGE STUFF
+        //IMAGE STUFF FOR PHONE ORDER BUTTON 1 
         phoneOrderbutton1_food1.sprite = StringtoSprite(pickfood1);
+        phoneOrderbutton1_food2.sprite = StringtoSprite(pickfood2);
+        phoneOrderbutton1_food3.sprite = StringtoSprite(pickfood3);
+
+        //IMAGE STUFF FOR PHONE ORDER BUTTON 2
+        phoneOrderbutton2_food1.sprite = StringtoSprite(pickfood4);
+        phoneOrderbutton2_food2.sprite = StringtoSprite(pickfood5);
+        phoneOrderbutton2_food3.sprite = StringtoSprite(pickfood6);
     }
 
     public void Update()
@@ -436,7 +443,13 @@ public class menu_Items : MonoBehaviour
                 Debug.Log("This is" + useFoods3);
 
                 OrderButtonOne.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3 + ", " + newRandomPlanets.PlanetOutcome1;
-                //menuButton1.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3;
+                
+                //IMAGE STUFF FOR PHONE ORDER BUTTON 1 
+                phoneOrderbutton1_food1.sprite = StringtoSprite(pickfood1);
+                phoneOrderbutton1_food2.sprite = StringtoSprite(pickfood2);
+                phoneOrderbutton1_food3.sprite = StringtoSprite(pickfood3);
+
+            
 
                 orderStatus.text = "Order Picked Up.";
             } 
@@ -465,7 +478,10 @@ public class menu_Items : MonoBehaviour
                 Debug.Log("Order 2.3 is: " + Foods[useFoods6]);
 
                 OrderButtonTwo.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6;
-                //menuButton2.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6;
+                //IMAGE STUFF FOR PHONE ORDER BUTTON 2
+                phoneOrderbutton2_food1.sprite = StringtoSprite(pickfood4);
+                phoneOrderbutton2_food2.sprite = StringtoSprite(pickfood5);
+                phoneOrderbutton2_food3.sprite = StringtoSprite(pickfood6);
 
                 orderStatus.text = "Order Picked Up.";
             }
@@ -493,33 +509,172 @@ public class menu_Items : MonoBehaviour
             } 
         }
 
-    }     
+    }
 
     //SPRITE STUFF
     public Sprite StringtoSprite(string s)
     {
         switch (s)
         {
-            case "Single Cheeseburger":
-                print("cheesburger");
-                //SPRITE TO IMAGE 
-                return null;
+            case "Cheeseburger":
+                return burgerImg;
+                break;
+
+            case "Steak":
+                return steakImg;
+                break;
+
+            case "Ribs":
+                return ribsImg;
+                break;
+
+            case "Taco":
+                return tacoImg;
+                break;
+
+            case "Noodles":
+                return noodlesImg;
+                break;
+
+            case "Pizza":
+                return pizzaImg;
+                break;
+
+            case "Chicken Piece":
+                return chickenImg;
+                break;
+
+            case "Sushi":
+                return sushiImg;
+                break;
+
+            case "Fried Fish":
+                return fishImg;
+                break;
+
+            case "Fried Calamari":
+                return calamariImg;
+                break;
+
+            case "Fried Prawns":
+                return prawnImg;
+                break;
+
+
+            case "Salad":
+                return saladImg;
+                break;
+
+            case "Chips":
+                return chipsImg;
+                break;
+
+            case "Onion Rings":
+                return onionRingsImg;
+                break;
+
+            case "Rice":
+                return riceImg;
+                break;
+
+            case "Doughnuts":
+                return donutsImg;
+                break;
+
+            case "Ice Cream":
+                return iceCreamImg;
                 break;
 
             case "Milkshake":
-                print("milkshake");
-                //SPRITE TO IMAGE 
-                return null;
+                return milkshakeImg;
+                break;
+
+            case "Water":
+                return waterImg;
+                break;
+
+            case "Juice":
+                return juiceImg;
+                break;
+
+            case "Alchol":
+                return alcoholImg;
+                break;
+
+            case "Cold Drink":
+                return coldDrinkImg;
+                break;
+
+            //////////////////////
+
+            case "Human Food":
+                return earthPlanet_Food;
+                break;
+
+            case "Bugs":
+                return junglePlanet_Food;
+                break;
+
+            case "Lava Drink":
+                return lavaPlanet_Food;
+                break;
+
+            case "Warm Milk":
+                return pillowPlanet_Food;
+                break;
+
+            case "Sun food":
+                return sunPlanet_Food;
+                break;
+
+            case "Snow cone":
+                return icePlanet_Food;
+                break;
+
+            case "Cat food":
+                return catPlanet_Food;
+                break;
+
+            case "Nuts and Bolts":
+                return robotPlanet_Food;
+                break;
+
+            case "Space Shrooms":
+                return lsdPlanet_Food;
+                break;
+
+            case "Helium":
+                return gasPlanet_Food;
+                break;
+
+            case "Energy Drink":
+                return discoPlanet_Food;
+                break;
+
+
+            case "Joint":
+                return weedPlanet_Food;
+                break;
+
+            case "Diamond Caviar":
+                return bougiePlanet_Food;
+                break;
+
+            case "THE VOID":
+                return lovecraftPlanet_Food;
                 break;
 
 
             default:
                 Debug.Log("incorrect string");
-                return burger;
+                return null;
                 break;
-
         }
         return null;
+
+
+
+
     }
 }
 
