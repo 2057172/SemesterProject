@@ -22,14 +22,18 @@ public class RandomIncorrectOrder : MonoBehaviour
 
     public string[] RandomFoods = new string[]
    {
-        "Cheeseburger",
+        "Single Cheeseburger",
+        "Double Cheeseburger",
         "Steak",
         "Ribs",
         "Taco",
         "Noodles",
         "Pizza",
+        "Hot Wings",
         "Chicken Piece",
-        "Sushi",
+        "Sushi 1",
+        "Sushi 2",
+        "Sushi 3",
         "Fried Fish",
         "Fried Calamari",
         "Fried Prawns",
