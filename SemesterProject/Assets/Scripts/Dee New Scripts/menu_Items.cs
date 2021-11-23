@@ -71,7 +71,7 @@ public class menu_Items : MonoBehaviour
         
   
 
-    //PHONE ORDER BUTTON STUFF
+    //ORDER BUTTON STUFF
     public Image phoneOrderbutton1_food1;
     public Image phoneOrderbutton1_food2;
     public Image phoneOrderbutton1_food3;

@@ -5505,7 +5505,7 @@ GameObject:
   - component: {fileID: 119349630}
   - component: {fileID: 119349629}
   m_Layer: 5
-  m_Name: B6_Food3
+  m_Name: B1_Food3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5543,7 +5543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8598,7 +8598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11727,7 +11727,7 @@ GameObject:
   - component: {fileID: 276896081}
   - component: {fileID: 276896080}
   m_Layer: 5
-  m_Name: B4_Food3
+  m_Name: B1_Food3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11765,7 +11765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11938,7 +11938,7 @@ GameObject:
   - component: {fileID: 282308076}
   - component: {fileID: 282308075}
   m_Layer: 5
-  m_Name: B6_Food1
+  m_Name: B1_Food1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11976,7 +11976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -16042,7 +16042,7 @@ GameObject:
   - component: {fileID: 390044403}
   - component: {fileID: 390044402}
   m_Layer: 5
-  m_Name: B5_Food1
+  m_Name: B1_Food1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16080,7 +16080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -17871,7 +17871,7 @@ GameObject:
   - component: {fileID: 438460658}
   - component: {fileID: 438460657}
   m_Layer: 5
-  m_Name: B4_Food1
+  m_Name: B1_Food1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17909,7 +17909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -22731,7 +22731,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1747878793}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4376119798433938792, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: m_SortingOrder
@@ -22739,7 +22739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4376119798433938804, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: m_Name
-      value: RandomOrderManager
+      value: OrderThingy
       objectReference: {fileID: 0}
     - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: Order1
@@ -22770,237 +22770,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1547638740}
     - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: fishImg
-      value: 
-      objectReference: {fileID: 21300000, guid: 408ff3bfddd27274a9259f6b85232cbc, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: ribsImg
-      value: 
-      objectReference: {fileID: 21300000, guid: 946011dcbbd9ddf4881a0b0068136c6b, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: riceImg
-      value: 
-      objectReference: {fileID: 21300000, guid: 324eadaab84c2b946866116905452f6a, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: tacoImg
-      value: 
-      objectReference: {fileID: 21300000, guid: d2618e6b18d94084e8a27837d8b89fff, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: chipsImg
-      value: 
-      objectReference: {fileID: 21300000, guid: d3dd049c11fc9d24aadc777575649bc5, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: juiceImg
-      value: 
-      objectReference: {fileID: 21300000, guid: eaa9a5e0e34ebcf4aa483b40b1eeecd5, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: pizzaImg
-      value: 
-      objectReference: {fileID: 21300000, guid: cdd606602c526734e8441c6440029edd, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: prawnImg
-      value: 
-      objectReference: {fileID: 21300000, guid: 971ad9d631d73b94f8f2cae36daeae21, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: saladImg
-      value: 
-      objectReference: {fileID: 21300000, guid: 0590a291fc331eb4a8e270190e42a301, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: steakImg
-      value: 
-      objectReference: {fileID: 21300000, guid: 01ae589da68998645bdbf5a60aa7c25b, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: sushiImg
-      value: 
-      objectReference: {fileID: 21300000, guid: 989f6f7f910825c4ca2b75d4714c445d, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: waterImg
-      value: 
-      objectReference: {fileID: 21300000, guid: aa08d3b9683df6c4ab85820d2e285d96, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: burgerImg
-      value: 
-      objectReference: {fileID: 21300000, guid: 45fa8b2360722114ab6435bea96e1d45, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: donutsImg
-      value: 
-      objectReference: {fileID: 21300000, guid: 1b85494af2477814c822b129bf9b707f, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: menuItems
       value: 
       objectReference: {fileID: 1796300869}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: waffleImg
-      value: 
-      objectReference: {fileID: 21300000, guid: e90e39e5103219c46bc14fd8ed39d5af, type: 3}
     - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: OrderPanel
       value: 
       objectReference: {fileID: 1502797972}
     - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: alcoholImg
-      value: 
-      objectReference: {fileID: 21300000, guid: ebf1436810cc79d4ea7f76a9c40deade, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: chickenImg
-      value: 
-      objectReference: {fileID: 21300000, guid: 9f028159848ea0148a791d125c8ed459, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: noodlesImg
-      value: 
-      objectReference: {fileID: 21300000, guid: b1d1a0c6caacf6b47b2b40f8d833bf88, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: calamariImg
-      value: 
-      objectReference: {fileID: 21300000, guid: 15a29b7a70c9f9e4b960de5d79fc359c, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: iceCreamImg
-      value: 
-      objectReference: {fileID: 21300000, guid: d6f5ba31b54234348b93dee775578b01, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: upgradeShop
       value: 
       objectReference: {fileID: 1041465758}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: coldDrinkImg
-      value: 
-      objectReference: {fileID: 21300000, guid: 287b40fff4ca3714b9cfbce3146376e8, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: milkshakeImg
-      value: 
-      objectReference: {fileID: 21300000, guid: b64996efced390c40ab4c1d45747475e, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: onionRingsImg
-      value: 
-      objectReference: {fileID: 21300000, guid: 1ecb9d8ca82232046bf69ee38c90d51f, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: catPlanet_Food
-      value: 
-      objectReference: {fileID: 21300000, guid: de0188e9d39a6cd4f84a5aef6548120a, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: gasPlanet_Food
-      value: 
-      objectReference: {fileID: 21300000, guid: fdec8231d88e4014b9cd9a50d9e15d4d, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: icePlanet_Food
-      value: 
-      objectReference: {fileID: 21300000, guid: a0128ef9d3e8910448378204acaea385, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: lsdPlanet_Food
-      value: 
-      objectReference: {fileID: 21300000, guid: d1ec76e09fdc29549a2cffc7385aef8c, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: sunPlanet_Food
-      value: 
-      objectReference: {fileID: 21300000, guid: b9453b8dd9c9dbb4f9f095fda5c1e45f, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: lavaPlanet_Food
-      value: 
-      objectReference: {fileID: 21300000, guid: 517bb9568de828840bb4c2e1f6f85cc3, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: weedPlanet_Food
-      value: 
-      objectReference: {fileID: 21300000, guid: d89cdd449c93a5549b01f4610ef51ae9, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: discoPlanet_Food
-      value: 
-      objectReference: {fileID: 21300000, guid: cf90ab35f55f61b4d9a68af494d0cc23, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: earthPlanet_Food
-      value: 
-      objectReference: {fileID: 21300000, guid: e3892c7d11c4e504296706289f1abfe1, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: robotPlanet_Food
-      value: 
-      objectReference: {fileID: 21300000, guid: 97d6bb833483abd4e9ef3b782b4d2425, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: bougiePlanet_Food
-      value: 
-      objectReference: {fileID: 21300000, guid: c49d8aca8336ecb4596dc96797681fe1, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: junglePlanet_Food
-      value: 
-      objectReference: {fileID: 21300000, guid: 6fc1b04aa3ea34e428873bbcea5741cf, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: pillowPlanet_Food
-      value: 
-      objectReference: {fileID: 21300000, guid: fe1f9a2f557b9a74dbd04f6eaee134d7, type: 3}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: orderButton1_food1
-      value: 
-      objectReference: {fileID: 2065209196}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: orderButton1_food2
-      value: 
-      objectReference: {fileID: 1865306250}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: orderButton1_food3
-      value: 
-      objectReference: {fileID: 1127359487}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: orderButton2_food1
-      value: 
-      objectReference: {fileID: 1119894432}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: orderButton2_food2
-      value: 
-      objectReference: {fileID: 666923600}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: orderButton2_food3
-      value: 
-      objectReference: {fileID: 1677813408}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: orderButton3_food1
-      value: 
-      objectReference: {fileID: 214714266}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: orderButton3_food2
-      value: 
-      objectReference: {fileID: 1865270285}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: orderButton3_food3
-      value: 
-      objectReference: {fileID: 1852604167}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: orderButton4_food1
-      value: 
-      objectReference: {fileID: 438460657}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: orderButton4_food2
-      value: 
-      objectReference: {fileID: 1158959725}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: orderButton4_food3
-      value: 
-      objectReference: {fileID: 276896080}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: orderButton5_food1
-      value: 
-      objectReference: {fileID: 390044402}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: orderButton5_food2
-      value: 
-      objectReference: {fileID: 1294129462}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: orderButton5_food3
-      value: 
-      objectReference: {fileID: 1693581225}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: orderButton6_food1
-      value: 
-      objectReference: {fileID: 282308075}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: orderButton6_food2
-      value: 
-      objectReference: {fileID: 1237722450}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: orderButton6_food3
-      value: 
-      objectReference: {fileID: 119349629}
-    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-      propertyPath: lovecraftPlanet_Food
-      value: 
-      objectReference: {fileID: 21300000, guid: cde0cb83fdcf2f84183969ad4c47089e, type: 3}
     - target: {fileID: 4376119798433938807, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -23011,7 +22791,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4376119798433938807, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4376119798433938807, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -26933,7 +26713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -43032,7 +42812,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1721997026624316029, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1721997026624316029, guid: 4506004fb2cc24c4bad0a63e792bd608, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43424,7 +43204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -43561,7 +43341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -44634,7 +44414,7 @@ GameObject:
   - component: {fileID: 1158959726}
   - component: {fileID: 1158959725}
   m_Layer: 5
-  m_Name: B4_Food2
+  m_Name: B1_Food2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44672,7 +44452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -48417,7 +48197,7 @@ GameObject:
   - component: {fileID: 1237722451}
   - component: {fileID: 1237722450}
   m_Layer: 5
-  m_Name: B6_Food2
+  m_Name: B1_Food2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48455,7 +48235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -50371,7 +50151,7 @@ GameObject:
   - component: {fileID: 1294129463}
   - component: {fileID: 1294129462}
   m_Layer: 5
-  m_Name: B5_Food2
+  m_Name: B1_Food2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50409,7 +50189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -65647,7 +65427,7 @@ GameObject:
   - component: {fileID: 1677813409}
   - component: {fileID: 1677813408}
   m_Layer: 5
-  m_Name: B2_Food3
+  m_Name: B3_Food3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65685,7 +65465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -66240,7 +66020,7 @@ GameObject:
   - component: {fileID: 1693581226}
   - component: {fileID: 1693581225}
   m_Layer: 5
-  m_Name: B5_Food3
+  m_Name: B1_Food3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66278,7 +66058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -69001,7 +68781,6 @@ Transform:
   m_Children:
   - {fileID: 1806517242}
   - {fileID: 1796300868}
-  - {fileID: 1907548943}
   - {fileID: 1116147595}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -73603,7 +73382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -73974,7 +73753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -74049,7 +73828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -75993,11 +75772,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2330509510079814169, guid: 8a2694243b614a140bd079ce91168173, type: 3}
   m_PrefabInstance: {fileID: 1907310647}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &1907548943 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4376119798433938807, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
-  m_PrefabInstance: {fileID: 572674865}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1910637117
 PrefabInstance:
@@ -82174,7 +81948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
