@@ -31,6 +31,7 @@ public class menu_Items : MonoBehaviour
 
     //IMAGE STUFF
 <<<<<<< HEAD
+<<<<<<< HEAD
     public Sprite burgerImg;
     public Sprite steakImg;
     public Sprite ribsImg;
@@ -73,6 +74,9 @@ public class menu_Items : MonoBehaviour
   
 
     //PHONE ORDER BUTTON STUFF
+=======
+    public Sprite burger;
+>>>>>>> parent of 18ac172 (Images Added to Phone)
 =======
     public Sprite burger;
 >>>>>>> parent of 18ac172 (Images Added to Phone)
