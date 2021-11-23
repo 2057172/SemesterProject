@@ -47,6 +47,7 @@ public class menu_Items : MonoBehaviour
     public Sprite riceImg;
     public Sprite donutsImg;
     public Sprite iceCreamImg;
+    public Sprite cupcakeImg;
     public Sprite waffleImg;
     public Sprite milkshakeImg;
     public Sprite waterImg;
@@ -579,6 +580,14 @@ public class menu_Items : MonoBehaviour
 
             case "Doughnuts":
                 return donutsImg;
+                break;
+
+            case "Waffles":
+                return waffleImg;
+                break;
+
+            case "Cupcake":
+                return cupcakeImg;
                 break;
 
             case "Ice Cream":
