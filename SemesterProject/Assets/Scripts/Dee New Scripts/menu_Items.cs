@@ -28,6 +28,11 @@ public class menu_Items : MonoBehaviour
     public bool OnOrder1, onOrder2, onOrder3;
 
 
+
+    //IMAGE STUFF
+    public Sprite burger;
+    public Image phoneOrderbutton1_food1;
+
     public string[] Foods = new string[]
     {
         "Single Cheeseburger",
@@ -293,6 +298,9 @@ public class menu_Items : MonoBehaviour
         gm.OrderButton2.GetComponentInChildren<TextMeshProUGUI>().text = pickfood4 + "," + pickfood5 + "," + pickfood6 + ", " + PlanetOutcome2.name;
 
         orderStatus.text = "";
+
+        //IMAGE STUFF
+        phoneOrderbutton1_food1.sprite = StringtoSprite(pickfood1);
     }
 
     public void Update()
@@ -442,6 +450,32 @@ public class menu_Items : MonoBehaviour
 
     }     
 
+    //SPRITE STUFF
+    public Sprite StringtoSprite(string s)
+    {
+        switch (s)
+        {
+            case "Single Cheeseburger":
+                print("cheesburger");
+                //SPRITE TO IMAGE 
+                return null;
+                break;
+
+            case "Milkshake":
+                print("milkshake");
+                //SPRITE TO IMAGE 
+                return null;
+                break;
+
+
+            default:
+                Debug.Log("incorrect string");
+                return burger;
+                break;
+
+        }
+        return null;
+    }
 }
 
    
