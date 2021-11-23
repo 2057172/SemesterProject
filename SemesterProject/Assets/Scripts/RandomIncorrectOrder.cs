@@ -12,6 +12,7 @@ public class RandomIncorrectOrder : MonoBehaviour
     public Button Order4;
     public Button Order5;
     public Button Order6;
+    public Button confirm;
 
     public bool CorrectButton1, CorrectButton2, CorrectButton3, CorrectButton4, CorrectButton5, CorrectButton6;
     public bool order1Assigned, order2Assigned, order3Assigned, order4Assigned, order5Assigned;

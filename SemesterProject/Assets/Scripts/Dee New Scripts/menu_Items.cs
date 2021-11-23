@@ -8,6 +8,13 @@ using TMPro;
 public class menu_Items : MonoBehaviour
 
 {
+    public GameObject[] Planets = new GameObject[14];
+    public GameObject PlanetOutcome1, PlanetOutcome2, PlanetOutcome3, planet1Final, planet2Final, planet3Final;
+    public float Distance1, Distance2, Distance3;
+    public Vector3 Destination1, Destination2, Destination3;
+
+    public TextMeshProUGUI Distance1TXT, Distance2TXT, Distance3TXT, Planet1, Planet2, Planet3;
+
 
     public GameManager gm;
     public Button OrderButtonOne, OrderButtonTwo, OrderButtonThree;
@@ -15,10 +22,11 @@ public class menu_Items : MonoBehaviour
 
     public UpgradeShop upgradeShop;
 
-    public Transform Earth, Forest, Ice, Metal, Cat, Sun, Sleep, Fire, Dance, Lovecraft, LSD, Weed, Bougie, Gas;
+    
 
     public TextMeshProUGUI orderStatus;
     public bool OnOrder1, onOrder2, onOrder3;
+
 
     public string[] Foods = new string[]
     {
@@ -256,39 +264,14 @@ public class menu_Items : MonoBehaviour
         //LOVECRAFT PLANET
         "THE VOID",
     };
-    public string[] Planets = new string[]
-    {
-        //START ZONE
-        "Earth Planet",
-        "Jungle Planet",
-
-         //HEAT ZONE
-        "Lava Planet",
-        "Pillow Planet",
-        "The Sun",
-        
-        //ICE ZONE
-        "Ice Planet",
-        "Cat Planet",
-        "Robot Planet",
-
-        //RADIATION ZONE
-        "LSD Planet",
-        "Lovecraft Planet",
-        "Disco Planet",
-
-        //HARDCORE ZONE
-        "Gas Planet",
-        "Bougie Planet",
-        "Weed Planet",
-    };
-
+   
     public string pickfood1, pickfood2, pickfood3, pickfood4, pickfood5, pickfood6, pickfood7, pickfood8, pickfood9, pickplanet;
 
     public int orderCounter;
  
     public void Start()
-    {     
+    {
+        getRandomPlanet();
         RefreshOrders();
         RefreshOrders();
         newRandomPlanets.fillOrders();
@@ -297,9 +280,17 @@ public class menu_Items : MonoBehaviour
         OnOrder1 = false;
         onOrder2 = false;
         onOrder3 = false;
+
+        Distance1TXT.gameObject.SetActive(false);
+        Distance2TXT.gameObject.SetActive(false);
+        Distance3TXT.gameObject.SetActive(false);
+
+        Planet1.gameObject.SetActive(false);
+        Planet2.gameObject.SetActive(false);
+        Planet3.gameObject.SetActive(false);
       
-        gm.OrderButton1.GetComponentInChildren<TextMeshProUGUI>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3 + ", " + newRandomPlanets.PlanetOutcome1;
-        gm.OrderButton2.GetComponentInChildren<TextMeshProUGUI>().text = pickfood4 + "," + pickfood5 + "," + pickfood6;
+        gm.OrderButton1.GetComponentInChildren<TextMeshProUGUI>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3 + ", " + PlanetOutcome1.name;
+        gm.OrderButton2.GetComponentInChildren<TextMeshProUGUI>().text = pickfood4 + "," + pickfood5 + "," + pickfood6 + ", " + PlanetOutcome2.name;
 
         orderStatus.text = "";
     }
@@ -316,6 +307,26 @@ public class menu_Items : MonoBehaviour
         }
     }
 
+    public void getRandomPlanet()
+    {
+        for (int count = 0; count < 3; count++)
+        {
+            if (count == 0)
+            {
+                PlanetOutcome1 = Planets[Random.Range(0, Planets.Length)];
+            }
+            else if (count == 1)
+            {             
+                PlanetOutcome2 = Planets[Random.Range(0, Planets.Length)];
+            }
+            else if (count == 2)
+            {
+                PlanetOutcome3 = Planets[Random.Range(0, Planets.Length)];
+            }
+           
+        }
+    }
+
     public void Order1()
     {
         if (OnOrder1 == false)
@@ -323,6 +334,7 @@ public class menu_Items : MonoBehaviour
             OrderButtonOne.gameObject.SetActive(false);
             OnOrder1 = true;
             orderCounter++;
+            planet1Final = PlanetOutcome1;           
         }
     }
     public void Order2()
@@ -332,6 +344,7 @@ public class menu_Items : MonoBehaviour
             OrderButtonTwo.gameObject.SetActive(false);
             onOrder2 = true;
             orderCounter++;
+            planet2Final = PlanetOutcome2;
         }
     }
     public void Order3()
@@ -341,6 +354,7 @@ public class menu_Items : MonoBehaviour
             OrderButtonThree.gameObject.SetActive(false);
             onOrder3 = true;
             orderCounter++;
+            planet3Final = PlanetOutcome3;
         }
     }
 
