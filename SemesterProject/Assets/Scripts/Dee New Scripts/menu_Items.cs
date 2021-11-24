@@ -22,7 +22,7 @@ public class menu_Items : MonoBehaviour
 
     public UpgradeShop upgradeShop;
 
-    
+
 
     public TextMeshProUGUI orderStatus;
     public bool OnOrder1, onOrder2, onOrder3;
@@ -48,6 +48,7 @@ public class menu_Items : MonoBehaviour
     public Sprite donutsImg;
     public Sprite iceCreamImg;
     public Sprite waffleImg;
+    public Sprite cupcakeImg;
     public Sprite milkshakeImg;
     public Sprite waterImg;
     public Sprite juiceImg;
@@ -68,10 +69,10 @@ public class menu_Items : MonoBehaviour
     public Sprite discoPlanet_Food;
     public Sprite bougiePlanet_Food;
     public Sprite lovecraftPlanet_Food;
-        
-  
 
-    //ORDER BUTTON STUFF
+
+
+    //PHONE ORDER BUTTON STUFF
     public Image phoneOrderbutton1_food1;
     public Image phoneOrderbutton1_food2;
     public Image phoneOrderbutton1_food3;
@@ -85,6 +86,25 @@ public class menu_Items : MonoBehaviour
     public Image phoneOrderbutton3_food2;
     public Image phoneOrderbutton3_food3;
 
+    //PLANET ORDER BUTTON STUFF
+    public Image phoneOrderbutton1_planet;
+    public Image phoneOrderbutton2_planet;
+
+    //PLANET IMAGES
+    public Sprite earthPlanetImg;
+    public Sprite junglePlanetImg;
+    public Sprite icePlanetImg;
+    public Sprite catPlanetImg;
+    public Sprite metalPlanetImg;
+    public Sprite theSunPlanetImg;
+    public Sprite lavaPlanetImg;
+    public Sprite sleepyPlanetImg;
+    public Sprite dancePlanetImg;
+    public Sprite lovecraftPlanetImg;
+    public Sprite lsdPlanetImg;
+    public Sprite weedPlanetImg;
+    public Sprite gasPlanetImg;
+    public Sprite bougiePlanetImg;
 
 
     public string[] Foods = new string[]
@@ -311,11 +331,11 @@ public class menu_Items : MonoBehaviour
         //LOVECRAFT PLANET
         "THE VOID",
     };
-   
+
     public string pickfood1, pickfood2, pickfood3, pickfood4, pickfood5, pickfood6, pickfood7, pickfood8, pickfood9, pickplanet;
 
     public int orderCounter;
- 
+
     public void Start()
     {
         getRandomPlanet();
@@ -357,7 +377,7 @@ public class menu_Items : MonoBehaviour
 
     public void Update()
     {
-        if(orderCounter <= 0)
+        if (orderCounter <= 0)
         {
             orderCounter = 0;
         }
@@ -365,6 +385,13 @@ public class menu_Items : MonoBehaviour
         {
             orderCounter = upgradeShop.maxOrderCapacity;
         }
+
+
+        //PLANET BUTTON STUFF
+        orderButton1Planet();
+        Debug.Log("1" + PlanetOutcome1);
+        orderButton2Planet();
+        Debug.Log("2" + PlanetOutcome2);
     }
 
     public void getRandomPlanet()
@@ -376,14 +403,14 @@ public class menu_Items : MonoBehaviour
                 PlanetOutcome1 = Planets[Random.Range(0, Planets.Length)];
             }
             else if (count == 1)
-            {             
+            {
                 PlanetOutcome2 = Planets[Random.Range(0, Planets.Length)];
             }
             else if (count == 2)
             {
                 PlanetOutcome3 = Planets[Random.Range(0, Planets.Length)];
             }
-           
+
         }
     }
 
@@ -394,7 +421,7 @@ public class menu_Items : MonoBehaviour
             OrderButtonOne.gameObject.SetActive(false);
             OnOrder1 = true;
             orderCounter++;
-            planet1Final = PlanetOutcome1;           
+            planet1Final = PlanetOutcome1;
         }
     }
     public void Order2()
@@ -420,62 +447,62 @@ public class menu_Items : MonoBehaviour
 
     public void RefreshOrders()
     {
-        for(int count = 0; count < 3; count++)
+        for (int count = 0; count < 3; count++)
         {
-            Debug.Log(count);
+            //Debug.Log(count);
 
             if (count == 0)
             {
-               
+
                 System.Random random1 = new System.Random();
 
                 int useFoods1 = Random.Range(0, Foods.Length);
                 pickfood1 = Foods[useFoods1];
-                Debug.Log("This is" + useFoods1);
+                //Debug.Log("This is" + useFoods1);
 
 
                 int useFoods2 = Random.Range(0, Foods.Length);
                 pickfood2 = Foods[useFoods2];
-                Debug.Log("This is" + useFoods2);
+                //Debug.Log("This is" + useFoods2);
 
                 int useFoods3 = Random.Range(0, Foods.Length);
                 pickfood3 = Foods[useFoods3];
-                Debug.Log("This is" + useFoods3);
+                //Debug.Log("This is" + useFoods3);
 
                 OrderButtonOne.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3 + ", " + newRandomPlanets.PlanetOutcome1;
-                
+
                 //IMAGE STUFF FOR PHONE ORDER BUTTON 1 
                 phoneOrderbutton1_food1.sprite = StringtoSprite(pickfood1);
                 phoneOrderbutton1_food2.sprite = StringtoSprite(pickfood2);
                 phoneOrderbutton1_food3.sprite = StringtoSprite(pickfood3);
 
-            
+
 
                 orderStatus.text = "Order Picked Up.";
-            } 
-            if(count == 1)
+            }
+            if (count == 1)
             {
-               
+
 
                 System.Random random4 = new System.Random();
-                int random4New = Random.Range(0, Foods.Length); 
+                int random4New = Random.Range(0, Foods.Length);
 
                 int useFoods4 = Random.Range(0, Foods.Length);
                 pickfood4 = Foods[useFoods4];
-                Debug.Log("This is" + random4New);
-                Debug.Log("Order 2.1 is: " + Foods[useFoods4]);
+                //Debug.Log("This is" + random4New);
+                //Debug.Log("Order 2.1 is: " + Foods[useFoods4]);
 
 
                 int useFoods5 = Random.Range(0, Foods.Length);
                 pickfood5 = Foods[useFoods5];
-                Debug.Log("This is" + useFoods5);
-                Debug.Log("Order 2.2 is: " + Foods[useFoods5]);
+                //Debug.Log("This is" + useFoods5);
+                //Debug.Log("Order 2.2 is: " + Foods[useFoods5]);
 
 
                 int useFoods6 = Random.Range(0, Foods.Length);
                 pickfood6 = Foods[useFoods6];
-                Debug.Log("This is" + useFoods6);
-                Debug.Log("Order 2.3 is: " + Foods[useFoods6]);
+                //Debug.Log("This is" + useFoods6);
+                //Debug.Log("Order 2.3 is: " + Foods[useFoods6]);
 
                 OrderButtonTwo.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6;
                 //IMAGE STUFF FOR PHONE ORDER BUTTON 2
@@ -487,7 +514,7 @@ public class menu_Items : MonoBehaviour
             }
             if (count == 2)
             {
-           
+
 
                 System.Random random6 = new System.Random();
 
@@ -506,7 +533,7 @@ public class menu_Items : MonoBehaviour
                 //menuButton3.gameObject.gameObject.GetComponentInChildren<Text>().text = pickfood7 + ", " + pickfood8 + ", " + pickfood9;
 
                 orderStatus.text = "Order Picked Up.";
-            } 
+            }
         }
 
     }
@@ -579,6 +606,14 @@ public class menu_Items : MonoBehaviour
 
             case "Doughnuts":
                 return donutsImg;
+                break;
+
+            case "Waffles":
+                return waffleImg;
+                break;
+
+            case "Cupcakes":
+                return cupcakeImg;
                 break;
 
             case "Ice Cream":
@@ -676,8 +711,169 @@ public class menu_Items : MonoBehaviour
 
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public void orderButton1Planet()
+    {
+        //ORDER BUTTON STUFF 
+        if (PlanetOutcome1.name == "Forest")
+        {
+            phoneOrderbutton1_planet.sprite = junglePlanetImg;
+        }
+
+        if (PlanetOutcome1.name == "Earth")
+        {
+            phoneOrderbutton1_planet.sprite = earthPlanetImg;
+        }
+
+        if (PlanetOutcome1.name == "Ice Planet")
+        {
+            phoneOrderbutton1_planet.sprite = icePlanetImg;
+        }
+        if (PlanetOutcome1.name == "Metal Planet")
+        {
+            phoneOrderbutton1_planet.sprite = metalPlanetImg;
+        }
+
+        if (PlanetOutcome1.name == "Cat Planet")
+        {
+            phoneOrderbutton1_planet.sprite = catPlanetImg;
+        }
+
+        if (PlanetOutcome1.name == "The Sun")
+        {
+            phoneOrderbutton1_planet.sprite = theSunPlanetImg;
+        }
+
+        if (PlanetOutcome1.name == "Sleepy Planet")
+        {
+            phoneOrderbutton1_planet.sprite = sleepyPlanetImg;
+        }
+
+        if (PlanetOutcome1.name == "Fire/Lava")
+        {
+            phoneOrderbutton1_planet.sprite = lavaPlanetImg;
+        }
+
+        if (PlanetOutcome1.name == "Dance Party")
+        {
+            phoneOrderbutton1_planet.sprite = dancePlanetImg;
+        }
+
+
+        if (PlanetOutcome1.name == "Lovecraft")
+        {
+            phoneOrderbutton1_planet.sprite = lovecraftPlanetImg;
+        }
+
+        if (PlanetOutcome1.name == "LSD Planet")
+        {
+            phoneOrderbutton1_planet.sprite = lsdPlanetImg;
+        }
+
+        if (PlanetOutcome1.name == "Weed Planet")
+        {
+            phoneOrderbutton1_planet.sprite = weedPlanetImg;
+        }
+
+        if (PlanetOutcome1.name == "Bougie Planet")
+        {
+            phoneOrderbutton1_planet.sprite = bougiePlanetImg;
+        }
+
+        if (PlanetOutcome1.name == "Gas Planet")
+        {
+            phoneOrderbutton1_planet.sprite = gasPlanetImg;
+        }
+    }
+
+
+    public void orderButton2Planet()
+    {
+        //ORDER BUTTON STUFF 
+        if (PlanetOutcome2.name == "Forrest")
+        {
+            phoneOrderbutton2_planet.sprite = junglePlanetImg;
+        }
+
+        if (PlanetOutcome2.name == "Earth")
+        {
+            phoneOrderbutton2_planet.sprite = earthPlanetImg;
+        }
+
+        if (PlanetOutcome2.name == "Ice Planet")
+        {
+            phoneOrderbutton2_planet.sprite = icePlanetImg;
+        }
+        if (PlanetOutcome2.name == "Metal Planet")
+        {
+            phoneOrderbutton2_planet.sprite = metalPlanetImg;
+        }
+
+        if (PlanetOutcome2.name == "Cat Planet")
+        {
+            phoneOrderbutton2_planet.sprite = catPlanetImg;
+        }
+
+        if (PlanetOutcome2.name == "The Sun")
+        {
+            phoneOrderbutton2_planet.sprite = theSunPlanetImg;
+        }
+
+        if (PlanetOutcome2.name == "Sleepy Planet")
+        {
+            phoneOrderbutton2_planet.sprite = sleepyPlanetImg;
+        }
+
+        if (PlanetOutcome2.name == "Fire/Lava")
+        {
+            phoneOrderbutton2_planet.sprite = lavaPlanetImg;
+        }
+
+        if (PlanetOutcome2.name == "Dance Party")
+        {
+            phoneOrderbutton2_planet.sprite = dancePlanetImg;
+        }
+
+
+        if (PlanetOutcome2.name == "Lovecraft")
+        {
+            phoneOrderbutton2_planet.sprite = lovecraftPlanetImg;
+        }
+
+        if (PlanetOutcome2.name == "LSD Planet")
+        {
+            phoneOrderbutton2_planet.sprite = lsdPlanetImg;
+        }
+
+        if (PlanetOutcome2.name == "Weed Planet")
+        {
+            phoneOrderbutton2_planet.sprite = weedPlanetImg;
+        }
+
+        if (PlanetOutcome2.name == "Bougie Planet")
+        {
+            phoneOrderbutton2_planet.sprite = bougiePlanetImg;
+        }
+
+        if (PlanetOutcome2.name == "Gas Planet")
+        {
+            phoneOrderbutton2_planet.sprite = gasPlanetImg;
+        }
+    }
+
+
+
+
 }
-
-   
-
-

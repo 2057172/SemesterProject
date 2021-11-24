@@ -20,6 +20,76 @@ public class RandomIncorrectOrder : MonoBehaviour
     public menu_Items menuItems;
     public UpgradeShop upgradeShop;
 
+
+
+    //IMAGE STUFF
+    public Sprite burgerImg;
+    public Sprite steakImg;
+    public Sprite ribsImg;
+    public Sprite tacoImg;
+    public Sprite noodlesImg;
+    public Sprite pizzaImg;
+    public Sprite chickenImg;
+    public Sprite sushiImg;
+    public Sprite fishImg;
+    public Sprite calamariImg;
+    public Sprite prawnImg;
+    public Sprite saladImg;
+    public Sprite chipsImg;
+    public Sprite onionRingsImg;
+    public Sprite riceImg;
+    public Sprite donutsImg;
+    public Sprite iceCreamImg;
+    public Sprite waffleImg;
+    public Sprite cupcakeImg;
+    public Sprite milkshakeImg;
+    public Sprite waterImg;
+    public Sprite juiceImg;
+    public Sprite alcoholImg;
+    public Sprite coldDrinkImg;
+
+    public Sprite earthPlanet_Food;
+    public Sprite junglePlanet_Food;
+    public Sprite lavaPlanet_Food;
+    public Sprite pillowPlanet_Food;
+    public Sprite sunPlanet_Food;
+    public Sprite icePlanet_Food;
+    public Sprite catPlanet_Food;
+    public Sprite robotPlanet_Food;
+    public Sprite lsdPlanet_Food;
+    public Sprite gasPlanet_Food;
+    public Sprite weedPlanet_Food;
+    public Sprite discoPlanet_Food;
+    public Sprite bougiePlanet_Food;
+    public Sprite lovecraftPlanet_Food;
+
+
+    //ORDER BUTTON STUFF
+    public Image orderbutton1_food1;
+    public Image orderbutton1_food2;
+    public Image orderbutton1_food3;
+
+    public Image orderbutton2_food1;
+    public Image orderbutton2_food2;
+    public Image orderbutton2_food3;
+
+    public Image orderbutton3_food1;
+    public Image orderbutton3_food2;
+    public Image orderbutton3_food3;
+
+    public Image orderbutton4_food1;
+    public Image orderbutton4_food2;
+    public Image orderbutton4_food3;
+
+    public Image orderbutton5_food1;
+    public Image orderbutton5_food2;
+    public Image orderbutton5_food3;
+
+
+    public Image orderbutton6_food1;
+    public Image orderbutton6_food2;
+    public Image orderbutton6_food3;
+
     public string[] RandomFoods = new string[]
    {
         "Cheeseburger",
@@ -170,6 +240,11 @@ public class RandomIncorrectOrder : MonoBehaviour
                 {
                     FourRandomFoods();
                     Order1.gameObject.GetComponentInChildren<Text>().text = PickRandomFood1 + "," + PickRandomFood2 + "," + PickRandomFood3;
+
+                    //RANDOM ORDER BUTTON 1 FOOD
+                    orderbutton1_food1.sprite = StringtoSprite(PickRandomFood1);
+                    orderbutton1_food2.sprite = StringtoSprite(PickRandomFood2);
+                    orderbutton1_food3.sprite = StringtoSprite(PickRandomFood3);
                 }               
             }
            
@@ -194,6 +269,11 @@ public class RandomIncorrectOrder : MonoBehaviour
                 {
                     FourRandomFoods();
                     Order2.gameObject.GetComponentInChildren<Text>().text = PickRandomFood4 + "," + PickRandomFood5 + "," + PickRandomFood6;
+
+                    //RANDOM ORDER BUTTON 2 FOOD
+                    orderbutton2_food1.sprite = StringtoSprite(PickRandomFood4);
+                    orderbutton2_food2.sprite = StringtoSprite(PickRandomFood5);
+                    orderbutton2_food3.sprite = StringtoSprite(PickRandomFood6);
                 }
             }
             if (counrt == 2)
@@ -216,6 +296,12 @@ public class RandomIncorrectOrder : MonoBehaviour
                 {
                     FourRandomFoods();
                     Order3.gameObject.GetComponentInChildren<Text>().text = PickRandomFood7 + "," + PickRandomFood8 + "," + PickRandomFood9;
+
+                    //RANDOM ORDER BUTTON 3 FOOD
+                    orderbutton3_food1.sprite = StringtoSprite(PickRandomFood7);
+                    orderbutton3_food2.sprite = StringtoSprite(PickRandomFood8);
+                    orderbutton3_food3.sprite = StringtoSprite(PickRandomFood9);
+
                 }
             }
             if (counrt == 3)
@@ -239,6 +325,11 @@ public class RandomIncorrectOrder : MonoBehaviour
                 {
                     FourRandomFoods();
                     Order4.gameObject.GetComponentInChildren<Text>().text = PickRandomFood10 + "," + PickRandomFood11 + "," + PickRandomFood12;
+
+                    //RANDOM ORDER BUTTON 4 FOOD
+                    orderbutton4_food1.sprite = StringtoSprite(PickRandomFood10);
+                    orderbutton4_food2.sprite = StringtoSprite(PickRandomFood11);
+                    orderbutton4_food3.sprite = StringtoSprite(PickRandomFood12);
                 }
             }
             if (counrt == 4)
@@ -262,6 +353,11 @@ public class RandomIncorrectOrder : MonoBehaviour
                 {
                     FourRandomFoods();
                     Order5.gameObject.GetComponentInChildren<Text>().text = PickRandomFood13 + "," + PickRandomFood14 + "," + PickRandomFood15;
+
+                    //RANDOM ORDER BUTTON 5 FOOD
+                    orderbutton5_food1.sprite = StringtoSprite(PickRandomFood13);
+                    orderbutton5_food2.sprite = StringtoSprite(PickRandomFood14);
+                    orderbutton5_food3.sprite = StringtoSprite(PickRandomFood15);
                 }
             }
             if (counrt == 5)
@@ -285,6 +381,10 @@ public class RandomIncorrectOrder : MonoBehaviour
                 {
                     FourRandomFoods();
                     Order6.gameObject.GetComponentInChildren<Text>().text = PickRandomFood16 + "," + PickRandomFood17 + "," + PickRandomFood18;
+
+                    orderbutton6_food1.sprite = StringtoSprite(PickRandomFood16);
+                    orderbutton6_food2.sprite = StringtoSprite(PickRandomFood17);
+                    orderbutton6_food3.sprite = StringtoSprite(PickRandomFood18);
                 }
 
             }
@@ -505,4 +605,181 @@ public class RandomIncorrectOrder : MonoBehaviour
         Debug.Log("This is" + useFoods18);
     }
 
+
+
+
+
+    //SPRITE STUFF
+    public Sprite StringtoSprite(string s)
+    {
+        switch (s)
+        {
+            case "Cheeseburger":
+                return burgerImg;
+                break;
+
+            case "Steak":
+                return steakImg;
+                break;
+
+            case "Ribs":
+                return ribsImg;
+                break;
+
+            case "Taco":
+                return tacoImg;
+                break;
+
+            case "Noodles":
+                return noodlesImg;
+                break;
+
+            case "Pizza":
+                return pizzaImg;
+                break;
+
+            case "Chicken Piece":
+                return chickenImg;
+                break;
+
+            case "Sushi":
+                return sushiImg;
+                break;
+
+            case "Fried Fish":
+                return fishImg;
+                break;
+
+            case "Fried Calamari":
+                return calamariImg;
+                break;
+
+            case "Fried Prawns":
+                return prawnImg;
+                break;
+
+
+            case "Salad":
+                return saladImg;
+                break;
+
+            case "Chips":
+                return chipsImg;
+                break;
+
+            case "Onion Rings":
+                return onionRingsImg;
+                break;
+
+            case "Rice":
+                return riceImg;
+                break;
+
+            case "Doughnuts":
+                return donutsImg;
+                break;
+
+            case "Waffles":
+                return waffleImg;
+                break;
+
+            case "Cupcakes":
+                return cupcakeImg;
+                break;
+
+            case "Ice Cream":
+                return iceCreamImg;
+                break;
+
+            case "Milkshake":
+                return milkshakeImg;
+                break;
+
+            case "Water":
+                return waterImg;
+                break;
+
+            case "Juice":
+                return juiceImg;
+                break;
+
+            case "Alchol":
+                return alcoholImg;
+                break;
+
+            case "Cold Drink":
+                return coldDrinkImg;
+                break;
+
+            //////////////////////
+
+            case "Human Food":
+                return earthPlanet_Food;
+                break;
+
+            case "Bugs":
+                return junglePlanet_Food;
+                break;
+
+            case "Lava Drink":
+                return lavaPlanet_Food;
+                break;
+
+            case "Warm Milk":
+                return pillowPlanet_Food;
+                break;
+
+            case "Sun food":
+                return sunPlanet_Food;
+                break;
+
+            case "Snow cone":
+                return icePlanet_Food;
+                break;
+
+            case "Cat food":
+                return catPlanet_Food;
+                break;
+
+            case "Nuts and Bolts":
+                return robotPlanet_Food;
+                break;
+
+            case "Space Shrooms":
+                return lsdPlanet_Food;
+                break;
+
+            case "Helium":
+                return gasPlanet_Food;
+                break;
+
+            case "Energy Drink":
+                return discoPlanet_Food;
+                break;
+
+
+            case "Joint":
+                return weedPlanet_Food;
+                break;
+
+            case "Diamond Caviar":
+                return bougiePlanet_Food;
+                break;
+
+            case "THE VOID":
+                return lovecraftPlanet_Food;
+                break;
+
+
+            default:
+                Debug.Log("incorrect string");
+                return null;
+                break;
+        }
+        return null;
+
+
+
+
+    }
 }

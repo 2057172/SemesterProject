@@ -602,11 +602,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2330509510079814169, guid: 8a2694243b614a140bd079ce91168173, type: 3}
   m_PrefabInstance: {fileID: 11003642}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &11745640 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7364800802931208076, guid: ad595edbe886c93438f1626bd7b15b56, type: 3}
-  m_PrefabInstance: {fileID: 1614471313}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &12007816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4506,7 +4501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7411765}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8548,81 +8543,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2330509510079814169, guid: 8a2694243b614a140bd079ce91168173, type: 3}
   m_PrefabInstance: {fileID: 212554361}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &214714264
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 214714265}
-  - component: {fileID: 214714267}
-  - component: {fileID: 214714266}
-  m_Layer: 5
-  m_Name: B3_Food1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &214714265
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214714264}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.999675, y: 0.999675, z: 0.999675}
-  m_Children: []
-  m_Father: {fileID: 11745640}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -108, y: 0}
-  m_SizeDelta: {x: 98.06, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &214714266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214714264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &214714267
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214714264}
-  m_CullTransparentMesh: 1
 --- !u!1001 &215769668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11727,7 +11647,7 @@ GameObject:
   - component: {fileID: 276896081}
   - component: {fileID: 276896080}
   m_Layer: 5
-  m_Name: B1_Food3
+  m_Name: B4_Food3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17871,7 +17791,7 @@ GameObject:
   - component: {fileID: 438460658}
   - component: {fileID: 438460657}
   m_Layer: 5
-  m_Name: B1_Food1
+  m_Name: B4_Food1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22731,7 +22651,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1747878793}
     m_Modifications:
     - target: {fileID: 4376119798433938792, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: m_SortingOrder
@@ -22739,7 +22659,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4376119798433938804, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: m_Name
-      value: OrderThingy
+      value: RandomOrderManager
       objectReference: {fileID: 0}
     - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: Order1
@@ -22752,15 +22672,15 @@ PrefabInstance:
     - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: Order3
       value: 
-      objectReference: {fileID: 1181056997}
+      objectReference: {fileID: 1962397150}
     - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: Order4
       value: 
-      objectReference: {fileID: 450307277}
+      objectReference: {fileID: 1181056997}
     - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: Order5
       value: 
-      objectReference: {fileID: 1962397150}
+      objectReference: {fileID: 450307277}
     - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: Order6
       value: 
@@ -22770,17 +22690,409 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1547638740}
     - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: fishImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 408ff3bfddd27274a9259f6b85232cbc, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: ribsImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 946011dcbbd9ddf4881a0b0068136c6b, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: riceImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 324eadaab84c2b946866116905452f6a, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: tacoImg
+      value: 
+      objectReference: {fileID: 21300000, guid: d2618e6b18d94084e8a27837d8b89fff, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: chipsImg
+      value: 
+      objectReference: {fileID: 21300000, guid: d3dd049c11fc9d24aadc777575649bc5, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: juiceImg
+      value: 
+      objectReference: {fileID: 21300000, guid: eaa9a5e0e34ebcf4aa483b40b1eeecd5, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: pizzaImg
+      value: 
+      objectReference: {fileID: 21300000, guid: cdd606602c526734e8441c6440029edd, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: prawnImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 971ad9d631d73b94f8f2cae36daeae21, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: saladImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 0590a291fc331eb4a8e270190e42a301, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: steakImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 01ae589da68998645bdbf5a60aa7c25b, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: sushiImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 989f6f7f910825c4ca2b75d4714c445d, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: waterImg
+      value: 
+      objectReference: {fileID: 21300000, guid: aa08d3b9683df6c4ab85820d2e285d96, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: burgerImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 45fa8b2360722114ab6435bea96e1d45, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: donutsImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 1b85494af2477814c822b129bf9b707f, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: menuItems
       value: 
       objectReference: {fileID: 1796300869}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: waffleImg
+      value: 
+      objectReference: {fileID: 21300000, guid: e90e39e5103219c46bc14fd8ed39d5af, type: 3}
     - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: OrderPanel
       value: 
       objectReference: {fileID: 1502797972}
     - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: alcoholImg
+      value: 
+      objectReference: {fileID: 21300000, guid: ebf1436810cc79d4ea7f76a9c40deade, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: chickenImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 9f028159848ea0148a791d125c8ed459, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: cupcakeImg
+      value: 
+      objectReference: {fileID: 21300000, guid: f16921f46fd2f0e4bb68c6fb44663958, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: noodlesImg
+      value: 
+      objectReference: {fileID: 21300000, guid: b1d1a0c6caacf6b47b2b40f8d833bf88, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: calamariImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 15a29b7a70c9f9e4b960de5d79fc359c, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: iceCreamImg
+      value: 
+      objectReference: {fileID: 21300000, guid: d6f5ba31b54234348b93dee775578b01, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: upgradeShop
       value: 
       objectReference: {fileID: 1041465758}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: coldDrinkImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 287b40fff4ca3714b9cfbce3146376e8, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: milkshakeImg
+      value: 
+      objectReference: {fileID: 21300000, guid: b64996efced390c40ab4c1d45747475e, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: onionRingsImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 1ecb9d8ca82232046bf69ee38c90d51f, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: catPlanet_Food
+      value: 
+      objectReference: {fileID: 21300000, guid: de0188e9d39a6cd4f84a5aef6548120a, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: gasPlanet_Food
+      value: 
+      objectReference: {fileID: 21300000, guid: fdec8231d88e4014b9cd9a50d9e15d4d, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: icePlanet_Food
+      value: 
+      objectReference: {fileID: 21300000, guid: a0128ef9d3e8910448378204acaea385, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: lsdPlanet_Food
+      value: 
+      objectReference: {fileID: 21300000, guid: d1ec76e09fdc29549a2cffc7385aef8c, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: sunPlanet_Food
+      value: 
+      objectReference: {fileID: 21300000, guid: b9453b8dd9c9dbb4f9f095fda5c1e45f, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: lavaPlanet_Food
+      value: 
+      objectReference: {fileID: 21300000, guid: 517bb9568de828840bb4c2e1f6f85cc3, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: weedPlanet_Food
+      value: 
+      objectReference: {fileID: 21300000, guid: d89cdd449c93a5549b01f4610ef51ae9, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: discoPlanet_Food
+      value: 
+      objectReference: {fileID: 21300000, guid: cf90ab35f55f61b4d9a68af494d0cc23, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: earthPlanet_Food
+      value: 
+      objectReference: {fileID: 21300000, guid: e3892c7d11c4e504296706289f1abfe1, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: robotPlanet_Food
+      value: 
+      objectReference: {fileID: 21300000, guid: 97d6bb833483abd4e9ef3b782b4d2425, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: bougiePlanet_Food
+      value: 
+      objectReference: {fileID: 21300000, guid: c49d8aca8336ecb4596dc96797681fe1, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: junglePlanet_Food
+      value: 
+      objectReference: {fileID: 21300000, guid: 6fc1b04aa3ea34e428873bbcea5741cf, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: pillowPlanet_Food
+      value: 
+      objectReference: {fileID: 21300000, guid: fe1f9a2f557b9a74dbd04f6eaee134d7, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: orderbutton1_food1
+      value: 
+      objectReference: {fileID: 2065209196}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: orderbutton1_food2
+      value: 
+      objectReference: {fileID: 1865306250}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: orderbutton1_food3
+      value: 
+      objectReference: {fileID: 1127359487}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: orderbutton2_food1
+      value: 
+      objectReference: {fileID: 1119894432}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: orderbutton2_food2
+      value: 
+      objectReference: {fileID: 666923600}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: orderbutton2_food3
+      value: 
+      objectReference: {fileID: 1677813408}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: orderbutton3_food1
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: orderbutton3_food2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: orderbutton3_food3
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: orderbutton4_food1
+      value: 
+      objectReference: {fileID: 438460657}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: orderbutton4_food2
+      value: 
+      objectReference: {fileID: 1158959725}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: orderbutton4_food3
+      value: 
+      objectReference: {fileID: 276896080}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: orderbutton5_food1
+      value: 
+      objectReference: {fileID: 390044402}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: orderbutton5_food2
+      value: 
+      objectReference: {fileID: 1294129462}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: orderbutton5_food3
+      value: 
+      objectReference: {fileID: 1693581225}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: orderbutton6_food1
+      value: 
+      objectReference: {fileID: 282308075}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: orderbutton6_food2
+      value: 
+      objectReference: {fileID: 1237722450}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: orderbutton6_food3
+      value: 
+      objectReference: {fileID: 119349629}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: lovecraftPlanet_Food
+      value: 
+      objectReference: {fileID: 21300000, guid: cde0cb83fdcf2f84183969ad4c47089e, type: 3}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.size
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[0]
+      value: Cheeseburger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[1]
+      value: Steak
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[2]
+      value: Ribs
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[3]
+      value: Taco
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[4]
+      value: Noodles
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[5]
+      value: Pizza
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[6]
+      value: Chicken Piece
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[7]
+      value: Sushi
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[8]
+      value: Fried Fish
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[9]
+      value: Fried Calamari
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[10]
+      value: Fried Prawns
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[11]
+      value: Salad
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[12]
+      value: Chips
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[13]
+      value: Onion Rings
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[14]
+      value: Rice
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[15]
+      value: Doughnuts
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[16]
+      value: Ice Cream
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[17]
+      value: Cupcakes
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[18]
+      value: Waffles
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[19]
+      value: Milkshake
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[20]
+      value: Water
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[21]
+      value: Juice
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[22]
+      value: Alchol
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[23]
+      value: Cold Drink
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[24]
+      value: Human Food
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[25]
+      value: Bugs
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[26]
+      value: Lava Drink
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[27]
+      value: Warm Milk
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[28]
+      value: Sun food
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[29]
+      value: Snow cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[30]
+      value: Cat food
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[31]
+      value: Nuts and Bolts
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[32]
+      value: Space Shrooms
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[33]
+      value: Helium
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[34]
+      value: Energy Drink
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[35]
+      value: Joint
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[36]
+      value: Diamond Caviar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[37]
+      value: THE VOID
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[38]
+      value: THE VOID
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[39]
+      value: THE VOID
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376119798433938805, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+      propertyPath: RandomFoods.Array.data[40]
+      value: THE VOID
+      objectReference: {fileID: 0}
     - target: {fileID: 4376119798433938807, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -22791,7 +23103,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4376119798433938807, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4376119798433938807, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -38843,7 +39155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1003750014
 Transform:
   m_ObjectHideFlags: 0
@@ -40230,6 +40542,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1732910945}
     m_Modifications:
+    - target: {fileID: 5017206258521752099, guid: a2b0783457b94b042bdceb2239e248b4, type: 3}
+      propertyPath: m_Name
+      value: Bougie Planet
+      objectReference: {fileID: 0}
     - target: {fileID: 5017206258630718000, guid: a2b0783457b94b042bdceb2239e248b4, type: 3}
       propertyPath: m_Name
       value: WorldSpaceCanvas
@@ -40321,6 +40637,10 @@ PrefabInstance:
     - target: {fileID: 5017206258630718005, guid: a2b0783457b94b042bdceb2239e248b4, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5017206259139825329, guid: a2b0783457b94b042bdceb2239e248b4, type: 3}
+      propertyPath: m_Name
+      value: Lovecraft
       objectReference: {fileID: 0}
     - target: {fileID: 5017206260395029705, guid: a2b0783457b94b042bdceb2239e248b4, type: 3}
       propertyPath: m_Layer
@@ -44414,7 +44734,7 @@ GameObject:
   - component: {fileID: 1158959726}
   - component: {fileID: 1158959725}
   m_Layer: 5
-  m_Name: B1_Food2
+  m_Name: B4_Food2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47467,7 +47787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7411765}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -47571,7 +47891,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1222296147
 RectTransform:
   m_ObjectHideFlags: 0
@@ -47604,7 +47924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5529412}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -53389,7 +53709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7411765}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -55667,7 +55987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7411765}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -65427,7 +65747,7 @@ GameObject:
   - component: {fileID: 1677813409}
   - component: {fileID: 1677813408}
   m_Layer: 5
-  m_Name: B3_Food3
+  m_Name: B2_Food3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68782,6 +69102,7 @@ Transform:
   - {fileID: 1806517242}
   - {fileID: 1796300868}
   - {fileID: 1116147595}
+  - {fileID: 2010587127}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -71021,6 +71342,7 @@ MonoBehaviour:
   donutsImg: {fileID: 21300000, guid: 1b85494af2477814c822b129bf9b707f, type: 3}
   iceCreamImg: {fileID: 21300000, guid: d6f5ba31b54234348b93dee775578b01, type: 3}
   waffleImg: {fileID: 21300000, guid: e90e39e5103219c46bc14fd8ed39d5af, type: 3}
+  cupcakeImg: {fileID: 21300000, guid: f16921f46fd2f0e4bb68c6fb44663958, type: 3}
   milkshakeImg: {fileID: 21300000, guid: b64996efced390c40ab4c1d45747475e, type: 3}
   waterImg: {fileID: 21300000, guid: aa08d3b9683df6c4ab85820d2e285d96, type: 3}
   juiceImg: {fileID: 21300000, guid: eaa9a5e0e34ebcf4aa483b40b1eeecd5, type: 3}
@@ -71049,19 +71371,31 @@ MonoBehaviour:
   phoneOrderbutton3_food1: {fileID: 780535724}
   phoneOrderbutton3_food2: {fileID: 1458838826}
   phoneOrderbutton3_food3: {fileID: 225708012}
+  phoneOrderbutton1_planet: {fileID: 2003268750}
+  phoneOrderbutton2_planet: {fileID: 1222296148}
+  earthPlanetImg: {fileID: 21300000, guid: a89c6676ad06e5b43b0e50a7bb71684c, type: 3}
+  junglePlanetImg: {fileID: 21300000, guid: 7bd73ed843f40364a9e5165640a6b543, type: 3}
+  icePlanetImg: {fileID: 21300000, guid: e80822aa243c2584a9db1d20f2341bcb, type: 3}
+  catPlanetImg: {fileID: 21300000, guid: a1d0906883bc00e43846c9b002b28c7f, type: 3}
+  metalPlanetImg: {fileID: 21300000, guid: 6a7aaf1be0b31f34691651af76b39265, type: 3}
+  theSunPlanetImg: {fileID: 21300000, guid: 5fbf1663fc2bc8e40979bbb6a03a2038, type: 3}
+  lavaPlanetImg: {fileID: 21300000, guid: 1a48a5186be4599449897e007f400e84, type: 3}
+  sleepyPlanetImg: {fileID: 21300000, guid: 842db5b114bd3fe4ea693f54fb2e3d94, type: 3}
+  dancePlanetImg: {fileID: 21300000, guid: ee05260d49ec8354c9dae526b99f1f8f, type: 3}
+  lovecraftPlanetImg: {fileID: 21300000, guid: ca8a58a275f1ade47b80e0d6b4566a3d, type: 3}
+  lsdPlanetImg: {fileID: 21300000, guid: 2008e50b8aa70cb49ab9562e50be908b, type: 3}
+  weedPlanetImg: {fileID: 21300000, guid: eaa49e820c332dc4db945bae973bb48b, type: 3}
+  gasPlanetImg: {fileID: 21300000, guid: 360c21643bd652c48a39fae0434811dc, type: 3}
+  bougiePlanetImg: {fileID: 21300000, guid: dc2ad7cc80e2d364aa25faec3ffa917a, type: 3}
   Foods:
-  - Single Cheeseburger
-  - Double Cheeseburger
+  - Cheeseburger
   - Steak
   - Ribs
   - Taco
   - Noodles
   - Pizza
-  - Hot Wings
   - Chicken Piece
-  - Sushi 1
-  - Sushi 2
-  - Sushi 3
+  - Sushi
   - Fried Fish
   - Fried Calamari
   - Fried Prawns
@@ -71093,18 +71427,14 @@ MonoBehaviour:
   - Diamond Caviar
   - THE VOID
   Foods2:
-  - Single Cheeseburger
-  - Double Cheeseburger
+  - Cheeseburger
   - Steak
   - Ribs
   - Taco
   - Noodles
   - Pizza
-  - Hot Wings
   - Chicken Piece
-  - Sushi 1
-  - Sushi 2
-  - Sushi 3
+  - Sushi
   - Fried Fish
   - Fried Calamari
   - Fried Prawns
@@ -71136,18 +71466,14 @@ MonoBehaviour:
   - Diamond Caviar
   - THE VOID
   Foods3:
-  - Single Cheeseburger
-  - Double Cheeseburger
+  - Cheeseburger
   - Steak
   - Ribs
   - Taco
   - Noodles
   - Pizza
-  - Hot Wings
   - Chicken Piece
-  - Sushi 1
-  - Sushi 2
-  - Sushi 3
+  - Sushi
   - Fried Fish
   - Fried Calamari
   - Fried Prawns
@@ -73332,81 +73658,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2330509510079814169, guid: 8a2694243b614a140bd079ce91168173, type: 3}
   m_PrefabInstance: {fileID: 1852043026}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1852604165
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1852604166}
-  - component: {fileID: 1852604168}
-  - component: {fileID: 1852604167}
-  m_Layer: 5
-  m_Name: B3_Food3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1852604166
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852604165}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.00019002438}
-  m_LocalScale: {x: 0.999675, y: 0.999675, z: 0.999675}
-  m_Children: []
-  m_Father: {fileID: 11745640}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 121.6001, y: 0.000006198883}
-  m_SizeDelta: {x: 98.06, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1852604167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852604165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1852604168
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852604165}
-  m_CullTransparentMesh: 1
 --- !u!1001 &1856868675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73703,81 +73954,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2330509510079814169, guid: 8a2694243b614a140bd079ce91168173, type: 3}
   m_PrefabInstance: {fileID: 1862252587}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1865270283
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1865270284}
-  - component: {fileID: 1865270286}
-  - component: {fileID: 1865270285}
-  m_Layer: 5
-  m_Name: B3_Food2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1865270284
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865270283}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.00025429248}
-  m_LocalScale: {x: 0.999675, y: 0.999675, z: 0.999675}
-  m_Children: []
-  m_Father: {fileID: 11745640}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.4000854, y: 0.000006198883}
-  m_SizeDelta: {x: 98.06, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1865270285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865270283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.5254902}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1865270286
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865270283}
-  m_CullTransparentMesh: 1
 --- !u!1 &1865306248
 GameObject:
   m_ObjectHideFlags: 0
@@ -79114,7 +79290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2003268749
 RectTransform:
   m_ObjectHideFlags: 0
@@ -79147,7 +79323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5529412}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -79441,6 +79617,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2330509510079814169, guid: 8a2694243b614a140bd079ce91168173, type: 3}
   m_PrefabInstance: {fileID: 2008612495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &2010587127 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4376119798433938807, guid: 83abb2e78c2732d478723484ff780a3f, type: 3}
+  m_PrefabInstance: {fileID: 572674865}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2010726002
 PrefabInstance:
@@ -80813,7 +80994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7411765}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -82629,7 +82810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7411765}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

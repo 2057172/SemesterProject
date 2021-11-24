@@ -85,6 +85,10 @@ public class NewRandomPlanets : MonoBehaviour
             Distance3TXT.gameObject.SetActive(false);
             Planet3.gameObject.SetActive(false);
         }
+
+
+
+      
     }
     public void Refresh()
     {
@@ -127,7 +131,7 @@ public class NewRandomPlanets : MonoBehaviour
                     Distance1TXT.text = Mathf.RoundToInt(Distance1).ToString() + "m";
                     Planet1.text = PlanetOutcome1.name;
                     planetOutcome1String = PlanetOutcome1.name;
-                
+
 
             }
             else if (count == 1)
@@ -168,4 +172,9 @@ public class NewRandomPlanets : MonoBehaviour
     }
 
 
+
+
+    
+ 
+    
 }
