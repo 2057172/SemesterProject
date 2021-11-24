@@ -72,7 +72,7 @@ public class menu_Items : MonoBehaviour
 
 
 
-    //ORDER BUTTON STUFF
+    //PHONE ORDER BUTTON STUFF
     public Image phoneOrderbutton1_food1;
     public Image phoneOrderbutton1_food2;
     public Image phoneOrderbutton1_food3;
@@ -727,7 +727,7 @@ public class menu_Items : MonoBehaviour
     public void orderButton1Planet()
     {
         //ORDER BUTTON STUFF 
-        if (PlanetOutcome1.name == "Forrest")
+        if (PlanetOutcome1.name == "Forest")
         {
             phoneOrderbutton1_planet.sprite = junglePlanetImg;
         }
