@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class playerMovement : MonoBehaviour
 {
@@ -53,6 +54,8 @@ public class playerMovement : MonoBehaviour
     public int fuelSeconds = 10;
     public int fuelDecrease = 2;
 
+    public TextMeshProUGUI fuel_text;
+    public TextMeshProUGUI health_text;
 
     void Start()
     {
@@ -113,7 +116,8 @@ public class playerMovement : MonoBehaviour
         //currentFuel -= fuel;
         //   Health_And_Fuel.setCurrentFuel(currentFuel);
         // }
-
+        fuel_text.text = currentFuel.ToString() + "/" + maxFuel.ToString();
+        health_text.text= currentHealth.ToString() + "/" + maxHealth.ToString();
     }
 
     //ALT FUEL DECREASE SYSTEM

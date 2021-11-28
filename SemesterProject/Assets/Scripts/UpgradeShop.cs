@@ -102,17 +102,12 @@ public class UpgradeShop : MonoBehaviour
 
     public TextMeshProUGUI priceTXT;
 
-    //FUEL AND HEATLH BAR STUFF
-    public GameObject fuel_border;
-    public GameObject fuel_fill;
   
 
     // Start is called before the first frame update
     void Start()
     {
-        fuel_border.transform.localScale = new Vector3(2, 1, 2);
-        fuel_fill.transform.localScale = new Vector3(2, 1, 2);
-
+        
         heatButton.GetComponentInChildren<TextMeshProUGUI>().text = "Heat Protection: " + "$" + firePro;
         iceButton.GetComponentInChildren<TextMeshProUGUI>().text = "Ice Protection: " + "$" + icePro;
         radButton.GetComponentInChildren<TextMeshProUGUI>().text = "Radiation Protection: " + "$" + radPro;
@@ -309,7 +304,6 @@ public class UpgradeShop : MonoBehaviour
     }
 
 
-   
 
     public void UpgradeHeat()
     {
@@ -377,6 +371,9 @@ public class UpgradeShop : MonoBehaviour
             gameMan.money -= FuelUp1Cost;
             playerMov.maxFuel = maxFuelUpgrade1;
             fuelUP1purchased = true;
+
+            playerMov.fuel_text.text = playerMov.currentFuel.ToString() + "/" + playerMov.maxFuel.ToString();
+            playerMov.health_text.text = playerMov.currentHealth.ToString() + "/" + playerMov.maxHealth.ToString();
         }
         else
         {
