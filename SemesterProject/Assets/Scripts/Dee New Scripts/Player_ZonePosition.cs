@@ -135,74 +135,20 @@ public class Player_ZonePosition : MonoBehaviour
         if (spaceship_distance > normalZoneEdge.transform.position.y && spaceship_distance < iceZoneEdge.transform.position.y)
         {
             isInIceZone = true;
-
-            //UPGRADE UI COLOUR IN ICE ZONE
-            ColorBlock hu1 = healthUpgrade1.colors;
-            hu1.normalColor = blue1;
-            healthUpgrade1.colors = hu1;
-
-            ColorBlock fu1 = fuelUpgrade1.colors;
-            fu1.normalColor = blue1;
-            fuelUpgrade1.colors = fu1;
-
-            ColorBlock cu1 = carryCapacity1.colors;
-            cu1.normalColor = blue1;
-            carryCapacity1.colors =cu1;
-
-            ColorBlock ice = iceUpgrade.colors;
-            ice.normalColor = blue1;
-            iceUpgrade.colors = ice;
-
-
-            ColorBlock hu2 = healthUpgrade2.colors;
-            hu2.normalColor = blue2;
-            healthUpgrade2.colors = hu2;
-
-            ColorBlock fu2 = fuelUpgrade2.colors;
-            fu2.normalColor = blue2;
-            fuelUpgrade2.colors = fu2;
-
-            ColorBlock cu2 = carryCapacity2.colors;
-            cu2.normalColor = blue2;
-            carryCapacity2.colors = cu2;
-
-            ColorBlock heat = heatUpgrade.colors;
-            heat.normalColor = blue2;
-            heatUpgrade.colors = heat;
-
-
-            ColorBlock hu3 = healthUpgrade3.colors;
-            hu3.normalColor = blue3;
-            healthUpgrade3.colors = hu3;
-
-            ColorBlock fu3 = fuelUpgrade3.colors;
-            fu3.normalColor = blue3;
-            fuelUpgrade3.colors = fu3;
-
-            ColorBlock cu3 = carryCapacity3.colors;
-            cu3.normalColor = blue3;
-            carryCapacity3.colors = cu3;
-
-            ColorBlock rad = radiationUpgrade.colors;
-            rad.normalColor = blue3;
-            radiationUpgrade.colors = rad;
-
-
-            ColorBlock hard = hardcoreUpgrade.colors;
-            hard.normalColor = blue4;
-            hardcoreUpgrade.colors = hard;
-
-            ColorBlock repair = repairButton.colors;
-            repair.normalColor = blue4;
-            repairButton.colors = repair;
+            Debug.Log("Ice.");
+          
+            
 
             //IF PLAYER DOES NOT HAVE ICE PROTECTION 
-            if (isInIceZone == true && upgradeShop.icePurchased == false)
-            {
-                dangerAlert.text = "ICE DAMAGE DAMAGE!";
+            if (isInIceZone == true)
+            { if(upgradeShop.icePurchased == false)
+                {
+                    dangerAlert.text = "ICE DAMAGE DAMAGE!";
 
-                //PUT CODE TO SLOW DOWN SHIP WHEN IN THIS ZONE HERE
-                playerMovement.maxSpeed = 3;
+                    //PUT CODE TO SLOW DOWN SHIP WHEN IN THIS ZONE HERE
+                    playerMovement.maxSpeed = 3;
+                }
+              
 
 
 
@@ -213,6 +159,7 @@ public class Player_ZonePosition : MonoBehaviour
                 playerMovement.maxSpeed = 6;
                 dangerAlert.text = "";
                 //CODE TO MAKE SHIP GO FAST AGAIN
+                Debug.Log("fucj"); 
             }
 
 
