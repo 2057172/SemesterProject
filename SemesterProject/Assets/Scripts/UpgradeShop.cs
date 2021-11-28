@@ -102,12 +102,16 @@ public class UpgradeShop : MonoBehaviour
 
     public TextMeshProUGUI priceTXT;
 
-
+    //FUEL AND HEATLH BAR STUFF
+    public GameObject fuel_border;
+    public GameObject fuel_fill;
   
 
     // Start is called before the first frame update
     void Start()
     {
+        fuel_border.transform.localScale = new Vector3(2, 1, 2);
+        fuel_fill.transform.localScale = new Vector3(2, 1, 2);
 
         heatButton.GetComponentInChildren<TextMeshProUGUI>().text = "Heat Protection: " + "$" + firePro;
         iceButton.GetComponentInChildren<TextMeshProUGUI>().text = "Ice Protection: " + "$" + icePro;
