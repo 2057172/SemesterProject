@@ -48,56 +48,12 @@ public class Player_ZonePosition : MonoBehaviour
 
     //STUFF FOR BUTTONS
     //UPGRADE BUTTONS
-    public Button healthUpgrade1;
-    public Button healthUpgrade2;
-    public Button healthUpgrade3;
-
-    public Button fuelUpgrade1;
-    public Button fuelUpgrade2;
-    public Button fuelUpgrade3;
-
-    public Button carryCapacity1;
-    public Button carryCapacity2;
-    public Button carryCapacity3;
-    public Button carryCapacity4;
-
-    public Button iceUpgrade;
-    public Button heatUpgrade;
-    public Button radiationUpgrade;
-    public Button hardcoreUpgrade;
-
-    public Button repairButton;
+ 
 
     public TextMeshProUGUI status;
     public GameObject statusBar;
 
-    //COLOURS 
-    public Color green1;
-    public Color green2;
-    public Color green3;
-    public Color green4;
-
-
-    public Color blue1;
-    public Color blue2;
-    public Color blue3;
-    public Color blue4;
-
-    public Color red1;
-    public Color red2;
-    public Color red3;
-    public Color red4;
-
-    public Color purple1;
-    public Color purple2;
-    public Color purple3;
-    public Color purple4;
-
-
-    public Color black1;
-    public Color black2;
-    public Color black3;
-    public Color black4;
+  
 
     public GameObject danger_Icon_disabled;
     public GameObject danger_Icon_enabled;

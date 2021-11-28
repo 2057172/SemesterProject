@@ -8,6 +8,10 @@ public class Button_Hover : MonoBehaviour ,IPointerEnterHandler, IPointerExitHan
 {
     public TextMeshProUGUI description;
     public TextMeshProUGUI heading;
+
+    public TextMeshProUGUI fuelDescription;
+    public TextMeshProUGUI fuelHeading;
+
     public UpgradeShop upgradeShop;
     public fuel_and_mechanic_Manager fuel_And_Mechanic_Manager;
     public bool mouse_over;
@@ -120,8 +124,12 @@ public class Button_Hover : MonoBehaviour ,IPointerEnterHandler, IPointerExitHan
                 description.text = "Protect your ship from all the dangers in the hardcore zone for: $ " + upgradeShop.hardcorePro;
             }
 
+            if(this.gameObject.name== "Refuel_Button")
+            {
+                fuelDescription.text = "Refuel your ship's gas for:$ " + fuel_And_Mechanic_Manager.fuelCost.ToString();
+            }
 
-            
+           
         }
 
         else if (mouse_over == false)

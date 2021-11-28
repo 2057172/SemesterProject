@@ -39,10 +39,6 @@ public class playerMovement : MonoBehaviour
     public float fuel = 1;
     public float consumption = 0.01f;
 
-    // Timer controls
-    private float startTime = 0f;
-    private float timer = 0f;
-    public float holdTime = 2.0f; // how long you need to hold to trigger the effect
 
     // Use if you only want to call the method once after holding for the required time
     private bool held = false;
