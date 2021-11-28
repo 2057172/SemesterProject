@@ -37,7 +37,7 @@ public class Player_ZonePosition : MonoBehaviour
     public int hardcoreHeatSeconds = 5;
     public int hardcoreHeatDamage = 15;
 
-    public TextMeshProUGUI dangerAlert;
+    
 
 
     //MAP STUFF FOR RADIATION ZONE
@@ -68,6 +68,9 @@ public class Player_ZonePosition : MonoBehaviour
 
     public Button repairButton;
 
+    public TextMeshProUGUI status;
+    public GameObject statusBar;
+
     //COLOURS 
     public Color green1;
     public Color green2;
@@ -95,13 +98,42 @@ public class Player_ZonePosition : MonoBehaviour
     public Color black2;
     public Color black3;
     public Color black4;
-    
-    
+
+    public GameObject danger_Icon_disabled;
+    public GameObject danger_Icon_enabled;
+
+    public GameObject ice_Icon_disabled;
+    public GameObject ice_Icon_enabled;
+
+    public GameObject fire_Icon_disabled;
+    public GameObject fire_Icon_enabled;
+
+    public GameObject radiation_Icon_disabled;
+    public GameObject radiation_Icon_enabled;
+
+    public GameObject hardcore_Icon_disabled;
+    public GameObject hardcore_Icon_enabled;
+
+
     void Start()
     {
 
 
-        //Changes the button's Normal color to the new color.
+        danger_Icon_disabled.SetActive(true);
+        ice_Icon_disabled.SetActive(true);
+        fire_Icon_disabled.SetActive(true);
+        radiation_Icon_disabled.SetActive(true);
+        hardcore_Icon_disabled.SetActive(true);
+
+
+        danger_Icon_enabled.SetActive(false);
+        ice_Icon_enabled.SetActive(false);
+        fire_Icon_enabled.SetActive(false);
+        radiation_Icon_enabled.SetActive(false);
+        hardcore_Icon_enabled.SetActive(false);
+
+        statusBar.SetActive(false);
+        status.text = "";
      
     }
 
@@ -119,7 +151,21 @@ public class Player_ZonePosition : MonoBehaviour
         {
             isInNormalZone = true;
 
-           
+            danger_Icon_disabled.SetActive(true);
+            ice_Icon_disabled.SetActive(true);
+            fire_Icon_disabled.SetActive(true);
+            radiation_Icon_disabled.SetActive(true);
+            hardcore_Icon_disabled.SetActive(true);
+
+
+            danger_Icon_enabled.SetActive(false);
+            ice_Icon_enabled.SetActive(false);
+            fire_Icon_enabled.SetActive(false);
+            radiation_Icon_enabled.SetActive(false);
+            hardcore_Icon_enabled.SetActive(false);
+
+            statusBar.SetActive(false);
+            status.text = "";
 
         }
         else
@@ -135,7 +181,7 @@ public class Player_ZonePosition : MonoBehaviour
         if (spaceship_distance > normalZoneEdge.transform.position.y && spaceship_distance < iceZoneEdge.transform.position.y)
         {
             isInIceZone = true;
-            Debug.Log("Ice.");
+          
           
             
 
@@ -143,10 +189,24 @@ public class Player_ZonePosition : MonoBehaviour
             if (isInIceZone == true)
             { if(upgradeShop.icePurchased == false)
                 {
-                    dangerAlert.text = "ICE DAMAGE DAMAGE!";
+                  
 
                     //PUT CODE TO SLOW DOWN SHIP WHEN IN THIS ZONE HERE
                     playerMovement.maxSpeed = 3;
+
+                    //ICON
+                    ice_Icon_disabled.SetActive(false);
+                    ice_Icon_enabled.SetActive(true);
+
+                    fire_Icon_disabled.SetActive(true);
+                    fire_Icon_enabled.SetActive(false);
+
+                    danger_Icon_disabled.SetActive(false);
+                    danger_Icon_enabled.SetActive(true);
+
+
+                    statusBar.SetActive(true);
+                    status.text = "ENGINE SYSTEM: <color=#f02005>CRITICAL</color>";
                 }
               
 
@@ -157,9 +217,27 @@ public class Player_ZonePosition : MonoBehaviour
             if (upgradeShop.icePurchased == true)
             {
                 playerMovement.maxSpeed = 6;
-                dangerAlert.text = "";
+               
                 //CODE TO MAKE SHIP GO FAST AGAIN
-                Debug.Log("fucj"); 
+        
+
+
+                //ICON
+                danger_Icon_disabled.SetActive(true);
+                ice_Icon_disabled.SetActive(true);
+                fire_Icon_disabled.SetActive(true);
+                radiation_Icon_disabled.SetActive(true);
+                hardcore_Icon_disabled.SetActive(true);
+
+
+                danger_Icon_enabled.SetActive(false);
+                ice_Icon_enabled.SetActive(false);
+                fire_Icon_enabled.SetActive(false);
+                radiation_Icon_enabled.SetActive(false);
+                hardcore_Icon_enabled.SetActive(false);
+                
+                statusBar.SetActive(false);
+                status.text = "";
             }
 
 
@@ -187,17 +265,53 @@ public class Player_ZonePosition : MonoBehaviour
             //IF PLAYER DOES NOT HAVE HEAT PROTECTION 
             if (isInHeatZone == true && upgradeShop.firePurchased == false && canTakeHeatDamage == true)
             {
-                dangerAlert.text = "HEAT DAMAGE!";
+                
                 checkHeatDamage();
 
                 StopCoroutine(TakeHeatDamage());
+
+
+                //ICONS
+                fire_Icon_disabled.SetActive(false);
+                fire_Icon_enabled.SetActive(true);
+
+                danger_Icon_enabled.SetActive(true);
+                danger_Icon_disabled.SetActive(false);
+
+                ice_Icon_enabled.SetActive(false);
+                ice_Icon_disabled.SetActive(true);
+
+                radiation_Icon_disabled.SetActive(true);
+                radiation_Icon_enabled.SetActive(false);
+
+                statusBar.SetActive(true);
+                status.text = "HEALTH SYSTEM: <color=#f02005>CRITICAL</color>";
             }
             //IF PLAYER DOES HAVE HEAT PROTECTION
             if (upgradeShop.firePurchased == true)
             {
                 canTakeHeatDamage = false;
-                dangerAlert.text = "";
+               
                 StopCoroutine(TakeHeatDamage());
+
+
+                //ICON
+                danger_Icon_disabled.SetActive(true);
+                ice_Icon_disabled.SetActive(true);
+                fire_Icon_disabled.SetActive(true);
+                radiation_Icon_disabled.SetActive(true);
+                hardcore_Icon_disabled.SetActive(true);
+
+
+                danger_Icon_enabled.SetActive(false);
+                ice_Icon_enabled.SetActive(false);
+                fire_Icon_enabled.SetActive(false);
+                radiation_Icon_enabled.SetActive(false);
+                hardcore_Icon_enabled.SetActive(false);
+
+                statusBar.SetActive(false);
+                status.text = "";
+
             }
         }
         else
@@ -210,81 +324,64 @@ public class Player_ZonePosition : MonoBehaviour
         {
             isInRadiationZone = true;
 
-            //UPGRADE UI COLOUR IN RADIATION ZONE
-            ColorBlock hu1 = healthUpgrade1.colors;
-            hu1.normalColor = purple1;
-            healthUpgrade1.colors = hu1;
-
-            ColorBlock fu1 = fuelUpgrade1.colors;
-            fu1.normalColor = purple1;
-            fuelUpgrade1.colors = fu1;
-
-            ColorBlock cu1 = carryCapacity1.colors;
-            cu1.normalColor = purple1;
-            carryCapacity1.colors = cu1;
-
-            ColorBlock ice = iceUpgrade.colors;
-            ice.normalColor = purple1;
-            iceUpgrade.colors = ice;
-
-
-            ColorBlock hu2 = healthUpgrade2.colors;
-            hu2.normalColor = purple1;
-            healthUpgrade2.colors = hu2;
-
-            ColorBlock fu2 = fuelUpgrade2.colors;
-            fu2.normalColor = purple2;
-            fuelUpgrade2.colors = fu2;
-
-            ColorBlock cu2 = carryCapacity2.colors;
-            cu2.normalColor = purple2;
-            carryCapacity2.colors = cu2;
-
-            ColorBlock heat = heatUpgrade.colors;
-            heat.normalColor = purple2;
-            heatUpgrade.colors = heat;
-
-
-            ColorBlock hu3 = healthUpgrade3.colors;
-            hu3.normalColor = purple3;
-            healthUpgrade3.colors = hu3;
-
-            ColorBlock fu3 = fuelUpgrade3.colors;
-            fu3.normalColor = purple3;
-            fuelUpgrade3.colors = fu3;
-
-            ColorBlock cu3 = carryCapacity3.colors;
-            cu3.normalColor = purple3;
-            carryCapacity3.colors = cu3;
-
-            ColorBlock rad = radiationUpgrade.colors;
-            rad.normalColor = purple3;
-            radiationUpgrade.colors = rad;
-
-
-            ColorBlock hard = hardcoreUpgrade.colors;
-            hard.normalColor = purple4;
-            hardcoreUpgrade.colors = hard;
-
-            ColorBlock repair = repairButton.colors;
-            repair.normalColor = purple4;
-            repairButton.colors = repair;
-
+        
+        
             //IF PLAYER DOES NOT HAVE RADIATION PROTECTION 
-            if (isInRadiationZone == true && upgradeShop.radPurchased == false)
+            if (isInRadiationZone == true && upgradeShop.radPurchased==false)
             {
                 
-                dangerAlert.text = "RADIATION DAMAGE!";
-                miniMap.SetActive(false);
                 
+                miniMap.SetActive(false);
+
+                
+                radiation_Icon_disabled.SetActive(false);
+                radiation_Icon_enabled.SetActive(true);
+
+                danger_Icon_enabled.SetActive(true);
+                danger_Icon_disabled.SetActive(false);
+
+
+               
+                ice_Icon_disabled.SetActive(true);
+                fire_Icon_disabled.SetActive(true);
+                hardcore_Icon_disabled.SetActive(true);
+
+
+             
+                ice_Icon_enabled.SetActive(false);
+                fire_Icon_enabled.SetActive(false);
+                hardcore_Icon_enabled.SetActive(false);
+
+                statusBar.SetActive(true);
+                status.text = "MAP SYSTEM: <color=#f02005>CRITICAL</color>";
+
             }
             //IF PLAYER DOES HAVE RADIATION PROTECTION
             if (upgradeShop.radPurchased == true)
             {
-                dangerAlert.text = "";
+                
                 miniMap.SetActive(true);
 
-                //CODE TO MAKE SHIP GO FAST AGAIN
+                danger_Icon_disabled.SetActive(true);
+                danger_Icon_enabled.SetActive(false);
+
+
+                //ICON
+                danger_Icon_disabled.SetActive(true);
+                ice_Icon_disabled.SetActive(true);
+                fire_Icon_disabled.SetActive(true);
+                radiation_Icon_disabled.SetActive(true);
+                hardcore_Icon_disabled.SetActive(true);
+
+
+                danger_Icon_enabled.SetActive(false);
+                ice_Icon_enabled.SetActive(false);
+                fire_Icon_enabled.SetActive(false);
+                radiation_Icon_enabled.SetActive(false);
+                hardcore_Icon_enabled.SetActive(false);
+
+                statusBar.SetActive(false);
+                status.text = "";
             }
 
 
@@ -300,12 +397,13 @@ public class Player_ZonePosition : MonoBehaviour
         //INSIDE HARDCORE ZONE
         if (spaceship_distance > radiationZoneEdge.transform.position.y && spaceship_distance < hardcoreZoneEdge.transform.position.y)
         {
+         
             isInHardcoreZone = true;
             //IF PLAYER DOES NOT HAVE HARDCORE PROTECTION 
             if (isInHardcoreZone == true && upgradeShop.hardcorePurchased == false && canTakeHardcoreHeatDamage==true && isInIceZone==false)
             {
 
-                dangerAlert.text = "HARDCORE DAMAGE!";
+               
 
                 //MORE DAMAGE TAKEN
                 checkHardcoreHeatDamage();
@@ -316,34 +414,60 @@ public class Player_ZonePosition : MonoBehaviour
                 //MINI MAP DISABLED 
                 miniMap.SetActive(false);
 
+
+                hardcore_Icon_enabled.SetActive(true);
+                hardcore_Icon_disabled.SetActive(false);
+
+                danger_Icon_disabled.SetActive(false);
+                danger_Icon_enabled.SetActive(true);
+
+              
+                ice_Icon_disabled.SetActive(false);
+                ice_Icon_enabled.SetActive(true);
+
+                fire_Icon_disabled.SetActive(false);
+                fire_Icon_enabled.SetActive(true);
+
+                radiation_Icon_disabled.SetActive(false);
+                radiation_Icon_enabled.SetActive(true);
+
+
+
+
+
+                statusBar.SetActive(true);
+                status.text = "ALL SYSTEMS: <color=#f02005>CRITICAL</color>";
+
+
+
             }
             //IF PLAYER DOES HAVE RADIATION PROTECTION
             if (upgradeShop.hardcorePurchased == true)
             {
-                dangerAlert.text = "";
+                
                 playerMovement.maxSpeed = 6;
+
+                //ICON
+                danger_Icon_disabled.SetActive(true);
+                ice_Icon_disabled.SetActive(true);
+                fire_Icon_disabled.SetActive(true);
+                radiation_Icon_disabled.SetActive(true);
+                hardcore_Icon_disabled.SetActive(true);
+
+
+                danger_Icon_enabled.SetActive(false);
+                ice_Icon_enabled.SetActive(false);
+                fire_Icon_enabled.SetActive(false);
+                radiation_Icon_enabled.SetActive(false);
+                hardcore_Icon_enabled.SetActive(false);
+
+                statusBar.SetActive(false);
+                status.text = "";
             }
 
 
 
-            //UPGRADE UI COLOUR IN HARDCORE ZONE
-            healthUpgrade1.GetComponent<Image>().color = black1;
-            fuelUpgrade1.GetComponent<Image>().color = black1;
-            carryCapacity1.GetComponent<Image>().color = black1;
-            iceUpgrade.GetComponent<Image>().color = black1;
-
-            healthUpgrade2.GetComponent<Image>().color = black2;
-            fuelUpgrade2.GetComponent<Image>().color = black2;
-            carryCapacity2.GetComponent<Image>().color = black2;
-            heatUpgrade.GetComponent<Image>().color = black2;
-
-            healthUpgrade3.GetComponent<Image>().color = black3;
-            fuelUpgrade3.GetComponent<Image>().color = black3;
-            carryCapacity3.GetComponent<Image>().color = black3;
-            radiationUpgrade.GetComponent<Image>().color = black3;
-
-            repairButton.GetComponent<Image>().color = black4;
-            hardcoreUpgrade.GetComponent<Image>().color = black4;
+            
 
         }
         else
