@@ -228,12 +228,22 @@ public class RandomIncorrectOrder : MonoBehaviour
                         Order1.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood1 + ", " +
                         menuItems.pickfood2 + ", " + menuItems.pickfood3;
                         order1Assigned = true;
+
+                        //CORRECT BUTTON 1
+                        orderbutton1_food1.sprite = StringtoSprite(menuItems.pickfood1);
+                        orderbutton1_food2.sprite = StringtoSprite(menuItems.pickfood2);
+                        orderbutton1_food3.sprite = StringtoSprite(menuItems.pickfood3);
                     }
                     else if (order2Assigned == false)
                     {
                         Order1.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood4 + ", " +
                         menuItems.pickfood5 + ", " + menuItems.pickfood6;
                         order2Assigned = true;
+
+                        //CORRECT BUTTON 1
+                        orderbutton1_food1.sprite = StringtoSprite(menuItems.pickfood4);
+                        orderbutton1_food2.sprite = StringtoSprite(menuItems.pickfood5);
+                        orderbutton1_food3.sprite = StringtoSprite(menuItems.pickfood6);
                     }
 
                 } else 
@@ -257,12 +267,23 @@ public class RandomIncorrectOrder : MonoBehaviour
                         Order2.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood1 + ", " +
                         menuItems.pickfood2 + ", " + menuItems.pickfood3;
                         order1Assigned = true;
+
+                        //CORRECT BUTTON 2
+                        orderbutton2_food1.sprite = StringtoSprite(menuItems.pickfood1);
+                        orderbutton2_food2.sprite = StringtoSprite(menuItems.pickfood2);
+                        orderbutton2_food3.sprite = StringtoSprite(menuItems.pickfood3);
                     }
                     else if (order2Assigned == false)
                     {
                         Order2.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood4 + ", " +
                         menuItems.pickfood5 + ", " + menuItems.pickfood6;
                         order2Assigned = true;
+
+
+                        //CORRECT BUTTON 2
+                        orderbutton2_food1.sprite = StringtoSprite(menuItems.pickfood4);
+                        orderbutton2_food2.sprite = StringtoSprite(menuItems.pickfood5);
+                        orderbutton2_food3.sprite = StringtoSprite(menuItems.pickfood6);
                     }
                 }
                 else
@@ -284,11 +305,23 @@ public class RandomIncorrectOrder : MonoBehaviour
                         Order3.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood1 + ", " +
                         menuItems.pickfood2 + ", " + menuItems.pickfood3;
                         order1Assigned = true;
+
+
+                        //CORRECT BUTTON 3
+                        orderbutton3_food1.sprite = StringtoSprite(menuItems.pickfood1);
+                        orderbutton3_food2.sprite = StringtoSprite(menuItems.pickfood2);
+                        orderbutton3_food3.sprite = StringtoSprite(menuItems.pickfood3);
+
                     } else if (order2Assigned == false)
                     {
                         Order3.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood4 + ", " +
                         menuItems.pickfood5 + ", " + menuItems.pickfood6;
                         order2Assigned = true;
+
+                        //CORRECT BUTTON 3
+                        orderbutton3_food1.sprite = StringtoSprite(menuItems.pickfood4);
+                        orderbutton3_food2.sprite = StringtoSprite(menuItems.pickfood5);
+                        orderbutton3_food3.sprite = StringtoSprite(menuItems.pickfood6);
                     }
                  
                 }
@@ -313,12 +346,22 @@ public class RandomIncorrectOrder : MonoBehaviour
                         Order4.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood1 + ", " +
                         menuItems.pickfood2 + ", " + menuItems.pickfood3;
                         order1Assigned = true;
+
+                        //CORRECT BUTTON 4
+                        orderbutton4_food1.sprite = StringtoSprite(menuItems.pickfood1);
+                        orderbutton4_food2.sprite = StringtoSprite(menuItems.pickfood2);
+                        orderbutton4_food3.sprite = StringtoSprite(menuItems.pickfood3);
                     }
                     else if (order2Assigned == false)
                     {
                         Order4.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood4 + ", " +
                         menuItems.pickfood5 + ", " + menuItems.pickfood6;
                         order2Assigned = true;
+
+                        //CORRECT BUTTON 4
+                        orderbutton3_food1.sprite = StringtoSprite(menuItems.pickfood4);
+                        orderbutton3_food2.sprite = StringtoSprite(menuItems.pickfood5);
+                        orderbutton3_food3.sprite = StringtoSprite(menuItems.pickfood6);
                     }
                 }
                 else
@@ -341,12 +384,22 @@ public class RandomIncorrectOrder : MonoBehaviour
                         Order5.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood1 + ", " +
                         menuItems.pickfood2 + ", " + menuItems.pickfood3;
                         order1Assigned = true;
+
+                        //CORRECT BUTTON 5
+                        orderbutton5_food1.sprite = StringtoSprite(menuItems.pickfood1);
+                        orderbutton5_food2.sprite = StringtoSprite(menuItems.pickfood2);
+                        orderbutton5_food3.sprite = StringtoSprite(menuItems.pickfood3);
                     }
                     else if (order2Assigned == false)
                     {
                         Order5.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood4 + ", " +
                         menuItems.pickfood5 + ", " + menuItems.pickfood6;
                         order2Assigned = true;
+
+                        //CORRECT BUTTON 5
+                        orderbutton5_food1.sprite = StringtoSprite(menuItems.pickfood4);
+                        orderbutton5_food2.sprite = StringtoSprite(menuItems.pickfood5);
+                        orderbutton5_food3.sprite = StringtoSprite(menuItems.pickfood6);
                     }
                 }
                 else
@@ -369,12 +422,22 @@ public class RandomIncorrectOrder : MonoBehaviour
                         Order6.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood1 + ", " +
                         menuItems.pickfood2 + ", " + menuItems.pickfood3;
                         order1Assigned = true;
+
+                        //CORRECT BUTTON 6
+                        orderbutton6_food1.sprite = StringtoSprite(menuItems.pickfood1);
+                        orderbutton6_food2.sprite = StringtoSprite(menuItems.pickfood2);
+                        orderbutton6_food3.sprite = StringtoSprite(menuItems.pickfood3);
                     }
                     else if (order2Assigned == false)
                     {
                         Order6.gameObject.GetComponentInChildren<Text>().text = menuItems.pickfood4 + ", " +
                         menuItems.pickfood5 + ", " + menuItems.pickfood6;
                         order2Assigned = true;
+
+                        //CORRECT BUTTON 3
+                        orderbutton3_food1.sprite = StringtoSprite(menuItems.pickfood4);
+                        orderbutton3_food2.sprite = StringtoSprite(menuItems.pickfood5);
+                        orderbutton3_food3.sprite = StringtoSprite(menuItems.pickfood6);
                     }
                 }
                 else
