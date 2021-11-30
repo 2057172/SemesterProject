@@ -58,17 +58,17 @@ public class NewRandomPlanets : MonoBehaviour
 
         if(MI.OnOrder1 == true)
         {
-            Distance1 = Vector3.Distance(Player.position, Destination1);
+            Distance1 = Vector3.Distance(Player.position, MI.PlanetOutcome1.transform.position);
             Distance1TXT.text = Mathf.RoundToInt(Distance1).ToString() + "m";
         }
         if(MI.onOrder2 == true)
         {
-            Distance2 = Vector3.Distance(Player.position, Destination2);
+            Distance2 = Vector3.Distance(Player.position, MI.PlanetOutcome2.transform.position);
             Distance2TXT.text = Mathf.RoundToInt(Distance2).ToString() + "m";
         }
         if (MI.onOrder3 == true)
         {
-            Distance3 = Vector3.Distance(Player.position, Destination3);
+            Distance3 = Vector3.Distance(Player.position, MI.PlanetOutcome3.transform.position);
             Distance3TXT.text = Mathf.RoundToInt(Distance3).ToString() + "m";
         } if (MI.OnOrder1 == false)
         {
