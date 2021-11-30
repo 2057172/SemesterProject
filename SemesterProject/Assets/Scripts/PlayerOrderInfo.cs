@@ -27,7 +27,7 @@ public class PlayerOrderInfo : MonoBehaviour
             Menu.gameObject.SetActive(true);
         }
 
-        if(collision.gameObject.name == MI.PlanetOutcome1.name)
+        if(collision.gameObject.name == np.PlanetOutcome1.name)
         {
             np.PlanetOutcome1 = null;
             gm.money += np.totalCommision1;
