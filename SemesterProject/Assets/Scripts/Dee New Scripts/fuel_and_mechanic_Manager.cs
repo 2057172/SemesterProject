@@ -16,8 +16,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
     public TMP_Text fuelAmountText;
   
     public int repairCost;
-    public TMP_Text repairText;
-    public TMP_Text repairAmountText;
+  
 
     public int baseFuelCost = 10;
     public int fuelAfterUpgradeCost1 = 50;
@@ -44,8 +43,16 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
 
     void Update()
     {
-        refuelButton.GetComponentInChildren<TextMeshProUGUI>().text = "Refuel: " + "$" + fuelCost;
-        
+        //IF FUEL FULL
+        if (PlayerMovement.currentFuel >= PlayerMovement.maxFuel)
+        {
+            refuelButton.interactable = false;
+        }
+        else if(PlayerMovement.currentFuel < PlayerMovement.maxFuel)
+        {
+            refuelButton.interactable = true;
+        }
+ 
         if (upgradeShop.fuelUP1purchased == true)
         {
             fuelCost = fuelAfterUpgradeCost1;
@@ -74,25 +81,27 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
         if (upgradeShop.healthUP1purchased == true)
         {
             repairCost = mechanicUpgradeCost1;
-            repairAmountText.text = "$100";
+          
         }
 
         if (upgradeShop.healthUP2purchased == true)
         {
             repairCost = mechanicUpgradeCost2;
-            repairAmountText.text = "$200";
+            
         }
 
         if (upgradeShop.healthUP3purchased == true)
         {
             repairCost = mechanicUpgradeCost3;
-            repairAmountText.text = "$300";
+           
         }
  
     }
 
     public void payForFuel()
     {
+        
+
         //BASE FUEL STATS
         //ENOUGH MONEY
         if (fuelCost == baseFuelCost)
@@ -100,11 +109,11 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
             if (gameManager.money >= fuelCost)
             {
                 gameManager.money = gameManager.money - fuelCost;
-                gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
-
+                
                 //AMOUNT FILLED UP 
                 PlayerMovement.currentFuel = upgradeShop.baseFuel;
                 Health_And_Fuel.setCurrentFuel(PlayerMovement.currentFuel);
+
             }
         }
 
@@ -223,7 +232,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
         {
 
             gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
-            repairText.text = "You don't have enough money!";
+            
         }
 
 
@@ -249,7 +258,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
         {
 
             gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
-            repairText.text = "You don't have enough money!";
+            
         }
 
 
@@ -273,7 +282,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
         {
 
             gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
-            repairText.text = "You don't have enough money!";
+            
         }
 
 
@@ -297,7 +306,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
         {
 
             gameManager.moneyTXT.text = "$" + Mathf.RoundToInt(gameManager.money);
-            repairText.text = "You don't have enough money!";
+            
         }
 
 
