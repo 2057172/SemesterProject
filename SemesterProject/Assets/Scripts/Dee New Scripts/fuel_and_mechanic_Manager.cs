@@ -36,7 +36,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
         fuelCost = 10;
         repairCost = 20;
 
-        refuelButton.GetComponentInChildren<TextMeshProUGUI>().text = "Refuel: " + "$" + fuelCost;
+       // refuelButton.GetComponentInChildren<TextMeshProUGUI>().text = "Refuel: " + "$" + fuelCost;
         fuelCost = baseFuelCost;
         repairCost = baseMechanicCost;
 
