@@ -12,6 +12,7 @@ public class PlayerOrderInfo : MonoBehaviour
     public TextMeshProUGUI orderMoneyInfo;
     public NewRandomPlanets np;
     public menu_Items MI;
+    public buttonLogic buttonLogic;
 
     void Start()
     {
@@ -28,24 +29,37 @@ public class PlayerOrderInfo : MonoBehaviour
 
         if(collision.gameObject.name == np.PlanetOutcome1.name)
         {
-            Debug.Log("Its lit");
             np.PlanetOutcome1 = null;
             gm.money += np.totalCommision1;
             MI.OnOrder1 = false;
+            MI.orderCounter--;
+            if (np.PlanetOutcome2 == null)
+            {
+                np.totalDestinationTime = np.eta - np.totalDestinationTime;
+            }
+
         }
 
         if (collision.gameObject.name == np.PlanetOutcome2.name)
         {
-            Debug.Log("Its lit 2");
+            MI.RefreshOrders();
             np.PlanetOutcome2 = null;
             gm.money += np.totalCommision2;
             MI.onOrder2 = false;
+            MI.orderCounter--;
+            if (np.PlanetOutcome1 == null)
+            {
+                np.totalDestinationTime = np.eta - np.totalDestinationTime;
+                gm.money += np.totalDestinationTime;
+            }
         }
 
         if (collision.gameObject.name == np.PlanetOutcome3.name)
         {
             Debug.Log("Its lit 3");
+            MI.RefreshOrders();
             np.PlanetOutcome3 = null;
+            MI.orderCounter--;
             gm.money += np.totalCommision3;
             MI.onOrder3 = false;
         }

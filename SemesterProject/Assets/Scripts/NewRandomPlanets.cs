@@ -9,6 +9,7 @@ public class NewRandomPlanets : MonoBehaviour
 
     public GameObject[] Planets = new GameObject[14];
     public GameObject PlanetOutcome1, PlanetOutcome2, PlanetOutcome3;
+    public string planetOutcome1String, planetOutcome2String, planetOutcome3String;
     public float Distance1, Distance2, Distance3;
     public Vector3 Destination1, Destination2, Destination3;
 
@@ -21,8 +22,19 @@ public class NewRandomPlanets : MonoBehaviour
 
     public float totalCommision1, totalCommision2, totalCommision3;
 
+    public float destinationTime1, destinationTime2, destinationTime3, totalDestinationTime;
+    public bool onOrder;
+    public float timeOfDelivery;
+    public float eta;
+
+    public void Awake()
+    {
+        fillOrders();
+    }
     public void Start()
     {
+        fillOrders();
+        onOrder = false;
         Distance1TXT.gameObject.SetActive(false);
         Distance2TXT.gameObject.SetActive(false);
         Distance3TXT.gameObject.SetActive(false);
@@ -34,6 +46,16 @@ public class NewRandomPlanets : MonoBehaviour
 
     public void Update()
     {
+        if(PlanetOutcome1 == null && PlanetOutcome2 == null)
+        {
+            onOrder = false;
+            timeOfDelivery = totalDestinationTime - timeOfDelivery;
+            Debug.Log(timeOfDelivery);           
+        } else {
+            onOrder = true;
+            totalDestinationTime -= 1 * Time.deltaTime;
+        }
+
         if(MI.OnOrder1 == true)
         {
             Distance1 = Vector3.Distance(Player.position, Destination1);
@@ -63,6 +85,10 @@ public class NewRandomPlanets : MonoBehaviour
             Distance3TXT.gameObject.SetActive(false);
             Planet3.gameObject.SetActive(false);
         }
+
+
+
+      
     }
     public void Refresh()
     {
@@ -87,16 +113,14 @@ public class NewRandomPlanets : MonoBehaviour
 
     public void fillOrders()
     {
-
+        onOrder = true;
         PI.Menu.gameObject.SetActive(false);
 
         for (int count = 0; count < 3; count++)
         {
             if (count == 0)
             {
-               
-                if (MI.OnOrder1 == true)
-                {
+            
                     Distance1TXT.gameObject.SetActive(true);
                     Planet1.gameObject.SetActive(true);
 
@@ -106,9 +130,8 @@ public class NewRandomPlanets : MonoBehaviour
                     Distance1 = Vector3.Distance(Player.position, Destination1);
                     Distance1TXT.text = Mathf.RoundToInt(Distance1).ToString() + "m";
                     Planet1.text = PlanetOutcome1.name;
+                    planetOutcome1String = PlanetOutcome1.name;
 
-                    totalCommision1 = 20 + (Vector3.Distance(pickUpZone.position, PlanetOutcome1.gameObject.GetComponent<Transform>().position) * 0.8f);
-                }
 
             }
             else if (count == 1)
@@ -124,9 +147,7 @@ public class NewRandomPlanets : MonoBehaviour
                     Distance2 = Vector3.Distance(Player.position, Destination2);
                     Distance2TXT.text = Mathf.RoundToInt(Distance2).ToString() + "m";
                     Planet2.text = PlanetOutcome2.name;
-
-                    totalCommision2 = 20 + (Vector3.Distance(pickUpZone.position, PlanetOutcome2.gameObject.GetComponent<Transform>().position) * 0.8f);
-
+                   
                 }               
 
             }
@@ -144,12 +165,16 @@ public class NewRandomPlanets : MonoBehaviour
                     Distance3TXT.text = Mathf.RoundToInt(Distance3).ToString() + "m";
                     Planet3.text = PlanetOutcome3.name;
 
-                    totalCommision3 = 20 + (Vector3.Distance(pickUpZone.position, PlanetOutcome3.gameObject.GetComponent<Transform>().position) * 0.8f);
                 }
-            }
+            } eta = totalDestinationTime;
         }
 
     }
 
 
+
+
+    
+ 
+    
 }
