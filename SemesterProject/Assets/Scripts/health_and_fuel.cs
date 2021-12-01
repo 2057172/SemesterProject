@@ -8,17 +8,12 @@ public class health_and_fuel : MonoBehaviour
     public Slider health_Bar;
     public Slider fuel_Bar;
 
-   
 
-    public Image health_fill;
-    public Image fuel_fill;
-   
+    //HEALTH STAT
     public void setMaxHealth(int health)
     {
         health_Bar.maxValue = health;
-        health_Bar.value = health;
-
-       
+        health_Bar.value = health; 
     }
 
     public void setCurrentHealth(int health)

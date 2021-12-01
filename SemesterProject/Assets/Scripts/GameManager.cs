@@ -15,7 +15,11 @@ public class GameManager : MonoBehaviour
     public WindowQuestPointer pointer;
 
     public Button OrderButton1, OrderButton2, OrderButton3, refreshButton;
+    public OrderManager om;
+    public Transform pickUp;
     public GameObject Player;
+
+    public Transform burgerAndFriesDropOff, Earth, ForestPlanet;
 
     public Vector3 deliveryDestination;
 
@@ -56,7 +60,7 @@ public class GameManager : MonoBehaviour
         {
             if (phoneUp == false)
             {
-                phone.GetComponent<RectTransform>().anchoredPosition = new Vector2(763f, -245f);
+                phone.GetComponent<RectTransform>().anchoredPosition = new Vector2(763f, -186f);
                 if(MI.OnOrder1 == false)
                 {
                     OrderButton1.gameObject.SetActive(true);
@@ -96,4 +100,40 @@ public class GameManager : MonoBehaviour
 
         
     }
+
+    public void BurgerAndFriesOrderSelected()
+    {
+        //pointer.gameObject.SetActive(true);
+        //pointer.targetPosition = pickUp.position;
+        deliveryDestination = burgerAndFriesDropOff.position;
+        //pointer.targetPosition = pickUp.position;
+
+        om.ETA = Mathf.Round(Vector3.Distance(om.pickUpZone.position, om.BAndFriesDestination.position)) + 
+            Mathf.Round(Vector3.Distance(Player.gameObject.GetComponent<Transform>().position, om.pickUpZone.position));
+        om.currentlyOnOrder = true;
+    }
+    public void PizzaOrderSelected()
+    {
+        //pointer.gameObject.SetActive(true);
+        //pointer.targetPosition = pickUp.position;
+        deliveryDestination = Earth.position;
+        //pointer.targetPosition = pickUp.position;
+
+        om.ETA = Mathf.Round(Vector3.Distance(om.pickUpZone.position, om.PizzaDestination.position)) +
+            Mathf.Round(Vector3.Distance(Player.gameObject.GetComponent<Transform>().position, om.pickUpZone.position));
+        om.currentlyOnOrder = true;
+    }
+    public void IceCreamOrderSelected()
+    {
+        //pointer.gameObject.SetActive(true);
+       //pointer.targetPosition = pickUp.position;
+        deliveryDestination = ForestPlanet.position;
+        //pointer.targetPosition = pickUp.position;
+
+        om.ETA = Mathf.Round(Vector3.Distance(om.pickUpZone.position, om.IceCreamDestination.position)) +
+            Mathf.Round(Vector3.Distance(Player.gameObject.GetComponent<Transform>().position, om.pickUpZone.position));
+        om.currentlyOnOrder = true;
+    }
+
+
 }
