@@ -10,9 +10,13 @@ public class Phone_Manager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void menuPopUp()
     {
-        
+
+    }
+
+    public void quitPopUp()
+    {
+
     }
 }
