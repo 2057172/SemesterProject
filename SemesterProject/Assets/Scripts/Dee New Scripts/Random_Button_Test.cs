@@ -122,7 +122,7 @@ public class Random_Button_Test : MonoBehaviour
         string pickfood3 = Foods[useFoods3];
 
         
-        GetComponentInChildren<TMPro.TextMeshProUGUI>().text = useFoods1.ToString() + useFoods2.ToString() + useFoods3.ToString();
+        GetComponentInChildren<TextMeshProUGUI>().text = useFoods1.ToString() + useFoods2.ToString() + useFoods3.ToString();
     }
 
 
