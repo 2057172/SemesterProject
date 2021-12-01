@@ -16,7 +16,7 @@ public class fuel_and_Mechanic : MonoBehaviour
 
     void Start()
     {
-       // refuelPanel.SetActive(false); ?????
+        refuelPanel.SetActive(false);
     }
 
     void Update()
