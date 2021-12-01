@@ -133,7 +133,8 @@ public class UpgradeShop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        heatButton.GetComponentInChildren<TextMeshProUGUI>().text = "Heat Protection: " + "$" + firePro;
+        /*
+       // heatButton.GetComponentInChildren<TextMeshProUGUI>().text = "Heat Protection: " + "$" + firePro;
         iceButton.GetComponentInChildren<TextMeshProUGUI>().text = "Ice Protection: " + "$" + icePro;
         radButton.GetComponentInChildren<TextMeshProUGUI>().text = "Radiation Protection: " + "$" + radPro;
         hardcoreButton.GetComponentInChildren<TextMeshProUGUI>().text = "Hardcore Proection: " + "$" + hardcorePro;
@@ -149,9 +150,9 @@ public class UpgradeShop : MonoBehaviour
         carryCapUp1Button.GetComponentInChildren<TextMeshProUGUI>().text = "Order Capacity Upgrade 1: " + "$" + carryCapUp1Cost;
         carryCapUp2Button.GetComponentInChildren<TextMeshProUGUI>().text = "Order Capacity Upgrade 2: " + "$" + carryCapUp2Cost;
         carryCapUp3Button.GetComponentInChildren<TextMeshProUGUI>().text = "Order Capacity Upgrade 3: " + "$" + carryCapUp3Cost;
+        */
 
-
-        repairButton.GetComponentInChildren<TextMeshProUGUI>().text = "Repair Ship: " + "$" + repairScript.repairCost;
+       // repairButton.GetComponentInChildren<TextMeshProUGUI>().text = "Repair Ship: " + "$" + repairScript.repairCost;
 
         ///Once Off Upgrades things
 
