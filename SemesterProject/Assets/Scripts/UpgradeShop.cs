@@ -116,6 +116,7 @@ public class UpgradeShop : MonoBehaviour
 
     void Update()
     {
+        /*
         heatButton.GetComponentInChildren<TextMeshProUGUI>().text = "Heat Protection: " + "$" + firePro;
         iceButton.GetComponentInChildren<TextMeshProUGUI>().text = "Ice Protection: " + "$" + icePro;
         radButton.GetComponentInChildren<TextMeshProUGUI>().text = "Radiation Protection: " + "$" + radPro;
@@ -134,7 +135,7 @@ public class UpgradeShop : MonoBehaviour
         carryCapUp3Button.GetComponentInChildren<TextMeshProUGUI>().text = "Order Capacity Upgrade 3: " + "$" + carryCapUp3Cost;
 
 
-        repairButton.GetComponentInChildren<TextMeshProUGUI>().text = "Repair Ship: " + "$" + repairScript.repairCost;
+        repairButton.GetComponentInChildren<TextMeshProUGUI>().text = "Repair Ship: " + "$" + repairScript.repairCost; */
 
         ///Once Off Upgrades things
 

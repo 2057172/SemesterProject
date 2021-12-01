@@ -74,7 +74,7 @@ public class Player_ZonePosition : MonoBehaviour
     void Start()
     {
 
-
+        /*
         danger_Icon_disabled.SetActive(true);
         ice_Icon_disabled.SetActive(true);
         fire_Icon_disabled.SetActive(true);
@@ -86,10 +86,10 @@ public class Player_ZonePosition : MonoBehaviour
         ice_Icon_enabled.SetActive(false);
         fire_Icon_enabled.SetActive(false);
         radiation_Icon_enabled.SetActive(false);
-        hardcore_Icon_enabled.SetActive(false);
+        hardcore_Icon_enabled.SetActive(false); 
 
         statusBar.SetActive(false);
-        status.text = "";
+        status.text = ""; */
      
     }
 
@@ -106,7 +106,7 @@ public class Player_ZonePosition : MonoBehaviour
         if (spaceship_distance <= normalZoneEdge.transform.position.y)
         {
             isInNormalZone = true;
-
+ /*
             danger_Icon_disabled.SetActive(true);
             ice_Icon_disabled.SetActive(true);
             fire_Icon_disabled.SetActive(true);
@@ -121,7 +121,7 @@ public class Player_ZonePosition : MonoBehaviour
             hardcore_Icon_enabled.SetActive(false);
 
             statusBar.SetActive(false);
-            status.text = "";
+            status.text = ""; */
 
         }
         else
@@ -151,7 +151,7 @@ public class Player_ZonePosition : MonoBehaviour
                     playerMovement.maxSpeed = 3;
 
                     //ICON
-                    ice_Icon_disabled.SetActive(false);
+                  /*  ice_Icon_disabled.SetActive(false);
                     ice_Icon_enabled.SetActive(true);
 
                     fire_Icon_disabled.SetActive(true);
@@ -160,6 +160,7 @@ public class Player_ZonePosition : MonoBehaviour
                     danger_Icon_disabled.SetActive(false);
                     danger_Icon_enabled.SetActive(true);
 
+                    */
 
                     statusBar.SetActive(true);
                     status.text = "ENGINE SYSTEM: <color=#f02005>CRITICAL</color>";
