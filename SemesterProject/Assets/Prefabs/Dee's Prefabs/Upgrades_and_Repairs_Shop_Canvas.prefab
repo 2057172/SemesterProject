@@ -729,6 +729,7 @@ MonoBehaviour:
   maxHealthUpgrade1: 150
   maxHealthUpgrade2: 200
   maxHealthUpgrade3: 250
+  maxOrderCapacity: 2
   carryCapUp1Cost: 200
   carryCapUp2Cost: 500
   carryCapUp3Cost: 800
