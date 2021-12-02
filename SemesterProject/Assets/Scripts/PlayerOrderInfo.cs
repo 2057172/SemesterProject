@@ -18,7 +18,9 @@ public class PlayerOrderInfo : MonoBehaviour
 
     public string destination1, destination2;
     public Transform pickup;
-    
+
+    public Sound_Manager sound_Manager;
+
 
     void Start()
     {
@@ -45,6 +47,7 @@ public class PlayerOrderInfo : MonoBehaviour
             {
                 np.totalDestinationTime = np.eta - np.totalDestinationTime;
             }
+            sound_Manager.orderPositive();
 
         }
 
@@ -61,6 +64,7 @@ public class PlayerOrderInfo : MonoBehaviour
                 np.totalDestinationTime = np.eta - np.totalDestinationTime;
                 gm.money += np.totalDestinationTime;
             }
+            sound_Manager.orderPositive();
         }
 
         if (collision.gameObject.name == MI.PlanetOutcome3.name)
