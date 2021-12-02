@@ -31,6 +31,10 @@ public class Sound_Manager : MonoBehaviour
     public void warning()
     {
         warningSound.Play();
+        if (warningSound.isPlaying)
+        {
+            Debug.Log("YYEEYEY");
+        }
     }
 
     public void orderPositive()

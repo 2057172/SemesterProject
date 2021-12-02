@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Player_ZonePosition : MonoBehaviour
 {
-
+    public Sound_Manager sound_Manager;
     public playerMovement playerMovement;
     public health_and_fuel Health_And_Fuel;
     public UpgradeShop upgradeShop;
@@ -164,6 +164,9 @@ public class Player_ZonePosition : MonoBehaviour
 
                     statusBar.SetActive(true);
                     status.text = "ENGINE SYSTEM: <color=#f02005>CRITICAL</color>";
+
+                    sound_Manager.warning();
+                   
                 }
               
 
@@ -243,6 +246,8 @@ public class Player_ZonePosition : MonoBehaviour
 
                 statusBar.SetActive(true);
                 status.text = "HEALTH SYSTEM: <color=#f02005>CRITICAL</color>";
+
+                sound_Manager.warning();
             }
             //IF PLAYER DOES HAVE HEAT PROTECTION
             if (upgradeShop.firePurchased == true)
@@ -311,6 +316,8 @@ public class Player_ZonePosition : MonoBehaviour
 
                 statusBar.SetActive(true);
                 status.text = "MAP SYSTEM: <color=#f02005>CRITICAL</color>";
+
+                sound_Manager.warning();
 
             }
             //IF PLAYER DOES HAVE RADIATION PROTECTION
@@ -395,7 +402,7 @@ public class Player_ZonePosition : MonoBehaviour
                 statusBar.SetActive(true);
                 status.text = "ALL SYSTEMS: <color=#f02005>CRITICAL</color>";
 
-
+                sound_Manager.warning();
 
             }
             //IF PLAYER DOES HAVE RADIATION PROTECTION
