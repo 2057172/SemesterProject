@@ -17,6 +17,11 @@ public class Sound_Manager : MonoBehaviour
         rocketSound.Play();
     }
 
+    public void rocketStop()
+    {
+        rocketSound.Stop();
+    }
+
     public void button()
     {
         buttonSound.Play();

@@ -78,7 +78,17 @@ public class playerMovement : MonoBehaviour
             
             {
                 checkfuel();
+                
             }
+        }
+
+        if (Input.GetKeyDown(key))
+        {
+            sound_Manager.rocket();
+        }
+        else if (Input.GetKeyUp(key))
+            {
+            sound_Manager.rocketStop();
         }
 
 
