@@ -402,14 +402,17 @@ public class menu_Items : MonoBehaviour
             if (count == 0)
             {
                 PlanetOutcome1 = Planets[Random.Range(0, Planets.Length)];
+                Debug.Log(PlanetOutcome1.ToString());
             }
             else if (count == 1)
             {
                 PlanetOutcome2 = Planets[Random.Range(0, Planets.Length)];
+                Debug.Log(PlanetOutcome2.ToString());
             }
             else if (count == 2)
             {
                 PlanetOutcome3 = Planets[Random.Range(0, Planets.Length)];
+                Debug.Log(gameObject.name);
             }
 
         }
@@ -728,16 +731,19 @@ public class menu_Items : MonoBehaviour
 
 
 
+
+
+
     public void orderButton1Planet()
     {
-
+        Debug.Log("Choose random planet + set image");
         //ORDER BUTTON STUFF 
-        if (PlanetOutcome1.name == "Forest")
+        if (PlanetOutcome1.name == "Forest Planet")
         {
             phoneOrderbutton1_planet.sprite = junglePlanetImg;
         }
 
-        if (PlanetOutcome1.name == "Earth")
+        if (PlanetOutcome1.name == "Earth Planet")
         {
             phoneOrderbutton1_planet.sprite = earthPlanetImg;
         }
@@ -777,7 +783,7 @@ public class menu_Items : MonoBehaviour
         }
 
 
-        if (PlanetOutcome1.name == "Lovecraft")
+        if (PlanetOutcome1.name == "Lovecraft Planet")
         {
             phoneOrderbutton1_planet.sprite = lovecraftPlanetImg;
         }

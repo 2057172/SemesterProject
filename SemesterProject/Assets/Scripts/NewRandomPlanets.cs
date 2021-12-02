@@ -128,7 +128,7 @@ public class NewRandomPlanets : MonoBehaviour
                     Destination1 = PlanetOutcome1.transform.position;
 
                     Distance1 = Vector3.Distance(Player.position, Destination1);
-                    Distance1TXT.text = Mathf.RoundToInt(Distance1).ToString() + "m";
+                    Distance1TXT.text = Mathf.RoundToInt(Distance1).ToString() + "km";
                     Planet1.text = PlanetOutcome1.name;
                     planetOutcome1String = PlanetOutcome1.name;
 
@@ -145,7 +145,7 @@ public class NewRandomPlanets : MonoBehaviour
                     Destination2 = PlanetOutcome2.transform.position;
 
                     Distance2 = Vector3.Distance(Player.position, Destination2);
-                    Distance2TXT.text = Mathf.RoundToInt(Distance2).ToString() + "m";
+                    Distance2TXT.text = Mathf.RoundToInt(Distance2).ToString() + "km";
                     Planet2.text = PlanetOutcome2.name;
                    
                 }               
@@ -162,7 +162,7 @@ public class NewRandomPlanets : MonoBehaviour
                     Destination3 = PlanetOutcome3.transform.position;
 
                     Distance3 = Vector3.Distance(Player.position, Destination3);
-                    Distance3TXT.text = Mathf.RoundToInt(Distance3).ToString() + "m";
+                    Distance3TXT.text = Mathf.RoundToInt(Distance3).ToString() + "km";
                     Planet3.text = PlanetOutcome3.name;
 
                 }
