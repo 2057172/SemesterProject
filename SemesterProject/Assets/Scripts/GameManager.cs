@@ -86,10 +86,10 @@ public class GameManager : MonoBehaviour
             else if (phoneUp == true)
             {
                 phone.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 424f);
-                OrderButton1.gameObject.SetActive(false);
-                OrderButton2.gameObject.SetActive(false);
+                /*OrderButton1.gameObject.SetActive(false);
+                OrderButton2.gameObject.SetActive(false);*/
                 OrderButton3.gameObject.SetActive(false);
-                refreshButton.gameObject.SetActive(false);
+                refreshButton.gameObject.SetActive(false); 
                 phoneUp = false;
             }
         } 
