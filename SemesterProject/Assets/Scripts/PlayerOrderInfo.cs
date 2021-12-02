@@ -38,7 +38,7 @@ public class PlayerOrderInfo : MonoBehaviour
             np.PlanetOutcome1 = null;
             buttonLogic.Planet1.GetComponent<TextMeshProUGUI>().text = "";
             buttonLogic.Distance1TXT.gameObject.SetActive(false);
-            gm.money = Mathf.RoundToInt(Vector2.Distance(pickup.position, MI.PlanetOutcome1.GetComponent<Transform>().position) * 1.5f);
+            gm.money += Mathf.RoundToInt(Vector2.Distance(pickup.position, MI.PlanetOutcome1.GetComponent<Transform>().position) * 1.5f);
             MI.OnOrder1 = false;
             MI.orderCounter--;
             if (np.PlanetOutcome2 == null)
@@ -53,7 +53,7 @@ public class PlayerOrderInfo : MonoBehaviour
             np.PlanetOutcome2 = null;
             buttonLogic.Planet2.GetComponent<TextMeshProUGUI>().text = "";
             buttonLogic.Distance2TXT.gameObject.SetActive(false);
-            gm.money = Mathf.RoundToInt(Vector2.Distance(pickup.position, MI.PlanetOutcome2.GetComponent<Transform>().position) * 1.5f);
+            gm.money += Mathf.RoundToInt(Vector2.Distance(pickup.position, MI.PlanetOutcome2.GetComponent<Transform>().position) * 1.5f);
             MI.onOrder2 = false;
             MI.orderCounter--;
             if (np.PlanetOutcome1 == null)
