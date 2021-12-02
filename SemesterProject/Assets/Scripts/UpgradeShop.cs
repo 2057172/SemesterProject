@@ -101,12 +101,20 @@ public class UpgradeShop : MonoBehaviour
     public Button repairButton;
 
 
-  
+
+    //STICKER STUFFF
+    public GameObject iceSticker;
+    public GameObject fireSticker;
+    public GameObject radiationSticker;
+    public GameObject hardcoreSticker;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        iceSticker.SetActive(false);
+        fireSticker.SetActive(false);
+        radiationSticker.SetActive(false);
+        hardcoreSticker.SetActive(false);
         
 
 }
@@ -300,7 +308,9 @@ public class UpgradeShop : MonoBehaviour
         {
             gameMan.money -= firePro;
             firePurchased = true;
+            fireSticker.SetActive(true);
             sound_Manager.orderPositive();
+           
         }
         else
         {
@@ -324,6 +334,7 @@ public class UpgradeShop : MonoBehaviour
         {
             gameMan.money -= icePro;
             icePurchased = true;
+            iceSticker.SetActive(true);
             sound_Manager.orderPositive();
         }
         else
@@ -350,6 +361,7 @@ public class UpgradeShop : MonoBehaviour
         {
             gameMan.money -= radPro;
             radPurchased = true;
+            radiationSticker.SetActive(true);
             sound_Manager.orderPositive();
         }
         else
@@ -378,6 +390,7 @@ public class UpgradeShop : MonoBehaviour
             gameMan.money -= hardcorePro;
             hardcorePurchased = true;
             sound_Manager.orderPositive();
+            hardcoreSticker.SetActive(true);
         }
         else
         {
