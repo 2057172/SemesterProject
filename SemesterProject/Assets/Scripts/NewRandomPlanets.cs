@@ -114,7 +114,7 @@ public class NewRandomPlanets : MonoBehaviour
     public void fillOrders()
     {
         onOrder = true;
-        PI.Menu.gameObject.SetActive(false);
+        
 
         for (int count = 0; count < 3; count++)
         {

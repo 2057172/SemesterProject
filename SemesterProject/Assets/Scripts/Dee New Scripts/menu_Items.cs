@@ -22,7 +22,7 @@ public class menu_Items : MonoBehaviour
 
     public UpgradeShop upgradeShop;
 
-
+    public buttonLogic bl;
 
     public TextMeshProUGUI orderStatus;
     public bool OnOrder1, onOrder2, onOrder3;
@@ -363,7 +363,7 @@ public class menu_Items : MonoBehaviour
         gm.OrderButton2.GetComponentInChildren<TextMeshProUGUI>().text = pickfood4 + "," + pickfood5 + "," + pickfood6 + ", " + PlanetOutcome2.name;
 
         orderStatus.text = "";
-
+/*
         //IMAGE STUFF FOR PHONE ORDER BUTTON 1 
         phoneOrderbutton1_food1.sprite = StringtoSprite(pickfood1);
         phoneOrderbutton1_food2.sprite = StringtoSprite(pickfood2);
@@ -373,6 +373,7 @@ public class menu_Items : MonoBehaviour
         phoneOrderbutton2_food1.sprite = StringtoSprite(pickfood4);
         phoneOrderbutton2_food2.sprite = StringtoSprite(pickfood5);
         phoneOrderbutton2_food3.sprite = StringtoSprite(pickfood6);
+*/
     }
 
     public void Update()
@@ -381,17 +382,17 @@ public class menu_Items : MonoBehaviour
         {
             orderCounter = 0;
         }
-        if (orderCounter >= upgradeShop.maxOrderCapacity)
+       /* if (orderCounter >= upgradeShop.maxOrderCapacity)
         {
             orderCounter = upgradeShop.maxOrderCapacity;
-        }
+        }*/
 
 
         //PLANET BUTTON STUFF
         orderButton1Planet();
-        Debug.Log("1" + PlanetOutcome1);
+       // Debug.Log("1" + PlanetOutcome1);
         orderButton2Planet();
-        Debug.Log("2" + PlanetOutcome2);
+       // Debug.Log("2" + PlanetOutcome2);
     }
 
     public void getRandomPlanet()
@@ -422,6 +423,7 @@ public class menu_Items : MonoBehaviour
             OnOrder1 = true;
             orderCounter++;
             planet1Final = PlanetOutcome1;
+            bl.planet1 = PlanetOutcome1;
         }
     }
     public void Order2()
@@ -432,6 +434,7 @@ public class menu_Items : MonoBehaviour
             onOrder2 = true;
             orderCounter++;
             planet2Final = PlanetOutcome2;
+            bl.planet2 = PlanetOutcome2;
         }
     }
     public void Order3()
@@ -442,6 +445,7 @@ public class menu_Items : MonoBehaviour
             onOrder3 = true;
             orderCounter++;
             planet3Final = PlanetOutcome3;
+            
         }
     }
 
@@ -472,9 +476,9 @@ public class menu_Items : MonoBehaviour
                 OrderButtonOne.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3 + ", " + newRandomPlanets.PlanetOutcome1;
 
                 //IMAGE STUFF FOR PHONE ORDER BUTTON 1 
-                phoneOrderbutton1_food1.sprite = StringtoSprite(pickfood1);
-                phoneOrderbutton1_food2.sprite = StringtoSprite(pickfood2);
-                phoneOrderbutton1_food3.sprite = StringtoSprite(pickfood3);
+                //phoneOrderbutton1_food1.sprite = StringtoSprite(pickfood1);
+                //phoneOrderbutton1_food2.sprite = StringtoSprite(pickfood2);
+                //phoneOrderbutton1_food3.sprite = StringtoSprite(pickfood3);
 
 
 
@@ -506,9 +510,9 @@ public class menu_Items : MonoBehaviour
 
                 OrderButtonTwo.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6;
                 //IMAGE STUFF FOR PHONE ORDER BUTTON 2
-                phoneOrderbutton2_food1.sprite = StringtoSprite(pickfood4);
-                phoneOrderbutton2_food2.sprite = StringtoSprite(pickfood5);
-                phoneOrderbutton2_food3.sprite = StringtoSprite(pickfood6);
+               // phoneOrderbutton2_food1.sprite = StringtoSprite(pickfood4);
+                //phoneOrderbutton2_food2.sprite = StringtoSprite(pickfood5);
+                //phoneOrderbutton2_food3.sprite = StringtoSprite(pickfood6);
 
                 orderStatus.text = "Order Picked Up.";
             }
@@ -726,6 +730,7 @@ public class menu_Items : MonoBehaviour
 
     public void orderButton1Planet()
     {
+        /*
         //ORDER BUTTON STUFF 
         if (PlanetOutcome1.name == "Forest")
         {
@@ -795,85 +800,86 @@ public class menu_Items : MonoBehaviour
         if (PlanetOutcome1.name == "Gas Planet")
         {
             phoneOrderbutton1_planet.sprite = gasPlanetImg;
-        }
+        } */
     }
 
 
     public void orderButton2Planet()
     {
-        //ORDER BUTTON STUFF 
-        if (PlanetOutcome2.name == "Forrest")
-        {
-            phoneOrderbutton2_planet.sprite = junglePlanetImg;
-        }
+        /*
+         //ORDER BUTTON STUFF 
+         if (PlanetOutcome2.name == "Forrest")
+         {
+             phoneOrderbutton2_planet.sprite = junglePlanetImg;
+         }
 
-        if (PlanetOutcome2.name == "Earth")
-        {
-            phoneOrderbutton2_planet.sprite = earthPlanetImg;
-        }
+         if (PlanetOutcome2.name == "Earth")
+         {
+             phoneOrderbutton2_planet.sprite = earthPlanetImg;
+         }
 
-        if (PlanetOutcome2.name == "Ice Planet")
-        {
-            phoneOrderbutton2_planet.sprite = icePlanetImg;
-        }
-        if (PlanetOutcome2.name == "Metal Planet")
-        {
-            phoneOrderbutton2_planet.sprite = metalPlanetImg;
-        }
+         if (PlanetOutcome2.name == "Ice Planet")
+         {
+             phoneOrderbutton2_planet.sprite = icePlanetImg;
+         }
+         if (PlanetOutcome2.name == "Metal Planet")
+         {
+             phoneOrderbutton2_planet.sprite = metalPlanetImg;
+         }
 
-        if (PlanetOutcome2.name == "Cat Planet")
-        {
-            phoneOrderbutton2_planet.sprite = catPlanetImg;
-        }
+         if (PlanetOutcome2.name == "Cat Planet")
+         {
+             phoneOrderbutton2_planet.sprite = catPlanetImg;
+         }
 
-        if (PlanetOutcome2.name == "The Sun")
-        {
-            phoneOrderbutton2_planet.sprite = theSunPlanetImg;
-        }
+         if (PlanetOutcome2.name == "The Sun")
+         {
+             phoneOrderbutton2_planet.sprite = theSunPlanetImg;
+         }
 
-        if (PlanetOutcome2.name == "Sleepy Planet")
-        {
-            phoneOrderbutton2_planet.sprite = sleepyPlanetImg;
-        }
+         if (PlanetOutcome2.name == "Sleepy Planet")
+         {
+             phoneOrderbutton2_planet.sprite = sleepyPlanetImg;
+         }
 
-        if (PlanetOutcome2.name == "Fire/Lava")
-        {
-            phoneOrderbutton2_planet.sprite = lavaPlanetImg;
-        }
+         if (PlanetOutcome2.name == "Fire/Lava")
+         {
+             phoneOrderbutton2_planet.sprite = lavaPlanetImg;
+         }
 
-        if (PlanetOutcome2.name == "Dance Party")
-        {
-            phoneOrderbutton2_planet.sprite = dancePlanetImg;
-        }
+         if (PlanetOutcome2.name == "Dance Party")
+         {
+             phoneOrderbutton2_planet.sprite = dancePlanetImg;
+         }
 
 
-        if (PlanetOutcome2.name == "Lovecraft")
-        {
-            phoneOrderbutton2_planet.sprite = lovecraftPlanetImg;
-        }
+         if (PlanetOutcome2.name == "Lovecraft")
+         {
+             phoneOrderbutton2_planet.sprite = lovecraftPlanetImg;
+         }
 
-        if (PlanetOutcome2.name == "LSD Planet")
-        {
-            phoneOrderbutton2_planet.sprite = lsdPlanetImg;
-        }
+         if (PlanetOutcome2.name == "LSD Planet")
+         {
+             phoneOrderbutton2_planet.sprite = lsdPlanetImg;
+         }
 
-        if (PlanetOutcome2.name == "Weed Planet")
-        {
-            phoneOrderbutton2_planet.sprite = weedPlanetImg;
-        }
+         if (PlanetOutcome2.name == "Weed Planet")
+         {
+             phoneOrderbutton2_planet.sprite = weedPlanetImg;
+         }
 
-        if (PlanetOutcome2.name == "Bougie Planet")
-        {
-            phoneOrderbutton2_planet.sprite = bougiePlanetImg;
-        }
+         if (PlanetOutcome2.name == "Bougie Planet")
+         {
+             phoneOrderbutton2_planet.sprite = bougiePlanetImg;
+         }
 
-        if (PlanetOutcome2.name == "Gas Planet")
-        {
-            phoneOrderbutton2_planet.sprite = gasPlanetImg;
-        }
+         if (PlanetOutcome2.name == "Gas Planet")
+         {
+             phoneOrderbutton2_planet.sprite = gasPlanetImg;
+         }
+     }
+        */
+
+
     }
-
-
-
-
 }

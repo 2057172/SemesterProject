@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 public class PlayerOrderInfo : MonoBehaviour
 {
-    public Image Menu;
+    
     public WindowQuestPointer pointer;
     public OrderManager orderManager;
     public GameManager gm;
@@ -14,9 +14,15 @@ public class PlayerOrderInfo : MonoBehaviour
     public menu_Items MI;
     public buttonLogic buttonLogic;
 
+    public GameObject Menu;
+
+    public string destination1, destination2;
+    public Transform pickup;
+    
+
     void Start()
     {
-       Menu.gameObject.SetActive(false);
+        Menu.gameObject.SetActive(false);
     }
 
 
@@ -27,10 +33,12 @@ public class PlayerOrderInfo : MonoBehaviour
             Menu.gameObject.SetActive(true);
         }
 
-        if(collision.gameObject.name == np.PlanetOutcome1.name)
+        if(collision.gameObject.name == MI.PlanetOutcome1.name)
         {
             np.PlanetOutcome1 = null;
-            gm.money += np.totalCommision1;
+            buttonLogic.Planet1.GetComponent<TextMeshProUGUI>().text = "";
+            buttonLogic.Distance1TXT.gameObject.SetActive(false);
+            gm.money = Mathf.RoundToInt(Vector2.Distance(pickup.position, MI.PlanetOutcome1.GetComponent<Transform>().position) * 1.5f);
             MI.OnOrder1 = false;
             MI.orderCounter--;
             if (np.PlanetOutcome2 == null)
@@ -40,11 +48,12 @@ public class PlayerOrderInfo : MonoBehaviour
 
         }
 
-        if (collision.gameObject.name == np.PlanetOutcome2.name)
+        if (collision.gameObject.name == MI.PlanetOutcome2.name)
         {
-            MI.RefreshOrders();
             np.PlanetOutcome2 = null;
-            gm.money += np.totalCommision2;
+            buttonLogic.Planet2.GetComponent<TextMeshProUGUI>().text = "";
+            buttonLogic.Distance2TXT.gameObject.SetActive(false);
+            gm.money = Mathf.RoundToInt(Vector2.Distance(pickup.position, MI.PlanetOutcome2.GetComponent<Transform>().position) * 1.5f);
             MI.onOrder2 = false;
             MI.orderCounter--;
             if (np.PlanetOutcome1 == null)
@@ -54,7 +63,7 @@ public class PlayerOrderInfo : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.name == np.PlanetOutcome3.name)
+        if (collision.gameObject.name == MI.PlanetOutcome3.name)
         {
             Debug.Log("Its lit 3");
             MI.RefreshOrders();
@@ -63,56 +72,7 @@ public class PlayerOrderInfo : MonoBehaviour
             gm.money += np.totalCommision3;
             MI.onOrder3 = false;
         }
-
-
-
-
-
-        if (collision.gameObject.tag == "DropOffZone" && orderManager.currentlyHasOrder == true )
-        {
-            if (collision.gameObject.name == "DropOff")
-            {
-                gm.money = gm.money + Mathf.Round(orderManager.totalCommision);
-                orderManager.currentlyHasOrder = false;
-                orderManager.totalCommision = 0;
-                pointer.gameObject.SetActive(false);
-                orderMoneyInfo.gameObject.SetActive(false);
-                StartCoroutine(droppedOff());
-                if (orderManager.countDown < orderManager.ETA)
-                {
-                    gm.money = gm.money + 15f;
-                }
-            } else if(collision.gameObject.name == "Earth")
-            {
-                gm.money = gm.money + Mathf.Round(orderManager.totalCommision);
-                orderManager.currentlyHasOrder = false;
-                orderManager.totalCommision = 0;
-                //pointer.gameObject.SetActive(false);
-                orderMoneyInfo.gameObject.SetActive(false);
-                StartCoroutine(droppedOff());
-                if (orderManager.countDown < orderManager.ETA)
-                {
-                    gm.money = gm.money + 15f;
-                }
-
-                Debug.Log("Dropped off at Earth");
-            }
-            else if (collision.gameObject.name == "Forest")
-            {
-                gm.money = gm.money + Mathf.Round(orderManager.totalCommision);
-                orderManager.currentlyHasOrder = false;
-                orderManager.totalCommision = 0;
-                //pointer.gameObject.SetActive(false);
-                orderMoneyInfo.gameObject.SetActive(false);
-                StartCoroutine(droppedOff());
-                if (orderManager.countDown < orderManager.ETA)
-                {
-                    gm.money = gm.money + 15f;
-                }
-
-                Debug.Log("Dropped off at Forest Planet");
-            }
-        }
+       
     }
     public void OnTriggerExit2D(Collider2D collision)
     {

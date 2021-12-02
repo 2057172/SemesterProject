@@ -186,7 +186,7 @@ public class RandomIncorrectOrder : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("COLLITION!!!");
+            
             OrderPanel.SetActive(true);
             AssignAllButtons();
             PickRandomFoodOrder();
@@ -457,14 +457,14 @@ public class RandomIncorrectOrder : MonoBehaviour
 
     public void AssignAllButtons()
     {
-        Debug.Log("Test");
+        
         int range = upgradeShop.maxOrderCapacity;
 
         int chosen1 = Random.Range(0, 6);
 
         if (upgradeShop.maxOrderCapacity == 2)
         {
-            Debug.Log("Test");
+            
             int chosen2 = Random.Range(0, 6);
 
             if (chosen1 == 0)
@@ -548,47 +548,47 @@ public class RandomIncorrectOrder : MonoBehaviour
         int useFoods1 = Random.Range(0, RandomFoods.Length);
 
         PickRandomFood1 = RandomFoods[useFoods1];
-        Debug.Log("This is" + useFoods1);
+        
 
 
         System.Random random2 = new System.Random();
         int useFoods2 = Random.Range(0, RandomFoods.Length);
 
         PickRandomFood2 = RandomFoods[useFoods2];
-        Debug.Log("This is" + useFoods2);
+        
 
         System.Random random3 = new System.Random();
         int useFoods3 = Random.Range(0, RandomFoods.Length);
 
         PickRandomFood3 = RandomFoods[useFoods3];
-        Debug.Log("This is" + useFoods3);
+        
 
         System.Random random4 = new System.Random();
         int useFoods4 = Random.Range(0, RandomFoods.Length);
 
         PickRandomFood4 = RandomFoods[useFoods4];
-        Debug.Log("This is" + useFoods4);
+       
 
 
         System.Random random5 = new System.Random();
         int useFoods5 = Random.Range(0, RandomFoods.Length);
 
         PickRandomFood5 = RandomFoods[useFoods5];
-        Debug.Log("This is" + useFoods5);
+        
 
 
         System.Random random6 = new System.Random();
         int useFoods6 = Random.Range(0, RandomFoods.Length);
 
         PickRandomFood6 = RandomFoods[useFoods6];
-        Debug.Log("This is" + useFoods6);
+        
 
 
         System.Random random7 = new System.Random();
         int useFoods7 = Random.Range(0, RandomFoods.Length);
 
         PickRandomFood7 = RandomFoods[useFoods7];
-        Debug.Log("This is" + useFoods7);
+        
 
 
 
@@ -596,7 +596,7 @@ public class RandomIncorrectOrder : MonoBehaviour
         int useFoods8 = Random.Range(0, RandomFoods.Length);
 
         PickRandomFood8 = RandomFoods[useFoods8];
-        Debug.Log("This is" + useFoods8);
+        
 
 
 
@@ -604,7 +604,7 @@ public class RandomIncorrectOrder : MonoBehaviour
         int useFoods9 = Random.Range(0, RandomFoods.Length);
 
         PickRandomFood9 = RandomFoods[useFoods9];
-        Debug.Log("This is" + useFoods9);
+        
 
 
 
@@ -612,7 +612,7 @@ public class RandomIncorrectOrder : MonoBehaviour
         int useFoods10 = Random.Range(0, RandomFoods.Length);
 
         PickRandomFood10 = RandomFoods[useFoods10];
-        Debug.Log("This is" + useFoods10);
+        
 
 
 
@@ -621,7 +621,7 @@ public class RandomIncorrectOrder : MonoBehaviour
         int useFoods11 = Random.Range(0, RandomFoods.Length);
 
         PickRandomFood11 = RandomFoods[useFoods11];
-        Debug.Log("This is" + useFoods11);
+       
 
 
 
@@ -629,43 +629,43 @@ public class RandomIncorrectOrder : MonoBehaviour
         int useFoods12 = Random.Range(0, RandomFoods.Length);
 
         PickRandomFood12 = RandomFoods[useFoods12];
-        Debug.Log("This is" + useFoods12);
+       
 
         System.Random random13 = new System.Random();
         int useFoods13 = Random.Range(0, RandomFoods.Length);
 
         PickRandomFood13 = RandomFoods[useFoods13];
-        Debug.Log("This is" + useFoods13);
+        
 
         System.Random random14 = new System.Random();
         int useFoods14 = Random.Range(0, RandomFoods.Length);
 
         PickRandomFood14 = RandomFoods[useFoods14];
-        Debug.Log("This is" + useFoods14);
+        
 
         System.Random random15 = new System.Random();
         int useFoods15 = Random.Range(0, RandomFoods.Length);
 
         PickRandomFood15 = RandomFoods[useFoods15];
-        Debug.Log("This is" + useFoods15);
+        
 
         System.Random random16 = new System.Random();
         int useFoods16 = Random.Range(0, RandomFoods.Length);
 
         PickRandomFood16 = RandomFoods[useFoods16];
-        Debug.Log("This is" + useFoods16);
+        
 
         System.Random random17 = new System.Random();
         int useFoods17 = Random.Range(0, RandomFoods.Length);
 
         PickRandomFood17 = RandomFoods[useFoods17];
-        Debug.Log("This is" + useFoods17);
+        
 
         System.Random random18 = new System.Random();
         int useFoods18 = Random.Range(0, RandomFoods.Length);
 
         PickRandomFood18 = RandomFoods[useFoods18];
-        Debug.Log("This is" + useFoods18);
+        
     }
 
 
@@ -673,6 +673,7 @@ public class RandomIncorrectOrder : MonoBehaviour
 
 
     //SPRITE STUFF
+    
     public Sprite StringtoSprite(string s)
     {
         switch (s)
