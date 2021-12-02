@@ -20,6 +20,7 @@ public class Sound_Manager : MonoBehaviour
     public void button()
     {
         buttonSound.Play();
+     
     }
 
     public void warning()
