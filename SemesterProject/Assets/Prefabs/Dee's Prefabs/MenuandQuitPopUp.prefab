@@ -544,7 +544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8650194151873026274
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1846,7 +1846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8650194152815855567
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2886,6 +2886,7 @@ MonoBehaviour:
   mainMenuAsk: {fileID: 8650194151873026275}
   quitAsk: {fileID: 8650194152928583425}
   howToPlayAsk: {fileID: 8650194152815855564}
+  orderScreenGO: {fileID: 0}
 --- !u!114 &8650194153447742294
 MonoBehaviour:
   m_ObjectHideFlags: 0

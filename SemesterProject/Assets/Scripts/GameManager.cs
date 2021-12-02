@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         {
             if (phoneUp == false)
             {
-                phone.GetComponent<RectTransform>().anchoredPosition = new Vector2(763f, -245f);
+                phone.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
                 if(MI.OnOrder1 == false)
                 {
                     OrderButton1.gameObject.SetActive(true);
@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
             }
             else if (phoneUp == true)
             {
-                phone.GetComponent<RectTransform>().anchoredPosition = new Vector2(763f, -653f);
+                phone.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 424f);
                 OrderButton1.gameObject.SetActive(false);
                 OrderButton2.gameObject.SetActive(false);
                 OrderButton3.gameObject.SetActive(false);

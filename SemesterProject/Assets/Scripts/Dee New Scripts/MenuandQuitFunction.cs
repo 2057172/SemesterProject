@@ -8,10 +8,11 @@ public class MenuandQuitFunction : MonoBehaviour
     public GameObject mainMenuAsk;
     public GameObject quitAsk;
     public GameObject howToPlayAsk;
+    public GameObject orderScreenGO;
 
     void Start()
     {
-        
+        orderScreenGO.SetActive(false);
     }
 
     // Update is called once per frame
@@ -25,5 +26,10 @@ public class MenuandQuitFunction : MonoBehaviour
         mainMenuAsk.SetActive(false);
         quitAsk.SetActive(false);
         howToPlayAsk.SetActive(false);
+    }
+
+    public void orderScreen()
+    {
+        orderScreenGO.SetActive(true);
     }
 }
