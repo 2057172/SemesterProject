@@ -23,10 +23,10 @@ public class buttonLogic : MonoBehaviour
     public void Update()
     {
         Distance1TXT.text = Mathf.RoundToInt(Vector2.Distance(player.gameObject.GetComponent<Transform>().position,
-            MI.PlanetOutcome1.gameObject.GetComponent<Transform>().position)).ToString() + "m";
+            MI.PlanetOutcome1.gameObject.GetComponent<Transform>().position)).ToString() + "km";
 
         Distance2TXT.text = Mathf.RoundToInt(Vector2.Distance(player.gameObject.GetComponent<Transform>().position,
-            MI.PlanetOutcome2.gameObject.GetComponent<Transform>().position)).ToString() + "m";
+            MI.PlanetOutcome2.gameObject.GetComponent<Transform>().position)).ToString() + "km";
     }
     public void onButton1()
     {
