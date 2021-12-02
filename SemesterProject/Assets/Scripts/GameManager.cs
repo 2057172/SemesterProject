@@ -76,10 +76,7 @@ public class GameManager : MonoBehaviour
                 {
                     OrderButton2.gameObject.SetActive(false);
                 }
-                else if (MI.onOrder3 == true)
-                {
-                    OrderButton3.gameObject.SetActive(false);
-                }
+               
 
                 phoneUp = true;
             }

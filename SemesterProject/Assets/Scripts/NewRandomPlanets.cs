@@ -66,11 +66,8 @@ public class NewRandomPlanets : MonoBehaviour
             Distance2 = Vector3.Distance(Player.position, Destination2);
             Distance2TXT.text = Mathf.RoundToInt(Distance2).ToString() + "m";
         }
-        if (MI.onOrder3 == true)
-        {
-            Distance3 = Vector3.Distance(Player.position, Destination3);
-            Distance3TXT.text = Mathf.RoundToInt(Distance3).ToString() + "m";
-        } if (MI.OnOrder1 == false)
+     
+         if (MI.OnOrder1 == false)
         {
             Distance1TXT.gameObject.SetActive(false);
             Planet1.gameObject.SetActive(false);
@@ -80,11 +77,7 @@ public class NewRandomPlanets : MonoBehaviour
             Distance2TXT.gameObject.SetActive(false);
             Planet2.gameObject.SetActive(false);
         }
-        if (MI.onOrder3 == false)
-        {
-            Distance3TXT.gameObject.SetActive(false);
-            Planet3.gameObject.SetActive(false);
-        }
+       
 
 
 
@@ -153,19 +146,7 @@ public class NewRandomPlanets : MonoBehaviour
             }
             else if (count == 2)
             {
-                if(MI.onOrder3 == true)
-                {
-                    Distance3TXT.gameObject.SetActive(true);
-                    Planet3.gameObject.SetActive(true);
-
-                    PlanetOutcome3 = Planets[Random.Range(0, Planets.Length)];
-                    Destination3 = PlanetOutcome3.transform.position;
-
-                    Distance3 = Vector3.Distance(Player.position, Destination3);
-                    Distance3TXT.text = Mathf.RoundToInt(Distance3).ToString() + "km";
-                    Planet3.text = PlanetOutcome3.name;
-
-                }
+               
             } eta = totalDestinationTime;
         }
 

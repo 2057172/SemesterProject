@@ -25,7 +25,7 @@ public class menu_Items : MonoBehaviour
     public buttonLogic bl;
 
     public TextMeshProUGUI orderStatus;
-    public bool OnOrder1, onOrder2, onOrder3;
+    public bool OnOrder1, onOrder2;
 
 
 
@@ -346,7 +346,7 @@ public class menu_Items : MonoBehaviour
 
         OnOrder1 = false;
         onOrder2 = false;
-        onOrder3 = false;
+        
 
         Distance1TXT.gameObject.SetActive(false);
         Distance2TXT.gameObject.SetActive(false);
@@ -440,17 +440,7 @@ public class menu_Items : MonoBehaviour
             bl.planet2 = PlanetOutcome2;
         }
     }
-    public void Order3()
-    {
-        if (onOrder3 == false)
-        {
-            OrderButtonThree.gameObject.SetActive(false);
-            onOrder3 = true;
-            orderCounter++;
-            planet3Final = PlanetOutcome3;
-            
-        }
-    }
+
 
     public void RefreshOrders()
     {

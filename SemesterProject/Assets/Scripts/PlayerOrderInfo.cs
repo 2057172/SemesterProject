@@ -67,15 +67,7 @@ public class PlayerOrderInfo : MonoBehaviour
             sound_Manager.orderPositive();
         }
 
-        if (collision.gameObject.name == MI.PlanetOutcome3.name)
-        {
-            Debug.Log("Its lit 3");
-            MI.RefreshOrders();
-            np.PlanetOutcome3 = null;
-            MI.orderCounter--;
-            gm.money += np.totalCommision3;
-            MI.onOrder3 = false;
-        }
+      
        
     }
     public void OnTriggerExit2D(Collider2D collision)
