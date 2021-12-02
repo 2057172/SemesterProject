@@ -6,6 +6,7 @@ using TMPro;
 
 public class playerMovement : MonoBehaviour
 {
+    public Sound_Manager sound_Manager;
 
     [Header("Ship Settings")]
     public float driftFactor = 0.95f;
@@ -144,6 +145,7 @@ public class playerMovement : MonoBehaviour
     //WHEN HITTING AN OBSTACLE THE SHIP TAKES DAMAGE
     void ShipCollision()
     {
+        sound_Manager.negative();
         currentHealth -= shipDamage;
         Health_And_Fuel.setCurrentHealth(currentHealth);
         if (currentHealth < 0)
