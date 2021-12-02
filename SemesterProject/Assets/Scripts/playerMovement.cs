@@ -112,8 +112,8 @@ public class playerMovement : MonoBehaviour
         //currentFuel -= fuel;
         //   Health_And_Fuel.setCurrentFuel(currentFuel);
         // }
-        //fuel_text.text = currentFuel.ToString() + "/" + maxFuel.ToString();
-       // health_text.text= currentHealth.ToString() + "/" + maxHealth.ToString();
+       fuel_text.text = currentFuel.ToString() + "/" + maxFuel.ToString();
+       health_text.text= currentHealth.ToString() + "/" + maxHealth.ToString();
     }
 
     //ALT FUEL DECREASE SYSTEM
