@@ -319,18 +319,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Welcome to the SpuberEats\u2122 family!\r\n\r\nPlease accept the terms
-    & conditions below before you become a loyal employee to the Spuber\u2122 Megacorporation:\r\n\r\n1.
-    All Spuber\u2122 employees are required to work 24 hours a day.\r\n2. All SpuberEats\u2122
-    employees must use the preinstalled SpuberEats\u2122 app on their phone to accept
-    delivery orders before headig to the resturant collection point.\n3. All Spuber\u2122
-    employees are encoruged to use the SpuberMaps\u2122 app preinstalled on their
-    phone when navigating through the galaxy.\r\n4. All ship fuel, upgrades and repairs
-    costs are at the employee's own expense.\r\n5. If your ship's fuel or health
-    hits zero your contract will be TERIMINATED.\r\n6. If your fail to deliver an
-    order on time your contract will be TERMINATED.\r\n7. If you interact with any
-    union organisation your contract will be TERMINATED. \r\n\r\nThank you for choosing
-    to work with us!\r\n\r\nPlease enter your name below to start your contract:\r\n"
+  m_text: "Welcome to the SpuberEats\u2122 family!\r\nPLEASE READ THROUGH CAREFULLY\r\nAccept
+    the terms & conditions below before you become a loyal employee to the Spuber\u2122
+    Megacorporation:\r\n1. All Spuber\u2122 employees are required to work endlessly
+    24 hours a day.\r\n2. All SpuberEats\u2122 employees must use the preinstalled
+    SpuberEats\u2122 app on their phone to accept delivery orders before heading
+    to the SpuberEats\u2122 restaurant collection point.\r\n3. All Spuber\u2122 employees
+    are encouraged to use the preinstalled SpuberMaps\u2122 app on their phone to
+    assist employees when navigating through the galaxy. \r\n4. All ship refuel costs
+    are at the employee's own expense (Employees can refuel at a Spuber\u2122 Fuel
+    location).\r\n5. All ship upgrades and repairs costs are at the employee's own
+    expense (Employees can perform upgrades and repairs at a Spuber\u2122 Mechanic
+    location).\r\n6. All Spuber\u2122 employees are highly discouraged from entering
+    dangerous zones without acquiring the proper protective upgrades from a Spuber\u2122
+    Mechanic location.\r\n7. If your ship runs out of health your contract will be
+    TERIMINATED.\r\n8. If your ship's runs out of fuel your contract will be TERIMINATED.\r\n9.
+    If you interact with any union organisation your contract will be TERMINATED.
+    \r\n\r\nThank you for choosing to work with us!\r\n\r\nPlease enter your name
+    below to start your contract:\r\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ec4e73ab289474c4c92f5d4ad06082f5, type: 2}
   m_sharedMaterial: {fileID: 3143316327272341669, guid: ec4e73ab289474c4c92f5d4ad06082f5, type: 2}
@@ -532,7 +538,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &133920894
 GameObject:
@@ -586,133 +592,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
---- !u!1 &166652087
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 166652089}
-  - component: {fileID: 166652088}
-  m_Layer: 0
-  m_Name: Music
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &166652088
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 166652087}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6b1fbcfd5d501e04fb22d3be1cb053d9, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.438
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 121
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &166652089
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 166652087}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.660298, y: -1.9893546, z: 162.76515}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &190016920
 GameObject:
   m_ObjectHideFlags: 0
