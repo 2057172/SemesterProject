@@ -104,7 +104,7 @@ public class Button_Hover : MonoBehaviour ,IPointerEnterHandler, IPointerExitHan
             if (this.gameObject.name == "RadiationProtection")
             {
                 heading.text = "Radiation Protection";
-                description.text = "Prevent your map system from being disabled from interference in the radiation zone for: $ " + upgradeShop.firePro.ToString();
+                description.text = "Prevent your map system from being disabled from interference in the radiation zone for: $ " + upgradeShop.radPro.ToString();
             }
 
 
