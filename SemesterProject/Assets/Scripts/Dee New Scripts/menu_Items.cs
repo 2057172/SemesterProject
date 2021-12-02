@@ -358,9 +358,9 @@ public class menu_Items : MonoBehaviour
 
 
         //PHONE BUTTON  1 ORDER
-        gm.OrderButton1.GetComponentInChildren<TextMeshProUGUI>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3 + ", " + PlanetOutcome1.name;
+       // gm.OrderButton1.GetComponentInChildren<TextMeshProUGUI>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3 + ", " + PlanetOutcome1.name;
         //PHONE BUTTON  2 ORDER
-        gm.OrderButton2.GetComponentInChildren<TextMeshProUGUI>().text = pickfood4 + "," + pickfood5 + "," + pickfood6 + ", " + PlanetOutcome2.name;
+        //gm.OrderButton2.GetComponentInChildren<TextMeshProUGUI>().text = pickfood4 + "," + pickfood5 + "," + pickfood6 + ", " + PlanetOutcome2.name;
 
         orderStatus.text = "";
 
@@ -476,7 +476,7 @@ public class menu_Items : MonoBehaviour
                 pickfood3 = Foods[useFoods3];
                 //Debug.Log("This is" + useFoods3);
 
-                OrderButtonOne.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3 + ", " + newRandomPlanets.PlanetOutcome1;
+                //OrderButtonOne.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3 + ", " + newRandomPlanets.PlanetOutcome1;
 
                 //IMAGE STUFF FOR PHONE ORDER BUTTON 1 
                 phoneOrderbutton1_food1.sprite = StringtoSprite(pickfood1);
@@ -511,7 +511,7 @@ public class menu_Items : MonoBehaviour
                 //Debug.Log("This is" + useFoods6);
                 //Debug.Log("Order 2.3 is: " + Foods[useFoods6]);
 
-                OrderButtonTwo.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6;
+               // OrderButtonTwo.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6;
                 //IMAGE STUFF FOR PHONE ORDER BUTTON 2
                 phoneOrderbutton2_food1.sprite = StringtoSprite(pickfood4);
                 phoneOrderbutton2_food2.sprite = StringtoSprite(pickfood5);
@@ -762,7 +762,7 @@ public class menu_Items : MonoBehaviour
             phoneOrderbutton1_planet.sprite = catPlanetImg;
         }
 
-        if (PlanetOutcome1.name == "The Sun")
+        if (PlanetOutcome1.name == "The Sun Planet")
         {
             phoneOrderbutton1_planet.sprite = theSunPlanetImg;
         }
@@ -772,12 +772,12 @@ public class menu_Items : MonoBehaviour
             phoneOrderbutton1_planet.sprite = sleepyPlanetImg;
         }
 
-        if (PlanetOutcome1.name == "Fire/Lava")
+        if (PlanetOutcome1.name == "FIre/Lava Planet")
         {
             phoneOrderbutton1_planet.sprite = lavaPlanetImg;
         }
 
-        if (PlanetOutcome1.name == "Dance Party")
+        if (PlanetOutcome1.name == "Dance Party Planet")
         {
             phoneOrderbutton1_planet.sprite = dancePlanetImg;
         }
@@ -814,12 +814,12 @@ public class menu_Items : MonoBehaviour
     {
         
          //ORDER BUTTON STUFF 
-         if (PlanetOutcome2.name == "Forrest")
+         if (PlanetOutcome2.name == "Forest Planet")
          {
              phoneOrderbutton2_planet.sprite = junglePlanetImg;
          }
 
-         if (PlanetOutcome2.name == "Earth")
+         if (PlanetOutcome2.name == "Earth Planet")
          {
              phoneOrderbutton2_planet.sprite = earthPlanetImg;
          }
@@ -838,7 +838,7 @@ public class menu_Items : MonoBehaviour
              phoneOrderbutton2_planet.sprite = catPlanetImg;
          }
 
-         if (PlanetOutcome2.name == "The Sun")
+         if (PlanetOutcome2.name == "The Sun Planet")
          {
              phoneOrderbutton2_planet.sprite = theSunPlanetImg;
          }
@@ -848,18 +848,18 @@ public class menu_Items : MonoBehaviour
              phoneOrderbutton2_planet.sprite = sleepyPlanetImg;
          }
 
-         if (PlanetOutcome2.name == "Fire/Lava")
+         if (PlanetOutcome2.name == "FIre/Lava Planet")
          {
              phoneOrderbutton2_planet.sprite = lavaPlanetImg;
          }
 
-         if (PlanetOutcome2.name == "Dance Party")
+         if (PlanetOutcome2.name == "Dance Party Planet")
          {
              phoneOrderbutton2_planet.sprite = dancePlanetImg;
          }
 
 
-         if (PlanetOutcome2.name == "Lovecraft")
+         if (PlanetOutcome2.name == "Lovecraft Planet")
          {
              phoneOrderbutton2_planet.sprite = lovecraftPlanetImg;
          }
