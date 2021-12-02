@@ -6,8 +6,8 @@ using TMPro;
 
 public class UpgradeShop : MonoBehaviour
 {
-   
-    
+
+    public Sound_Manager sound_Manager;
     /// <summary>
     /// All of the variables for the once off upgrades
     /// </summary>
@@ -300,6 +300,7 @@ public class UpgradeShop : MonoBehaviour
         {
             gameMan.money -= firePro;
             firePurchased = true;
+            sound_Manager.orderPositive();
         }
         else
         {
@@ -323,6 +324,7 @@ public class UpgradeShop : MonoBehaviour
         {
             gameMan.money -= icePro;
             icePurchased = true;
+            sound_Manager.orderPositive();
         }
         else
         {
@@ -348,6 +350,7 @@ public class UpgradeShop : MonoBehaviour
         {
             gameMan.money -= radPro;
             radPurchased = true;
+            sound_Manager.orderPositive();
         }
         else
         {
@@ -374,6 +377,7 @@ public class UpgradeShop : MonoBehaviour
         {
             gameMan.money -= hardcorePro;
             hardcorePurchased = true;
+            sound_Manager.orderPositive();
         }
         else
         {
@@ -399,6 +403,7 @@ public class UpgradeShop : MonoBehaviour
             playerMov.maxFuel = maxFuelUpgrade1;
             playerMov.currentFuel = maxFuelUpgrade1;
             fuelUP1purchased = true;
+            sound_Manager.orderPositive();
 
             playerMov.fuel_text.text = playerMov.currentFuel.ToString() + "/" + playerMov.maxFuel.ToString();
             playerMov.health_text.text = playerMov.currentHealth.ToString() + "/" + playerMov.maxHealth.ToString();
@@ -428,6 +433,7 @@ public class UpgradeShop : MonoBehaviour
             playerMov.maxFuel = maxFuelUpgrade2;
             playerMov.currentFuel = maxFuelUpgrade2;
             fuelUP2purchased = true;
+            sound_Manager.orderPositive();
         }
         else
         {
@@ -452,6 +458,7 @@ public class UpgradeShop : MonoBehaviour
             playerMov.maxFuel = maxFuelUpgrade3;
             fuelUP3purchased = true;
             playerMov.currentFuel = maxFuelUpgrade3;
+            sound_Manager.orderPositive();
         }
         else
         {
@@ -479,6 +486,7 @@ public class UpgradeShop : MonoBehaviour
 
             healthUp1Button.interactable = false;
             //healthUp1Button.enabled = false;
+            sound_Manager.orderPositive();
         }
         else
         {
@@ -501,6 +509,7 @@ public class UpgradeShop : MonoBehaviour
             playerMov.currentHealth = maxFuelUpgrade2;
             playerMov.maxHealth = maxHealthUpgrade2;
             healthUP2purchased = true;
+            sound_Manager.orderPositive();
         }
         else
         {
@@ -526,6 +535,7 @@ public class UpgradeShop : MonoBehaviour
             playerMov.currentHealth = maxFuelUpgrade3;
             playerMov.maxHealth = maxHealthUpgrade3;
             healthUP3purchased = true;
+            sound_Manager.orderPositive();
         }
         else
         {

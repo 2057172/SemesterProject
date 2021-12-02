@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class fuel_and_mechanic_Manager : MonoBehaviour
 {
+    public Sound_Manager sound_Manager;
     public GameManager gameManager;
     public health_and_fuel Health_And_Fuel;
     public playerMovement  PlayerMovement;
@@ -114,6 +115,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
                 PlayerMovement.currentFuel = upgradeShop.baseFuel;
                 Health_And_Fuel.setCurrentFuel(PlayerMovement.currentFuel);
 
+                sound_Manager.orderPositive();
             }
         }
 
@@ -224,6 +226,7 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
                 //AMOUNT FILLED UP 
                 PlayerMovement.currentHealth = upgradeShop.baseHealth;
                 Health_And_Fuel.setCurrentHealth(PlayerMovement.currentHealth);
+                sound_Manager.orderPositive();
             }
         }
 
