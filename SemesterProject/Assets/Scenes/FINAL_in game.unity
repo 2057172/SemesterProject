@@ -31680,7 +31680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &676845502
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37482,7 +37482,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &830017750
 RectTransform:
   m_ObjectHideFlags: 0
@@ -54703,7 +54703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1227922734
 RectTransform:
   m_ObjectHideFlags: 0
@@ -70012,7 +70012,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1540333618
 RectTransform:
   m_ObjectHideFlags: 0
@@ -92380,7 +92380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2023405584
 RectTransform:
   m_ObjectHideFlags: 0
@@ -95527,18 +95527,18 @@ MonoBehaviour:
   hardcoreHeatSeconds: 5
   hardcoreHeatDamage: 15
   miniMap: {fileID: 1882467198}
-  status: {fileID: 0}
-  statusBar: {fileID: 0}
-  danger_Icon_disabled: {fileID: 0}
-  danger_Icon_enabled: {fileID: 0}
-  ice_Icon_disabled: {fileID: 0}
-  ice_Icon_enabled: {fileID: 0}
-  fire_Icon_disabled: {fileID: 0}
-  fire_Icon_enabled: {fileID: 0}
-  radiation_Icon_disabled: {fileID: 0}
-  radiation_Icon_enabled: {fileID: 0}
-  hardcore_Icon_disabled: {fileID: 0}
-  hardcore_Icon_enabled: {fileID: 0}
+  status: {fileID: 1209292222}
+  statusBar: {fileID: 694055058}
+  danger_Icon_disabled: {fileID: 421244840}
+  danger_Icon_enabled: {fileID: 1227922733}
+  ice_Icon_disabled: {fileID: 315148798}
+  ice_Icon_enabled: {fileID: 676845501}
+  fire_Icon_disabled: {fileID: 1592002823}
+  fire_Icon_enabled: {fileID: 2023405583}
+  radiation_Icon_disabled: {fileID: 479678373}
+  radiation_Icon_enabled: {fileID: 830017749}
+  hardcore_Icon_disabled: {fileID: 118429124}
+  hardcore_Icon_enabled: {fileID: 1540333617}
 --- !u!114 &2052233153
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -363,7 +363,7 @@ public class menu_Items : MonoBehaviour
         gm.OrderButton2.GetComponentInChildren<TextMeshProUGUI>().text = pickfood4 + "," + pickfood5 + "," + pickfood6 + ", " + PlanetOutcome2.name;
 
         orderStatus.text = "";
-/*
+
         //IMAGE STUFF FOR PHONE ORDER BUTTON 1 
         phoneOrderbutton1_food1.sprite = StringtoSprite(pickfood1);
         phoneOrderbutton1_food2.sprite = StringtoSprite(pickfood2);
@@ -373,7 +373,7 @@ public class menu_Items : MonoBehaviour
         phoneOrderbutton2_food1.sprite = StringtoSprite(pickfood4);
         phoneOrderbutton2_food2.sprite = StringtoSprite(pickfood5);
         phoneOrderbutton2_food3.sprite = StringtoSprite(pickfood6);
-*/
+
     }
 
     public void Update()
@@ -476,9 +476,9 @@ public class menu_Items : MonoBehaviour
                 OrderButtonOne.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = pickfood1 + ", " + pickfood2 + ", " + pickfood3 + ", " + newRandomPlanets.PlanetOutcome1;
 
                 //IMAGE STUFF FOR PHONE ORDER BUTTON 1 
-                //phoneOrderbutton1_food1.sprite = StringtoSprite(pickfood1);
-                //phoneOrderbutton1_food2.sprite = StringtoSprite(pickfood2);
-                //phoneOrderbutton1_food3.sprite = StringtoSprite(pickfood3);
+                phoneOrderbutton1_food1.sprite = StringtoSprite(pickfood1);
+                phoneOrderbutton1_food2.sprite = StringtoSprite(pickfood2);
+                phoneOrderbutton1_food3.sprite = StringtoSprite(pickfood3);
 
 
 
@@ -510,9 +510,9 @@ public class menu_Items : MonoBehaviour
 
                 OrderButtonTwo.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = pickfood4 + ", " + pickfood5 + ", " + pickfood6;
                 //IMAGE STUFF FOR PHONE ORDER BUTTON 2
-               // phoneOrderbutton2_food1.sprite = StringtoSprite(pickfood4);
-                //phoneOrderbutton2_food2.sprite = StringtoSprite(pickfood5);
-                //phoneOrderbutton2_food3.sprite = StringtoSprite(pickfood6);
+                phoneOrderbutton2_food1.sprite = StringtoSprite(pickfood4);
+                phoneOrderbutton2_food2.sprite = StringtoSprite(pickfood5);
+                phoneOrderbutton2_food3.sprite = StringtoSprite(pickfood6);
 
                 orderStatus.text = "Order Picked Up.";
             }
@@ -730,7 +730,7 @@ public class menu_Items : MonoBehaviour
 
     public void orderButton1Planet()
     {
-        /*
+
         //ORDER BUTTON STUFF 
         if (PlanetOutcome1.name == "Forest")
         {
@@ -800,13 +800,13 @@ public class menu_Items : MonoBehaviour
         if (PlanetOutcome1.name == "Gas Planet")
         {
             phoneOrderbutton1_planet.sprite = gasPlanetImg;
-        } */
-    }
 
+        }
+    }
 
     public void orderButton2Planet()
     {
-        /*
+        
          //ORDER BUTTON STUFF 
          if (PlanetOutcome2.name == "Forrest")
          {
@@ -878,8 +878,7 @@ public class menu_Items : MonoBehaviour
              phoneOrderbutton2_planet.sprite = gasPlanetImg;
          }
      }
-        */
+        
 
 
     }
-}
