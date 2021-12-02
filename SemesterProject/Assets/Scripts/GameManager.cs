@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
                 OrderButton1.gameObject.SetActive(false);
                 OrderButton2.gameObject.SetActive(false);
                 OrderButton3.gameObject.SetActive(false);
-                refreshButton.gameObject.SetActive(false); 
+               // refreshButton.gameObject.SetActive(false); 
                 phoneUp = false;
             }
         } 
