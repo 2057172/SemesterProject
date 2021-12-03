@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public bool mapOpen;
 
     public menu_Items MI;
+    public Player_ZonePosition playerZone;
 
     void Start()
     {
@@ -39,7 +40,7 @@ public class GameManager : MonoBehaviour
         {
             Application.Quit();
         }
-        if(Input.GetKeyDown(KeyCode.M))
+        if(Input.GetKeyDown(KeyCode.M) && playerZone.canUseMiniMap == true)
         {
             if(mapOpen == false)
             {

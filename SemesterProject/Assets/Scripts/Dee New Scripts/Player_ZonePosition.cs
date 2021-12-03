@@ -42,6 +42,8 @@ public class Player_ZonePosition : MonoBehaviour
 
     //MAP STUFF FOR RADIATION ZONE
     public GameObject miniMap;
+    public Button miniMapButton;
+    public bool canUseMiniMap;
 
 
 
@@ -106,7 +108,9 @@ public class Player_ZonePosition : MonoBehaviour
         if (spaceship_distance <= normalZoneEdge.transform.position.y)
         {
             isInNormalZone = true;
- 
+            canUseMiniMap = true;
+            miniMapButton.interactable = true;
+
             danger_Icon_disabled.SetActive(true);
             ice_Icon_disabled.SetActive(true);
             fire_Icon_disabled.SetActive(true);
@@ -137,9 +141,11 @@ public class Player_ZonePosition : MonoBehaviour
         if (spaceship_distance > normalZoneEdge.transform.position.y && spaceship_distance < iceZoneEdge.transform.position.y)
         {
             isInIceZone = true;
-          
-          
-            
+            canUseMiniMap = true;
+            miniMapButton.interactable = true;
+
+
+
 
             //IF PLAYER DOES NOT HAVE ICE PROTECTION 
             if (isInIceZone == true)
@@ -221,6 +227,8 @@ public class Player_ZonePosition : MonoBehaviour
         if (spaceship_distance > iceZoneEdge.transform.position.y && spaceship_distance < heatZoneEdge.transform.position.y)
         {
             isInHeatZone = true;
+            canUseMiniMap = true;
+            miniMapButton.interactable = true;
 
             //IF PLAYER DOES NOT HAVE HEAT PROTECTION 
             if (isInHeatZone == true && upgradeShop.firePurchased == false && canTakeHeatDamage == true)
@@ -291,9 +299,10 @@ public class Player_ZonePosition : MonoBehaviour
             //IF PLAYER DOES NOT HAVE RADIATION PROTECTION 
             if (isInRadiationZone == true && upgradeShop.radPurchased==false)
             {
-                
-                
-                miniMap.SetActive(false);
+
+                canUseMiniMap = false;
+                miniMapButton.interactable = false;
+                //miniMap.SetActive(false);
 
                 
                 radiation_Icon_disabled.SetActive(false);
@@ -323,8 +332,9 @@ public class Player_ZonePosition : MonoBehaviour
             //IF PLAYER DOES HAVE RADIATION PROTECTION
             if (upgradeShop.radPurchased == true)
             {
-                
-                miniMap.SetActive(true);
+                canUseMiniMap = true;
+                miniMapButton.interactable = true;
+                //miniMap.SetActive(true);
 
                 danger_Icon_disabled.SetActive(true);
                 danger_Icon_enabled.SetActive(false);
@@ -376,7 +386,9 @@ public class Player_ZonePosition : MonoBehaviour
                 playerMovement.maxSpeed = 1.5f;
 
                 //MINI MAP DISABLED 
-                miniMap.SetActive(false);
+                //miniMap.SetActive(false);
+                canUseMiniMap = false;
+                miniMapButton.interactable = false;
 
 
                 hardcore_Icon_enabled.SetActive(true);
@@ -408,7 +420,8 @@ public class Player_ZonePosition : MonoBehaviour
             //IF PLAYER DOES HAVE RADIATION PROTECTION
             if (upgradeShop.hardcorePurchased == true)
             {
-                
+                canUseMiniMap = true;
+                miniMapButton.interactable = true;
                 playerMovement.maxSpeed = 6;
 
                 //ICON
