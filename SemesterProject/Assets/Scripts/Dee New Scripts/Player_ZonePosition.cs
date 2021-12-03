@@ -154,7 +154,7 @@ public class Player_ZonePosition : MonoBehaviour
                   
 
                     //PUT CODE TO SLOW DOWN SHIP WHEN IN THIS ZONE HERE
-                    playerMovement.maxSpeed = 3;
+                    playerMovement.maxSpeed = 6;
 
                     //ICON
                    ice_Icon_disabled.SetActive(false);
@@ -182,7 +182,7 @@ public class Player_ZonePosition : MonoBehaviour
             //IF PLAYER DOES HAVE ICE PROTECTION
             if (upgradeShop.icePurchased == true)
             {
-                playerMovement.maxSpeed = 6;
+                playerMovement.maxSpeed = 10;
                
                 //CODE TO MAKE SHIP GO FAST AGAIN
         
@@ -216,7 +216,7 @@ public class Player_ZonePosition : MonoBehaviour
 
             if (isInIceZone == false && isInNormalZone==true ||isInHeatZone==true || isInRadiationZone==true)
             {
-                playerMovement.maxSpeed = 6;
+                playerMovement.maxSpeed = 10;
             }
 
            
@@ -383,7 +383,7 @@ public class Player_ZonePosition : MonoBehaviour
                 checkHardcoreHeatDamage();
                 //SHIP SLOWED DOWN EVEN MORE
                 //CAM PLS PUT CODE TO SLOW DOWN SHIP EVEN MORE HERE 
-                playerMovement.maxSpeed = 1.5f;
+                playerMovement.maxSpeed = 4;
 
                 //MINI MAP DISABLED 
                 //miniMap.SetActive(false);
@@ -422,7 +422,7 @@ public class Player_ZonePosition : MonoBehaviour
             {
                 canUseMiniMap = true;
                 miniMapButton.interactable = true;
-                playerMovement.maxSpeed = 6;
+                playerMovement.maxSpeed = 10;
 
                 //ICON
                 danger_Icon_disabled.SetActive(true);

@@ -57,20 +57,20 @@ public class fuel_and_mechanic_Manager : MonoBehaviour
         if (upgradeShop.fuelUP1purchased == true)
         {
             fuelCost = fuelAfterUpgradeCost1;
-            refuelButton.GetComponentInChildren<TextMeshProUGUI>().text = "Refuel: " + "$" + fuelCost;
+           // refuelButton.GetComponentInChildren<TextMeshProUGUI>().text = "Refuel: " + "$" + fuelCost;
 
         }
 
         if (upgradeShop.fuelUP2purchased == true)
         {
             fuelCost = fuelAfterUpgradeCost2;
-            refuelButton.GetComponentInChildren<TextMeshProUGUI>().text = "Refuel: " + "$" + fuelCost;
+            //refuelButton.GetComponentInChildren<TextMeshProUGUI>().text = "Refuel: " + "$" + fuelCost;
         }
 
         if (upgradeShop.fuelUP3purchased == true)
         {
             fuelCost = fuelAfterUpgradeCost3;
-            refuelButton.GetComponentInChildren<TextMeshProUGUI>().text = "Refuel: " + "$" + fuelCost;
+           // refuelButton.GetComponentInChildren<TextMeshProUGUI>().text = "Refuel: " + "$" + fuelCost;
         }
         
 
