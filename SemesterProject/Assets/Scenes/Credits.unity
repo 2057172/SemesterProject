@@ -152,7 +152,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6b1fbcfd5d501e04fb22d3be1cb053d9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.438
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -799,8 +799,8 @@ MonoBehaviour:
     License\r\nhttps://www.zapsplat.com/music/multimedia-game-blip-generic-tone-5/
     \r\r\nWeed leaf by freepnglogos\r\nLicense: Free for personal use \r\nhttps://www.freepnglogos.com/pics/weed-leaf
     \r\n\r\r\n513876__nati03__firstsynth.ogg by nati03\r\n\rLicense: Creative Commons\r\nhttps://freesound.org/people/nati03/sounds/513876/\r\n\r\nGame
-    sound, basic digital retro incorrect, wrong, error, negative tone 1\r by Zapsplat
-    \n\rLicense: Creative Commons\r\nhttps://www.zapsplat.com/music/game-sound-basic-digital-retro-incorrect-wrong-error-negative-tone-1/ "
+    sound, basic digital retro incorrect, wrong error, negative tone 1 by Zapslapt\nLicense:
+    Creative Commons\nhttps://www.zapsplat.com/music/game-sound-basic-digital-retro-incorrect-wrong-error-negative-tone-1/\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ec4e73ab289474c4c92f5d4ad06082f5, type: 2}
   m_sharedMaterial: {fileID: 3143316327272341669, guid: ec4e73ab289474c4c92f5d4ad06082f5, type: 2}
