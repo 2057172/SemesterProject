@@ -16,7 +16,7 @@ public class fuel_and_Mechanic : MonoBehaviour
 
     void Start()
     {
-      //  refuelPanel.SetActive(false);
+        refuelPanel.SetActive(false);
     }
 
     void Update()
@@ -55,6 +55,7 @@ public class fuel_and_Mechanic : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             refuelPanel.SetActive(false);
+            isAtFuelShop = false;
             instruction.text = null;
         }
     }

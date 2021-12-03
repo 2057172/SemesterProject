@@ -55,6 +55,7 @@ public class upgrade_shop_opener : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             repairPanel.SetActive(false);
+            isAtShop = false;
             instruction.text = null;
         }
     }
