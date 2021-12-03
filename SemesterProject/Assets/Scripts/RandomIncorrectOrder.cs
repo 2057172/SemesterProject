@@ -19,6 +19,7 @@ public class RandomIncorrectOrder : MonoBehaviour
 
     public menu_Items menuItems;
     public UpgradeShop upgradeShop;
+    public buttonLogic butLog;
 
 
 
@@ -188,6 +189,12 @@ public class RandomIncorrectOrder : MonoBehaviour
         {
             
             OrderPanel.SetActive(true);
+            butLog.b1.interactable = true;
+            butLog.b2.interactable = true;
+            butLog.b3.interactable = true;
+            butLog.b4.interactable = true;
+            butLog.b5.interactable = true;
+            butLog.b6.interactable = true;
             AssignAllButtons();
             PickRandomFoodOrder();
             
